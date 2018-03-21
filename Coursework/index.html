@@ -37,6 +37,10 @@
     <main>
       <!-- Top  5 in the user's location -->
       <section id="top5">
+        <!-- Left slideshow arrow -->
+        <div id="left" class="arrows">
+          <img onclick="plusDivs(-1)" src= "left-arrow.png">
+        </div>
 
         <!-- Top 5 #1 -->
         <div class="slideshow">
@@ -132,24 +136,19 @@
           <img src="poster0.jpg" alt="Poster">
         </div>
         </div>
+        <!-- Right slideshow arrow -->
 
-        <div class="arrows">
-          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)"><img src= "left-arrow.png"></button>
-        </div>
-
-        <div class="arrows">
-          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)"><img src= "right-arrow.png"></button>
+        <div id="right" class="arrows">
+          <img onclick="plusDivs(1)" src= "right-arrow.png">
         </div>
       </section>
 
       <!-- Top 5 on Netflix -->
-      <section class="grid-container">
-        <section id="top5netflix">
-          <h2>Top 5 on Netflix</h2>
-          <section id="netflixfilters" class="top5filters">
-          </section>
-          <section id="netflixtop5" class="top5s">
-          </section>
+      <section id="top5netflix">
+        <h2>Top 5 on Netflix</h2>
+        <section id="netflixfilters" class="top5filters">
+        </section>
+        <section id="netflixtop5" class="top5s">
         </section>
       </section>
 
