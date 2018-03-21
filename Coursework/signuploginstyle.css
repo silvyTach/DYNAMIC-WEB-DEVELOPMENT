@@ -13,13 +13,66 @@ main {
   padding:0.5%;
   margin:0 0 2%;
 }
+
+
+navbar {
+  text-align: center;
+}
 .text {
   float: left;
   width: 75%;
 }
-.text h1 {
-  font-size: 5em;
-  color: white;
+ h2 {
+  font-size: 4em;
+  color: #5B6073;
+  width: auto;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .info, .plot {
