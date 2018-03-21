@@ -3,15 +3,6 @@ main {
   margin:15%;
 }
 
-h2 {
-  color: #ab0000;
-}
-
-.top5byservice {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
 .slideshow {
   float: left;
   width: 89%;
@@ -119,8 +110,15 @@ i {
 }
 /*--------------Slideshow end --------------*/
 
-#red {
+#white {
   width: 100%; !important;
   clear: both;
   background-color: white !important;
+}
+
+h2 {
+  color: #ab0000;
+}
+
+.top5byservice {
 }
