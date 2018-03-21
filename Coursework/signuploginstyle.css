@@ -7,6 +7,10 @@ main {
   width: 100%;
 }
 
+#loginformpassword {
+  width: 100%;
+}
+
 .loginsignupbutton {
   width: 75%;
   margin: auto;
