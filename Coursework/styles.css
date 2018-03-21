@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@media all and (min-width : 1025px) {
+*  {
+	font-family: 'Comfortaa', sans-serif;
+}
+body{
+  width: 90%auto;
+  background-color:  #1C1F24
+;
+}
+#logo-img{
+  display: inline-block;
+  float: left;
+}
+navbar {
+  display: inline-block;
+  float: right;
+}
+li a, #back-to-top, #copyright {
+  padding:10px;
+  text-decoration:none;
+  font-weight:bold;
+  color:white;
+}
+
+a {
+  cursor:pointer;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+}
+
+back-to-top {
+  text-decoration: none;
+}
+.footer {
+  display: inline-block;
+}
+#copyright {
+  display: inline-block;
+  float: left;
+}
+#back-to-top {
+  display: inline-block;
+  float: right;
+}
+
+#back-to-top, #copyright {
+  font-size: small;
+  color: #5B6073;
+}
+
+.footer-menu {
+  color: #5B6073;
+}
+
+a:hover{
+	border-top: medium solid #D75813;
+	color: #D75813;
+}
+
+#back-to-top:hover {
+  border-top: medium solid #D75813;
+  color: #D75813;
+}
+
+header, footer,  {
+  border: solid 1px black;
+}
