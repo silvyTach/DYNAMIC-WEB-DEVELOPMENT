@@ -76,6 +76,12 @@ i {
 .arrows img {
   width: 10%
 }
-button {
-  width: 50px;
+#left {
+  clear: both;
+  float: left;
+}
+
+#right {
+  clear: both;
+  float: right;
 }
