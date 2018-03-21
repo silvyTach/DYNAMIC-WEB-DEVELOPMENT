@@ -27,14 +27,15 @@
   <navbar>
   <ul>
     <li><a id="menu-item" href="library.html">Library</a></li>
-    <li><a id="menu-item" href="signuplogin.html#login">Log in</a></li>
-    <li><a id="menu-item" href="signuplogin.html#signup">Sign up</a></li>
+    <li><a id="menu-item" href="signuplogin.html">Log in</a></li>
+    <li><a id="menu-item" href="signuplogin.html">Sign up</a></li>
   </ul>
   <navbar>
 <!-- end of menu -->
     </header>
 
     <main>
+      <!-- Top  5 in the user's location -->
       <section id="top5">
 
         <!-- Top 5 #1 -->
@@ -159,6 +160,20 @@
           <img onclick="plusDivs(1)" src= "right-arrow.png">
         </div>
       </section>
+
+      <!-- Top 5 on Netflix -->
+      <section id="top5netflix">
+
+      </section>
+
+      <!-- Top 5 on Amazon Prime -->
+      <section id="top5netflix">
+      </section>
+
+      <!-- Top 5 on Hulu -->
+      <section id="top5netflix">
+      </section>
+
     </main>
 
       <footer  class="grid-100 tablet-grid-100 footer">
@@ -190,24 +205,6 @@
       </div>
       </footer>
 
-      <script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("slideshow");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
+      <script src="slideshowscript.js"></script>
 </body>
 </html>
