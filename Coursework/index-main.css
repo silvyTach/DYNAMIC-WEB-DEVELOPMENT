@@ -18,7 +18,7 @@ h2 {
 
 .text, .image, .title{
   box-sizing:border-box;
-  width: 70%;
+  width: 90%;
   padding:0.5%;
   margin:0 0 2%;
 }
