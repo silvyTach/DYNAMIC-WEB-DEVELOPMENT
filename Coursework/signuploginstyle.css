@@ -5,10 +5,7 @@ main {
 
 .loginsignup {
   width: 100%;
-}
-
-#loginformpassword {
-  width: 100%;
+  margin: auto;
 }
 
 .loginsignupbutton {
