@@ -4,7 +4,7 @@ main {
 }
 
 h2 {
-  color: white;
+  color: #ab0000;
 }
 
 .top5byservice {
@@ -54,7 +54,7 @@ i {
 .plot {
   color: #5B6073;
   font-size: large;
-  @override box-sizing: content-box important;
+  /*@override box-sizing: content-box important;*/
 }
 
 .image {
@@ -114,7 +114,13 @@ i {
   padding-top: 230%;
 }
 
-
 .slideshow, .arrows, .poster {
   bofrder: solid green;
+}
+/*--------------Slideshow end --------------*/
+
+#red {
+  width: 100%; !important;
+  clear: both;
+  background-color: white !important;
 }
