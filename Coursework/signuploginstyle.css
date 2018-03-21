@@ -9,8 +9,8 @@ main {
 }
 
 .loginsignupbutton {
-  width: 75%;
-  margin: auto;
+  width: 35%;
+  position: absolute;
 }
 
 .text, .image, .title{
