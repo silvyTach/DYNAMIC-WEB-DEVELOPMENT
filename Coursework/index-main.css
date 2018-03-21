@@ -2,6 +2,11 @@ main {
   clear: both;
   margin:15%;
 }
+
+h2 {
+  color: white;
+}
+
 .slideshow {
   float: left;
   width: 89%;
