@@ -7,10 +7,6 @@ main {
   width: 100%;
 }
 
-h2 {
-  color: white;
-}
-
 hr {
   width: 75%;
 }
@@ -42,9 +38,16 @@ navbar {
 }
  h2 {
   font-size: 4em;
-  color: #5B6073;
+  color: #ab0000;
   width: auto;
 }
+
+#white {
+  width: 100%; !important;
+  clear: both;
+  background-color: white !important;
+}
+
 
 div.gallery {
     border: 1px solid #ccc;
