@@ -2,6 +2,14 @@ main {
   clear: both;
   margin:15%;
 }
+.slideshow {
+  float: left;
+  width: 89%;
+}
+
+.arrows {
+  width: 5%;
+}
 
 .text, .image, .title{
   box-sizing:border-box;
@@ -74,14 +82,29 @@ i {
 }
 
 .arrows img {
-  width: 10%
+  width: 50%;
+  padding-top: 210%;
+  padding-bottom: 210%;
 }
 #left {
   clear: both;
   float: left;
 }
+#left img {
+  width:52%;
+  padding-top: 235%;
+}
 
 #right {
-  clear: both;
   float: right;
+}
+
+#right img {
+  float: right;
+  padding-top: 230%;
+}
+
+
+.slideshow, .arrows, .poster {
+  bodrder: solid green;
 }
