@@ -16,7 +16,7 @@
       </div>
 
       <!-- search box -->
-      <section class= "grid-20 tablet-grid-15 mobile-grid-100" id= "search">
+      <section class="grid-20 tablet-grid-15 mobile-grid-100" id= "search">
         <input id="searchBox"  type="search" placeholder="Search">
         <img  id="searchIcon" src= "lupa-orange.png" alt="Search Icon" />
       </section>
@@ -39,34 +39,26 @@
       <br/>
       <!-- Formatting -->
 
-      <section id="login">
-
-        <!-- Standard Bootstrap container -->
-        <div class="container">
-
-          <!-- Identifying the form -->
-          <br/>
-          <div class="page-header">
-            <center><h2>Log In</h2></center>
+      <section class="grid-20 tablet-grid-15 mobile-grid-100" id="login">
+        <!-- Identifying the form -->
+        <br/>
+          <center><h2>Log In</h2></center>
+        <br/>
+        <!-- Start of whole form -->
+        <form id="loginform">
+          <div class="form-group">
+            <!-- Row for username/email -->
+            <input type="text" class="form-control" id="loginformusername" placeholder="Username or Email Address">
           </div>
-          <br/>
-          <!-- Start of whole form -->
-          <form id="loginform">
-            <div class="form-group">
-              <!-- Row for username/email -->
-              <input type="text" class="form-control" id="loginformusername" placeholder="Username or Email Address">
-            </div>
-            <div class="form-group">
-              <!-- Row for password -->
-              <input type="text" class="form-control" id="loginformpassword" placeholder="Password">
-            </div>
-            <div class="form-group">
-              <!-- Row for button -->
-              <button type="submit" class="btn btn-primary btn-block" id="loginformsubmit">Log In</button>
-            </div>
-          </form>
-        <!-- End of Bootstrap container -->
-        </div>
+          <div class="form-group">
+            <!-- Row for password -->
+            <input type="text" class="form-control" id="loginformpassword" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <!-- Row for button -->
+            <button type="submit" class="btn btn-primary btn-block" id="loginformsubmit">Log In</button>
+          </div>
+        </form>
 
       </section>
 
