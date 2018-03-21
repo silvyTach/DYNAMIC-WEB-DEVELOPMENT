@@ -72,3 +72,10 @@ i {
   bodrder: solid green;
   margin: 0;
 }
+
+.arrows img {
+  width: 10%
+}
+button {
+  width: 50px;
+}
