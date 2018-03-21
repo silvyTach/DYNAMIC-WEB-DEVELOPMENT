@@ -108,6 +108,7 @@ i {
 #right {
   float: right;
 }
+<<<<<<< HEAD
 
 #right img {
   float: right;
@@ -117,4 +118,19 @@ i {
 
 .slideshow, .arrows, .poster {
   bofrder: solid green;
+=======
+<<<<<<< HEAD
+#left {
+  clear: both;
+  float: left;
+}
+
+#right {
+  clear: both;
+  float: right;
+=======
+button {
+  width: 50px;
+>>>>>>> 572450d2ed14f5f4f229c826783ddc3b655add95
+>>>>>>> 532505a4ff4f46332ddfc37852d42b7d103a4fd3
 }
