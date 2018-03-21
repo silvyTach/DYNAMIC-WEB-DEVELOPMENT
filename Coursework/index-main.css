@@ -72,3 +72,16 @@ i {
   bodrder: solid green;
   margin: 0;
 }
+
+.arrows img {
+  width: 10%
+}
+#left {
+  clear: both;
+  float: left;
+}
+
+#right {
+  clear: both;
+  float: right;
+}
