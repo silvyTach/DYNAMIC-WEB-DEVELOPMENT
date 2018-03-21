@@ -39,28 +39,39 @@
       <br/>
       <!-- Formatting -->
 
-      <section class="grid-20 tablet-grid-15 mobile-grid-100" id="login">
+      <section id="login">
+        <!-- Formatting -->
+        <center>
         <!-- Identifying the form -->
-        <br/>
-          <center><h2>Log In</h2></center>
-        <br/>
+        <section class="grid-container">
+          <section class="grid-100">
+            <br/>
+            <h2>Log In</h2>
+            <br/>
+          </section>
+        </section>
         <!-- Start of whole form -->
-        <form id="loginform">
-          <div class="form-group">
-            <!-- Row for username/email -->
-            <input type="text" class="form-control" id="loginformusername" placeholder="Username or Email Address">
-          </div>
-          <div class="form-group">
-            <!-- Row for password -->
-            <input type="text" class="form-control" id="loginformpassword" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <!-- Row for button -->
-            <button type="submit" class="btn btn-primary btn-block" id="loginformsubmit">Log In</button>
-          </div>
-        </form>
+        <section class="grid-container">
+          <section class="grid-100 grid-parent">
+
+              <form id="loginform">
+                <input type="text" class="form-control" id="loginformusername" placeholder="Username or Email Address">
+                <br/>
+                <br/>
+                <input type="text" class="form-control" id="loginformpassword" placeholder="Password">
+                <br/>
+                <br/>
+                <button type="submit" class="btn btn-primary btn-block" id="loginformsubmit">Log In</button>
+              </form>
+
+          </section>
+          </center>
+          <!-- Formatting -->
+        </section>
+
 
       </section>
+
 
       <!-- Gap between form sections - width needs to be in CSS -->
       <br/>
