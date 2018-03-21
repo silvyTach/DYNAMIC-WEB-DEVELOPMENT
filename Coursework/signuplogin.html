@@ -26,9 +26,9 @@
       <!-- menu -->
       <navbar>
         <ul>
-          <li><a id="menu-item" href="#">Library</a></li>
-          <li><a id="menu-item" href="#">Log in</a></li>
-          <li><a id="menu-item" href="#">Sign up</a></li>
+          <li><a id="menu-item" href="library.html">Library</a></li>
+          <li><a id="menu-item" href="signuplogin.html">Log in</a></li>
+          <li><a id="menu-item" href="signuplogin.html">Sign up</a></li>
         </ul>
       <navbar>
       <!-- end of menu -->
@@ -36,7 +36,6 @@
 
     <main>
       <!-- Formatting -->
-      <br/>
       <br/>
       <!-- Formatting -->
 
@@ -51,74 +50,78 @@
             <br/>
           </section>
         </section>
-        </center>
-        <!-- Formatting -->
 
         <!-- Start of whole form -->
         <section class="grid-container">
-          <section class="grid-100 grid-parent">
+          <section class="grid-100">
 
               <form id="loginform">
                 <input type="text" class="loginsignup" id="loginformusername" placeholder="Username or Email Address">
                 <br/>
                 <br/>
-                <input type="text" class="form-loginsignup" id="loginformpassword" placeholder="Password">
+                <input type="password" class="loginsignup" id="loginformpassword" placeholder="Password">
                 <br/>
                 <br/>
-                <button type="submit" class="" id="loginformsubmit">Log In</button>
+                <button type="submit" class="loginsignupbutton" id="loginformsubmit">Log In</button>
+                <br>
+                <br>
               </form>
 
           </section>
-
         </section>
-
-
+        <!-- End of whole form -->
+      </center>
+      <!-- Formatting -->
       </section>
 
-
-      <!-- Gap between form sections - width needs to be in CSS -->
+      <!-- Gap between form sections -->
       <br/>
-      <hr width="75%"/>
+      <hr/>
       <br/>
+      <!-- Gap between form sections -->
 
       <section id="signup">
+        <!-- Formatting -->
+        <center>
+        <!-- Identifying the form -->
+        <section class="grid-container">
+          <section class="grid-100">
+            <br/>
+            <h2>Sign Up</h2>
+            <br/>
+          </section>
+        </section>
 
-        <!-- Standard Bootstrap container -->
-        <div class="container">
+        <!-- Start of whole form -->
+        <section class="grid-container">
+          <section class="grid-100">
 
-          <!-- Identifying the form -->
-          <div class="page-header">
-            <center><h2>Sign Up for Free</h2></center>
-          </div>
-          <br/>
-          <!-- Start of whole form -->
-          <form id="signupform">
-            <div class="form-group">
+              <form id="signupform">
+                <input type="text" class="loginsignup" id="signupformusername" placeholder="Username">
+                <br/>
+                <br/>
+                <input type="text" class="loginsignup" id="signupformemail1" placeholder="Email Address">
+                <br/>
+                <br/>
+                <input type="text" class="loginsignup" id="signupformemail2" placeholder="Confirm Email Address">
+                <br/>
+                <br/>
+                <input type="password" class="loginsignup" id="signupformpassword1" placeholder="Password">
+                <br/>
+                <br
+                <input type="password" class="loginsignup" id="signupformpassword2" placeholder="Confirm Password">
+                <br/>
+                <br/>
+                <button type="submit" class="loginsignupbutton" id="signupformsubmit">Sign Up</button>
+                <br>
+                <br>
+              </form>
 
-              <!-- Row for username -->
-              <input type="text" class="form-control" id="signupformusername" placeholder="Username">
-            </div>
-            <div class="form-group">
-              <!-- Row for email address -->
-              <input type="text" class="form-control" id="signupformemail" placeholder="Email Address">
-            </div>
-            <div class="form-group">
-              <!-- Row for password -->
-              <input type="password" class="form-control" id="signupformpassword" placeholder="Enter a Password">
-            </div>
-            <div class="form-group">
-              <!-- Row for confirming password -->
-              <input type="password" class="form-control" id="signupformconfirmpassword" placeholder="Confirm Password">
-            </div>
-            <div class="form-group">
-              <!-- Row for button -->
-              <button type="submit" class="btn btn-primary btn-block" id="signupformsubmit">Sign Up</button>
-            </div>
-          </form>
-
-        <!-- End of Bootstrap container -->
-        </div>
-
+          </section>
+        </section>
+        <!-- End of whole form -->
+      </center>
+      <!-- Formatting -->
       </section>
 
     </main>
