@@ -3,22 +3,12 @@ main {
   margin:15%;
 }
 
-.loginsignup {
-  width: 100%;
-}
-
 hr {
   width: 75%;
 }
 
 .loginsignup {
-  width: 60%;
-  margin: auto;
-}
-
-.loginsignupbutton {
-  width: 20%;
-  position: relative;
+  width: 100%;
 }
 
 .text, .image, .title{
@@ -26,6 +16,41 @@ hr {
   width: 70%;
   padding:0.5%;
   margin:0 0 2%;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+#image_div .img_wrapper img
+{
+ width:100%;
+}
+#image_div .img_wrapper:hover img
+{
+ -webkit-filter: blur(1.7px);
+}
+#image_div .img_wrapper span
+{
+ display:none;
+ position:absolute;
+ top:40px;
+ left:30px;
+}
+#image_div .img_wrapper:hover span
+{
+ display:table-cell;
+}
+#image_div .img_wrapper span input[type="button"]
+{
+ width:120px;
+ height:40px;
+ background-color:#00BFFF;
+ border:none;
+ color:white;
+ font-weight:bold;
+ font-size:17px;
 }
 
 
@@ -38,16 +63,9 @@ navbar {
 }
  h2 {
   font-size: 4em;
-  color: #ab0000;
+  color: #5B6073;
   width: auto;
 }
-
-#white {
-  width: 100%; !important;
-  clear: both;
-  background-color: white !important;
-}
-
 
 div.gallery {
     border: 1px solid #ccc;
@@ -150,8 +168,3 @@ i {
   bodrder: solid green;
   margin: 0;
 }
-
-/*.loginsignupbutton {
-  background-color: #D75813;
-  color: #D75813;
-}*/
