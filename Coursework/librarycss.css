@@ -136,14 +136,10 @@ i {
   @override box-sizing: content-box important;
 }
 
-.image {
-  float: right;
-  width: 25%;
+
 
 }
-.image img{
-  float: right;
-}
+
 
 .button {
   border-radius: 30px;
