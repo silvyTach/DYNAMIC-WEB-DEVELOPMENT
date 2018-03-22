@@ -149,10 +149,10 @@ i {
   @override box-sizing: content-box important;
 }
 
-
-
+#librarynav {
+  display: block;
+  float: none;
 }
-
 
 .button {
   border-radius: 30px;
