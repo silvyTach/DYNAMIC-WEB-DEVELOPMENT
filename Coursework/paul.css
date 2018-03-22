@@ -56,10 +56,7 @@ i {
 .image img{
   float: right;
 }
-.image Poster{
-  float: right;
 
-}
 
 
 
@@ -111,6 +108,8 @@ i {
   padding-top: 230%;
 }
 
+
+
 .slideshow, .arrows, .poster {
   bofrder: solid green;
 }
@@ -131,4 +130,3 @@ h2,.provider a {
   float: right;
   text-decoration: none;
 }
-
