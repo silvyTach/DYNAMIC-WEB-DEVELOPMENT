@@ -60,7 +60,7 @@ navbar {
 }
  h2 {
   font-size: 4em;
-  color: #  AB0000;
+  color: #AB0000;
   text-align: center;
    width: auto;
 }
@@ -95,8 +95,8 @@ div.desc {
 
 @media only screen and (max-width: 700px) {
     .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
+        width: 100%;
+        <!--   width: 49.99999%; !-->
     }
 }
 
