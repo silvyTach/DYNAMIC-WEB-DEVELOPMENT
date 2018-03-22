@@ -4,8 +4,8 @@
 
     <meta charset="utf-8">
     <title>Where's my movie</title>
-    <link rel="stylesheet" href="header and footer.css">
-    <link rel="stylesheet" href="signuploginstyle.css">
+    <link rel="stylesheet" href="headerandfooterlibrary.css">
+    <link rel="stylesheet" href="librarycss.css">
     <style type="text/css">@import url("unsemantic-grid-responsive-tablet.css");</style>
   </head>
 
@@ -26,9 +26,9 @@
       <!-- menu -->
       <navbar>
         <ul>
-          <li><a id="menu-item" href="#">Library</a></li>
-          <li><a id="menu-item" href="#">Log in</a></li>
-          <li><a id="menu-item" href="#">Sign up</a></li>
+          <li><a id="menu-item" href="library.html">Library</a></li>
+          <li><a id="menu-item" href="signuplogin.html">Log in</a></li>
+          <li><a id="menu-item" href="signuplogin.html">Sign up</a></li>
         </ul>
       <navbar>
       <!-- end of menu -->
@@ -48,25 +48,35 @@
           </section>
         </section>
         </center>
+<!-- Filters -->
+<section id="libraryfilters" class="grid-container">
+  <div class="grid-100">
+    <navbar id="librarynav">
+      <ul>
+        <li><a id="menu-item" href="#">All</a></li>
+        <li><a id="menu-item-netflix" href="#">Netflix</a></li>
+        <li><a id="menu-item-prime" href="#">Amazon Prime</a></li>
+        <li><a id="menu-item-hulu" href="#">Hulu</a></li>
+      </ul>
+    <navbar>
+  </div>
+</section>
 
-<!-- 4 movie items in a responsive gallery -->
-<navbar>
-  <ul>
-    <li><a id="menu-item" href="#">All</a></li>
-    <li><a id="menu-item" href="#">Netflix</a></li>
-    <li><a id="menu-item" href="#">Amazon Prime</a></li>
-    <li><a id="menu-item" href="#">Hulu</a></li>
-  </ul>
-<navbar>
+
+
+<!-- Movie items in a responsive gallery -->
 
 
 
-
-  <div class="responsive">
+<div class="responsive">
     <div class="gallery">
+      <div class="show-image">
       <a target="_blank" href="movie_placeholder.png">
         <img src="movie_placeholder.png" alt="movie" width="600" height="400">
+        <input class="update" type="button" value="More Details" />
       </a>
+      </div>
+
       <div class="desc">Move info bla bla bla etc </div>
     </div>
   </div>
@@ -74,8 +84,11 @@
 
 <div class="responsive">
   <div class="gallery">
+    <div class = "show-image">
     <a target="_blank" href="movie_placeholder.png">
       <img src="movie_placeholder.png" alt="movie" width="600" height="400">
+        <input class="update" type="button" value="More Details" />
+        </div>
     </a>
     <div class="desc">Move info bla bla bla etc </div>
   </div>
@@ -83,8 +96,11 @@
 
 <div class="responsive">
   <div class="gallery">
+    <div class = "show-image">
     <a target="_blank" href="movie_placeholder.png">
       <img src="movie_placeholder.png" alt="movie" width="600" height="400">
+      <input class="update" type="button" value="More Details" />
+      </div>
     </a>
     <div class="desc">Move info bla bla bla etc </div>
   </div>
@@ -92,8 +108,11 @@
 
 <div class="responsive">
   <div class="gallery">
+    <div class = "show-image">
     <a target="_blank" href="movie_placeholder.png">
       <img src="movie_placeholder.png" alt="movie" width="600" height="400">
+      <input class="update" type="button" value="More Details" />
+        </div>
     </a>
     <div class="desc">Move info bla bla bla etc </div>
   </div>
@@ -157,7 +176,7 @@
           <p>© 2018 Where is my Movie. All Rights Reserved. Designed by Group 8</p>
         </div>
         <div>
-          <a href="index.html" id="back-to-top">Back to top ↑</a>
+          <a href="library.html" id="back-to-top">Back to top ↑</a>
         </div>
       </div>
     </footer>
