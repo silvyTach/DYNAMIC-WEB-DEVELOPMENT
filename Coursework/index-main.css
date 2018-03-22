@@ -114,8 +114,20 @@ i {
   width: 100%; !important;
   clear: both;
   background-color: white !important;
+  padding: 5% 5% 5%;
+
 }
 
+.provider {
+  width: 92%;
+  padding: none;
+  overflow: hidden;
+  border: solid green;
+}
+
+h2 {
+  display: inline;
+}
 
 h2,.provider a {
   color: #ab0000;
@@ -124,4 +136,8 @@ h2,.provider a {
 .provider a{
   float: right;
   text-decoration: none;
+}
+
+.provider img {
+  padding-left: 2.5%;
 }
