@@ -108,9 +108,7 @@ i {
   padding-top: 230%;
 }
 
-li, href {
-  float: left;
-}
+
 
 .slideshow, .arrows, .poster {
   bofrder: solid green;
