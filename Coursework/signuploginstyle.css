@@ -3,6 +3,10 @@ main {
   margin:15%;
 }
 
+hr {
+  width: 75%;
+}
+
 .loginsignup {
   width: 100%;
 }
