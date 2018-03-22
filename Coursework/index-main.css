@@ -116,11 +116,12 @@ i {
   background-color: white !important;
 }
 
-h2 {
+
+h2,.provider a {
   color: #ab0000;
 }
 
-.top5byservice {
->>>>>>> 532505a4ff4f46332ddfc37852d42b7d103a4fd3
->>>>>>> a9d1de7ecd426fe6fad32035a34afe68e01a4b97
+.provider a{
+  float: right;
+  text-decoration: none;
 }
