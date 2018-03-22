@@ -56,6 +56,12 @@ i {
 .image img{
   float: right;
 }
+.image Poster{
+  float: left;
+
+}
+
+
 
 .button {
   border-radius: 30px;
