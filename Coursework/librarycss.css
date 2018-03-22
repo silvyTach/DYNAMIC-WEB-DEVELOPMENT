@@ -27,10 +27,7 @@ hr {
 {
  width:100%;
 }
-#image_div .img_wrapper:hover img
-{
- -webkit-filter: blur(1.7px);
-}
+
 #image_div .img_wrapper span
 {
  display:none;
@@ -64,8 +61,8 @@ navbar {
  h2 {
   font-size: 4em;
   color: #  AB0000;
-
-  width: auto;
+  text-align: center;
+   width: auto;
 }
 
 div.gallery {
@@ -77,7 +74,7 @@ div.gallery:hover {
 }
 
 div.gallery img {
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
