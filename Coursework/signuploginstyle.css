@@ -3,11 +3,9 @@ main {
   margin:15%;
 }
 
-.loginsignup, #login {
+.loginsignup {
   width: 100%;
 }
-
-
 
 hr {
   width: 75%;
