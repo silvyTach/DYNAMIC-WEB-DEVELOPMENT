@@ -61,13 +61,13 @@ navbar {
 }
 
 #menu-item-prime:hover{
-	border-top: medium solid #0000AB;
-	color: #0000AB;
+	border-top: medium solid #129de2;
+	color: #129de2;
 }
 
 #menu-item-hulu:hover{
 	border-top: medium solid #00AB00;
-	color: ##00AB00;
+	color: #00AB00;
 }
 
 .text {
