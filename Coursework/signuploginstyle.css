@@ -7,21 +7,46 @@ main {
   width: 100%;
 }
 
-.loginsignup {
-  width: 60%;
-  margin: auto;
-}
-
-.loginsignupbutton {
-  width: 20%;
-  position: relative;
-}
-
 .text, .image, .title{
   box-sizing:border-box;
   width: 70%;
   padding:0.5%;
   margin:0 0 2%;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+#image_div .img_wrapper img
+{
+ width:100%;
+}
+#image_div .img_wrapper:hover img
+{
+ -webkit-filter: blur(1.7px);
+}
+#image_div .img_wrapper span
+{
+ display:none;
+ position:absolute;
+ top:40px;
+ left:30px;
+}
+#image_div .img_wrapper:hover span
+{
+ display:table-cell;
+}
+#image_div .img_wrapper span input[type="button"]
+{
+ width:120px;
+ height:40px;
+ background-color:#00BFFF;
+ border:none;
+ color:white;
+ font-weight:bold;
+ font-size:17px;
 }
 
 
@@ -49,7 +74,6 @@ div.gallery:hover {
 div.gallery img {
     width: 100%;
     height: auto;
-    width: auto;
 }
 
 div.desc {
@@ -139,26 +163,4 @@ i {
 .info, .plot, .title {
   bodrder: solid green;
   margin: 0;
-}
-
-
-
-div.show-image {
-    position: relative;
-    float:left;
-    margin:5px;
-}
-div.show-image:hover img{
-    opacity:0.5;
-}
-div.show-image:hover input {
-    display: block;
-}
-div.show-image input {
-    position:absolute;
-    display:none;
-}
-div.show-image input.update {
-    top:0;
-    left:0;
 }
