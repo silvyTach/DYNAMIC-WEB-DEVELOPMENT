@@ -3,14 +3,8 @@ main {
   margin:15%;
 }
 
-.loginsignup, #login {
+.loginsignup {
   width: 100%;
-}
-
-
-
-hr {
-  width: 75%;
 }
 
 .loginsignup {
@@ -40,16 +34,9 @@ navbar {
 }
  h2 {
   font-size: 4em;
-  color: #ab0000;
+  color: #5B6073;
   width: auto;
 }
-
-#white {
-  width: 100%; !important;
-  clear: both;
-  background-color: white !important;
-}
-
 
 div.gallery {
     border: 1px solid #ccc;
@@ -62,6 +49,7 @@ div.gallery:hover {
 div.gallery img {
     width: 100%;
     height: auto;
+    width: auto;
 }
 
 div.desc {
@@ -153,7 +141,24 @@ i {
   margin: 0;
 }
 
-/*.loginsignupbutton {
-  background-color: #D75813;
-  color: #D75813;
-}*/
+
+
+div.show-image {
+    position: relative;
+    float:left;
+    margin:5px;
+}
+div.show-image:hover img{
+    opacity:0.5;
+}
+div.show-image:hover input {
+    display: block;
+}
+div.show-image input {
+    position:absolute;
+    display:none;
+}
+div.show-image input.update {
+    top:0;
+    left:0;
+}
