@@ -27,19 +27,21 @@
 						 // populate the empty span element with the query terms
 						 // grab reference to "query" <span> using a DOM method
 						 // update its innerHTML property with value
-						 
+						 var query = document.getElementById("query");
+						 query.innerHTML = value;
+
 					 }
 				}
-			}			
+			}
 		</script>
 	</head>
 	<body onload="updateQuery();">
 		<h1>
 			Noogle!
 		</h1>
-		
+
 		Searched for: <span id="query"></span>
-		
+
 		<ul>
 			<li><h3>result one</h3> not much here...</li>
 			<li><h3>result two</h3> still not much here...</li>
