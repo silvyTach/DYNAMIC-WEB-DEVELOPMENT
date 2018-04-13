@@ -2,33 +2,24 @@
 <html>
 <head>
   <title>test</title>
-  <script>
+  <!-- <script>
   function testResults(form) {
-    //simple script to pop-up form values after submission
-    //grab form element values and store as a=variables
-    var username = form.username.value;
-    var breed = form.breed.value;
-    var email = form.email.value;
-    var homepage = form.homepage.value;
-    var dob = form.dob.value;
-    var about = form.about.value;
-    //repeat above afor all the form elements used
     var values = form.values;
     var text = "";
     for (var i = 0; i < form.length; i++) {
       text+= form[i].value + " ";
     }
     //complete alert message popup by appending variables
-    alert("You registered: " + text);
+    //alert("You registered: " + text);
   }
-  </script>
+  </script> -->
 </head>
 <body>
   <h1>Moggybook!</h1>
 
   <!--Complete the form-->
 
-  <form>
+  <form action="submit.html">
     <table border="0" cellspacing="5">
       <tr>
         <td>Username:</td>
@@ -68,7 +59,7 @@
         </td>
       </tr>
     </table>
-    <input type="submit" name="submit" value="Submit" onClick="testResults(this.form)"/>
+    <input type="submit" name="submit" value="Submit" onClick="submit.html"/>
   </form>
 </body>
 </html>
