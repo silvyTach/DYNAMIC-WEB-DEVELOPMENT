@@ -4,7 +4,7 @@ function addContent() {
   var nvPairs = searchString.split("&");
   //var namePair= nvPairs[0].split("=");
   var name = nvPairs[0].split("=")[1];
-  var list = document.createElement("ol");
+  var list = document.createElement("ul");
   list.appendChild(document.createTextNode(name));
 	document.body.appendChild(list);
 
@@ -20,7 +20,7 @@ function addContent() {
 function addContentSamePage(form) {
   var name = form[0].value;
   //var name = values[0].value;
-  var list = document.createElement("ol");
+  var list = document.createElement("ul");
   list.appendChild(document.createTextNode(name));
 	document.body.appendChild(list);
 	for (i = 1; i < form.length - 2; i++) {
@@ -33,6 +33,6 @@ function addContentSamePage(form) {
 
 function removeLast() {
   var items = document.getElementsByTagName("ul");
-  var last = items[length - 1];
-  document.getElementsByTagName("body").removeChild(last);
+  var last = items[items.length - 1];
+  last.parentNode.removeChild(last);
 }
