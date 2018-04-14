@@ -26,9 +26,6 @@
 </head>
 <body>
   <h1>Moggybook!</h1>
-
-  <!--COmplete the form-->
-
   <form>
     <table border="0" cellspacing="5">
       <tr>
@@ -37,7 +34,6 @@
           <input type="text" name="username">
         </td>
       </tr>
-      <!-- use table row <tr> template beneath for other form elements-->
       <tr>
         <td>Breed:</td>
         <td>
@@ -68,8 +64,15 @@
           <input type="text" name="about">
         </td>
       </tr>
+      <td>
+        <input type="button" value="Add" onClick="testResults(this.form)"/>
+      </td>
+      <td>
+        <input type="button" name="delete" value="Remove" onClick="deleteLast(this.form)"/>
+      </td>
     </table>
-    <input type="submit" name="submit" value="Submit" onClick="testResults(this.form)"/>
+    <!-- <input type="submit" name="submit" value="Submit" onClick="testResults(this.form)"/> -->
+
   </form>
 </body>
 </html>
