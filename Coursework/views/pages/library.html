@@ -11,27 +11,8 @@
 
   <body>
     <header>
-      <div id="logo">
-        <!-- need to change the logo -->
-        <a href="index.html"><img id="logo-img" src="black-logo.png"  alt="Website's logo" width="13%"></a>
-      </div>
-
-      <!-- search box -->
-      <section class="grid-20 tablet-grid-15 mobile-grid-100" id= "search">
-        <input id="searchBox"  type="search" placeholder="Search">
-        <img  id="searchIcon" src= "lupa-orange.png" alt="Search Icon" />
-      </section>
-      <!-- end of search box -->
-
-      <!-- menu -->
-      <navbar>
-        <ul>
-          <li><a id="menu-item" href="library.html">Library</a></li>
-          <li><a id="menu-item" href="signuplogin.html">Log in</a></li>
-          <li><a id="menu-item" href="signuplogin.html">Sign up</a></li>
-        </ul>
-      <navbar>
-      <!-- end of menu -->
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
     </header>
 
     <main>
