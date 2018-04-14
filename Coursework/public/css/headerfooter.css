@@ -114,6 +114,8 @@ navbar li a:hover{
 } */
 /* Not sure what the purpose of this is */
 
+/* ----- Footer menu links ----- */
+
 #footer-menu {
   width: 90%;
 	color: #5B6073;
@@ -122,6 +124,8 @@ navbar li a:hover{
   padding-left: 20%
 	/* Each item has 5% space between itself and the element on its left, it also has 20% internal padding */
 }
+
+/* ----- Copyright notice and back to top ----- */
 
 #copyright {
   display: inline-block;
@@ -146,6 +150,8 @@ navbar li a:hover{
   color: #D75813;
 	/* Menu items in the footer and the back to top link turn orange and have an orange border above appear when they're hovered on */
 }
+
+/* ----- Social media icons ----- */
 
 #socialMediaLogos {
   margin-left: 47%;
