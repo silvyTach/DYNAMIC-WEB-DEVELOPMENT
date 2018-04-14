@@ -1,3 +1,5 @@
+/* ---------- EVERYTHING ---------- */
+
 main {
   clear: both;
   margin:15%;
@@ -6,6 +8,8 @@ main {
 hr {
   width: 75%;
 }
+
+/* ---------- EVERYTHING ---------- */
 
 .loginsignup {
   width: 100%;
