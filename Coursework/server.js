@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient; //npm install mongodb@2.2.32
-const url = "mongodb://localhost:27017/profiles";
+const url = "mongodb://localhost:27017/wheresmymovie";
 const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
@@ -59,3 +59,29 @@ app.get('/signuplogin', function(req, res) {
 });
 
 //-------------------- POST ROUTES --------------------
+
+app.post('/login', function(req, res) {
+  console.log(JSON.stringify(req.body))
+  var uname = req.body.loginformusername;
+  var pword = req.body.loginformpassword;
+  //Getting the username and password entered by the user
+  db.collection('users').findOne({"username":uname}, function, (error, result) {
+    if (error) {
+      throw error;
+      //If there's an error, throw it
+    }
+
+    if (!result) {
+      res.redirect('/login');
+      return
+      //If there is no result matching the username, a new login page is generated
+    }
+
+    if (result.password == pword) {
+      req.session.loggedin = true;
+      //If the password is correct for the existing username, the session is labelled as logged inspect
+      res.redirect('/library');
+      //The user is redirected to their library
+    }
+  });
+});
