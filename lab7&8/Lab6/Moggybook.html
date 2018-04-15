@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+  <!-- <script>
+  function testResults(form) {
+    var values = form.values;
+    var text = "";
+    for (var i = 0; i < form.length; i++) {
+      text+= form[i].value + " ";
+    }
+    //complete alert message popup by appending variables
+    //alert("You registered: " + text);
+  }
+  </script> -->
+  <script src="moggy.js"></script>
+</head>
+<body>
+  <h1>Moggybook!</h1>
+
+  <!--Complete the form-->
+
+  <form name="form" action="submit.html">
+    <table border="0" cellspacing="5">
+      <tr>
+        <td>Username:</td>
+        <td>
+          <input type="text" name="username">
+        </td>
+      </tr>
+      <!-- use table row <tr> template beneath for other form elements-->
+      <tr>
+        <td>Breed:</td>
+        <td>
+          <input type="text" name="breed">
+        </td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>
+          <input type="email" name="email">
+        </td>
+      </tr>
+      <tr>
+        <td>Homepage:</td>
+        <td>
+          <input type="text" name="homepage">
+        </td>
+      </tr>
+      <tr>
+        <td>Date of Birth:</td>
+        <td>
+          <input type="date" name="dob">
+        </td>
+      </tr>
+      <tr>
+        <td>About:</td>
+        <td>
+          <input type="text" name="about">
+        </td>
+      </tr>
+    </table>
+    <!-- <input type="submit" name="submit" value="Submit" onClick="submit.html"/> -->
+    <input type="button" value="Add" onClick="addContentSamePage(this.form)"/>
+    <input type="button" value="Remove" onClick="removeLast()"/>
+  </form>
+</body>
+</html>

@@ -56,22 +56,6 @@ hr {
 navbar {
   text-align: center;
 }
-
-#menu-item-netflix:hover{
-	border-top: medium solid #AB0000;
-	color: #AB0000;
-}
-
-#menu-item-prime:hover{
-	border-top: medium solid #129de2;
-	color: #129de2;
-}
-
-#menu-item-hulu:hover{
-	border-top: medium solid #00AB00;
-	color: #00AB00;
-}
-
 .text {
   float: left;
   width: 75%;
@@ -179,10 +163,4 @@ i {
 .info, .plot, .title {
   bodrder: solid green;
   margin: 0;
-}
-
-img {
-display: block;
-margin-left: auto;
-margin-right: auto;
 }
