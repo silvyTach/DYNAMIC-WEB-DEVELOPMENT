@@ -21,6 +21,7 @@ input {
   display: inline-block;
   padding: 12px 20px;
   margin: auto;
+  box-sizing: border-box;
   /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
 }
 
