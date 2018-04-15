@@ -171,3 +171,90 @@ h2, .provider a {
   text-decoration: none;
   /* Links in the provider class will float to the right and have text decoration stripped */
 }
+
+.provider img {
+  padding-left: 2.5%;
+  /* Images within the provider class have some padding added to the left */
+}
+
+.poster-title {
+  position: relative;
+  display: inline-block;
+  /* The title above the poster is rendered relative to its normal position */
+  /* It is also displayed as an inline element */
+}
+
+.poster-title > span {
+  width: 100%;
+  margin-left: 7px;
+  padding: 5px;
+  /* Span tags within the poster-title class take up the whole width of their containing element, has an outer margin to separate it from the element on its left (i.e. the edge) and internal padding of 5px */
+  position: absolute;
+  bottom: 0;
+  /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class */
+  /* The bottom edge of the tags is set to a unit equal to the bottom edge of the ancestor element */
+  font-size: large;
+  font-weight: 700;
+  color: #FFFFFF;
+  /* The font is made large, bold and white */
+}
+
+.poster-title .imageInner{
+  width: 100%;
+  height: 100%;
+  /* The area covering the image when its hovered over takes the whole height and width of the poster size */
+  margin: auto;
+  position: absolute;
+  /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class and the margin is calculated by the browser */
+  margin-left: 2.5%;
+  /* The left margin is then increased */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* The edges of the tags is set to a unit equal to the edges of the ancestor element */
+  opacity: 0;
+  background-color: rgba(91, 96, 115, 0.5);
+  /* The opacity is changed and a colour given */
+  text-align: center;
+  vertical-align: middle;
+  /* Any text is centred and the vertical alignment within the poster-title class is set to middle */
+}
+
+.poster-title .imageInner span {
+  position: relative;
+  margin: 0;
+  top: 50%;
+  /* Span tags within the imageInner class are positioned relative to their natural position, have their margin reset, and the top edge adjusted */
+}
+
+.poster-title:hover .imageInner {
+  display: block;
+  /* When the image is hovered over, the innerImage is displayed as a whole-line element, taking a line to itself*/
+  z-index: 999;
+  opacity: 1;
+  /* The opacity is set and the stack order is set */
+  transition: all 0.5s ease-out;
+  /* All properties will have an effect added for half a second with a slow end */
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  /* Including transition compatability for Safari, Mozilla Firefox and Oracle*/
+}
+
+.imageInner .poster-button {
+  background-color: #AB0000;
+  border-radius: 30px;
+  padding: 13px 25px;
+  margin: auto;
+  /* The button is given an orange color, its edges rounded, some padding added and separation from */
+  position: relative;
+  float: unset;
+  /* The element is positioned and floating left unset */
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
+}
