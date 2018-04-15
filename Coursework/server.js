@@ -32,7 +32,7 @@ MongoClient.connect(url, function(error, database) {
   //Telling the app to listen on port 8080
   console.log('8080 is the magic port.');
   //Displaying a message in the console
-}
+});
 
 //-------------------- GET ROUTES --------------------
 
