@@ -12,6 +12,9 @@ body {
   width: 90%;
   background-color: #1C1F24;
 	/* Everything within the body tag will have a max width of 90% of the page and the background is a dark blue-y grey */
+	margin-left: 5%;
+	margin-right: 5%;
+	/* Making the body centralised */
 }
 
 /* ---------- HEADER ---------- */
