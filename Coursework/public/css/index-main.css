@@ -155,8 +155,8 @@ i {
   background-color: #FFFFFF !important;
   /* The width of this now fills the whole browser window, nothing can float around it and it is white */
   padding: 5%;
-  margin: none;
-  /* Padding added the top, right/left and bottom */
+  margin: auto;
+  /* Padding added the top, right/left and bottom, removing margin */
 }
 
 h2 {
