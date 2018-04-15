@@ -1,0 +1,48 @@
+main {
+  clear: both;
+  margin: 15%;
+  /* No elements are allowed to float within the main element and it has a margin around it of 15% */
+}
+
+/* ---------- FORM ---------- */
+
+h2 {
+  font-size: 4em;
+  color: #AB0000;
+  width: auto;
+  /* The h2 tags have a red text colour, a set text size and a browser calculated width */
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
+}
+
+.button {
+  background-color: #D75813;
+  border-radius: 30px;
+  padding: 13px 25px;
+  margin-top: 3%;
+  /* The button is given an orange color, its edges rounded, some padding added and separation from */
+  clear: both;
+  float: left;
+  /* No items are allowed to float around it and it floats to the left of its containing element */
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #D75813;
+  /* When the button is hovered over it becomes transparent and the text becomes orange */
+}
+
+hr {
+  width: 75%;
+  /* The line will take 75% of its parent element */
+}
