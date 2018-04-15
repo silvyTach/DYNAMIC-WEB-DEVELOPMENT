@@ -160,6 +160,7 @@ i {
   padding: 5%;
   margin: auto;
   /* Padding added the top, right/left and bottom, removing margin */
+  float: left;
 }
 
 h2 {
