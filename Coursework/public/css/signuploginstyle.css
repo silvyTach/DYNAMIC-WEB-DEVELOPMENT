@@ -12,7 +12,7 @@ h2 {
   font-size: 4em;
   color: #AB0000;
   width: auto;
-  margin: auto;
+  margin: 5%;
   text-align: center;
   /* The h2 tags have a red text colour, a set text size and a browser calculated width */
 }
