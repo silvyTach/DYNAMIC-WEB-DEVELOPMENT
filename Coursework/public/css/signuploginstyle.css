@@ -13,6 +13,7 @@ h2 {
   color: #AB0000;
   width: auto;
   margin: auto;
+  text-align: center;
   /* The h2 tags have a red text colour, a set text size and a browser calculated width */
 }
 
