@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('public'));
 //Looking in the public folder for static files
 app.use(session({
-  secret: 'example';
+  secret: 'example'
   //Telling express we're using sessions
 }));
 var db;
