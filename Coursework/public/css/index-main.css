@@ -154,8 +154,8 @@ i {
   clear: both;
   background-color: #FFFFFF !important;
   /* The width of this now fills the whole browser window, nothing can float around it and it is white */
-  margin: none;
-  /* Changing the margin of the white boxes */
+  padding: 5%;
+  /* Padding added the top, right/left and bottom */
 }
 
 h2 {
