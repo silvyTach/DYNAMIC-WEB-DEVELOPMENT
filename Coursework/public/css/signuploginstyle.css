@@ -6,6 +6,8 @@ main {
 
 /* ---------- FORM ---------- */
 
+/* ----- General ----- */
+
 h2 {
   font-size: 4em;
   color: #AB0000;
@@ -46,3 +48,12 @@ hr {
   width: 75%;
   /* The line will take 75% of its parent element */
 }
+
+#login, #signup {
+  border: 1px solid green;
+  /* Adding a border so I can see where each element starts and ends */
+}
+
+/* ----- Log In ----- */
+
+/* ----- Sign Up ----- */
