@@ -1,37 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- please work so i don't have to die -->
-    <meta charset="utf-8">
-    <title>Where's my movie</title>
-    <link rel="stylesheet" href="header and footer.css">
-    <link rel="stylesheet" href="signuploginstyle.css">
-    <style type="text/css">@import url("unsemantic-grid-responsive-tablet.css");</style>
+    <% include ../partials/head.ejs %>
+    <!-- Using ejs to import the head code -->
   </head>
 
   <body>
     <header>
-      <div id="logo">
-        <!-- need to change the logo -->
-        <a href="index.html"><img id="logo-img" src="black-logo.png"  alt="Website's logo" width="13%"></a>
-      </div>
-
-      <!-- search box -->
-      <section class="grid-20 tablet-grid-15 mobile-grid-100" id= "search">
-        <input id="searchBox" type="search" placeholder="Search">
-        <img  id="searchIcon" src= "lupa-orange.png" alt="Search Icon" />
-      </section>
-      <!-- end of search box -->
-
-      <!-- menu -->
-      <navbar>
-        <ul>
-          <li><a id="menu-item" href="library.html">Library</a></li>
-          <li><a id="menu-item" href="signuplogin.html">Log in</a></li>
-          <li><a id="menu-item" href="signuplogin.html">Sign up</a></li>
-        </ul>
-      <navbar>
-      <!-- end of menu -->
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
     </header>
 
     <main>
@@ -102,7 +79,7 @@
             <br/>
             <input type="password" class="loginsignup" id="signupformpassword1" placeholder="Password">
             <br/>
-            <br
+            <br>
             <input type="password" class="loginsignup" id="signupformpassword2" placeholder="Confirm Password">
             <br/>
             <br/>
@@ -122,32 +99,11 @@
     </main>
 
     <footer class="grid-100 tablet-grid-100 footer">
-      <ul id="footer-menu" class="prefix-25 grid-50 tablet-prefix-25 tablet-grid-50 mobile-prefix-5 mobile-grid-90">
-        <li><a href="#" class="footer-menu">Accessibility</a></li>
-        <li>|</li>
-        <li><a href="#" class="footer-menu">Privacy</a></li>
-        <li>|</li>
-        <li><a href="#" class="footer-menu">Cookie Preferences</a></li>
-        <li>|</li>
-        <li><a href="#" class="footer-menu">Sitemap</a></li>
-        <li>|</li>
-        <li><a href="#" class="footer-menu">Copyright</a></li>
-      </ul>
-
-      <section id= "socialMediaLogos" class="grid-25 tablet-grid-25 mobile-grid-100 hide-on-mobile">      <!-- Logos of social media -->
-        <a href="#"><img id="inst" class="mobile-grid-33" src="insta-logo-red.png" alt="Instagram Logo" /></a>
-        <a href="#"><img id="tw" class= "mobile-grid-33" src="twitter-logo-red.png" alt="Twitter Logo" /></a>
-        <a href="#"><img id="fb" class= "mobile-grid-33" src="fb-logo-red.png" alt="Facebook Logo" /></a>
-      </section>
-
-      <div class = "grid-100 tablet-grid-100 footer">
-        <div id="copyright">
-          <p>© 2018 Where is my Movie. All Rights Reserved. Designed by Group 8</p>
-        </div>
-        <div>
-          <a href="signuplogin.html" id="back-to-top">Back to top ↑</a>
-        </div>
-      </div>
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
     </footer>
-  </body>
+
+    <script src="slideshowscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
 </html>

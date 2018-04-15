@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head.ejs %>
+    <!-- Using ejs to import the head code -->
+  </head>
+
+  <body>
+    <header>
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
+    </header>
+
+      <main>
+        <!-- Top  5 in the user's location -->
+        <section id="top5">
+          <!-- Left slideshow arrow -->
+          <div id="left" class="arrows">
+            <img onclick="plusDivs(-1)" src= "left-arrow.png">
+          </div>
+
+          <!-- Top 5 #1 -->
+          <div class="slideshow">
+            <div class="text">
+            <h1 class="title">Guardians of the Galaxy</h1>
+            <ul class="info">
+              <li class="rating">⭐️ 7.4 <i> /10</i></li>
+              <li class="duration">Run Time: 2h 21'</li>
+              <li class="age">Rated: PG-13</li>
+            </ul>
+            <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum,
+              ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda,
+              nec ex choro omnium sadipscing.</p>
+              <div><a href="#" class="button" tabindex="-1">more details</a></div>
+          </div>
+          <div class="image">
+            <img src="poster0.jpg" alt="Poster">
+          </div>
+          </div>
+
+          <!-- Top 5 #2 -->
+          <div class="slideshow">
+            <div class="text">
+            <h1 class="title">Game of Thrones</h1>
+            <ul class="info">
+              <li class="rating">⭐️ 7.4 <i> /10</i></li>
+              <li class="duration">Run Time: 2h 21'</li>
+              <li class="age">Rated: PG-13</li>
+            </ul>
+            <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum,
+              ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda,
+              nec ex choro omnium sadipscing.</p>
+              <div><a href="#" class="button" tabindex="-1">more details</a></div>
+          </div>
+          <div class="image">
+            <img src="poster0.jpg" alt="Poster">
+          </div>
+          </div>
+
+          <!-- Top 5 #3 -->
+          <div class="slideshow">
+            <div class="text">
+            <h1 class="title">Example 3</h1>
+            <ul class="info">
+              <li class="rating">⭐️ 7.4 <i> /10</i></li>
+              <li class="duration">Run Time: 2h 21'</li>
+              <li class="age">Rated: PG-13</li>
+            </ul>
+            <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum,
+              ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda,
+              nec ex choro omnium sadipscing.</p>
+              <div><a href="#" class="button" tabindex="-1">more details</a></div>
+          </div>
+          <div class="image">
+            <img src="poster0.jpg" alt="Poster">
+          </div>
+          </div>
+
+          <!-- Top 5 #4 -->
+          <div class="slideshow">
+            <div class="text">
+            <h1 class="title">Another Example</h1>
+            <ul class="info">
+              <li class="rating">⭐️ 7.4 <i> /10</i></li>
+              <li class="duration">Run Time: 2h 21'</li>
+              <li class="age">Rated: PG-13</li>
+            </ul>
+            <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum,
+              ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda,
+              nec ex choro omnium sadipscing.</p>
+              <div><a href="#" class="button" tabindex="-1">more details</a></div>
+          </div>
+          <div class="image">
+            <img src="poster0.jpg" alt="Poster">
+          </div>
+          </div>
+
+          <!-- Top 5 #5 -->
+          <div class="slideshow">
+            <div class="text">
+            <h1 class="title">Last example, Top 5</h1>
+            <ul class="info">
+              <li class="rating">⭐️ 7.4 <i> /10</i></li>
+              <li class="duration">Run Time: 2h 21'</li>
+              <li class="age">Rated: PG-13</li>
+            </ul>
+            <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum,
+              ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda,
+              nec ex choro omnium sadipscing.</p>
+              <div><a href="#" class="button" tabindex="-1">more details</a></div>
+          </div>
+          <div class="image">
+            <img src="poster0.jpg" alt="Poster">
+          </div>
+          </div>
+          <!-- Right slideshow arrow -->
+
+          <div id="right" class="arrows">
+            <img onclick="plusDivs(1)" src= "right-arrow.png">
+          </div>
+        </section>
+      </main>
+
+      <section id="white">
+        <!-- Top 5 on Netflix -->
+        <section class=" provider" id="netflix">
+          <h2>Netflix <i>#Top5</i></h2>
+          <section class="posters">
+            <img src="poster1.jpg" alt="Poster 1">
+            <img src="poster2.jpg" alt="Poster 2">
+            <img src="poster3.jpg" alt="Poster 3">
+            <img src="poster4.jpg" alt="Poster 4">
+            <img src="poster5.jpg" alt="Poster 5">
+          </section>
+          <a href="#">view all ></a>
+        </section>
+
+        <!-- Top 5 on Netflix -->
+        <section class="grid-container">
+          <section class="top5byservice" id="top5netflix">
+
+            <section id="netflixfilters" class="top5filters">
+            </section>
+            <section id="netflixtop5" class="top5s">
+            </section>
+          </section>
+        </section>
+
+        <!-- Top 5 on Amazon Prime -->
+        <section id="top5netflix">
+        </section>
+
+        <!-- Top 5 on Hulu -->
+        <section id="top5netflix">
+        </section>
+
+      </section>
+
+
+
+
+      <footer class="grid-100 tablet-grid-100 footer">
+        <% include ../partials/header.ejs %>
+        <!-- Using ejs to import the header code -->
+      </footer>
+
+      <script src="slideshowscript.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </body>
+</html>
