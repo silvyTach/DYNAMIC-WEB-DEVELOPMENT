@@ -1,7 +1,10 @@
 main {
   clear: both;
-  margin: 15%;
   /* No elements are allowed to float within the main element and it has a margin around it of 15% */
+}
+
+#top5 {
+  margin: 15%;
 }
 
 /* ---------- SLIDESHOW ---------- */
@@ -154,8 +157,10 @@ i {
   clear: both;
   background-color: #FFFFFF !important;
   /* The width of this now fills the whole browser window, nothing can float around it and it is white */
+  padding: 5%;
   margin: auto;
-  /* Changing the margin of the white boxes */
+  /* Padding added the top, right/left and bottom, removing margin */
+  float: left;
 }
 
 h2 {
