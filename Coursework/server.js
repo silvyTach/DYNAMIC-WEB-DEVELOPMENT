@@ -87,6 +87,10 @@ app.post('/login', function(req, res) {
       //If the password is correct for the existing username, the session is labelled as logged inspect
       res.redirect('/library');
       //The user is redirected to their library
+    } else {
+      res.redirect('/login');
+      return;
+      //If there is no result matching the username, a new login page is generated
     }
   };
 });
