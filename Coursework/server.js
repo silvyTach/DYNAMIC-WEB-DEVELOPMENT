@@ -9,7 +9,7 @@ const app = express();
 app.set('view engine', 'ejs');
 //Setting the view engine to ejs
 app.use(bodyParser.urlencoded({
-  extended: true;
+  extended: true
   //Using the body-parser for post data
 }));
 app.use(express.static('public'));
