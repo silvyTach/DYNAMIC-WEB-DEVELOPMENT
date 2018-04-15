@@ -70,7 +70,7 @@ app.post('/login', function(req, res) {
   var uname = req.body.loginformusername;
   var pword = req.body.loginformpassword;
   //Getting the username and password entered by the user
-  db.collection('users').findOne({"username":uname}) function (error, result) {
+  db.collection('users').findOne({"username":uname}), function (error, result) {
     if (error) {
       throw error;
       //If there's an error, throw it
