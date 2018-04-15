@@ -156,6 +156,11 @@ i {
   /* The width of this now fills the whole browser window, nothing can float around it and it is white */
 }
 
+h2 {
+  display: inline;
+  /* h2 tags are displayed as inline elements */
+}
+
 h2, .provider a {
   color: #AB0000;
   /* The h2 tags and any links in the provider class have a red text colour */
