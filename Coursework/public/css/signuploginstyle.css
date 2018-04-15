@@ -18,7 +18,7 @@ h2 {
 }
 
 input {
-  width: 100%;
+  width: auto;
   padding: 12px 20px;
   /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
 }
@@ -58,6 +58,7 @@ hr {
   /* Making everything in the centre */
   box-sizing: border-box;
   /* Including the border in any floating */
+  position: relative;
 }
 
 #login form, #signup form {
