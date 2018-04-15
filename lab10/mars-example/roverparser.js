@@ -25,7 +25,7 @@
   {
     output+="<tr><td>" + photos[i].rover.name + "</td><td>"
     + photos[i].camera.full_name + "</td><td>"
-    + "<img src=&ldquo;" + photos[i].img_src + "&rdquo;></td><td>"
+    + "<img src=" + photos[i].img_src + "></td><td>"
     + photos[i].rover.launch_date + "</td></tr>";
   }
   output+="</tbody></table>";
