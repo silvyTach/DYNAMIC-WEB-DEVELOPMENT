@@ -1,5 +1,5 @@
 {"_id":1,
   "email":"1600644@rgu.ac.uk",
-  "login":{"username":"whitegorilla872","password":"butch"},
+  "login":{"username":"testuser","password":"1234password"},
   "library":{}
 }
