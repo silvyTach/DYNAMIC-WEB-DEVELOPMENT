@@ -88,5 +88,5 @@ app.post('/login', function(req, res) {
       res.redirect('/library');
       //The user is redirected to their library
     }
-  });
+  };
 });
