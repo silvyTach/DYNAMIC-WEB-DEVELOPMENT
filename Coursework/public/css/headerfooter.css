@@ -9,7 +9,6 @@
 }
 
 body {
-  width: 90%;
   background-color: #1C1F24;
 	/* Everything within the body tag will have a max width of 90% of the page and the background is a dark blue-y grey */
 	margin-left: 5%;
@@ -23,6 +22,7 @@ header {
   display: inline;
   clear: none;
 	/* The header area is displayed as an inline element and allows elements to float on both sizes */
+	width: 90%;
 }
 
 /* ----- Logo area ----- */
