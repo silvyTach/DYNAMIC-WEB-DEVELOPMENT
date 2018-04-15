@@ -1,7 +1,10 @@
 main {
   clear: both;
-  margin: 15%;
   /* No elements are allowed to float within the main element and it has a margin around it of 15% */
+}
+
+#top5 {
+  margin: 15%;
 }
 
 /* ---------- SLIDESHOW ---------- */
