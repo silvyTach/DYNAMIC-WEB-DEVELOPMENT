@@ -73,6 +73,11 @@ hr {
   /* Including the border in any floating */
 }
 
+.loginsignupgrid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /* ----- Log In ----- */
 
 /* ----- Sign Up ----- */

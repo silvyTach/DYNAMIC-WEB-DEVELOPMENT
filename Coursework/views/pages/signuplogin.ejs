@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <% include ../partials/head.ejs %>
-    <!-- Using ejs to import the head code -->
+    <!-- Using ejs to import the head code  -->
     <link rel="stylesheet" type="text/css" href="/css/signuploginstyle.css">
     <!-- Linking the stylesheet for the index page -->
   </head>
@@ -21,7 +21,7 @@
         <!-- Start of container -->
         <div class="grid-container">
             <!-- Start of whole form -->
-            <div class="grid-100 mobile-grid-100 tablet-grid-100">
+            <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
 
               <form id="loginform" action="/login" method="POST">
                 <input type="text" class="loginsignup" name="loginformusername" placeholder="Username or Email Address">
@@ -44,21 +44,24 @@
       <section id="signup">
         <!-- Identifying the form with a header -->
         <h2>Sign Up</h2>
-        <!-- Start of whole form -->
-        <section class="grid-100 mobile-grid-100 tablet-grid-100">
+        <!-- Start of container -->
+        <div class="grid-container">
+            <!-- Start of whole form -->
+            <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
 
-          <form id="signupform" method="post">
-            <input type="text" class="loginsignup" id="signupformusername" placeholder="Username">
-            <input type="text" class="loginsignup" id="signupformemail1" placeholder="Email Address">
-            <input type="text" class="loginsignup" id="signupformemail2" placeholder="Confirm Email Address">
-            <input type="password" class="loginsignup" id="signupformpassword1" placeholder="Password">
-            <input type="password" class="loginsignup" id="signupformpassword2" placeholder="Confirm Password">
-            <button type="submit" class="button" id="signupformsubmit">Sign Up</button>
-          </form>
+              <form id="signupform" action="/signup" method="post">
+                <input type="text" class="loginsignup" name="signupformusername" placeholder="Username">
+                <input type="text" class="loginsignup" name="signupformemail1" placeholder="Email Address">
+                <input type="text" class="loginsignup" name="signupformemail2" placeholder="Confirm Email Address">
+                <input type="password" class="loginsignup" name="signupformpassword1" placeholder="Password">
+                <input type="password" class="loginsignup" name="signupformpassword2" placeholder="Confirm Password">
+                <button type="submit" class="button" name="signupformsubmit">Sign Up</button>
+              </form>
 
-        <!-- End of whole form -->
-        </section>
-
+            <!-- End of whole form -->
+            </div>
+        <!-- End of container -->
+        </div>
       <!-- End of sign up section -->
       </section>
 
