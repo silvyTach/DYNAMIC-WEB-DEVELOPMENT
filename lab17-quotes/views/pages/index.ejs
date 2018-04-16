@@ -17,8 +17,11 @@
       <h2>Quotes!</h2>
       <ul>
       <% quotes.forEach(function(result) { %>
+      <li> <h3>
+      <%= result.name %>
+    </h3></li>
       <li>
-      <%= result %>
+      <%= result.quote %>
       </li>
       <% }); %>
       </ul>
