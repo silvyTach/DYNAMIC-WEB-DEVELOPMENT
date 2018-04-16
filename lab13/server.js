@@ -43,3 +43,5 @@ if(div == "") {
 }
     res.send(resp); 
 });
+
+app.use(express.static('public'));
