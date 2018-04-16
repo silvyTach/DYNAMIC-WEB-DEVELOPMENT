@@ -44,21 +44,24 @@
       <section id="signup">
         <!-- Identifying the form with a header -->
         <h2>Sign Up</h2>
-        <!-- Start of whole form -->
-        <section class="grid-100 mobile-grid-100 tablet-grid-100">
+        <!-- Start of container -->
+        <div class="grid-container">
+            <!-- Start of whole form -->
+            <div class="grid-100 mobile-grid-100 tablet-grid-100">
 
-          <form id="signupform" method="post">
-            <input type="text" class="loginsignup" id="signupformusername" placeholder="Username">
-            <input type="text" class="loginsignup" id="signupformemail1" placeholder="Email Address">
-            <input type="text" class="loginsignup" id="signupformemail2" placeholder="Confirm Email Address">
-            <input type="password" class="loginsignup" id="signupformpassword1" placeholder="Password">
-            <input type="password" class="loginsignup" id="signupformpassword2" placeholder="Confirm Password">
-            <button type="submit" class="button" id="signupformsubmit">Sign Up</button>
-          </form>
+              <form id="signupform" method="post">
+                <input type="text" class="loginsignup" name="signupformusername" placeholder="Username">
+                <input type="text" class="loginsignup" name="signupformemail1" placeholder="Email Address">
+                <input type="text" class="loginsignup" name="signupformemail2" placeholder="Confirm Email Address">
+                <input type="password" class="loginsignup" name="signupformpassword1" placeholder="Password">
+                <input type="password" class="loginsignup" name="signupformpassword2" placeholder="Confirm Password">
+                <button type="submit" class="button" name="signupformsubmit">Sign Up</button>
+              </form>
 
-        <!-- End of whole form -->
-        </section>
-
+            <!-- End of whole form -->
+            </div>
+        <!-- End of container -->
+        </div>
       <!-- End of sign up section -->
       </section>
 
