@@ -83,8 +83,6 @@ app.post('/login', function(req, res) {
     }
 
     if (result.password == pword) {
-      req.session.loggedin = true;
-      //If the password is correct for the existing username, the session is labelled as logged inspect
       res.redirect('/library');
       //The user is redirected to their library
     } else {
