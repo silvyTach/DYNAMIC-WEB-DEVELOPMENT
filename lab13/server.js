@@ -28,5 +28,16 @@ var mul = req.query.mul;
 var sub = req.query.sub;
     var div = req.query.div;
     var add = req.query.add;
- res.send("X + Y="+(x+y) + " mul: " + mul + " sub: " + sub + " div: " + div + " add: " + add);
+if(mul == "") {
+ res.send("X x Y="+(x*y)); 
+}
+if(add == "") {
+ res.send("X + Y="+(x+y)); 
+}
+if(sub == "") {
+ res.send("X - Y="+(x-y)); 
+}
+if(div == "") {
+ res.send("X / Y="+(x/y)); 
+}
 });
