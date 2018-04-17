@@ -31,7 +31,7 @@ function addResults(jsondata) {
   //Logging the JSON data to allow for data mining
   var htmlstring = "";
   //Creating a String to contain the HTML to inject
-  if (jsondata) {
+  if (jsondata.length > 0) {
     for (var i = 0; i < 10; i++) {
       var title = jsondata.Search[i].Title;
       var poster = jsondata.Search[i].Poster;
