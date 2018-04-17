@@ -21,7 +21,7 @@ input {
   display: inline-block;
   padding: 12px 20px;
   margin-bottom: 2%;
-  /* width: 100%; */
+  width: 100%;
   margin-left: 25%;
   box-sizing: border-box;
   text-align: center;
@@ -65,6 +65,7 @@ hr {
   box-sizing: border-box;
   /* Including the border in any floating */
   position: relative;
+  margin-left: 25%;
 }
 
 #login form, #signup form {
@@ -75,7 +76,6 @@ hr {
   box-sizing: border-box;
   /* Including the border in any floating */
   border-radius:20px;
-  background-color: #FFFFFF;
 }
 
 .loginsignupgrid {
