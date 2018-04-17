@@ -104,7 +104,7 @@ i {
 
 /* ----- Boreders for fixing positions ----- */
 
-#movieshowinfo, #text, #poster, #buttons, #trailer {
+#text, #poster, .resultbox {
   border: 1px solid green;
   /* Adding a border so I can see where each element starts and ends */
   box-sizing: border-box;
