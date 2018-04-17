@@ -11,7 +11,7 @@ main {
 .text, .image, .title {
   box-sizing: border-box;
   /* Each of these elements will have its border included in a float */
-  width: 90%;
+  /*width: 90%;
   /* They all take 90% of their parent element's width */
   padding: 0.5%;
   /*margin: 0% 0% 2%;
