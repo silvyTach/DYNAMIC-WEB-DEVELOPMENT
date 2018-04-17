@@ -111,6 +111,6 @@ i {
 }
 
 #poster {
-  float: none;
-  width: 100%;
+  float: right;
+  /* width: 100%; */
 }
