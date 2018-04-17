@@ -85,6 +85,11 @@ i {
   width: 100%;
 }
 
+.streamservice {
+  background-color: #AB0000;
+  /* Changing the button color for the streaming services */
+}
+
 .button:hover {
   background-color: transparent;
   color: #D75813;
