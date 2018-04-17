@@ -8,7 +8,7 @@ main {
 
 /* ----- General ----- */
 
-#text, .title {
+.text, .title {
   box-sizing: border-box;
   /* Each of these elements will have its border included in a float */
   /*width: 90%;
@@ -20,13 +20,13 @@ main {
 
 /* ----- Text ----- */
 
-#text {
+.text {
   float: left;
   width: 95%;
   /* All text within the slideshow will occupy 75% of the width and float left */
 }
 
-#text h1 {
+.text h1 {
   font-size: 5em;
   color: #FFFFFF;
   /* The headers of the slideshow are made white and given a font size */
@@ -85,32 +85,21 @@ i {
   width: 100%;
 }
 
-.streamservice {
-  background-color: #FBC02D;
-  /* Changing the button color for the streaming services */
-}
-
 .button:hover {
   background-color: transparent;
   color: #D75813;
   /* When the button is hovered over it becomes transparent and the text becomes orange */
 }
 
-.streamservice:hover {
-  background-color: transparent;
-  color: #FBC02D;
-  /* When the button is hovered over it becomes transparent and the text becomes yellow */
-}
-
 /* ----- Boreders for fixing positions ----- */
 
-#text, #poster, .resultbox {
+.text, .poster, .resultbox {
   border: 1px solid green;
   /* Adding a border so I can see where each element starts and ends */
   box-sizing: border-box;
 }
 
-#poster {
+.poster {
   float: right;
   width: 100%;
 }
