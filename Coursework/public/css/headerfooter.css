@@ -166,6 +166,9 @@ navbar li a:hover{
 /* mobile  */
 @media all and (max-width: 767px) {
 	navbar {
-		font-size: 20%;
+		font-size: medium;
+	}
+	#logo-img {
+		width: 70%;
 	}
 }

@@ -12,15 +12,17 @@ header {
 	margin: 5px 10% 5% 10%;
 	display: inline;
 }
-/* mobile  */
-@media only screen and (max-width: 767px) {
-	.logo, navbar{
-		display: inline-block;
-		width: 100%;
-		clear: both;
-	}
 
+/* mobile  */
+@media all and (max-width: 767px) {
+	navbar {
+		font-size: 20%;
+	}
+	#logo-img{
+	  width:70%;
+	}
 }
+
 #logo-img{
   display: inline-block;
   float: left;
