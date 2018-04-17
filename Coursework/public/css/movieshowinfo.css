@@ -111,3 +111,11 @@ i {
   color: #D75813;
   /* When the button is hovered over it becomes transparent and the text becomes orange */
 }
+
+/* ----- Boreders for fixing positions ----- */
+
+#movieshowinfo, #text, #images, #buttons, #trailer {
+  border: 1px solid green;
+  /* Adding a border so I can see where each element starts and ends */
+  box-sizing: border-box;
+}
