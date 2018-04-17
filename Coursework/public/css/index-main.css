@@ -184,6 +184,12 @@ h2, .provider a {
   /* Images within the provider class have some padding added to the left */
 }
 
+.posters {
+    box-sizing: content-box;
+    float: left;
+    width: 20%;
+}
+
 .poster-title {
   position: relative;
   display: inline-block;
