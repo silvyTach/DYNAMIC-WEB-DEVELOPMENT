@@ -96,6 +96,12 @@ i {
   /* When the button is hovered over it becomes transparent and the text becomes orange */
 }
 
+.streamservice:hover {
+  background-color: transparent;
+  color: #FBC02D;
+  /* When the button is hovered over it becomes transparent and the text becomes yellow */
+}
+
 /* ----- Boreders for fixing positions ----- */
 
 #movieshowinfo, #text, #poster, #buttons, #trailer {
