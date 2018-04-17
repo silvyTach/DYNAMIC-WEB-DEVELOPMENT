@@ -164,7 +164,7 @@ navbar li a:hover{
 }
 
 /* mobile  */
-@media only screen and (max-width: 767px) {
+@media all and (max-width: 767px) {
 	navbar {
 		font-size: 20%;
 	}
