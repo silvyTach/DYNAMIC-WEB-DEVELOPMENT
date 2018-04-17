@@ -8,7 +8,7 @@ main {
 
 /* ----- General ----- */
 
-.text, .image, .title {
+#text, .title {
   box-sizing: border-box;
   /* Each of these elements will have its border included in a float */
   /*width: 90%;
@@ -20,13 +20,13 @@ main {
 
 /* ----- Text ----- */
 
-.text {
+#text {
   float: left;
   width: 95%;
   /* All text within the slideshow will occupy 75% of the width and float left */
 }
 
-.text h1 {
+#text h1 {
   font-size: 5em;
   color: #FFFFFF;
   /* The headers of the slideshow are made white and given a font size */
