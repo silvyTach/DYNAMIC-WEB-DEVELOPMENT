@@ -1,9 +1,6 @@
 main {
   clear: both;
   /* No elements are allowed to float within the main element and it has a margin around it of 15% */
-}
-
-body {
   margin: 8px;
 }
 
