@@ -33,7 +33,7 @@ main {
 }
 
 .info, .plot {
-  width: 80%;
+  /*width: 80%;
   /* The info about the movie/show and the plot will only occupy 80% of the text section */
 }
 
