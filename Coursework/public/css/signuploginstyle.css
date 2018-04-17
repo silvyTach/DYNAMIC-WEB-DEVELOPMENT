@@ -9,7 +9,7 @@ main {
 /* ----- General ----- */
 
 h2 {
-  font-size: large;
+  font-size: xx-large;
   color: #AB0000;
   width: auto;
   margin: 5%;
@@ -29,6 +29,7 @@ input {
 
 .button {
   background-color: #D75813;
+  display: inline-block;
   border-radius: 30px;
   border-color: transparent;
   padding: 13px 25px;
