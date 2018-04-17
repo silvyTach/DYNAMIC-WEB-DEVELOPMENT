@@ -4,47 +4,36 @@ main {
   /* No elements are allowed to float within the main element and it has a margin around it of 15% */
 }
 
-/* ---------- SLIDESHOW ---------- */
+/* ---------- SLIDESHOW CREATING NEW BRANCH---------- */
 
 /* ----- General ----- */
 
-.slideshow {
-  /* This needs renamed/repurposed for this page */
-  float: left;
-  width: 89%;
-  /* It floats to the left (technically this is obsolete?) and takes up 89% of the containing element's width */
-}
-
-.slideshow, .poster {
-  /* border: solid green; */
-}
-
-.text, .image, .title {
+#text, .title {
   box-sizing: border-box;
   /* Each of these elements will have its border included in a float */
-  width: 90%;
+  /*width: 90%;
   /* They all take 90% of their parent element's width */
   padding: 0.5%;
-  margin: 0% 0% 2%;
+  /*margin: 0% 0% 2%;
   /* They all have internal padding and external margins added */
 }
 
 /* ----- Text ----- */
 
-.text {
+#text {
   float: left;
-  width: 75%;
+  width: 95%;
   /* All text within the slideshow will occupy 75% of the width and float left */
 }
 
-.text h1 {
+#text h1 {
   font-size: 5em;
   color: #FFFFFF;
   /* The headers of the slideshow are made white and given a font size */
 }
 
 .info, .plot {
-  width: 80%;
+  /*width: 80%;
   /* The info about the movie/show and the plot will only occupy 80% of the text section */
 }
 
@@ -76,26 +65,15 @@ i {
 
 /* ----- Images ----- */
 
-.image {
-  float: right;
-  width: 25%;
-  /* The image will take up 25% of the slide and float to the right */
-}
-.image img{
-  float: right;
-  /* The image itself will float to the right within its container */
-}
-
 /* ----- Button ----- */
 
 .button {
   background-color: #D75813;
   border-radius: 30px;
+  border-color: transparent;
   padding: 13px 25px;
   margin-top: 3%;
   /* The button is given an orange color, its edges rounded, some padding added and separation from */
-  clear: both;
-  float: left;
   /* No items are allowed to float around it and it floats to the left of its containing element */
   font-weight: bold;
   color: #FFFFFF;
@@ -103,10 +81,36 @@ i {
   text-transform: uppercase;
   text-decoration: none;
   /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
+  display: inline-block;
+  width: 100%;
+}
+
+.streamservice {
+  background-color: #FBC02D;
+  /* Changing the button color for the streaming services */
 }
 
 .button:hover {
   background-color: transparent;
   color: #D75813;
   /* When the button is hovered over it becomes transparent and the text becomes orange */
+}
+
+.streamservice:hover {
+  background-color: transparent;
+  color: #FBC02D;
+  /* When the button is hovered over it becomes transparent and the text becomes yellow */
+}
+
+/* ----- Boreders for fixing positions ----- */
+
+#movieshowinfo, #text, #poster, #buttons, #trailer {
+  border: 1px solid green;
+  /* Adding a border so I can see where each element starts and ends */
+  box-sizing: border-box;
+}
+
+#poster {
+  float: none;
+  width: 100%;
 }
