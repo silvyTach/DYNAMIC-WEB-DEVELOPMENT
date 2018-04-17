@@ -68,7 +68,7 @@ i {
 /* ----- Button ----- */
 
 .button {
-  background-color: #FDD835;
+  background-color: #D75813;
   border-radius: 30px;
   border-color: transparent;
   padding: 13px 25px;
@@ -86,7 +86,7 @@ i {
 }
 
 .streamservice {
-  background-color: #D75813;
+  background-color: #FDD835;
   /* Changing the button color for the streaming services */
 }
 
