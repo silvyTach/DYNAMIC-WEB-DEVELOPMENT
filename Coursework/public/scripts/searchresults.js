@@ -51,7 +51,7 @@ function addResults(jsondata) {
     htmlstring += '    </div>' + '\n';
     htmlstring += '  </div>' + '\n';
     htmlstring += '\n';
-    htmlstring += '  <div class="grid-20 ">' + '\n';
+    htmlstring += '  <div class="grid-20">' + '\n';
     htmlstring += '    <img class="poster" src="' + poster + '" alt = "Poster">' + '\n';
     htmlstring += '  </div>' + '\n';
     htmlstring += '</div>' + '\n';
