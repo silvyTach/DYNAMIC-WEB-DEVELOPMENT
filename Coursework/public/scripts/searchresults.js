@@ -36,8 +36,8 @@ function addResults(jsondata) {
     var poster = jsondata.Search[i].Poster;
     //Storing the parameters of each result in a variable
 
-    htmlstring += '<div class="grid-100 grid-parent resultbox result">' + '\n';
-    htmlstring += '  <div class="grid-80 resultbox">' + '\n';
+    htmlstring += '<div class="grid-100 grid-parent result">' + '\n';
+    htmlstring += '  <div class="grid-80">' + '\n';
     htmlstring += '    <div class="text">' + '\n';
     htmlstring += '      <h1 class="title">' + title + '</h1>' + '\n';
     htmlstring += '      <ul class="info">' + '\n';
@@ -51,7 +51,7 @@ function addResults(jsondata) {
     htmlstring += '    </div>' + '\n';
     htmlstring += '  </div>' + '\n';
     htmlstring += '\n';
-    htmlstring += '  <div class="grid-20 resultbox">' + '\n';
+    htmlstring += '  <div class="grid-20 ">' + '\n';
     htmlstring += '    <img class="poster" src="' + poster + '" alt = "Poster">' + '\n';
     htmlstring += '  </div>' + '\n';
     htmlstring += '</div>' + '\n';
