@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News site</title>
+
+</head>
+<body>
+
+  <div id="header">
+    Welcome on my news site, <span class="username"> </span>
+  </div>
+  <div id="container">
+    Loading ...
+  </div>
+  <div id="footer">
+    Copyright 2015, My news site.
+  </div>
+
+
+  <script>
+    $(document).ready(function(){
+
+      $("span.username").text("Ashaya Pi")
+
+
+      getNews(function(news) {
+
+        $("#container").empty()
+
+        var news_count = news.length;
+        for (var i=0;i<news_count;i++) {
+          var news_item = news[i];
+
+          $('<div>').addClass('news').attr('id',news_item.id)
+          $('.news').append($('<div>')).addClass('author').text(news_item.author)
+          $('.news').append($('<div>')).addClass('title').text(news_item.text)
+          $('.news').append($('<a>')).attr({'href':news_item.link,
+                                               'text':news_item.link
+                                              })
+          $('#container').append($('.news'))
+
+        }
+
+      })
+    })
+
+  </script>
+
+</body>
+</html>
