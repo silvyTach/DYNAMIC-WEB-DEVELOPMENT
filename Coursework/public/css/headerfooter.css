@@ -165,9 +165,7 @@ navbar li a:hover{
 
 /* mobile  */
 @media only screen and (max-width: 767px) {
-	.logo, navbar{
-		display: inline-block;
-		width: 100%;
-		clear: both;
+	navbar {
+		font-size: 20%;
 	}
 }
