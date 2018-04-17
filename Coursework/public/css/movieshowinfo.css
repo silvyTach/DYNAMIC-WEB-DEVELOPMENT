@@ -8,24 +8,13 @@ main {
 
 /* ----- General ----- */
 
-.slideshow {
-  /* This needs renamed/repurposed for this page */
-  float: left;
-  width: 89%;
-  /* It floats to the left (technically this is obsolete?) and takes up 89% of the containing element's width */
-}
-
-.slideshow, .poster {
-  /* border: solid green; */
-}
-
 .text, .image, .title {
   box-sizing: border-box;
   /* Each of these elements will have its border included in a float */
   width: 90%;
   /* They all take 90% of their parent element's width */
   padding: 0.5%;
-  margin: 0% 0% 2%;
+  /*margin: 0% 0% 2%;
   /* They all have internal padding and external margins added */
 }
 
@@ -33,7 +22,7 @@ main {
 
 .text {
   float: left;
-  width: 75%;
+  /*width: 75%;
   /* All text within the slideshow will occupy 75% of the width and float left */
 }
 
@@ -76,16 +65,6 @@ i {
 
 /* ----- Images ----- */
 
-.image {
-  float: right;
-  width: 25%;
-  /* The image will take up 25% of the slide and float to the right */
-}
-.image img{
-  float: right;
-  /* The image itself will float to the right within its container */
-}
-
 /* ----- Button ----- */
 
 .button {
@@ -112,7 +91,7 @@ i {
 
 /* ----- Boreders for fixing positions ----- */
 
-#movieshowinfo, #text, #images, #buttons, #trailer {
+#movieshowinfo, #text, #posterimage, #buttons, #trailer {
   border: 1px solid green;
   /* Adding a border so I can see where each element starts and ends */
   box-sizing: border-box;
