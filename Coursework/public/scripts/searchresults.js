@@ -7,7 +7,7 @@ $(function (){
     //Tying a listener to the submit event of the search bar
       var searchTerms = $('#searchBox').val();
       //Getting the item in the search term box
-      console.log(searchTerms);
+      console.log("Search term:" searchTerms);
       //Calling the function with the search terms as the parameter
       getResultsFromOMDb(searchTerms);
       //Calling the function with the search terms as the parameter
