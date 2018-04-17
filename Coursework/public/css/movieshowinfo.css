@@ -95,8 +95,6 @@ i {
   padding: 13px 25px;
   margin-top: 3%;
   /* The button is given an orange color, its edges rounded, some padding added and separation from */
-  clear: both;
-  float: left;
   /* No items are allowed to float around it and it floats to the left of its containing element */
   font-weight: bold;
   color: #FFFFFF;
