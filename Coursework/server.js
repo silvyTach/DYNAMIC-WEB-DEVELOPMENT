@@ -63,6 +63,11 @@ app.get('/signuplogin', function(req, res) {
   //Log in/sign up page
 });
 
+app.get('/search', function(req, res) {
+  res.render('pages/search');
+  //Log in/sign up page
+});
+
 //-------------------- POST ROUTES --------------------
 
 app.post('/login', function(req, res) {
