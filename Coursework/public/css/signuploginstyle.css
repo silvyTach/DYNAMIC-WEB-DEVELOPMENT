@@ -27,6 +27,11 @@ input {
   /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
 }
 
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+}
+
 .button {
   background-color: #D75813;
   display: inline-block;
