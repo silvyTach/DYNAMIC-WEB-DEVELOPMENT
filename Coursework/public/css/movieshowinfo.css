@@ -22,7 +22,7 @@ main {
 
 .text {
   float: left;
-  width: 90%;
+  width: 95%;
   /* All text within the slideshow will occupy 75% of the width and float left */
 }
 
