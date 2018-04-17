@@ -44,11 +44,6 @@ app.get('/', function(req, res) {
 });
 
 app.get('/library', function(req, res) {
-  if (!req.session.loggedin) {
-    res.redirect('/signuplogin');
-    return;
-    //If the user isn't logged in, they can't access the library page
-  }
   res.render('pages/library');
   //Library page
 });
@@ -63,10 +58,15 @@ app.get('/signuplogin', function(req, res) {
   //Log in/sign up page
 });
 
+app.get('/search', function(req, res) {
+  res.render('pages/search');
+  //Log in/sign up page
+});
+
 //-------------------- POST ROUTES --------------------
 
 app.post('/login', function(req, res) {
-  console.log(JSON.stringify(req.body))
+  console.log(JSON.stringify(req.body));
   var uname = req.body.loginformusername;
   var pword = req.body.loginformpassword;
   //Getting the username and password entered by the user
@@ -91,4 +91,10 @@ app.post('/login', function(req, res) {
       //If there is no result matching the username, a new login page is generated
     }
   };
+});
+
+app.post('/dosearch', function(req, res) {
+  console.log(JSON.stringify(req.body));
+  var searchterm = req.body;
+  //Getting the username and password entered by the user
 });
