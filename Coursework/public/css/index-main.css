@@ -163,10 +163,6 @@ i {
   float: left;
 }
 
-.top {
-  padding: 20px;
-}
-
 h2 {
   display: inline;
   /* h2 tags are displayed as inline elements */
@@ -186,6 +182,7 @@ h2, .provider a {
 .provider img {
   padding-left: 2.5%;
   /* Images within the provider class have some padding added to the left */
+  margin-bottom: 10px;
 }
 
 .posters {
