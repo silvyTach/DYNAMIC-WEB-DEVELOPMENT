@@ -162,13 +162,3 @@ navbar li a:hover{
 	margin-top: 2.5%;
 	/* Each icon has internal padding of 0.5% and a margin of 2.5% separating it from the element above it */
 }
-
-/* mobile  */
-@media all and (max-width: 767px) {
-	navbar {
-		font-size: medium;
-	}
-	#logo-img {
-		width: 70%;
-	}
-}
