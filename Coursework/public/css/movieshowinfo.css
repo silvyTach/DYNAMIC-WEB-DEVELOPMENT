@@ -91,6 +91,7 @@ i {
 .button {
   background-color: #D75813;
   border-radius: 30px;
+  border-color: transparent;
   padding: 13px 25px;
   margin-top: 3%;
   /* The button is given an orange color, its edges rounded, some padding added and separation from */
