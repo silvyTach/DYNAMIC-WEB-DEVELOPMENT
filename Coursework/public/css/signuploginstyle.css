@@ -26,7 +26,6 @@ input {
   border-color: transparent;
   box-sizing: border-box;
   text-align: center;
-  border-radius: 25px;
   /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
 }
 
