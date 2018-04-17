@@ -68,14 +68,7 @@ hr {
   position: relative;
 }
 
-#login form, #signup form {
-  /* border: 1px solid green; */
-  /* Adding a border so I can see where each element starts and ends */
-  margin: auto;
-  /* Making everything in the centre */
-  box-sizing: border-box;
-  /* Including the border in any floating */
-}
+
 
 .loginsignupgrid {
   padding-left: 0px;
