@@ -44,11 +44,6 @@ app.get('/', function(req, res) {
 });
 
 app.get('/library', function(req, res) {
-  if (!req.session.loggedin) {
-    res.redirect('/signuplogin');
-    return;
-    //If the user isn't logged in, they can't access the library page
-  }
   res.render('pages/library');
   //Library page
 });
