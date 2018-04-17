@@ -21,7 +21,8 @@ input {
   display: inline-block;
   padding: 12px 20px;
   margin-bottom: 2%;
-  width: 100%;
+  /* width: 100%; */
+  margin-left: 25%;
   box-sizing: border-box;
   text-align: center;
   /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
@@ -57,7 +58,7 @@ hr {
 }
 
 #login, #signup {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   /* Adding a border so I can see where each element starts and ends */
   margin-bottom: 5%;
   /* Making everything in the centre */
@@ -67,12 +68,14 @@ hr {
 }
 
 #login form, #signup form {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   /* Adding a border so I can see where each element starts and ends */
   margin: auto;
   /* Making everything in the centre */
   box-sizing: border-box;
   /* Including the border in any floating */
+  border-radius:20px;
+  background-color: #FFFFFF;
 }
 
 .loginsignupgrid {
