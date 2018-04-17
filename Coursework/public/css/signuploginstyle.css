@@ -61,7 +61,7 @@ hr {
 #login, #signup {
   /* border: 1px solid green; */
   /* Adding a border so I can see where each element starts and ends */
-  margin-top: 20%;
+  margin-top: 10%;
   /* Making everything in the centre */
   box-sizing: border-box;
   /* Including the border in any floating */
