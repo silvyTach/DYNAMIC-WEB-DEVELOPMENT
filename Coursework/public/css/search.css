@@ -82,7 +82,7 @@ i {
   text-decoration: none;
   /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
   display: inline-block;
-  width: 95%;
+  width: 100%;
 }
 
 .button:hover {
@@ -97,6 +97,10 @@ i {
   border: 1px solid green;
   /* Adding a border so I can see where each element starts and ends */
   box-sizing: border-box;
+}
+
+.moredetails {
+  width: 95%;
 }
 
 .poster {
