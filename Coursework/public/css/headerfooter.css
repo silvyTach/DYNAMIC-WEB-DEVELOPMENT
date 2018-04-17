@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 /* Importing the Comfortaa font from Google Fonts */
-@media only screen and (min-width: 768px) {
+
 /* ---------- EVERYTHING ---------- */
 
 *  {
@@ -162,7 +162,17 @@ navbar li a:hover{
 	margin-top: 2.5%;
 	/* Each icon has internal padding of 0.5% and a margin of 2.5% separating it from the element above it */
 }
+
+@media only screen and (min-width: 768px) {
+    /* For mobile phones: */
+    #logo-img {
+        width: 30%;
+    }
+		navbar {
+			font-size: x-large;
+		}
 }
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     #logo-img {
