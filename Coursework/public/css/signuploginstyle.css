@@ -9,7 +9,7 @@ main {
 /* ----- General ----- */
 
 h2 {
-  font-size: 4em;
+  font-size: large;
   color: #AB0000;
   width: auto;
   margin: 5%;
@@ -23,6 +23,7 @@ input {
   margin-bottom: 2%;
   width: 100%;
   box-sizing: border-box;
+  text-align: center;
   /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
 }
 
