@@ -182,7 +182,7 @@ h2, .provider a {
 .provider img {
   padding-left: 2.5%;
   /* Images within the provider class have some padding added to the left */
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .posters {
