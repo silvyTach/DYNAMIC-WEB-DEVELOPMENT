@@ -59,7 +59,7 @@ function addResults(jsondata) {
       htmlstring += '\n';
     } //Iteratng over the collection of results
   } else {
-    htmlstring += '<div id="errormessage">\n';
+    htmlstring += '<div class="grid-100" id="errormessage">\n';
     htmlstring += '  <h1 class="title">Oops!</h1>\n';
     htmlstring += "  <p>We couldn't find anything with that in the title. Please try again with a different search term.</p>\n";
     htmlstring += '</div>\n';
