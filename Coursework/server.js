@@ -66,7 +66,7 @@ app.get('/search', function(req, res) {
 //-------------------- POST ROUTES --------------------
 
 app.post('/login', function(req, res) {
-  console.log(JSON.stringify(req.body))
+  console.log(JSON.stringify(req.body));
   var uname = req.body.loginformusername;
   var pword = req.body.loginformpassword;
   //Getting the username and password entered by the user
@@ -91,4 +91,10 @@ app.post('/login', function(req, res) {
       //If there is no result matching the username, a new login page is generated
     }
   };
+});
+
+app.post('/dosearch', function(req, res) {
+  console.log(JSON.stringify(req.body));
+  var searchterm = req.body;
+  //Getting the username and password entered by the user
 });
