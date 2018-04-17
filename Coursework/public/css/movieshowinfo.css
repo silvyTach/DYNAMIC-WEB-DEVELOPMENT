@@ -81,6 +81,7 @@ i {
   text-transform: uppercase;
   text-decoration: none;
   /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
+  display: inline-block;
 }
 
 .button:hover {
