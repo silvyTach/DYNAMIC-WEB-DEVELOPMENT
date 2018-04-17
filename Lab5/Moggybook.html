@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--enter title. meta, css link here-->
+  <title>test</title>
   <script>
   function testResults(form) {
     //simple script to pop-up form values after submission
     //grab form element values and store as a=variables
     var username = form.username.value;
+    var breed = form.breed.value;
+    var email = form.email.value;
+    var homepage = form.homepage.value;
+    var dob = form.dob.value;
+    var about = form.about.value;
     //repeat above afor all the form elements used
 
     //complete alert message popup by appending variables
-    alert("You registered: " + username + ", ");
+    alert("You registered: " + username + ", "
+                             + breed + ", "
+                             + email + ", "
+                             + homepage + ", "
+                             + dob + ", "
+                             + about + ", "    );
   }
   </script>
 </head>
 <body>
   <h1>Moggybook!</h1>
-
-  <!--COmplete the form-->
-
   <form>
     <table border="0" cellspacing="5">
       <tr>
@@ -27,14 +34,45 @@
           <input type="text" name="username">
         </td>
       </tr>
-      <!-- use table row <tr> template beneath for other form elements-->
       <tr>
-        <td> *** element label *** </td>
-        <td> *** element input *** </td>
+        <td>Breed:</td>
+        <td>
+          <input type="text" name="breed">
+        </td>
       </tr>
-      <td> *** element label *** </td>
+      <tr>
+        <td>Email:</td>
+        <td>
+          <input type="email" name="email">
+        </td>
+      </tr>
+      <tr>
+        <td>Homepage:</td>
+        <td>
+          <input type="text" name="homepage">
+        </td>
+      </tr>
+      <tr>
+        <td>Date of Birth:</td>
+        <td>
+          <input type="date" name="dob">
+        </td>
+      </tr>
+      <tr>
+        <td>About:</td>
+        <td>
+          <input type="text" name="about">
+        </td>
+      </tr>
+      <td>
+        <input type="button" value="Add" onClick="testResults(this.form)"/>
+      </td>
+      <td>
+        <input type="button" name="delete" value="Remove" onClick="deleteLast(this.form)"/>
+      </td>
     </table>
-    <inout type="submit" name="submit" value="Submit" onClick="testResults(this.form)"/>
+    <!-- <input type="submit" name="submit" value="Submit" onClick="testResults(this.form)"/> -->
+
   </form>
 </body>
 </html>
