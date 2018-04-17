@@ -12,27 +12,30 @@
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <a href="index.html"><img id="logo-img" src="black-logo.png"  alt="Website's logo" width="13%"></a>
+    <header class="grid-container">
+        <div class="prefix-15 grid-35 tablet-prefix-5 tablet-grid-40 mobile-grid-100" id="logo">
+            <a href="index.html"><img id="logo-img" src="black-logo.png"  alt="Website's logo" width="35%"></a>
         </div>
 
-        <!-- search box -->
-        <section class="-20 tablet-grid-15 mobile-grid-100" id="search">
-            <input id="searchBox" type="search" placeholder="Search">
-            <img id="searchIcon" src="lupa-orange.png" alt="Search Icon" />
-        </section>
-        <!-- end of search box -->
-
         <!-- menu -->
-        <navbar>
+        <navbar class="prefix-15 grid-35 tablet-prefix-5 tablet-grid-40 mobile-grid-100">
             <ul>
                 <li><a id="menu-item" href="library.html">Library</a></li>
                 <li><a id="menu-item" href="signuplogin.html">Log in</a></li>
                 <li><a id="menu-item" href="signuplogin.html">Sign up</a></li>
             </ul>
-            <navbar>
+          </navbar>
                 <!-- end of menu -->
+
+        <!-- search box -->
+        <div id="search" class="prefix-20 grid-60 tablet-prefix-10 tablet-grid-80 mobile-grid-100">
+        <form action="/search" method="POST">
+          <input id="searchBox" type="search" name="title" placeholder="Search">
+          <input type="image" src="lupa-orange.png" alt="Submit" id="searchIcon">
+        </form>
+      </div>
+        <!-- end of search box -->
+
     </header>
 
     <main>
@@ -134,190 +137,6 @@
             </div>
         </section>
     </main>
-
-    <section id="white">
-        <!-- Top 5 on Netflix -->
-        <div class=" provider" id="netflix">
-            <div class="top">
-                <h2>Netflix <i>#Top5</i></h2>
-                <a href="library.html">view all ></a>
-            </div>
-            <!-- Poster #1 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster1.jpg" alt="Poster 1">
-                    <span>Into The Wild</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #2 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster2.jpg" alt="Poster 2">
-                    <span>Skyfall</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #3 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster3.jpg" alt="Poster 3">
-                    <span>It</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #4 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster4.jpg" alt="Poster 4">
-                    <span>Inception</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #5 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster5.jpg" alt="Poster 5">
-                    <span>Jurassic Park</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Top 5 on Netflix end-->
-        <!-- Top 5 on Prime -->
-        <div class=" provider" id="prime">
-            <div class="top">
-                <h2>Amazon <i>#Top5</i></h2>
-                <a href="library.html">view all ></a>
-            </div>
-            <!-- Poster #1 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster1.jpg" alt="Poster 1">
-                    <span>Into The Wild</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #2 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster2.jpg" alt="Poster 2">
-                    <span>Skyfall</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #3 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster3.jpg" alt="Poster 3">
-                    <span>It</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #4 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster4.jpg" alt="Poster 4">
-                    <span>Inception</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #5 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster5.jpg" alt="Poster 5">
-                    <span>Jurassic Park</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Top 5 on Amazon Prime end-->
-        <!-- Top 5 on Hulu -->
-        <div class=" provider" id="hulu">
-            <div class="top">
-                <h2>Hulu <i>#Top5</i></h2>
-                <a href="library.html">view all ></a>
-            </div>
-            <!-- Poster #1 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster1.jpg" alt="Poster 1">
-                    <span>Into The Wild</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #2 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster2.jpg" alt="Poster 2">
-                    <span>Skyfall</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #3 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster3.jpg" alt="Poster 3">
-                    <span>It</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #4 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster4.jpg" alt="Poster 4">
-                    <span>Inception</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Poster #5 -->
-            <div class="posters">
-                <div class="poster-title">
-                    <img src="poster5.jpg" alt="Poster 5">
-                    <span>Jurassic Park</span>
-                    <div class="imageInner">
-                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Top 5 on Hulu end-->
-
-    </section>
 
 
 

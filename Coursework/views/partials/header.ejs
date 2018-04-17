@@ -1,26 +1,23 @@
-    <!-- ejs file for the header of all the pages -->
-
-    <div id="logo">
-      <!-- need to change the logo -->
-      <a href="/"><img id="logo-img" src="/images/black-logo.png"  alt="Website's logo" width="13%"></a>
-      <!-- Image used as a link back to the home page -->
-    </div>
-
-    <!-- Search box -->
-    <div class= "grid-20 tablet-grid-15 mobile-grid-100" id="search">
-    <!-- There was a -20 class used here, but no indication of which this referred to so it's been removed -->
-      <input id="searchBox"  type="search" placeholder="Search">
-      <img id="searchIcon" src= "/images/lupa-orange.png" alt="Search Icon" />
-    </div>
-    <!-- End of search box -->
-
-    <!-- Navigation menu bar-->
-    <navbar>
-      <ul>
-        <li><a id="menu-item" href="/library">Library</a></li>
-        <li><a id="menu-item" href="/signuplogin">Log in</a></li>
-        <li><a id="menu-item" href="/signuplogin">Sign up</a></li>
-        <!-- Unordered list of items linking to their corresponding routes -->
-      </ul>
-    <navbar>
-    <!-- End of navigation menu bar -->
+<!-- ejs file for the header of all the pages -->
+<div class="prefix-15 grid-35 tablet-prefix-5 tablet-grid-40 mobile-grid-100" id="logo">
+   <!-- need to change the logo -->
+   <a href="index.html"><img id="logo-img" src="black-logo.png"  alt="Website's logo" width="35%"></a>
+   <!-- Image used as a link back to the home page -->
+</div>
+<!-- Navigation menu bar-->
+<navbar class="prefix-15 grid-35 tablet-prefix-5 tablet-grid-40 mobile-grid-100">
+   <ul>
+      <li><a id="menu-item" href="library.html">Library</a></li>
+      <li><a id="menu-item" href="signuplogin.html">Log in</a></li>
+      <li><a id="menu-item" href="signuplogin.html">Sign up</a></li>
+   </ul>
+</navbar>
+<!-- End of navigation menu bar -->
+<!-- Search box -->
+<div id="search" class="prefix-20 grid-60 tablet-prefix-10 tablet-grid-80 mobile-grid-100">
+   <form action="/search" method="POST">
+      <input id="searchBox" type="search" name="title" placeholder="Search">
+      <input type="image" src="lupa-orange.png" alt="Submit" id="searchIcon">
+   </form>
+</div>
+<!-- End of search box -->
