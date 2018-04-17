@@ -21,7 +21,9 @@ input {
   display: inline-block;
   padding: 12px 20px;
   margin-bottom: 2%;
-  width: 100%;
+  width: 50%;
+  margin-left: 25%;
+  border-color: transparent;
   box-sizing: border-box;
   text-align: center;
   /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
@@ -29,7 +31,7 @@ input {
 
 .button {
   background-color: #D75813;
-  display: inline-block;
+  display: block;
   border-radius: 30px;
   border-color: transparent;
   padding: 13px 25px;
@@ -57,29 +59,14 @@ hr {
 }
 
 #login, #signup {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   /* Adding a border so I can see where each element starts and ends */
-  margin-bottom: 5%;
+  margin-top: 10%;
   /* Making everything in the centre */
   box-sizing: border-box;
   /* Including the border in any floating */
   position: relative;
 }
-
-#login form, #signup form {
-  border: 1px solid green;
-  /* Adding a border so I can see where each element starts and ends */
-  margin: auto;
-  /* Making everything in the centre */
-  box-sizing: border-box;
-  /* Including the border in any floating */
-}
-
-.loginsignupgrid {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 /* ----- Log In ----- */
 
 /* ----- Sign Up ----- */
