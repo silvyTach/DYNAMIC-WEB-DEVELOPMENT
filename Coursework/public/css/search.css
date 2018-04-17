@@ -114,14 +114,14 @@ i {
   width: 100%;
 }
 
-.errormessage h1 {
-  font-size: 5em;
+#errormessage h1 {
+  font-size: xx-large;
   color: #FFFFFF;
   text-align: center;
   /* The headers of the slideshow are made white and given a font size */
 }
 
-.errormessage p {
-  color: #FFFFFF;
+#errormessage p {
+  color: #5B6073;
   text-align: center;
 }
