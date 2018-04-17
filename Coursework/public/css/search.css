@@ -93,7 +93,7 @@ i {
 
 /* ----- Boreders for fixing positions ----- */
 
-.text, .poster, .resultbox {
+.text, .poster, .resultbox, .moredetails {
   border: 1px solid green;
   /* Adding a border so I can see where each element starts and ends */
   box-sizing: border-box;
