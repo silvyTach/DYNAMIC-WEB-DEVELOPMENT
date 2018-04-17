@@ -19,11 +19,11 @@ h2 {
 
 input {
   display: inline-block;
+  margin-left: 25%;
   padding: 12px 20px;
   margin-bottom: 2%;
   width: 50%;
   box-sizing: border-box;
-  text-align: center;
   /* Each input box will have the full width of its container and padding within to make the text boxes bigger */
 }
 
@@ -57,7 +57,7 @@ hr {
 }
 
 #login, #signup {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   /* Adding a border so I can see where each element starts and ends */
   margin-bottom: 5%;
   /* Making everything in the centre */
