@@ -114,6 +114,10 @@ i {
   width: 100%;
 }
 
+#errormessage {
+  margin-top: 5%;
+}
+
 #errormessage h1 {
   font-size: xx-large;
   color: #FFFFFF;
