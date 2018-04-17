@@ -96,3 +96,7 @@ i {
   /* Adding a border so I can see where each element starts and ends */
   box-sizing: border-box;
 }
+
+img {
+  float: none;
+}
