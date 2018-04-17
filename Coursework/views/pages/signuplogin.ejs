@@ -24,8 +24,8 @@
             <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
 
               <form id="loginform" action="/login" method="POST">
-                <input type="text" class="loginsignup" name="username" placeholder="Username">
-                <input type="password" class="loginsignup" name="password" placeholder="Password">
+                <input type="text" class="loginsignup" name="loginformusername" placeholder="Username">
+                <input type="password" class="loginsignup" name="loginformpassword" placeholder="Password">
                 <button type="submit" class="button">Log In</button>
               </form>
 
@@ -46,11 +46,12 @@
             <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
 
               <form id="signupform" action="/signup" method="post">
-                <input type="text" class="loginsignup" name="username" placeholder="Username">
-                <input type="text" class="loginsignup" name="email1" placeholder="Email Address">
-                <input type="text" class="loginsignup" name="email2" placeholder="Confirm Email Address">
-                <input type="password" class="loginsignup" name="password1" placeholder="Password">
-                <input type="password" class="loginsignup" name="password2" placeholder="Confirm Password">
+                <input type="text" class="loginsignup" name="signupformusername" placeholder="Username">
+                <input type="text" class="loginsignup" name="signupformemail1" placeholder="Email Address">
+                <input type="text" class="loginsignup" name="signupformemail2" placeholder="Confirm Email Address">
+                <input type="password" class="loginsignup" name="signupformpassword1" placeholder="Password">
+                <input type="password" class="loginsignup" name="signupformpassword2" placeholder="Confirm Password">
+                <input type="checkbox" checked="unchecked" name="remember" style="margin-bottom:15px"> I have read and agree to the <a href="#" style="color:dodgerblue">Terms & Conditions</a>.
                 <button type="submit" class="button" name="signupformsubmit">Sign Up</button>
               </form>
 
