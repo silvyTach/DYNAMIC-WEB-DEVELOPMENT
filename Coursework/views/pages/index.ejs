@@ -20,10 +20,24 @@
             <div id="left" class="arrows">
                <img onclick="plusDivs(-1)" src="/images/left-arrow.png">
             </div>
-            <% include ../partials/slideshow.ejs %>
-            <!-- Using ejs to import the movei poster code -->
             <!-- Top 5 #1 -->
-            
+            <%for(var i = 0; i < 5; i++) {%>
+            <div class="slideshow">
+              <div class="text">
+                 <h1 class="title"><%= index[i].title %></h1>
+                 <ul class="info">
+                    <li class="rating">⭐️ <%= index[i].vote_average %><i> /10</i></li>
+                    <!-- <li class="duration">Run Time: 2h 21'</li>
+                    <li class="age">Rated: PG-13</li> -->
+                 </ul>
+                 <p class="plot"><%= index[i].overview %></p>
+                 <div><a href="/movieshowinfo" class="button" tabindex="-1">more details</a></div>
+              </div>
+              <div class="image">
+                 <img src="https://image.tmdb.org/t/p/original/<%= index[i].poster_path %>" alt="Poster" width="261px" height="401px">
+              </div>
+            </div>
+            <% }; %>
             <!-- Right slideshow arrow -->
             <div id="right" class="arrows">
                <img onclick="plusDivs(1)" src="/images/right-arrow.png">

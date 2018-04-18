@@ -41,10 +41,6 @@ MongoClient.connect(url, function(error, database) {
 
 //Index page
 app.get('/', function(req, res) {
-   res.render('pages/index');
-});
-
-app.get('../partials/slideshow', function(req, res) {
    //res.render('pages/index');
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
   req.query({
@@ -56,8 +52,8 @@ app.get('../partials/slideshow', function(req, res) {
     for (var i = 0; i < 4; i++) {
       console.log(result.body.results[i]);
     }
-    res.render('partials/slideshow', {
-      slideshow: result.body.results
+    res.render('pages/index', {
+      index: result.body.results
     });
   });
 });
