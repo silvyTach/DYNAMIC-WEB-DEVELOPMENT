@@ -3,7 +3,7 @@ $(function (){
     //alert("Document is ready.");
     //The document is ready
 
-    var searchTerms = req.body.title;
+    var searchTerms;
     //Getting the item in the search term box
     console.log("Search term:" + searchTerms);
     //Calling the function with the search terms as the parameter

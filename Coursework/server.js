@@ -59,6 +59,10 @@ app.get('/signuplogin', function(req, res) {
 });
 
 app.get('/search', function(req, res) {
+  var searchTerms = req.body.title;
+  //Getting the item in the search term box
+  console.log("Search term:" + searchTerms);
+  //Calling the function with the search terms as the parameter
   res.render('pages/search');
   //Log in/sign up page
 });
