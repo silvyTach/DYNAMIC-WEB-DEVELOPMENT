@@ -49,9 +49,15 @@ app.get('/', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    // var top5 = result.body.results.subarray(0, 4);
+    //var top5 = result.body.results.subarray(0, 4);
+    var top5 = {result.body.results[i],
+                result.body.results[i],
+                result.body.results[i],
+                result.body.results[i],
+                result.body.results[i]
+              }
     for (var i = 0; i < 4; i++) {
-      console.log(result.body.results[i]);
+      console.log(top[i]);
     }
 
     res.render('pages/index', {
