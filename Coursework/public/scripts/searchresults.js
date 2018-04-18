@@ -3,17 +3,14 @@ $(function (){
     //alert("Document is ready.");
     //The document is ready
 
-    $('#search').submit(function() {
-    //Tying a listener to the submit event of the search bar
-      var searchTerms = $('#searchBox').val();
-      //Getting the item in the search term box
-      console.log("Search term:" + searchTerms);
-      //Calling the function with the search terms as the parameter
-      getResultsFromOMDb(searchTerms);
-      //Calling the function with the search terms as the parameter
-      return false;
-      //Preventing the page from reloading
-    });
+    var searchTerms = req.body.title;
+    //Getting the item in the search term box
+    console.log("Search term:" + searchTerms);
+    //Calling the function with the search terms as the parameter
+    getResultsFromOMDb(searchTerms);
+    //Calling the function with the search terms as the parameter
+    return false;
+    //Preventing the page from reloading
 });
 
 function getResultsFromOMDb(searchTerms) {
