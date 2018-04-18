@@ -136,6 +136,24 @@ i {
   box-sizing: border-box;
 }
 
-.librarybox {
-  margin: 2%;
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .librarybox {
+    margin: 2.5%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .librarybox {
+    margin: 1%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .librarybox {
+    margin: 2.5%;
+  }
 }
