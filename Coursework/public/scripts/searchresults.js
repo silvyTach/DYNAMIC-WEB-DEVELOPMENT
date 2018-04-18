@@ -54,7 +54,7 @@ function addResults(jsondata) {
       htmlstring += '      </ul>' + '\n';
       htmlstring += '    </div>' + '\n';
       htmlstring += '    <div class="moredetails">' + '\n';
-      htmlstring += '      <button onclick="itemSelected(' + imdb + ')" class="button">More Details</button>' + '\n';
+      htmlstring += '      <a onclick="itemSelected(' + imdb + ')" class="button">More Details</a>' + '\n';
       htmlstring += '    </div>' + '\n';
       htmlstring += '  </div>' + '\n';
       htmlstring += '\n';
