@@ -44,7 +44,7 @@ app.get('/', function(req, res) {
    res.render('pages/index');
 });
 
-app.get('partials/slideshow', function(req, res) {
+app.get('../partials/slideshow', function(req, res) {
    //res.render('pages/index');
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
   req.query({
