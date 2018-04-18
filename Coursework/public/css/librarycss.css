@@ -7,160 +7,131 @@ hr {
   width: 75%;
 }
 
-/* ---------- EVERYTHING ---------- */
+/* ----- General ----- */
 
-.loginsignup {
-  width: 100%;
-}
-
-.text, .image, .title{
-  box-sizing:border-box;
-  width: 70%;
-  padding:0.5%;
-  margin:0 0 2%;
-}
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-#image_div .img_wrapper img
-{
- width:100%;
+.text, .title {
+  box-sizing: border-box;
+  /* Each of these elements will have its border included in a float */
+  /*width: 90%;
+  /* They all take 90% of their parent element's width */
+  padding: 0.5%;
+  /*margin: 0% 0% 2%;
+  /* They all have internal padding and external margins added */
 }
 
-#image_div .img_wrapper span
-{
- display:none;
- position:absolute;
- top:40px;
- left:30px;
-}
-#image_div .img_wrapper:hover span
-{
- display:table-cell;
-}
-#image_div .img_wrapper span input[type="button"]
-{
- width:120px;
- height:40px;
- background-color:#00BFFF;
- border:none;
- color:white;
- font-weight:bold;
- font-size:17px;
-}
+/* ----- Text ----- */
 
-
-navbar {
-  text-align: center;
-}
 .text {
   float: left;
-  width: 75%;
-}
- h2 {
-  font-size: 4em;
-  color: #AB0000;
-  text-align: center;
-   width: auto;
+  width: 95%;
+  /* All text within the slideshow will occupy 75% of the width and float left */
 }
 
-div.gallery {
-    border: 1px solid #ccc;
-}
-
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: auto;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 100%;
-        <!--   width: 49.99999%; !-->
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-    }
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+.text h1 {
+  font-size: 5em;
+  color: #FFFFFF;
+  /* The headers of the slideshow are made white and given a font size */
 }
 
 .info, .plot {
-  width: 80%;
+  /*width: 80%;
+  /* The info about the movie/show and the plot will only occupy 80% of the text section */
+}
+
+.info, .plot, .title {
+  /* border: solid green; */
+  margin: 0;
+  /* Each of these items has their margin removed */
 }
 
 .info li {
   font-size: large;
-  color: #ab0000;
+  color: #AB0000;
   font-weight: bold;
+  /* The list items within the info list will have a large font size, be red, and be bold */
 }
 
 i {
   font-size: small;
   color: #5B6073;
+  /* Any font made italic will be small and a medium grey colour */
 }
 
 .plot {
   color: #5B6073;
   font-size: large;
-  @override box-sizing: content-box important;
+  /* The plot text will be a medium grey and a large font size */
+  /*@override box-sizing: content-box important;*/
 }
 
-#librarynav {
-  display: block;
-  float: none;
-}
+/* ----- Images ----- */
+
+/* ----- Button ----- */
 
 .button {
+  background-color: #D75813;
   border-radius: 30px;
-    font-weight: bold;
-    background-color: #D75813;
-    color: #ffffff;
-    padding: 13px 25px;
-    clear: both;
-    float: left;
-    margin-top: 3%;
-    font-size: 0.75em;
-    text-transform: uppercase;
-    text-decoration: none;
+  border-color: transparent;
+  padding: 13px 25px;
+  margin-top: 3%;
+  /* The button is given an orange color, its edges rounded, some padding added and separation from */
+  /* No items are allowed to float around it and it floats to the left of its containing element */
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
+  display: inline-block;
+  width: 100%;
 }
 
 .button:hover {
   background-color: transparent;
   color: #D75813;
-
+  /* When the button is hovered over it becomes transparent and the text becomes orange */
 }
 
-.info, .plot, .title {
-  bodrder: solid green;
-  margin: 0;
+/* ----- Boreders for fixing positions ----- */
+
+/* .text, .poster, .resultbox, .moredetails {
+  border: 1px solid green;
+
+  box-sizing: border-box;
+} */
+
+.result {
+  margin-top: 5%;
+  /* Separating results */
+}
+
+
+.moredetails {
+  width: 95%;
+}
+
+.poster {
+  float: right;
+  width: 100%;
+}
+
+#errormessage {
+  margin-top: 5%;
+}
+
+#errormessage h1 {
+  font-size: xx-large;
+  color: #FFFFFF;
+  text-align: center;
+  /* The headers of the slideshow are made white and given a font size */
+}
+
+#errormessage p {
+  color: #5B6073;
+  text-align: center;
+}
+
+.library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
+  border: 1px solid green;
+  box-sizing: border-box;
 }
