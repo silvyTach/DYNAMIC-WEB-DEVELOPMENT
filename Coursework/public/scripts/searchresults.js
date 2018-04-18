@@ -1,6 +1,6 @@
 $(function (){
 //Function will run when the page is loaded
-    alert(window.location.search);
+    alert(window.location.search.substr(8));
     //The document is ready
 
     //var searchTerms;
