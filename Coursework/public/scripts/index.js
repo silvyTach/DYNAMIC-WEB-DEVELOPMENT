@@ -10,7 +10,7 @@ $(function(){
   // });
 });
 function getResultsFromOMDB() {
-  var url = 'http://www.omdbapi.com/?apikey=280e6eab&type=movie';
+  var url = 'http://www.omdbapi.com/?apikey=280e6eab&s=Avengers';
   $.getJSON(url, function(jsondata) {
     addResultTitles(jsondata);
   });
