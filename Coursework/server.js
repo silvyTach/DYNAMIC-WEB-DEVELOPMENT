@@ -50,14 +50,10 @@ app.get('/', function(req, res) {
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
     //var top5 = result.body.results.subarray(0, 4);
-    var top5 = {result.body.results[i],
-                result.body.results[i],
-                result.body.results[i],
-                result.body.results[i],
-                result.body.results[i]
-              }
+    var top5 = []
     for (var i = 0; i < 4; i++) {
-      console.log(top[i]);
+      console.log(result.body.results[i]);
+      top5+= result.body.results[i];
     }
 
     res.render('pages/index', {
