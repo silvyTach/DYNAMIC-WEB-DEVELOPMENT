@@ -53,7 +53,7 @@ app.get('/', function(req, res) {
       console.log(result.body.results[i]);
     }
     res.render('pages/index', {
-      movies: result.body.results
+      index: result.body.results
     });
   });
 });
