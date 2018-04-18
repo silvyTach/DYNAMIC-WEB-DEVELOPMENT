@@ -49,7 +49,7 @@ app.get('/', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    console.log(res.body);
+    console.log(result.body);
     res.render('pages/index', {
       index: result.body
     });
