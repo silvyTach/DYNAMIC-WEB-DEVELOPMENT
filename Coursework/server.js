@@ -59,7 +59,6 @@ app.get('/signuplogin', function(req, res) {
 });
 
 app.get('/search', function(req, res) {
-  console.log("Full body:" + req.query);
   var searchTerms = req.query.search;
   //Getting the item in the search term box
   console.log("Search term:" + searchTerms);
