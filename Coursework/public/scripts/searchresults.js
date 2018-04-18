@@ -76,8 +76,8 @@ function addResults(jsondata) {
   //Injecting the HTML into the empty container
 }
 
-function itemSelected(imdbid) {
-  sessionStorage.setItem('itemid', imdbid);
+function itemSelected(itemid) {
+  sessionStorage.setItem('itemid', itemid);
   window.location = "/movieshowinfo";
   return false;
 }
