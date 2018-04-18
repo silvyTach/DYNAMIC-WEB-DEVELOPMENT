@@ -51,16 +51,11 @@ app.get('/', function(req, res) {
     if (result.error) throw new Error(result.error);
     //var top5 = result.body.results.subarray(0, 4);
     for (var i = 0; i < 4; i++) {
-      // console.log(result.body.results[i]);
-      top5+= result.body.results[i];
+      console.log(result.body.results[i]);
     }
 
     res.render('pages/index', {
-      movies: { result.body.results[0],
-                result.body.results[1],
-                result.body.results[2],
-                result.body.results[3],
-                result.body.results[4]}
+      movies: result.body.results
     });
   });
 });
