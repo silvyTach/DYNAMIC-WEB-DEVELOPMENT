@@ -4,6 +4,7 @@ const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
+const unirest = require("unirest"); // npm install unirest
 //Loading the things we need
 
 app.set('view engine', 'ejs');
@@ -38,9 +39,21 @@ MongoClient.connect(url, function(error, database) {
 
 //Using res.render to load up an ejs view file:
 
+//Index page
 app.get('/', function(req, res) {
-  res.render('pages/index');
-  //Index page
+  // res.render('pages/index');
+  var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
+  req.query({
+    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+  });
+  req.send("{}");
+  req.end(function (res) {
+    if (res.error) throw new Error(res.error);
+    console.log(res.body);
+    res.render('pages/index', {
+      index: res
+    });
+  });
 });
 
 app.get('/library', function(req, res) {
