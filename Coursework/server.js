@@ -58,7 +58,7 @@ app.get('/signuplogin', function(req, res) {
   //Log in/sign up page
 });
 
-app.get('/search', function(req, res) {
+app.post('/search', function(req, res) {
   var searchTerms = req.query.search;
   //Getting the item in the search term box
   console.log("Search term:" + searchTerms);
