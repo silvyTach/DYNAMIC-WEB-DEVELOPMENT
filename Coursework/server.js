@@ -47,11 +47,11 @@ app.get('/', function(req, res) {
     "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
   });
   req.send("{}");
-  req.end(function (res) {
-    if (res.error) throw new Error(res.error);
-    console.log(res.body);
-    res.render('pages/index', {
-      index: res.body
+  req.end(function (result) {
+    if (result.error) throw new Error(result.error);
+    //console.log(res.body);
+    result.render('pages/index', {
+      index: result.body
     });
   });
 });
