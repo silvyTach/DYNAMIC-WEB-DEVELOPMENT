@@ -41,7 +41,7 @@ MongoClient.connect(url, function(error, database) {
 
 //Index page
 app.get('/', function(req, res) {
-   res.render('pages/index');
+   //res.render('pages/index');
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
   req.query({
     "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
