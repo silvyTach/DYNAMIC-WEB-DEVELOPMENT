@@ -145,14 +145,14 @@ i {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .librarybox {
     margin: 1%;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 769px) {
   .librarybox {
     margin: 2.5%;
   }
