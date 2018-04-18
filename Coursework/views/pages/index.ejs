@@ -20,7 +20,7 @@
             <div id="left" class="arrows">
                <img onclick="plusDivs(-1)" src="/images/left-arrow.png">
             </div>
-            <% for(var i = 0; i < 5; i++) { %>
+            <!-- <% for(var i = 0; i < 5; i++) { %>
               <div class="slideshow">
                 <div class="text">
                    <h1 class="title"><%= index.resuls[i].title %></h1>
@@ -36,9 +36,32 @@
                    <img src="/images/poster0.jpg" alt="Poster">
                 </div>
               </div>
-            <% }); %>
+            <% }); %> -->
             <!-- Top 5 #1 -->
-            
+            <div class="slideshow">
+               <% include ../partials/slideshow.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Top 5 #2 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow2.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Top 5 #3 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Top 5 #4 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow2.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Top 5 #5 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow2.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
             <!-- Right slideshow arrow -->
             <div id="right" class="arrows">
                <img onclick="plusDivs(1)" src="/images/right-arrow.png">
