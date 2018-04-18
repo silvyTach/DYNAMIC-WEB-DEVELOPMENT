@@ -1,22 +1,23 @@
 $(function (){
 //Function will run when the page is loaded
-    alert(window.location.search.substr(8).slice(0, -8));
+    //alert(window.location.search.substr(8).slice(0, -8));
     //The document is ready
 
     var queryString = window.location.search.substr(8).slice(0, -8);
+    //The URL is stored with the leading ?search= and ending &x=...&y=... removed
     var searchTerms = queryString.split("+");
-    console.log(searchTerms);
+    //The elements are split into an array for reformatting
+    //console.log(searchTerms);
     var searchString = "";
+    //An empty String set up for holding the formatted search String
     for (var i = 0; i < searchTerms.length; i++) {
       searchString += searchTerms[i] + " ";
+      //Formatting the search String
     }
     console.log(searchString);
-    //Getting the item in the search term box
-    //console.log("Search term:" + searchTerms);
+    getResultsFromOMDb(searchTerms);
     //Calling the function with the search terms as the parameter
-    //getResultsFromOMDb(searchTerms);
-    //Calling the function with the search terms as the parameter
-    //return false;
+    return false;
     //Preventing the page from reloading
 });
 
