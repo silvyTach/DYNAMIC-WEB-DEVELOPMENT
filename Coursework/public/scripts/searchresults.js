@@ -40,6 +40,7 @@ function addResults(jsondata) {
     for (var i = 0; i < 10; i++) {
       var title = jsondata.Search[i].Title;
       var poster = jsondata.Search[i].Poster;
+      var imdb = jsondata.Search[i].imdbID;
       //Storing the parameters of each result in a variable
 
       htmlstring += '<div class="grid-100 grid-parent result">' + '\n';
@@ -53,7 +54,7 @@ function addResults(jsondata) {
       htmlstring += '      </ul>' + '\n';
       htmlstring += '    </div>' + '\n';
       htmlstring += '    <div class="moredetails">' + '\n';
-      htmlstring += '      <button class="button">More Details</button>' + '\n';
+      htmlstring += '      <button onclick="itemSelected(' + imdb + ')" class="button">More Details</button>' + '\n';
       htmlstring += '    </div>' + '\n';
       htmlstring += '  </div>' + '\n';
       htmlstring += '\n';
