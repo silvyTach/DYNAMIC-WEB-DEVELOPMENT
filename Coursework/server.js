@@ -57,7 +57,7 @@ app.get('partials/slideshow', function(req, res) {
       console.log(result.body.results[i]);
     }
     res.render('partials/slideshow', {
-      index: result.body.results
+      slideshow: result.body.results
     });
   });
 });

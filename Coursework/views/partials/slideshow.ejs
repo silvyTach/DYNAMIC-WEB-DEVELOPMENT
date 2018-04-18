@@ -1,17 +1,17 @@
 <%for(var i = 0; i < 5; i++) {%>
 <div class="slideshow">
   <div class="text">
-     <h1 class="title"><%= index[i].title %></h1>
+     <h1 class="title"><%= slideshow[i].title %></h1>
      <ul class="info">
-        <li class="rating">⭐️ <%= index[i].vote_average %><i> /10</i></li>
+        <li class="rating">⭐️ <%= slideshow[i].vote_average %><i> /10</i></li>
         <!-- <li class="duration">Run Time: 2h 21'</li>
         <li class="age">Rated: PG-13</li> -->
      </ul>
-     <p class="plot"><%= index[i].overview %></p>
+     <p class="plot"><%= slideshow[i].overview %></p>
      <div><a href="/movieshowinfo" class="button" tabindex="-1">more details</a></div>
   </div>
   <div class="image">
-     <img src="https://image.tmdb.org/t/p/original/<%= index[i].poster_path %>" alt="Poster" width="261px" height="401px">
+     <img src="https://image.tmdb.org/t/p/original/<%= slideshow[i].poster_path %>" alt="Poster" width="261px" height="401px">
   </div>
 </div>
 <% }; %>
