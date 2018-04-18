@@ -4,8 +4,8 @@
       <% include ../partials/head.ejs %>
       <!-- Using ejs to import the head code -->
       <link rel="stylesheet" type="text/css" href="/css/index-main.css">
-      <!-- <script src="/scripts/slideshowscript.js"></script> -->
-      <script src="/scripts/index.js"></script>
+      <script src="/scripts/slideshowscript.js"></script>
+      <!-- <script src="/scripts/index.js"></script> -->
       <!-- Linking the stylesheet for the index page -->
    </head>
    <body>
@@ -20,11 +20,25 @@
             <div id="left" class="arrows">
                <img onclick="plusDivs(-1)" src="/images/left-arrow.png">
             </div>
-            
+
             <!-- Top 5 #1 -->
             <div class="slideshow">
-               <% include ../partials/slideshow.ejs %>
-               <!-- Using ejs to import the slide code-->
+              <div class="text">
+                 <h1 class="title"><%= movies.results.title %></h1>
+                 <ul class="info">
+                    <li class="rating">⭐️ 7.4 <i> /10</i></li>
+                    <li class="duration">Run Time: 2h 21'</li>
+                    <li class="age">Rated: PG-13</li>
+                 </ul>
+                 <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum,
+                    ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda,
+                    nec ex choro omnium sadipscing.
+                 </p>
+                 <div><a href="/movieshowinfo" class="button" tabindex="-1">more details</a></div>
+              </div>
+              <div class="image">
+                 <img src="/images/poster0.jpg" alt="Poster">
+              </div>
             </div>
             <!-- Top 5 #2 -->
             <div class="slideshow">
