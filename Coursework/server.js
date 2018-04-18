@@ -49,9 +49,12 @@ app.get('/', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    console.log(result.body);
+    for (var i = 0; i < 4; i++) {
+      console.log(result.body[i]);
+    }
+
     res.render('pages/index', {
-      index: result.body
+      index: result.body[0], result.body[1], result.body[2], result.body[3],result.body[4]
     });
   });
 });
