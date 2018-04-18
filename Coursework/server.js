@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
     //console.log(res.body);
-    result.render('pages/index', {
+    res.render('pages/index', {
       index: result.body
     });
   });
