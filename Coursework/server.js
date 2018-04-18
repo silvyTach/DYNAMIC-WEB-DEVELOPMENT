@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
     for (var i = 0; i < 4; i++) {
-      console.log(result.body[i]);
+      console.log(result.body.results);
     }
 
     res.render('pages/index', {
