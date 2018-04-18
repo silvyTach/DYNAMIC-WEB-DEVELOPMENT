@@ -1,16 +1,17 @@
-<div class="text">
-   <h1 class="title">Guardians of the Galaxy</h1>
-   <ul class="info">
-      <li class="rating">⭐️ 7.4 <i> /10</i></li>
-      <li class="duration">Run Time: 2h 21'</li>
-      <li class="age">Rated: PG-13</li>
-   </ul>
-   <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum,
-      ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda,
-      nec ex choro omnium sadipscing.
-   </p>
-   <div><a href="/movieshowinfo" class="button" tabindex="-1">more details</a></div>
+<%for(var i = 0; i < 5; i++) {%>
+<div class="slideshow">
+  <div class="text">
+     <h1 class="title"><%= index[i].title %></h1>
+     <ul class="info">
+        <li class="rating">⭐️ <%= index[i].vote_average %><i> /10</i></li>
+        <!-- <li class="duration">Run Time: 2h 21'</li>
+        <li class="age">Rated: PG-13</li> -->
+     </ul>
+     <p class="plot"><%= index[i].overview %></p>
+     <div><a href="/movieshowinfo" class="button" tabindex="-1">more details</a></div>
+  </div>
+  <div class="image">
+     <img src="https://image.tmdb.org/t/p/original/<%= index[i].poster_path %>" alt="Poster" width="261px" height="401px">
+  </div>
 </div>
-<div class="image">
-   <img src="/images/poster0.jpg" alt="Poster">
-</div>
+<% }; %>
