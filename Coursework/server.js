@@ -54,7 +54,7 @@ app.get('/', function(req, res) {
     }
 
     res.render('pages/index', {
-      index: result.body[0], result.body[1], result.body[2], result.body[3],result.body[4]
+      index: result.body
     });
   });
 });
