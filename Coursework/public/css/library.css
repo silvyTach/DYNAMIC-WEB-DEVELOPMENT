@@ -152,7 +152,7 @@ i {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
   .librarybox {
     margin: 2.5%;
   }
