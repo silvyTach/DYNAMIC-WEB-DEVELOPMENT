@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="header and footer.css">
   <link rel="stylesheet" href="paul.css">
   <style type="text/css">@import url("unsemantic-grid-responsive-tablet.css");</style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tabs - Collapse content</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs({
+      collapsible: true
+    });
+  } );
+  </script>
+
 </head>
 
 <body>
@@ -38,21 +54,34 @@
 <!-- start of main body -->
 
 <main>
+
+
+
   <div>
-  <video width="800" height="240" controls>
-  <source src="https://tinyurl.com/2fcpre6" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-  </video>
+
 
   <div class="text">
   <h1 class="title">Guardians of the Galaxy</h1>
-  <ul class="info">
-    <li class="rating">⭐️ 7.4 <i> /10</i></li>
-    <li class="duration">Run Time: 2h 21'</li>
-    <li class="age">Rated: PG-13</li>
-  </ul>
 
+  </ul>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Review</a></li>
+      <li><a href="#tabs-2">video</a></li>
+        </ul>
+    <div id="tabs-1">
+      <p>  
+        <ul class="info">
+          <li class="rating">⭐️ 7.4 <i> /10</i></li>
+          <li class="duration">Run Time: 2h 21'</li>
+          <li class="age">Rated: PG-13</li></p>
+    </div>
+    <div id="tabs-2">
+      <video width="800" height="240" controls>
+      <source src="https://tinyurl.com/2fcpre6" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video></div>
 
 <p></p>
     <img src="poster0.jpg" alt = "Poster"
@@ -62,35 +91,14 @@
       <li><a href = "#"> Netflix </a></li><br />
       <li><a href = "#"> Add to Library/Watchlist </a></li><br />
     </div>
-    <p class="plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus hendrerit justo urna. Proin finibus rhoncus egestas.
-      Vivamus tempus odio non ultrices condimentum. Nam sapien purus, mollis non justo ut, consequat semper ex.
-       Pellentesque vitae suscipit leo, nec aliquam lacus. Phasellus pretium risus vitae leo vestibulum, id condimentum nulla sollicitudin.
-        Cras nec quam libero. Sed nec purus erat. Maecenas sodales mauris tincidunt facilisis ullamcorper.
-         In consequat, velit ut gravida lobortis, libero purus dapibus odio, ac scelerisque mi sem vel nisl.</p>
-         <p class="plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-           Phasellus hendrerit justo urna. Proin finibus rhoncus egestas.
-           Vivamus tempus odio non ultrices condimentum. Nam sapien purus, mollis non justo ut, consequat semper ex.
-            Pellentesque vitae suscipit leo, nec aliquam lacus. Phasellus pretium risus vitae leo vestibulum, id condimentum nulla sollicitudin.
-             Cras nec quam libero. Sed nec purus erat. Maecenas sodales mauris tincidunt facilisis ullamcorper.
-              In consequat, velit ut gravida lobortis, libero purus dapibus odio, ac scelerisque mi sem vel nisl.</p>
-         <p></p>
-         <p class="plot">Quisque in ipsum vel felis sollicitudin vehicula. Sed a luctus magna.
-            Proin in fermentum mi, quis iaculis mauris. Nunc quis aliquet justo.
-            Morbi mollis, felis non dignissim fringilla, magna leo vestibulum nulla, eget euismod lectus nulla sit amet lorem.
-             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus congue nisl non semper pulvinar.
-              Nunc sodales auctor nunc, in fermentum metus consectetur eget.
-               Nulla tellus justo, laoreet eu ante ut, dapibus tristique sapien.
-               Ut venenatis, turpis ut ultricies iaculis, sem diam finibus enim, vitae efficitur nulla dolor id metus.
-                Fusce augue diam, congue in congue a, placerat in nunc.
-                 Nullam dignissim, enim eu luctus tincidunt, risus turpis feugiat felis, quis pulvinar libero augue et neque.
-                  Cras quis egestas elit. Curabitur mattis, eros sed feugiat aliquam, metus ex auctor tortor, vitae euismod nulla nisl ac neque. </p>
 
-  
 
 
   </div>
   </div>
+
+
+
 
 </main>
 
