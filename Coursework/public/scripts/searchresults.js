@@ -3,13 +3,13 @@ $(function (){
     //alert("Document is ready.");
     //The document is ready
 
-    var searchTerms;
+    //var searchTerms;
     //Getting the item in the search term box
-    console.log("Search term:" + searchTerms);
+    //console.log("Search term:" + searchTerms);
     //Calling the function with the search terms as the parameter
-    getResultsFromOMDb(searchTerms);
+    //getResultsFromOMDb(searchTerms);
     //Calling the function with the search terms as the parameter
-    return false;
+    //return false;
     //Preventing the page from reloading
 });
 
