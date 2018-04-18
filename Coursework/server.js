@@ -51,7 +51,7 @@ app.get('/', function(req, res) {
     if (res.error) throw new Error(res.error);
     console.log(res.body);
     res.render('pages/index', {
-      index: res
+      index: res.body
     });
   });
 });
