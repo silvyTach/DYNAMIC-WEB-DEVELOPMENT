@@ -131,7 +131,7 @@ i {
   text-align: center;
 }
 
-.library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
+#library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
   border: 1px solid green;
   box-sizing: border-box;
 }
