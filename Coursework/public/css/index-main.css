@@ -2,11 +2,9 @@ main {
   clear: both;
   /* No elements are allowed to float within the main element and it has a margin around it of 15% */
 }
-
 #top5 {
   margin: 15%;
 }
-
 /* ---------- SLIDESHOW ---------- */
 
 /* ----- General ----- */
@@ -168,6 +166,10 @@ h2 {
   /* h2 tags are displayed as inline elements */
 }
 
+.provider {
+  margin: 2%;
+}
+
 h2, .provider a {
   color: #AB0000;
   /* The h2 tags and any links in the provider class have a red text colour */
@@ -182,6 +184,12 @@ h2, .provider a {
 .provider img {
   padding-left: 2.5%;
   /* Images within the provider class have some padding added to the left */
+}
+
+.posters {
+    box-sizing: content-box;
+    float: left;
+    width: 20%;
 }
 
 .poster-title {

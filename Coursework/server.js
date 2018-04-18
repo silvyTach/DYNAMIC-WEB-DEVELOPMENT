@@ -4,6 +4,7 @@ const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
+const unirest = require("unirest"); // npm install unirest
 //Loading the things we need
 
 app.set('view engine', 'ejs');
@@ -38,17 +39,27 @@ MongoClient.connect(url, function(error, database) {
 
 //Using res.render to load up an ejs view file:
 
+//Index page
 app.get('/', function(req, res) {
-  res.render('pages/index');
-  //Index page
+  // res.render('pages/index');
+  var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
+  req.query({
+    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+  });
+  req.send("{}");
+  req.end(function (result) {
+    if (result.error) throw new Error(result.error);
+    for (var i = 0; i < 4; i++) {
+      console.log(result.body.results);
+    }
+
+    res.render('pages/index', {
+      index: result.body
+    });
+  });
 });
 
 app.get('/library', function(req, res) {
-  if (!req.session.loggedin) {
-    res.redirect('/signuplogin');
-    return;
-    //If the user isn't logged in, they can't access the library page
-  }
   res.render('pages/library');
   //Library page
 });
@@ -63,10 +74,15 @@ app.get('/signuplogin', function(req, res) {
   //Log in/sign up page
 });
 
+app.get('/search', function(req, res) {
+  res.render('pages/search');
+  //Log in/sign up page
+});
+
 //-------------------- POST ROUTES --------------------
 
 app.post('/login', function(req, res) {
-  console.log(JSON.stringify(req.body))
+  console.log(JSON.stringify(req.body));
   var uname = req.body.loginformusername;
   var pword = req.body.loginformpassword;
   //Getting the username and password entered by the user
@@ -91,4 +107,10 @@ app.post('/login', function(req, res) {
       //If there is no result matching the username, a new login page is generated
     }
   };
+});
+
+app.post('/dosearch', function(req, res) {
+  console.log(JSON.stringify(req.body));
+  var searchterm = req.body;
+  //Getting the username and password entered by the user
 });

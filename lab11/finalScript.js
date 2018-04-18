@@ -1,29 +1,24 @@
 $(function(){
   //document ready
   alert("Document Ready");
-
-  $('#searchform').submit(function(){
-    var searchterms = $('#searchterms').val();
-    //addItemToList(searchterms);
-    getResultsFromOMDB(searchterms);
-    return false;
+    getResultsFromOMDB();
   });
-});
-function getResultsFromOMDB(searchterms) {
-  var url = 'http://www.omdbapi.com/?apikey=280e6eab&s=' + searchterms;
-  $.getJSON(url, function(jsondata) {
-    addResultTitles(jsondata);
-  });
-
-  function addResultTitles(jsondata) {
-    var htmlstring = "";
-    for(var i=0; i<5; i++){
-      var title = jsondata.Search[i].Title;
-      htmlstring+= "<li>" + title + "</li>";
-    }
-    $('#resultsbox').html(htmlstring);
-  }
+function getResultsFromOMDB() {
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.themoviedb.org/3/movie/popular?api_key=305a3b42d88760bd22c9f8c8c54f788d",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
 }
-// function addItemToList(item){
-//   $('#results').append("<li>" + item + "</li>");
-// }
+
+$.ajax(settings).done(function (response) {
+  var htmlstring = "";
+  for(var i=0; i<5; i++){
+    var title = response.results[i].title;
+    htmlstring+= "<li>" + title + "</li>";
+  }
+  $('#resultsbox').html(htmlstring);
+});
+}

@@ -1,3 +1,4 @@
+//JS for the slideshow on the index page
 var slideIndex = 1;
 showDivs(slideIndex);
 
