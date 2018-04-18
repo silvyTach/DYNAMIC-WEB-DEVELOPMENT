@@ -5,8 +5,9 @@ $(function (){
 
     var queryString = window.location.search.substr(8).slice(0, -8);
     var searchTerms = queryString.split("+");
+    console.log(searchTerms);
     var searchString;
-    for (var i = 1; i < searchTerms.length; i++) {
+    for (var i = 0; i < searchTerms.length; i++) {
       searchString += searchTerms[i] + " ";
     }
     console.log(searchString);
