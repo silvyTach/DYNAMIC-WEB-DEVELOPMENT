@@ -147,7 +147,7 @@ i {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   .librarybox {
-    margin: 7%;
+    margin: 3%;
   }
 }
 
