@@ -3,7 +3,13 @@ $(function (){
     alert(window.location.search.substr(8).slice(0, -8));
     //The document is ready
 
-    //var searchTerms;
+    var queryString = window.location.search.substr(8).slice(0, -8);
+    var searchTerms = queryString.split("+");
+    var searchString;
+    for (var i = 0; i < searchTerms.length; i++) {
+      searchString += searchTerms[i] + " ";
+    }
+    console.log(searchString);
     //Getting the item in the search term box
     //console.log("Search term:" + searchTerms);
     //Calling the function with the search terms as the parameter
