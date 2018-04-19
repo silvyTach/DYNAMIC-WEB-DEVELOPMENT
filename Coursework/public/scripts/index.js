@@ -1,26 +1,7 @@
 $(function(){
   //document ready
   //alert("Document Ready");
-//---------- JavaScript for the slideshow on the index page ----------
 
-  var slideIndex = 1;
-  showDivs(slideIndex);
-
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
-
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("slideshow");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-  }
-  //---------- JavaScript for the slideshow on the index page end----------
   // Top 5 Comedies
     top5(35, "Comedy");
     // Top 5 Action
@@ -56,3 +37,24 @@ $.ajax(settings).done(function (response) {
 });
 
 }
+
+//---------- JavaScript for the slideshow on the index page ----------
+
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("slideshow");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  //---------- JavaScript for the slideshow on the index page end----------
