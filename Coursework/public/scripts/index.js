@@ -5,28 +5,21 @@ $(function(){
   //---------- JavaScript for the slideshow on the index page ----------
 
   var slideIndex = 1;
-  //Initialising the slideshow index at 1 (first slide) and displaying that slide
   showDivs(slideIndex);
 
   function plusDivs(n) {
     showDivs(slideIndex += n);
-    //Whenever an arrow is clicked it will send either 1 (right) or -1 (left)
-    //This value is added to the current index value and then the new index is used to show that particular slide
   }
 
   function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("slideshow");
-    //All slides are selected
     if (n > x.length) {slideIndex = 1}
-    //If the intended index/index received is greater than the number of slides, the index is reset to the start
     if (n < 1) {slideIndex = x.length}
-    //If the intended index/index received is less than 1, the index is reset to the end
     for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";
     }
     x[slideIndex-1].style.display = "block";
-    //All the slides but the targeted one are hidden
   }
 
   //---------- End of slideshow ----------
