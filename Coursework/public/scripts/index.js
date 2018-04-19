@@ -14,7 +14,7 @@ function Comedies() {
   }
 
 $.ajax(settings).done(function (response) {
-  var htmlstring = "<h2>Comedies <i>#Top5</i></h2><a href='library.html'>view all ></a>";
+  var html = "<h2>Comedies <i>#Top5</i></h2><a href='library.html'>view all ></a>";
   for(var i=0; i<5; i++){
     html+= "<div class='poster-title'>"
     html+= "<img src='https://image.tmdb.org/t/p/original/" + response.results[i].poster_path +
