@@ -49,9 +49,6 @@ app.get('/', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    for (var i = 0; i < 4; i++) {
-      console.log(result.body.results[i]);
-    }
     res.render('pages/index', {
       index: result.body.results
     });
