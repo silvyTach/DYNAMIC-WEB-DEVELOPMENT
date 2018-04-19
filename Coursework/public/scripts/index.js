@@ -24,7 +24,7 @@ $.ajax(settings).done(function (response) {
     html+= '<span><a href="/movieshowinfo" class="poster-button" tabindex="-1">more details</a></span>'
     html+= "</div></div>"
     console.log(response.results[i].title);
-    $('#comedy').html(htmlstring);
+    $('#comedy').html(html);
   }
 });
 
