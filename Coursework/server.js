@@ -110,3 +110,18 @@ app.post('/dosearch', function(req, res) {
   var searchterm = req.body;
   //Getting the username and password entered by the user
 });
+
+app.post('/movieshowinfo', function(req, res) {
+  console.log(JSON.stringify(req.body))
+  var id = req.body.id;
+  var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
+  req.query({
+  "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+});
+  req.send("{}");
+req.end(function (res) {
+  if (res.error) throw new Error(res.error);
+  console.log(res.body);
+});
+res.redirect('/movieshowinfo');
+});
