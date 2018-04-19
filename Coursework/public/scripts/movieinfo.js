@@ -9,7 +9,7 @@ $(function(){
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://api.themoviedb.org/3/movie/" + i + "/similar?page=1&api_key=305a3b42d88760bd22c9f8c8c54f788d",
+      "url": "https://api.themoviedb.org/3/movie/" + id + "/similar?page=1&api_key=305a3b42d88760bd22c9f8c8c54f788d",
       "method": "GET",
       "headers": {},
       "data": "{}"
