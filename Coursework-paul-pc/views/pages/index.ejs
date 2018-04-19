@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <% include ../partials/head.ejs %>
+      <!-- Using ejs to import the head code -->
+      <link rel="stylesheet" type="text/css" href="/css/index-main.css">
+      <script src="/scripts/slideshowscript.js"></script>
+      <script src="/scripts/index.js"></script>
+      <!-- Linking the stylesheet for the index page -->
+   </head>
+   <body>
+      <header>
+         <% include ../partials/header.ejs %>
+         <!-- Using ejs to import the header code -->
+      </header>
+      <main>
+         <!-- Top  5 in the user's location -->
+         <section id="top5">
+            <!-- Left slideshow arrow -->
+            <div id="left" class="arrows">
+               <img onclick="plusDivs(-1)" src="/images/left-arrow.png">
+            </div>
+            <!-- Top 5 #1 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Top 5 #2 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow2.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Top 5 #3 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Top 5 #4 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow2.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Top 5 #5 -->
+            <div class="slideshow">
+               <% include ../partials/slideshow2.ejs %>
+               <!-- Using ejs to import the slide code-->
+            </div>
+            <!-- Right slideshow arrow -->
+            <div id="right" class="arrows">
+               <img onclick="plusDivs(1)" src="/images/right-arrow.png">
+            </div>
+         </section>
+      </main>
+      <section id="white">
+         <!-- Top 5 on Netflix -->
+         <div class=" provider" id="netflix">
+            <div class="top">
+               <h2>Netflix <i>#Top5</i></h2>
+               <a href="library.html">view all ></a>
+            </div>
+            <!-- Poster #1 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #2 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #3 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #4 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #5 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+         </div>
+         <!-- Top 5 on Netflix end-->
+         <!-- Top 5 on Prime -->
+         <div class=" provider" id="netflix">
+            <div class="top">
+               <h2>Netflix <i>#Top5</i></h2>
+               <a href="library.html">view all ></a>
+            </div>
+            <!-- Poster #1 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #2 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #3 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #4 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #5 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+         </div>
+         <!-- Top 5 on Amazon Prime end-->
+         <!-- Top 5 on Hulu -->
+         <div class=" provider" id="netflix">
+            <div class="top">
+               <h2>Netflix <i>#Top5</i></h2>
+               <a href="library.html">view all ></a>
+            </div>
+            <!-- Poster #1 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #2 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #3 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #4 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+            <!-- Poster #5 -->
+            <div class="posters">
+               <% include ../partials/movie.ejs %>
+               <!-- Using ejs to import the movei poster code -->
+            </div>
+         </div>
+         <!-- Top 5 on Hulu end-->
+      </section>
+      <footer class="grid-100 tablet-grid-100 footer">
+         <% include ../partials/footer.ejs %>
+         <!-- Using ejs to import the footer code -->
+      </footer>
+      <script src="/scripts/slideshowscript.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </body>
+</html>
