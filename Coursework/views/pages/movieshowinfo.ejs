@@ -25,7 +25,7 @@
 
         <div class="grid-50 tablet-grid-50 mobile-grid-100">
             <div>
-                <h1 class="title"><%= movie.title %></h1>
+                <h1 id="title"><%= movie.title %></h1>
             </div>
             <div class=" grid-100 tab">
                 <button class="tablinks active" onclick="showTab(event, 'overview')">Overview</button>
@@ -33,7 +33,7 @@
                 <button class="tablinks" onclick="showTab(event, 'related')">Related Movies</button>
             </div>
             <div id="overview" class="tabcontent">
-                <p class="plot"><%= movie.overview %></p>
+                <p id="plot"><%= movie.overview %></p>
             </div>
 
             <div id="cast" class="tabcontent">
