@@ -62,10 +62,7 @@
 
             <ul>
                 <li class="info"> Director: </li>
-                <% movie.credits.crew.forEach(function(crew){%>
-                  <% if(crew.department == "Directing") { %>
-                <li ><% crew.name %></li>
-                <% }}) %>
+                <li ><% movie.credits.crew.name %></li>
                 <li class="info"> Release Date: </li>
                 <li ><%= movie.release_date %></li>
                 <li class="info"> Run Time: </li>
