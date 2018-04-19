@@ -31,7 +31,7 @@
             <div class=" grid-100 tab">
                 <button class="tablinks active" onclick="showTab(event, 'overview')">Overview</button>
                 <button class="tablinks" onclick="showTab(event, 'cast')">Cast</button>
-                <button class="tablinks" onclick="showTab(event, 'related')">Related Movies</button>
+                <button class="tablinks" onclick="showTab(event, 'related')">Similar Movies</button>
             </div>
             <div id="overview" class="tabcontent">
                 <p class="plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit justo urna. Proin finibus rhoncus egestas. Vivamus tempus odio non ultrices condimentum. Nam sapien purus, mollis non justo ut, consequat semper ex. Pellentesque
@@ -64,9 +64,30 @@
                 </table>
             </div>
 
-            <div id="related" class="tabcontent">
-                <h3>Related Movies</h3>
-                <p>Related movies are displayed here</p>
+            <div id="similar" class="tabcontent">
+                <table style="width:100%">
+                  <tr>
+                    <td><a href="movieshowinfo.html?id=5000"><img src="poster0.jpg" alt="Actor Photo" width="154"></a></td>
+                    <td>
+                      <h1 class="title">Guardians of the Galaxy</h1>
+                          <p class="l-items">⭐️ 7.4 <i> /10</i></p>
+                          <p class="l-items">Release Date: 2009-08-18</p>
+                      <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum, ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda, nec ex choro omnium sadipscing.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="movieshowinfo.html?id=5050"><img src="poster4.jpg" alt="Actor Photo" width="154"></a></td>
+                    <td>
+                      <h1 class="title">Guardians of the Galaxy</h1>
+                          <p class="l-items">⭐️ 7.4 <i> /10</i></p>
+                          <p class="l-items">Release Date: 2009-08-18</p>
+                      <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum, ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda, nec ex choro omnium sadipscing.</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+                </div>
             </div>
 
         </div>
@@ -99,7 +120,7 @@
 
 <script>
     $()
-    $("#overview").css('display', 'block');
+    $("#similar").css('display', 'block');
     function showTab(evt, tabName) {
         var i, tabcontent, tablinks;
         tabcontent = $(".tabcontent");

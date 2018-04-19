@@ -2,7 +2,7 @@
 *  {
 	font-family: 'Comfortaa', sans-serif;
 	box-sizing: border-box;
-	/* border: solid green; */
+	padding:  0;
 }
 body{
 	margin:0;
@@ -94,4 +94,9 @@ table {
 
 td {
   border: solid 1em transparent;
+}
+
+.l-items{
+	display: inline-block;
+	margin-right: 5%;
 }
