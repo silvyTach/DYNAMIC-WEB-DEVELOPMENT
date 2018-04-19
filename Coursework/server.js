@@ -60,7 +60,7 @@ app.get('/library', function(req, res) {
   //Library page
 });
 
-÷
+
 
 app.get('/movieshowinfo', function(req, res) {
   var id = req.query.id;
