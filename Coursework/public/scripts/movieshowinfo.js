@@ -13,4 +13,4 @@ function showTab(evt, tabName) {
     $("#" +tabName).css("display", "block");
     evt.currentTarget.className += " active";
 }
-}
+})
