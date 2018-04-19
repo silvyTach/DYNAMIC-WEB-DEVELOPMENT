@@ -2,8 +2,8 @@ $(function(){
   //document ready
   //alert("Document Ready");
   var id = $('#id').html();
-  $('#id').display("none");
   similarMovies(id);
+  $('#id').remove();
   });
 
   function similarMovies(id) {
