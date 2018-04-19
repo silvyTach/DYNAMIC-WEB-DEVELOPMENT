@@ -5,6 +5,7 @@ const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
 const unirest = require("unirest"); // npm install unirest
+const api_key = "305a3b42d88760bd22c9f8c8c54f788d" //tmdb api key
 //Loading the things we need
 
 app.set('view engine', 'ejs');
@@ -42,10 +43,7 @@ MongoClient.connect(url, function(error, database) {
 //Index page
 app.get('/', function(req, res) {
    //res.render('pages/index');
-  var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
-  req.query({
-    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
-  });
+  var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular" + api_key);
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
@@ -65,9 +63,9 @@ app.get('/movieshowinfo', function(req, res) {
   var id = req.query.id;
   console.log(id);
   //this query finds the id of the movie that will be shown on the next page.
-  var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
+  var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id + api_key);
   req.query({
-  "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+
 });
 req.send("{}");
 req.end(function (result) {
