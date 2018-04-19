@@ -59,8 +59,12 @@ main {
      display: block;
      font-size: small;
 }
- .info {
-     color: #D75813;
+
+ul {
+  color: #FFFFFF;
+}
+.info {
+    color: #D75813;
 }
  #genres p{
      display:inline-block;
@@ -78,4 +82,8 @@ main {
 .l-items{
  display: inline-block;
  margin-right: 5%;
+}
+
+h1 {
+  color: #AB0000;
 }
