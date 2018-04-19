@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head.ejs %>
+    <!-- Using ejs to import the head code -->
+    <link rel="stylesheet" type="text/css" href="/css/movieshowinfo.css">
+    <!-- Linking the stylesheet for the index page -->
+  </head>
+
+  <body>
+    <header>
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
+    </header>
+
+    <!-- Start of main body -->
+    <main>
+      <!-- Start of the grid container -->
+      <div class="grid-container">
+
+        <!-- Start of main info about movie/show -->
+        <section id="movieshowinfo">
+          <!-- Start of the text -->
+          <div class="grid-66">
+            <div id="text">
+              <h1 class="title">Guardians of the Galaxy</h1>
+              <ul class="info">
+                <li class="rating">⭐️ 7.4 <i> /10</i></li>
+                <li class="duration">Run Time: 2h 21m</li>
+                <li class="age">Rated: PG-13</li>
+              </ul>
+              <p class="plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit justo urna. Proin finibus rhoncus egestas. Vivamus tempus odio non ultrices condimentum. Nam sapien purus, mollis non justo ut, consequat semper ex. Pellentesque vitae suscipit leo, nec aliquam lacus. Phasellus pretium risus vitae leo vestibulum, id condimentum nulla sollicitudin. Cras nec quam libero. Sed nec purus erat. Maecenas sodales mauris tincidunt facilisis ullamcorper. In consequat, velit ut gravida lobortis, libero purus dapibus odio, ac scelerisque mi sem vel nisl.</p>
+              <p class="plot">Quisque in ipsum vel felis sollicitudin vehicula. Sed a luctus magna. Proin in fermentum mi, quis iaculis mauris. Nunc quis aliquet justo. Morbi mollis, felis non dignissim fringilla, magna leo vestibulum nulla, eget euismod lectus nulla sit amet lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus congue nisl non semper pulvinar. Nunc sodales auctor nunc, in fermentum metus consectetur eget. Nulla tellus justo, laoreet eu ante ut, dapibus tristique sapien. Ut venenatis, turpis ut ultricies iaculis, sem diam finibus enim, vitae efficitur nulla dolor id metus. Fusce augue diam, congue in congue a, placerat in nunc. Nullam dignissim, enim eu luctus tincidunt, risus turpis feugiat felis, quis pulvinar libero augue et neque. Cras quis egestas elit. Curabitur mattis, eros sed feugiat aliquam, metus ex auctor tortor, vitae euismod nulla nisl ac neque.</p>
+            </div>
+          </div>
+          <!-- End of the text -->
+
+          <!-- Grid parent for poster and buttons -->
+          <div class="grid-33 grid-parent">
+
+            <!-- Start of the poster -->
+            <div class="grid-100">
+              <img id="poster" src="/images/poster0.jpg" alt = "Poster">
+            </div>
+            <!-- End of the poster -->
+
+            <!-- Start of the buttons -->
+            <section id="buttons">
+              <div class="grid-100">
+                <button class="button" id="addtolibrary">Add to Library</button>
+                <button class="button streamservice" id="gotonetflix">Netflix</button>
+                <button class="button streamservice" id="gotoprime">Prime</button>
+                <button class="button streamservice" id="gotohulu">Hulu</button>
+              </div>
+            </section>
+            <!-- End of the buttons -->
+
+          </div>
+          <!-- End of grid parent for poster and buttons -->
+      </section>
+      <!-- End of main info -->
+
+      <!-- Start of the trailer -->
+      <section id="trailer">
+          <div class="grid-100 mobile-grid-100 tablet-grid-100">
+            <center>
+              <iframe width="420" height="315" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></iframe>
+            </center>
+            <video width="320" height="240" controls>
+              <source src="https://tinyurl.com/2fcpre6" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+              Test.Your browser does not support the video tag.
+            </video>
+          </div>
+      </section>
+      <!-- End of the trailer -->
+
+      </div>
+      <!-- End of the grid container -->
+    </main>
+    <!-- end of main body -->
+
+    <footer class="grid-100 tablet-grid-100 footer">
+      <% include ../partials/footer.ejs %>
+      <!-- Using ejs to import the footer code -->
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </body>
+</html>
