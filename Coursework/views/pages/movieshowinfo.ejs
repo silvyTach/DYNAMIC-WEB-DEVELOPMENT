@@ -38,12 +38,14 @@
 
             <div id="cast" class="tabcontent">
                 <table style="width:100%">
+                  <%for(var i = 0; i < 10; i++) {%>
                     <tr>
-                        <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
-                        <td class="actor">Robert Downey Jr</td>
-                        <td class="character">character</td>
+                        <td><img src="http://image.tmdb.org/t/p/w45/<%=ovie.credits.cast[i].profile_path %>" alt="Actor Photo" width="45"></td>
+                        <td class="actor">movie.credits.cast[i].name</td>
+                        <td class="character">movie.credits.cast[i].character</td>
                     </tr>
-                    <tr>
+                    <% }); %>
+                    <!-- <tr>
                         <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
                         <td class="actor">Chris Hemsworth</td>
                         <td class="character">character</td>
@@ -52,7 +54,7 @@
                         <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
                         <td class="actor">Scarlett Johansson</td>
                         <td class="character">character</td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
 
