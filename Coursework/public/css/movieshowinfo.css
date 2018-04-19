@@ -1,3 +1,9 @@
+main {
+  padding: 10%;
+  margin:10%;
+  color: white;
+
+}
 .button {
   border-radius: 30px;
     font-weight: bold;
