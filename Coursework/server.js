@@ -60,10 +60,10 @@ app.get('/library', function(req, res) {
   //Library page
 });
 
-÷
 
 app.get('/movieshowinfo', function(req, res) {
   var id = req.query.id;
+  console.log(id);
   //this query finds the id of the movie that will be shown on the next page.
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
   req.query({
