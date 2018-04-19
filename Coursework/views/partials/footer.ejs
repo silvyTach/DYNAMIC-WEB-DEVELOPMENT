@@ -33,7 +33,7 @@
         <!-- Copyright notice and identification of who built it -->
       </div>
       <div>
-        <a id="back-to-top">Back to top ↑</a>
+        <a href="" id="back-to-top">Back to top ↑</a>
         <!-- Link back to the top of the page -->
       </div>
     </div>
@@ -41,5 +41,5 @@
 
     <!-- Some script to customize the button for the different pages -->
     <script>
-      $('#back-to-top').href($(location).attr('href'));
+      $('#back-to-top').attr('href', ($(location).attr('href')));
     </script>
