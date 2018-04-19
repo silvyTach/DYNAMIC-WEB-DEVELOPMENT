@@ -74,4 +74,8 @@ main {
  td {
      border: solid 1em transparent;
 }
- 
+
+.l-items{
+ display: inline-block;
+ margin-right: 5%;
+}

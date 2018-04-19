@@ -1,21 +1,30 @@
 $(function(){
   //document ready
-  alert($('#title').html());
-  omdb($('#title').html());
-  // Top 5 Comedies
+  //alert("Document Ready");
+  var id = $('#id').html();
+  similarMovies(id);
   });
-function omdb(title) {
-  var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "hhttp://www.omdbapi.com/?t=" + title+ "&plot=full&apikey=280e6eab",
-    "method": "GET",
-    "headers": {},
-    "data": "{}"
-  }
-$.ajax(settings).done(function (response) {
-  alert(response);
-  $('#plot').html(response.Plot)
-});
 
-}
+  function similarMovies(id) {
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://api.themoviedb.org/3/movie/" + i + "/similar?page=1&api_key=305a3b42d88760bd22c9f8c8c54f788d",
+      "method": "GET",
+      "headers": {},
+      "data": "{}"
+    }
+    $.ajax(settings).done(function (response) {
+      var html = "";
+      for(var i=0; i<3; i++){
+        html+= '<tr><td><a href="/movieshowinfo?id=' + response.reults[i].id + '">'
+        html+= "<img src='https://image.tmdb.org/t/p/w154" + response.results[i].poster_path + "alt='" + response.results[i].title + " poster'></a></td><td>"
+        html+= "<h1>" + response.results[i].title + "</h1>"
+
+        html+= '<p class="l-items">⭐️ ' + response.results[i].vote_average + '<i> /10</i></p>'
+        html+= '<p class="l-items">Release Date: ' + response.results[i].release_date + ' </p>'
+        html+= '<p>' + response.results[i].overview + ' </p></td></tr>'
+      }
+      $('#similar table').html(html);
+    });
+  }
