@@ -15,7 +15,7 @@ $(function (){
       //Formatting the search String
     }
     console.log(searchString);
-    getResultsFromOMDb(searchTerms);
+    getResults(searchTerms);
     //Calling the function with the search terms as the parameter
     return false;
     //Preventing the page from reloading
