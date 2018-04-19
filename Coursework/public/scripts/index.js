@@ -62,13 +62,15 @@ function top5(id, genre) {
   //The URL makes use of the ids we selected (provided by the API documentation), the API key and additional parameters to sort our results by popularity
 
   $.ajax(settings).done(function (response) {
+    console.log(response);
+    //Testing a response comes through
     var html = "<div class='top'>\n";
     html += "  <h2>" + genre + " <i>#Top5</i></h2><a href='/library'>view all ></a>\n";
     html += "</div>\n";
     //Declaring a variable to store the HTML String to include and formatting it a bit
       for(var i = 0; i < 5; i++) {
         html += "  <div class='poster-title'>\n";
-        html += "    <img src='https://image.tmdb.org/t/p/original/" + response.results[i].poster_path + "' width = '261px' alt='" + response.results[i].title + " poster'>\n";
+        html += "    <img src='https://image.tmdb.org/t/p/original/" + response.results[i].poster_path + "' width='261px' alt='" + response.results[i].title + " poster'>\n";
         html += "    <span>" + response.results[i].title + "</span>\n";
         html += "    <div class='imageInner'>\n";
         html += "      <span><a href='/movieshowinfo?id=" + response.results[i].id + "' class='poster-button' tabindex='-1'>more details</a></span>\n";
