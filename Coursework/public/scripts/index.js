@@ -41,14 +41,14 @@ $(function(){
   var genreids = [35, 28, 10749, 80];
   //Creating arrays to store the genre names we need and their TheMovieDB API ids for calls later on
 
-  for (var i = 0; i < genres.length; i++) {
+  for (var i = 0; i < genreids.length; i++) {
     top5(genres[i], genreids[i]);
     //For each genre, it and its genre id are passed to the top5 method to populate its area on the index page
   }
 
 });
 
-function top5(id, genre) {
+function top5(genre, id) {
 
   var settings = {
     "async": true,
