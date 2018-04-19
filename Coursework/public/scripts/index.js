@@ -15,8 +15,8 @@ $(function(){
   }
 
   function showDivs(index) {
-    var slides = $(".slideshow");
-    //All slides are selected using the JQuery selector
+    var slides = document.getElementsByClassName("slideshow");
+    //All slides are selected
     if (index > slides.length) {
       slideIndex = 1;
       //If the intended index/index received is greater than the number of slides, the index is reset to the start
