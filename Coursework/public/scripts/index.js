@@ -1,13 +1,13 @@
 $(function(){
   //document ready
-  alert("Document Ready");
+  //alert("Document Ready");
   // Top 5 Comedies
     top5(35, "Comedy");
-    // Top 5 Comedies
+    // Top 5 Action
       top5(28, "Action");
-      // Top 5 Comedies
+      // Top 5 Romance
         top5(10749, "Romance");
-        // Top 5 Comedies
+        // Top 5 Crine
           top5(80, "Crime");
   });
 function top5(id, genre) {
