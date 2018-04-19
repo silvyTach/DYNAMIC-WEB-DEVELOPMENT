@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <% include ../partials/head.ejs %>
-    <!-- Using ejs to import the head code -->
-    <link rel="stylesheet" type="text/css" href="/css/movieshowinfo.css">
-    <!-- Linking the stylesheet for the index page -->
-  </head>
 
-  <body>
+<head>
+    <% include ../partials/head.ejs %>
+        <!-- Using ejs to import the head code -->
+        <link rel="stylesheet" type="text/css" href="/css/movieshowinfo.css">
+        <!-- Linking the stylesheet for the index page -->
+</head>
+
+<body>
     <header>
-      <% include ../partials/header.ejs %>
-      <!-- Using ejs to import the header code -->
+        <% include ../partials/header.ejs %>
+            <!-- Using ejs to import the header code -->
     </header>
 
     <!-- Start of main body -->
     <main>
-      <div id="poster" class="grid-30 tablet-grid-30 mobile-grid-100">
-          <img src="/images/poster0.jpg" alt="Poster" class="grid-100 mobile-grid-100">
-          <div class="prefix-25 grid-50 suffix-25 tablet-prefix-25 tablet-grid-50 tablet-suffix-25 mobile-grid-100">
-              <button class="button" id="addtolibrary">Add to Library</button>
-          </div>
-      </div>
+        <div id="poster" class="grid-30 tablet-grid-30 mobile-grid-100">
+            <img src="/images/poster0.jpg" alt="Poster" class="grid-100 mobile-grid-100">
+            <div class="prefix-25 grid-50 suffix-25 tablet-prefix-25 tablet-grid-50 tablet-suffix-25 mobile-grid-100">
+                <button class="button" id="addtolibrary">Add to Library</button>
+            </div>
+        </div>
 
         <div class="grid-50 tablet-grid-50 mobile-grid-100">
             <div>
@@ -45,19 +46,19 @@
             <div id="cast" class="tabcontent">
                 <table style="width:100%">
                     <tr>
-                      <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
-                      <td class="actor">Robert Downey Jr</td>
-                      <td class="character">character</td>
+                        <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
+                        <td class="actor">Robert Downey Jr</td>
+                        <td class="character">character</td>
                     </tr>
                     <tr>
-                      <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
-                      <td class="actor">Chris Hemsworth</td>
-                      <td class="character">character</td>
+                        <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
+                        <td class="actor">Chris Hemsworth</td>
+                        <td class="character">character</td>
                     </tr>
                     <tr>
-                      <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
-                      <td class="actor">Scarlett Johansson</td>
-                      <td class="character">character</td>
+                        <td><img src="/images/cast.jpg" alt="Actor Photo" width="45"></td>
+                        <td class="actor">Scarlett Johansson</td>
+                        <td class="character">character</td>
                     </tr>
                 </table>
             </div>
@@ -95,8 +96,8 @@
     <!-- end of main body -->
 
     <footer class="grid-100 tablet-grid-100 footer">
-      <% include ../partials/footer.ejs %>
-      <!-- Using ejs to import the footer code -->
+        <% include ../partials/footer.ejs %>
+            <!-- Using ejs to import the footer code -->
     </footer>
     <script>
         $()
@@ -115,5 +116,6 @@
             evt.currentTarget.className += " active";
         }
     </script>
-  </body>
+</body>
+
 </html>
