@@ -155,8 +155,7 @@ i {
   clear: both;
   background-color: #FFFFFF !important;
   /* The width of this now fills the whole browser window, nothing can float around it and it is white */
-  padding: 5%;
-  margin: auto;
+  padding: 5% 10%;
   /* Padding added the top, right/left and bottom, removing margin */
   float: left;
 }
@@ -164,10 +163,6 @@ i {
 h2 {
   display: inline;
   /* h2 tags are displayed as inline elements */
-}
-
-.provider {
-  margin: 2%;
 }
 
 h2, .provider a {
@@ -182,14 +177,14 @@ h2, .provider a {
 }
 
 .provider img {
-  padding-left: 2.5%;
+  padding: 5%;
   /* Images within the provider class have some padding added to the left */
 }
 
 .posters {
     box-sizing: content-box;
     float: left;
-    width: 20%;
+    width: 10%;
 }
 
 .poster-title {
@@ -200,9 +195,8 @@ h2, .provider a {
 }
 
 .poster-title > span {
-  width: 100%;
-  margin-left: 7px;
-  padding: 5px;
+  margin-left: -100%;
+  padding: 10%;
   /* Span tags within the poster-title class take up the whole width of their containing element, has an outer margin to separate it from the element on its left (i.e. the edge) and internal padding of 5px */
   position: absolute;
   bottom: 0;
@@ -212,16 +206,17 @@ h2, .provider a {
   font-weight: 700;
   color: #FFFFFF;
   /* The font is made large, bold and white */
+  z-index:3;
 }
 
 .poster-title .imageInner{
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 92%;
   /* The area covering the image when its hovered over takes the whole height and width of the poster size */
-  margin: auto;
+
   position: absolute;
   /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class and the margin is calculated by the browser */
-  margin-left: 2.5%;
+  margin: 5%;
   /* The left margin is then increased */
   top: 0;
   left: 0;

@@ -122,3 +122,7 @@ navbar li a:hover{
 #socialMediaLogos{
   jborder: solid 1px green;
 }
+
+td {
+	font-size: x-large;
+}

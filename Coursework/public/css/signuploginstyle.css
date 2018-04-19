@@ -17,7 +17,7 @@ h2 {
   /* The h2 tags have a red text colour, a set text size and a browser calculated width */
 }
 
-input {
+main input {
   display: inline-block;
   padding: 12px 20px;
   margin-bottom: 2%;
