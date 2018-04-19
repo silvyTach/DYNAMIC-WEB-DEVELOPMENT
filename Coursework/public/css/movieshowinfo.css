@@ -1,16 +1,9 @@
-main {
-  margin:10%;
-  color: white;
-}
-
 .button {
   border-radius: 30px;
     font-weight: bold;
     background-color: #D75813;
     color: #ffffff;
     padding: 13px 25px;
-    clear: both;
-    float: left;
     margin-top: 3%;
     font-size: 0.75em;
     text-transform: uppercase;
