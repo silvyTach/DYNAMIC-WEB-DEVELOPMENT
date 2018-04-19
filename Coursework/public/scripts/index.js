@@ -15,23 +15,19 @@ $(function(){
   }
 
   function showDivs(n) {
-    var slides = document.getElementsByClassName("slideshow");
+    var i;
+    var x = document.getElementsByClassName("slideshow");
     //All slides are selected
-    if (n > slides.length) {
-      slideIndex = 1;
-      //If the intended index/index received is greater than the number of slides, the index is reset to the start
-    } else if (n < 1) {
-      slideIndex = slides.length;
-      //If the intended index/index received is less than the number of slides, the index is reset to the end
+    if (n > x.length) {slideIndex = 1}
+    //If the intended index/index received is greater than the number of slides, the index is reset to the start
+    if (n < 1) {slideIndex = x.length}
+    //If the intended index/index received is less than 1, the index is reset to the end
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
     }
-
-    for (var i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";
-       //Each unwanted slide is completely removed by changing the display CSS attribute
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    //The desired slide is shown as a block element by changing the display CSS attribute
+    x[slideIndex-1].style.display = "block";
+  }
+  //All the slides but the targeted one are hidden
 
   }
 
@@ -62,7 +58,7 @@ function top5(genre, id) {
   //The URL makes use of the ids we selected (provided by the API documentation), the API key and additional parameters to sort our results by popularity
 
   $.ajax(settings).done(function (response) {
-    console.log(response);
+    //console.log(response);
     //Testing a response comes through
     var html = "<div class='top'>\n";
     html += "  <h2>" + genre + " <i>#Top5</i></h2><a href='/library'>view all ></a>\n";
