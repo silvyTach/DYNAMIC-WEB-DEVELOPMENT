@@ -62,15 +62,16 @@
 
             <ul>
                 <li class="info"> Director: </li>
-                <li id="director"> Joss Whedon </li>
-                <li class="info"> Writer: </li>
-                <li id="writer"> Joss Whedon </li>
+                <% movie.credits.crew.forEach(function(crew){%>
+                  <% if(crew.department == "Directing") { %>
+                <li ><% crew.name %></li>
+                <% }} %>
                 <li class="info"> Release Date: </li>
-                <li id="released"><%= movie.release_date %></li>
+                <li ><%= movie.release_date %></li>
                 <li class="info"> Run Time: </li>
-                <li id="runtime"><%= movie.runtime %>m </li>
+                <li ><%= movie.runtime %>m </li>
                 <li class="info"> Tagline: </li>
-                <li id="tagline"><%= movie.tagline %></li>
+                <li ><%= movie.tagline %></li>
                 <li class="info"> Genres: </li>
                 <li id="genres">
                   <% movie.genres.forEach(function(genre){%>
