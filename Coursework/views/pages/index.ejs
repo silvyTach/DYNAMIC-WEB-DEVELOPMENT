@@ -3,88 +3,77 @@
 
 <head>
     <% include ../partials/head.ejs %>
-    <!-- End of ejs to import the head code -->
-    <link rel="stylesheet" type="text/css" href="/css/index-main.css">
-    <script src="/scripts/index.js"></script>
-    <script src="/scripts/slideshowscript.js"></script>
-    <!-- Linking the stylesheet for the index page -->
+        <!-- Using ejs to import the head code -->
+        <link rel="stylesheet" type="text/css" href="/css/index-main.css">
+        <script src="/scripts/index.js"></script>
+        <!-- <script src="/scripts/slideshowscript.js"></script> -->
+        <!-- Linking the stylesheet for the index page -->
 </head>
 
 <body>
     <header>
         <% include ../partials/header.ejs %>
-        <!-- End of ejs to import the header code -->
+            <!-- Using ejs to import the header code -->
     </header>
     <main>
-      <!-- Slideshow of the top 5 most popular movies -->
-      <section id="top5">
-        <!-- Left slideshow arrow -->
-        <div id="left" class="arrows">
-          <img onclick="plusDivs(-1)" src="/images/left-arrow.png">
-        </div>
-
-        <!-- Top 5 slideshow -->
-        <% for(var i = 0; i < 5; i++) { %>
-        <!-- Using an ejs for loop to create 5 slides -->
-          <div class="slideshow">
-            <!-- Each slideshow has text -->
-            <div class="text">
-              <h1 class="title"><%= index[i].title %></h1>
-              <!-- Once title is found from API, it is added using ejs -->
-              <ul class="info">
-                <li class="rating">⭐️<%= index[i].vote_average %><i>/10</i></li>
-                <!-- <li class="duration">Run Time: 2h 21'</li>
-                <li class="age">Rated: PG-13</li> -->
-                <!-- Other information is gathered from API and inserted using ejs. We've commented out information we couldn't get -->
-              </ul>
-              <p class="plot"><%= index[i].overview %></p>
-              <!-- Once plot is found from API, it is added using ejs -->
-              <div>
-                <a href="/movieshowinfo?id=<%=index[i].id%>" class="button" tabindex="-1">More Details</a>
-                <!-- Button is used with the movie id from the API to link to show more details -->
-              </div>
+        <!-- Top  5 in the user's location -->
+        <section id="top5">
+            <!-- Left slideshow arrow -->
+            <div id="left" class="arrows">
+                <img onclick="plusDivs(-1)" src="/images/left-arrow.png">
             </div>
-            <!-- End of text content -->
-            <!-- Each slide has a poster for its movie -->
-            <div class="image">
-              <img src="https://image.tmdb.org/t/p/original/<%= index[i].poster_path %>" alt="<%= index[i].title %> Poster" width="261px" height="401px">
-            </div>
-            <!-- End of poster -->
-          </div>
-        <!-- End of ejs for loop -->
-        <% }; %>
-
-        <!-- Right slideshow arrow -->
-        <div id="right" class="arrows">
-          <img onclick="plusDivs()" src="/images/right-arrow.png">
-        </div>
-      </section>
-      <!-- End of slideshow -->
+            <!-- Top 5 #1 -->
+            <%for(var i = 0; i < 5; i++) {%>
+                <div class="slideshow">
+                    <div class="text">
+                        <h1 class="title">
+                            <%= index[i].title %>
+                        </h1>
+                        <ul class="info">
+                            <li class="rating">⭐️
+                                <%= index[i].vote_average %><i> /10</i></li>
+                            <!-- <li class="duration">Run Time: 2h 21'</li>
+                    <li class="age">Rated: PG-13</li> -->
+                        </ul>
+                        <p class="plot">
+                            <%= index[i].overview %>
+                        </p>
+                        <div><a href="/movieshowinfo?id=<%=index[i].id%>" class="button" tabindex="-1">more details</a></div>
+                    </div>
+                    <div class="image">
+                        <img src="https://image.tmdb.org/t/p/original/<%= index[i].poster_path %>" alt="<%= index[i].title %> Poster" width="261px" height="401px">
+                    </div>
+                </div>
+                <% }; %>
+                    <!-- Right slideshow arrow -->
+                    <div id="right" class="arrows">
+                        <img onclick="plusDivs(1)" src="/images/right-arrow.png">
+                    </div>
+        </section>
     </main>
-
     <section id="white">
-        <!-- Section for the top 5s sorted by genre -->
-        <div class="provider" id="Comedy">
-          <!-- This is populated by the top5 function in the index.js script -->
+        <!-- Top 5 on Netflix -->
+        <div class=" provider" id="Comedy">
         </div>
-
-        <div class="provider" id="Action">
-          <!-- This is populated by the top5 function in the index.js script -->
+        <!-- Top 5 on Netflix end-->
+        <!-- Top 5 on Prime -->
+        <div class=" provider" id="Action">
         </div>
-
-        <div class="provider" id="Romance">
-          <!-- This is populated by the top5 function in the index.js script -->
+        <!-- Top 5 on Amazon Prime end-->
+        <!-- Top 5 on Hulu -->
+        <div class=" provider" id="Romance">
         </div>
-
-        <div class="provider" id="Crime">
-          <!-- This is populated by the top5 function in the index.js script -->
+        <!-- Top 5 on Hulu end-->
+        <!-- Top 5 on Hulu -->
+        <div class=" provider" id="Crime">
         </div>
-        <!-- End of top 5s sorted by genre -->
+        <!-- Top 5 on Hulu end-->
     </section>
     <footer class="grid-100 tablet-grid-100 footer">
         <% include ../partials/footer.ejs %>
-        <!-- End of ejs to import the footer code -->
+            <!-- Using ejs to import the footer code -->
     </footer>
+    <script src="/scripts/slideshowscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
-
 </html>
