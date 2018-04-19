@@ -31,13 +31,17 @@
                         <ul class="info">
                             <li class="rating">⭐️
                                 <%= index[i].vote_average %><i> /10</i></li>
-                            <li id='id' action="/movieshowinfo" method="POST" placeholder="id" display="none">index[i].id</li>
+                            <li action="/movieshowinfo" method="POST" placeholder="id" display="none">index[i].id</li>
                             <!-- <li class="age">Rated: PG-13</li> -->
                         </ul>
                         <p class="plot">
                             <%= index[i].overview %>
                         </p>
-                        <div><a href="/movieshowinfo" class="button" type="submit" tabindex="-1">more details</a></div>
+                        <form action="/movieshowinfo" method="POST">
+                          <input name="id" display="none">
+                          <button type="submit" class="button" tabindex="-1">more details</button>
+                        </form>
+                        <!-- <div><a href="/movieshowinfo" class="button" type="submit" tabindex="-1">more details</a></div> -->
                     </div>
                     <div class="image">
                         <img src="https://image.tmdb.org/t/p/original/<%= index[i].poster_path %>" alt="Poster" width="261px" height="401px">
