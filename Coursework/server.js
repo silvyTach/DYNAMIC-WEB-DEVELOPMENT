@@ -95,32 +95,25 @@ app.get('/search', function(req, res) {
 //-------------------- POST ROUTES --------------------
 
 app.post('/login', function(req, res) {
-  console.log(JSON.stringify(req.body));
+  console.log(JSON.stringify(req.body))
   var uname = req.body.loginformusername;
   var pword = req.body.loginformpassword;
-  //Getting the username and password entered by the user
-  db.collection('users').findOne({"username":uname}), function (error, result) {
-    if (error) {
-      throw error;
-      //If there's an error, throw it
-    }
 
-    if (!result) {
-      res.redirect('/login');
-      return;
-      //If there is no result matching the username, a new login page is generated
-    }
-
-    if (result.password == pword) {
-      res.redirect('/library');
-      //The user is redirected to their library
-    } else {
-      res.redirect('/login');
-      return;
-      //If there is no result matching the username, a new login page is generated
-    }
-  };
+  db.collection('people').findOne({"login.username":uname}, function(err, result) {
+    if (err) throw err;//if there is an error, throw the error
+    //if there is no result, redirect the user back to the login system as that username must not exist
+    if(!result){res.redirect('/login');return}
+    //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
+    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/') }
+    //otherwise send them back to login
+    else{res.redirect('/login')}
+  });
 });
+
+
+
+
+
 
 app.post('/dosearch', function(req, res) {
   console.log(JSON.stringify(req.body));
