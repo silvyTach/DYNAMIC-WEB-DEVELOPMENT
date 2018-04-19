@@ -60,6 +60,7 @@ app.get('/library', function(req, res) {
   //Library page
 });
 
+//Movie info page
 app.get('/movieshowinfo', function(req, res) {
   var id = req.query.id;
   console.log(id);
@@ -71,8 +72,10 @@ app.get('/movieshowinfo', function(req, res) {
 req.send("{}");
 req.end(function (result) {
   if (result.error) throw new Error(result.error);
-  console.log(result.body);
-  res.render('pages/movieshowinfo');
+  console.log(result.body.title);
+  res.render('pages/index', {
+    index: result.body
+  });
 });
 });
 
