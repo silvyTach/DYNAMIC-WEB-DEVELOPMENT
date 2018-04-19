@@ -60,10 +60,24 @@ app.get('/library', function(req, res) {
   //Library page
 });
 
+÷
+
 app.get('/movieshowinfo', function(req, res) {
-  res.render('pages/movieshowinfo');
-  //Page to show info about a movie or show
+  var id = req.query.id;
+  //this query finds the id of the movie that will be shown on the next page.
+  var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
+  req.query({
+  "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
 });
+req.send("{}");
+req.end(function (result) {
+  if (result.error) throw new Error(result.error);
+  console.log(result.body);
+  res.render('pages/movieshowinfo');
+});
+});
+
+
 
 app.get('/signuplogin', function(req, res) {
   res.render('pages/signuplogin');
