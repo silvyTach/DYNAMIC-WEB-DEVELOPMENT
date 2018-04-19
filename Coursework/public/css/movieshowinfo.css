@@ -59,13 +59,11 @@ main {
      display: block;
      font-size: small;
 }
-
-.value {
-  color: #FFFFFF;
+ .value, #director {
+     color: #FFFFFF;
 }
-
-.label {
-    color: #D75813;
+ .label {
+     color: #D75813;
 }
  #genres p{
      display:inline-block;
@@ -79,12 +77,10 @@ main {
  td {
      border: solid 1em transparent;
 }
-
-.l-items{
- display: inline-block;
- margin-right: 5%;
+ .l-items{
+     display: inline-block;
+     margin-right: 5%;
 }
-
-h1 {
-  color: #AB0000;
+ h1 {
+     color: #AB0000;
 }
