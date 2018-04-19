@@ -18,7 +18,7 @@ $(function(){
       var html = "";
       for(var i=0; i<3; i++){
         html+= '<tr><td><a href="/movieshowinfo?id=' + response.results[i].id + '">'
-        html+= "<img src='https://image.tmdb.org/t/p/w154" + response.results[i].poster_path + "alt='" + response.results[i].title + " poster'></a></td><td>"
+        html+= "<img src='https://image.tmdb.org/t/p/w154" + response.results[i].poster_path + "' alt='" + response.results[i].title + " poster'></a></td><td>"
         html+= "<h1>" + response.results[i].title + "</h1>"
 
         html+= '<p class="l-items">⭐️ ' + response.results[i].vote_average + '<i> /10</i></p>'
