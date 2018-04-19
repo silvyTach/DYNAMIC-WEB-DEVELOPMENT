@@ -1,20 +1,27 @@
 $(function(){
   //document ready
   alert("Document Ready");
-    Comedies();
+  // Top 5 Comedies
+    top5(35, "Comedy");
+    // Top 5 Comedies
+      top5(28, "Action");
+      // Top 5 Comedies
+        top5(10749, "Romance");
+        // Top 5 Comedies
+          top5(80, "Crime");
   });
-function Comedies() {
+function top5(id, genre) {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://api.themoviedb.org/3/discover/movie?with_genres=35&page=1&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
+    "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id+ "&page=1&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
     "method": "GET",
     "headers": {},
     "data": "{}"
   }
 
 $.ajax(settings).done(function (response) {
-  var html = "";
+  var html = '<div class="top"><h2>' + genre + ' <i>#Top5</i></h2><a href="library.html">view all ></a></div>';
   for(var i=0; i<5; i++){
     html+= "<div class='poster-title'>"
     html+= "<img src='https://image.tmdb.org/t/p/original/" + response.results[i].poster_path +
@@ -23,8 +30,8 @@ $.ajax(settings).done(function (response) {
     html+= "<div class='imageInner'>"
     html+= '<span><a href="/movieshowinfo" class="poster-button" tabindex="-1">more details</a></span>'
     html+= "</div></div>"
-    console.log(response.results[i].title);
-    $('#comedy').html(html);
+    // console.log(response.results[i].title);
+    $("'#" + genre + "'").html(html);
   }
 });
 
