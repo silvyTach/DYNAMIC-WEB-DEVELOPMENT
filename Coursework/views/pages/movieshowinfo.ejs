@@ -31,7 +31,7 @@
             <div class=" grid-100 tab">
                 <button class="tablinks active" onclick="showTab(event, 'overview')">Overview</button>
                 <button class="tablinks" onclick="showTab(event, 'cast')">Cast</button>
-                <button class="tablinks" onclick="showTab(event, 'related')">Related Movies</button>
+                <button class="tablinks" onclick="showTab(event, 'similar')">Related Movies</button>
             </div>
             <div id="overview" class="tabcontent">
                 <p id="plot"><%= movie.overview %></p>
@@ -49,9 +49,24 @@
                 </table>
             </div>
 
-            <div id="related" class="tabcontent">
-                <h3>Related Movies</h3>
-                <p>Related movies are displayed here</p>
+            <div id="cast" class="tabcontent">
+                <table style="width:100%">
+                    <tr>
+                      <td><img src="cast.jpg" alt="Actor Photo" width="45"></td>
+                      <td class="actor">Robert Downey Jr</td>
+                      <td class="character">character</td>
+                    </tr>
+                    <tr>
+                      <td><img src="cast.jpg" alt="Actor Photo" width="45"></td>
+                      <td class="actor">Chris Hemsworth</td>
+                      <td class="character">character</td>
+                    </tr>
+                    <tr>
+                      <td><img src="cast.jpg" alt="Actor Photo" width="45"></td>
+                      <td class="actor">Scarlett Johansson</td>
+                      <td class="character">character</td>
+                    </tr>
+                </table>
             </div>
 
         </div>
