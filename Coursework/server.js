@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
     res.render('pages/index', {
-      index: result.body.results
+      movie: result.body.results
     });
   });
 });
