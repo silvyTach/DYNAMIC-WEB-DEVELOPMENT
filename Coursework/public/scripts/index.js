@@ -71,7 +71,7 @@ function top5(genre, id) {
       for(var i = 0; i < 5; i++) {
         html += "  <div class='poster-title'>\n";
         html += "    <img src='https://image.tmdb.org/t/p/original/" + response.results[i].poster_path + "' width='261px' alt='" + response.results[i].title + " poster'>\n";
-        html += "    <span>" + response.results[i - 1].title + "</span>\n";
+        html += "    <span>" + response.results[i].title + "</span>\n";
         html += "    <div class='imageInner'>\n";
         html += "      <span><a href='/movieshowinfo?id=" + response.results[i].id + "' class='poster-button' tabindex='-1'>more details</a></span>\n";
         html += "    </div>\n";
