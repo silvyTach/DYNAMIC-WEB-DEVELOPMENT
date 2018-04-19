@@ -1,7 +1,7 @@
 $(function(){
   //document ready
-  alert($('#title').html);
-  omdb($('#title').html);
+  alert($('#title').html());
+  omdb($('#title').html());
   // Top 5 Comedies
   });
 function omdb(title) {
