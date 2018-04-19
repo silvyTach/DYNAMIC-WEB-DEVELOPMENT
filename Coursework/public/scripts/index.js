@@ -22,50 +22,38 @@ $(function(){
   }
   // end of slideshow code
 
-  var genres = ["Comedy", "Action", "Romance", "Crime"];
-  var genreids = [35, 28, 10749, 80];
-  //Creating arrays to store the genre names we need and their TheMovieDB API ids for calls later on
-
-  for (var i = 0; i < genreids.length; i++) {
-    top5(genres[i], genreids[i]);
-    //For each genre, it and its genre id are passed to the top5 method to populate its area on the index page
-  }
+  // Top 5 Comedies
+    top5(35, "Comedy");
+    // Top 5 Action
+      top5(28, "Action");
+      // Top 5 Romance
+        top5(10749, "Romance");
+        // Top 5 Crine
+          top5(80, "Crime");
   });
-
-  function top5(genre, id) {
-
-    var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&page=1&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
-      "method": "GET",
-      "headers": {},
-      "data": "{}"
-    }
-    //Initialising settings for the API call using the JQuery AJAX method
-    //The URL makes use of the ids we selected (provided by the API documentation), the API key and additional parameters to sort our results by popularity
-
-    $.ajax(settings).done(function (response) {
-      //console.log(response);
-      //Testing a response comes through
-      var html = "<div class='top'>\n";
-      html += "  <h2>" + genre + " <i>#Top5</i></h2><a href='/library'>view all ></a>\n";
-      html += "</div>\n";
-      //Declaring a variable to store the HTML String to include and formatting it a bit
-        for(var i = 0; i < 5; i++) {
-          html += "  <div class='poster-title'>\n";
-          html += "    <img src='https://image.tmdb.org/t/p/original/" + response.results[i].poster_path + "' width='261px' alt='" + response.results[i].title + " poster'>\n";
-          html += "    <span>" + response.results[i].title + "</span>\n";
-          html += "    <div class='imageInner'>\n";
-          html += "      <span><a href='/movieshowinfo?id=" + response.results[i].id + "' class='poster-button' tabindex='-1'>more details</a></span>\n";
-          html += "    </div>\n";
-          html += "  </div>\n";
-          //Formatting the HTML String
-          //console.log(response.results[i].title);
-          $("#" + genre).html(html);
-          //Adding the HTML String to its allocated div in the index page
-        }
-        //End of for loop
-      });
-      //End of AJAX API call
+function top5(id, genre) {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id+ "&page=1&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
+    "method": "GET",
+    "headers": {},
+    "data": "{}"
   }
+
+$.ajax(settings).done(function (response) {
+  var html = '<div class="top"><h2>' + genre + ' <i>#Top5</i></h2><a href="/library">view all ></a></div>';
+  for(var i=0; i<5; i++){
+    html+= "<div class='poster-title'>"
+    html+= "<img src='https://image.tmdb.org/t/p/original/" + response.results[i].poster_path +
+      "' width = '261px' alt='" + response.results[i].title + " poster'>"
+    html+= "<span>" + response.results[i].title + "</span>"
+    html+= "<div class='imageInner'>"
+    html+= '<span><a href="/movieshowinfo?id=' + response.results[i].id +'" class="poster-button" tabindex="-1">more details</a></span>'
+    html+= "</div></div>"
+    // console.log(response.results[i].title);
+    $("#" + genre).html(html);
+  }
+});
+
+}
