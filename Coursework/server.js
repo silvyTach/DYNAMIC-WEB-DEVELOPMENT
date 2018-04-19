@@ -72,7 +72,7 @@ app.get('/movieshowinfo', function(req, res) {
 req.send("{}");
 req.end(function (result) {
   if (result.error) throw new Error(result.error);
-  console.log(result.body.title);
+  console.log(result.body.original_title);
   res.render('pages/index', {
     index: result.body
   });
