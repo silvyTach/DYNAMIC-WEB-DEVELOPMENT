@@ -33,14 +33,7 @@
                 <button class="tablinks" onclick="showTab(event, 'related')">Related Movies</button>
             </div>
             <div id="overview" class="tabcontent">
-                <p class="plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit justo urna. Proin finibus rhoncus egestas. Vivamus tempus odio non ultrices condimentum. Nam sapien purus, mollis non justo ut, consequat semper ex. Pellentesque
-                    vitae suscipit leo, nec aliquam lacus. Phasellus pretium risus vitae leo vestibulum, id condimentum nulla sollicitudin. Cras nec quam libero. Sed nec purus erat. Maecenas sodales mauris tincidunt facilisis ullamcorper. In consequat,
-                    velit ut gravida lobortis, libero purus dapibus odio, ac scelerisque mi sem vel nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit justo urna. Proin finibus rhoncus egestas. Vivamus tempus odio non ultrices
-                    condimentum. Nam sapien purus, mollis non justo ut, consequat semper ex. Pellentesque vitae suscipit leo, nec aliquam lacus. Phasellus pretium risus vitae leo vestibulum, id condimentum nulla sollicitudin. Cras nec quam libero. Sed
-                    nec purus erat. Maecenas sodales mauris tincidunt facilisis ullamcorper. In consequat, velit ut gravida lobortis, libero purus dapibus odio, ac scelerisque mi sem vel nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                    hendrerit justo urna. Proin finibus rhoncus egestas. Vivamus tempus odio non ultrices condimentum. Nam sapien purus, mollis non justo ut, consequat semper ex. Pellentesque vitae suscipit leo, nec aliquam lacus. Phasellus pretium risus
-                    vitae leo vestibulum, id condimentum nulla sollicitudin. Cras nec quam libero. Sed nec purus erat. Maecenas sodales mauris tincidunt facilisis ullamcorper. In consequat, velit ut gravida lobortis, libero purus dapibus odio, ac scelerisque
-                    mi sem vel nisl.</p>
+                <p class="plot"><%= movie.overview %></p>
             </div>
 
             <div id="cast" class="tabcontent">
@@ -79,16 +72,16 @@
                 <li class="info"> Writer: </li>
                 <li id="writer"> Joss Whedon </li>
                 <li class="info"> Release Date: </li>
-                <li id="released"> 2012-04-25</li>
+                <li id="released"><%= movie.release_date %></li>
                 <li class="info"> Run Time: </li>
-                <li id="runtime"> 143m </li>
+                <li id="runtime"><%= movie.tagline %>m </li>
                 <li class="info"> Tagline: </li>
-                <li id="tagline"> Some assembly required. </li>
+                <li id="tagline"><%= movie.tagline %></li>
                 <li class="info"> Genres: </li>
                 <li id="genres">
-                    <p> Action </p>
-                    <p> Adventure </p>
-                    <p> Science Fiction </p>
+                  <% movie.genres.forEach(function(genre){%>
+                    <p><%= genre.name %></p>
+                    <% }); %>
                 </li>
             </ul>
         </div>
