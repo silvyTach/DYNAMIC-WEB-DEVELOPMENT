@@ -5,8 +5,8 @@ $(function(){
   //---------- JavaScript for the slideshow on the index page ----------
 
   var slideIndex = 1;
-  showDivs(slideIndex);
   //Initialising the slideshow index at 1 (first slide) and displaying that slide
+  showDivs(slideIndex);
 
   function plusDivs(n) {
     showDivs(slideIndex += n);
@@ -26,9 +26,7 @@ $(function(){
        x[i].style.display = "none";
     }
     x[slideIndex-1].style.display = "block";
-  }
-  //All the slides but the targeted one are hidden
-
+    //All the slides but the targeted one are hidden
   }
 
   //---------- End of slideshow ----------
