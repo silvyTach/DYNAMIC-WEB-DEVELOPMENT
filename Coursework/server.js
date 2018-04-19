@@ -67,6 +67,7 @@ app.get('/movieshowinfo', function(req, res) {
   //this query finds the id of the movie that will be shown on the next page.
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
   req.query({
+    "append_to_response": "credits",
   "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
 });
 req.send("{}");
