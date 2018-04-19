@@ -14,13 +14,13 @@ $(function(){
     //This value is added to the current index value and then the new index is used to show that particular slide
   }
 
-  function showDivs(index) {
+  function showDivs(n) {
     var slides = document.getElementsByClassName("slideshow");
     //All slides are selected
-    if (index > slides.length) {
+    if (n > slides.length) {
       slideIndex = 1;
       //If the intended index/index received is greater than the number of slides, the index is reset to the start
-    } else if (index < 1) {
+    } else if (n < 1) {
       slideIndex = slides.length;
       //If the intended index/index received is less than the number of slides, the index is reset to the end
     }
