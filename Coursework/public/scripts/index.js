@@ -15,8 +15,8 @@ $(function(){
   }
 
   function showDivs(index) {
-    var slides = $(".slideshow");
-    //All slides are selected using the JQuery selector
+    var slides = document.getElementsByClassName("slideshow");
+    //All slides are selected
     if (index > slides.length) {
       slideIndex = 1;
       //If the intended index/index received is greater than the number of slides, the index is reset to the start
@@ -26,12 +26,12 @@ $(function(){
     }
 
     for (var i = 0; i < slides.length; i++) {
-       $(slides[i]).css("display", "none");
-       //Each unwanted slide is completely removed by changing the display CSS attribute through JQuery
+       slides[i].style.display = "none";
+       //Each unwanted slide is completely removed by changing the display CSS attribute
     }
 
-    $(slides[slideIndex - 1]).css("display","block");
-    //The desired slide is shown as a block element by changing the display CSS attribute through JQuery
+    slides[slideIndex - 1].style.display = "block";
+    //The desired slide is shown as a block element by changing the display CSS attribute
 
   }
 
