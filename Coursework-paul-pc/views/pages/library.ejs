@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head.ejs %>
+    <!-- Using ejs to import the head code -->
+  </head>
+
+  <body>
+    <header>
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
+    </header>
+
+    <main>
+      <!-- Formatting -->
+      <br/>
+      <br/>
+
+        <!-- Formatting -->
+        <center>
+        <!-- Identifying the form -->
+        <section class="grid-container">
+          <section class="grid-100">
+            <h2> Library </h2>
+          </section>
+        </section>
+        </center>
+<!-- Filters -->
+<section id="libraryfilters" class="grid-container">
+  <div class="grid-100">
+    <navbar id="librarynav">
+      <ul>
+        <li><a id="menu-item" href="#">All</a></li>
+        <li><a id="menu-item-netflix" href="#">Netflix</a></li>
+        <li><a id="menu-item-prime" href="#">Amazon Prime</a></li>
+        <li><a id="menu-item-hulu" href="#">Hulu</a></li>
+      </ul>
+    <navbar>
+  </div>
+</section>
+
+
+
+<!-- Movie items in a responsive gallery -->
+
+
+
+<div class="responsive">
+    <div class="gallery">
+      <div class="show-image">
+      <a target="_blank" href="movie_placeholder.png">
+        <img src="movie_placeholder.png" alt="movie" width="600" height="400">
+        <input class="update" type="button" value="More Details" />
+      </a>
+      </div>
+
+      <div class="desc">Move info bla bla bla etc </div>
+    </div>
+  </div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <div class = "show-image">
+    <a target="_blank" href="movie_placeholder.png">
+      <img src="movie_placeholder.png" alt="movie" width="600" height="400">
+        <input class="update" type="button" value="More Details" />
+        </div>
+    </a>
+    <div class="desc">Move info bla bla bla etc </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <div class = "show-image">
+    <a target="_blank" href="movie_placeholder.png">
+      <img src="movie_placeholder.png" alt="movie" width="600" height="400">
+      <input class="update" type="button" value="More Details" />
+      </div>
+    </a>
+    <div class="desc">Move info bla bla bla etc </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <div class = "show-image">
+    <a target="_blank" href="movie_placeholder.png">
+      <img src="movie_placeholder.png" alt="movie" width="600" height="400">
+      <input class="update" type="button" value="More Details" />
+        </div>
+    </a>
+    <div class="desc">Move info bla bla bla etc </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+        <!-- Start of whole form -->
+        <section class="grid-container">
+          <section class="grid-100 grid-parent">
+
+
+
+          </section>
+
+        </section>
+
+
+      </section>
+
+
+
+
+
+        <!-- Standard Bootstrap container -->
+        <div class="container">
+
+          </div>
+          <br/>
+
+
+        <!-- End of Bootstrap container -->
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="grid-100 tablet-grid-100 footer">
+      <% include ../partials/footer.ejs %>
+      <!-- Using ejs to import the footer code -->
+    </footer>
+
+    <script src="slideshowscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>

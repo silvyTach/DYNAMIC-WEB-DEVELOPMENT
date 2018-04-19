@@ -1,0 +1,275 @@
+main {
+  clear: both;
+  /* No elements are allowed to float within the main element and it has a margin around it of 15% */
+}
+#top5 {
+  margin: 15%;
+}
+/* ---------- SLIDESHOW ---------- */
+
+/* ----- General ----- */
+
+.slideshow {
+  float: left;
+  width: 89%;
+  /* It floats to the left (technically this is obsolete?) and takes up 89% of the containing element's width */
+}
+
+.slideshow, .arrows, .poster {
+  /* border: solid green; */
+}
+
+.text, .image, .title {
+  box-sizing: border-box;
+  /* Each of these elements will have its border included in a float */
+  width: 90%;
+  /* They all take 90% of their parent element's width */
+  padding: 0.5%;
+  margin: 0% 0% 2%;
+  /* They all have internal padding and external margins added */
+}
+
+/* ----- Text ----- */
+
+.text {
+  float: left;
+  width: 75%;
+  /* All text within the slideshow will occupy 75% of the width and float left */
+}
+
+.text h1 {
+  font-size: 5em;
+  color: #FFFFFF;
+  /* The headers of the slideshow are made white and given a font size */
+}
+
+.info, .plot {
+  width: 80%;
+  /* The info about the movie/show and the plot will only occupy 80% of the text section */
+}
+
+.info, .plot, .title {
+  /* border: solid green; */
+  margin: 0;
+  /* Each of these items has their margin removed */
+}
+
+.info li {
+  font-size: large;
+  color: #AB0000;
+  font-weight: bold;
+  /* The list items within the info list will have a large font size, be red, and be bold */
+}
+
+i {
+  font-size: small;
+  color: #5B6073;
+  /* Any font made italic will be small and a medium grey colour */
+}
+
+.plot {
+  color: #5B6073;
+  font-size: large;
+  /* The plot text will be a medium grey and a large font size */
+  /*@override box-sizing: content-box important;*/
+}
+
+/* ----- Images ----- */
+
+.image {
+  float: right;
+  width: 25%;
+  /* The image will take up 25% of the slide and float to the right */
+}
+.image img{
+  float: right;
+  /* The image itself will float to the right within its container */
+}
+
+/* ----- Button ----- */
+
+.button {
+  background-color: #D75813;
+  border-radius: 30px;
+  padding: 13px 25px;
+  margin-top: 3%;
+  /* The button is given an orange color, its edges rounded, some padding added and separation from */
+  clear: both;
+  float: left;
+  /* No items are allowed to float around it and it floats to the left of its containing element */
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #D75813;
+  /* When the button is hovered over it becomes transparent and the text becomes orange */
+}
+
+/* ----- Arrows ----- */
+
+.arrows {
+  width: 5%;
+  /* An arrow can only take 5% of the width of the main element */
+}
+
+.arrows img {
+  width: 50%;
+  padding-top: 210%;
+  padding-bottom: 210%;
+  /* The images used for the arrows can take 50% of their container's width and have some added to the top and bottom */
+}
+
+#left {
+  clear: both;
+  float: left;
+  /* The left arrow floats to the left and nothing can float around it */
+}
+
+#left img {
+  width: 52%;
+  padding-top: 235%;
+  /* The image for the left arrow can only take 52% of its container width and is padded from above */
+}
+
+#right {
+  float: right;
+  /* The button is given an orange color, its edges rounded, some padding added and separation from */
+}
+
+#right img {
+  float: right;
+  padding-top: 230%;
+  /* The image for the right arrow is padded from above and floats to the right */
+}
+
+/* ---------- TOP 5 BY SERVICE ---------- */
+
+#white {
+  width: 100%; /* !important; */
+  clear: both;
+  background-color: #FFFFFF !important;
+  /* The width of this now fills the whole browser window, nothing can float around it and it is white */
+  padding: 5%;
+  margin: auto;
+  /* Padding added the top, right/left and bottom, removing margin */
+  float: left;
+}
+
+h2 {
+  display: inline;
+  /* h2 tags are displayed as inline elements */
+}
+
+.provider {
+  margin: 2%;
+}
+
+h2, .provider a {
+  color: #AB0000;
+  /* The h2 tags and any links in the provider class have a red text colour */
+}
+
+.provider a {
+  float: right;
+  text-decoration: none;
+  /* Links in the provider class will float to the right and have text decoration stripped */
+}
+
+.provider img {
+  padding-left: 2.5%;
+  /* Images within the provider class have some padding added to the left */
+}
+
+.posters {
+    box-sizing: content-box;
+    float: left;
+    width: 20%;
+}
+
+.poster-title {
+  position: relative;
+  display: inline-block;
+  /* The title above the poster is rendered relative to its normal position */
+  /* It is also displayed as an inline element */
+}
+
+.poster-title > span {
+  width: 100%;
+  margin-left: 7px;
+  padding: 5px;
+  /* Span tags within the poster-title class take up the whole width of their containing element, has an outer margin to separate it from the element on its left (i.e. the edge) and internal padding of 5px */
+  position: absolute;
+  bottom: 0;
+  /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class */
+  /* The bottom edge of the tags is set to a unit equal to the bottom edge of the ancestor element */
+  font-size: large;
+  font-weight: 700;
+  color: #FFFFFF;
+  /* The font is made large, bold and white */
+}
+
+.poster-title .imageInner{
+  width: 100%;
+  height: 100%;
+  /* The area covering the image when its hovered over takes the whole height and width of the poster size */
+  margin: auto;
+  position: absolute;
+  /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class and the margin is calculated by the browser */
+  margin-left: 2.5%;
+  /* The left margin is then increased */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* The edges of the tags is set to a unit equal to the edges of the ancestor element */
+  opacity: 0;
+  background-color: rgba(91, 96, 115, 0.5);
+  /* The opacity is changed and a colour given */
+  text-align: center;
+  vertical-align: middle;
+  /* Any text is centred and the vertical alignment within the poster-title class is set to middle */
+}
+
+.poster-title .imageInner span {
+  position: relative;
+  margin: 0;
+  top: 50%;
+  /* Span tags within the imageInner class are positioned relative to their natural position, have their margin reset, and the top edge adjusted */
+}
+
+.poster-title:hover .imageInner {
+  display: block;
+  /* When the image is hovered over, the innerImage is displayed as a whole-line element, taking a line to itself*/
+  z-index: 999;
+  opacity: 1;
+  /* The opacity is set and the stack order is set */
+  transition: all 0.5s ease-out;
+  /* All properties will have an effect added for half a second with a slow end */
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  /* Including transition compatability for Safari, Mozilla Firefox and Oracle*/
+}
+
+.imageInner .poster-button {
+  background-color: #AB0000;
+  border-radius: 30px;
+  padding: 13px 25px;
+  margin: auto;
+  /* The button is given an orange color, its edges rounded, some padding added and separation from */
+  position: relative;
+  float: unset;
+  /* The element is positioned and floating left unset */
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
+}
