@@ -73,7 +73,7 @@ req.send("{}");
 req.end(function (result) {
   if (result.error) throw new Error(result.error);
   console.log(result.body.original_title);
-  res.render('pages/index', {
+  res.render('pages/movieshowinfo', {
     index: result.body
   });
 });
