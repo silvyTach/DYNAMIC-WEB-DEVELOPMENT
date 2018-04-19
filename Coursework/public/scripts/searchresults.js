@@ -59,7 +59,7 @@ function getResults(searchTerms) {
         htmlstring += '  </div>' + '\n';
         htmlstring += '\n';
         htmlstring += '  <div class="grid-20">' + '\n';
-        htmlstring += '    <img class="poster" src="' + response.results[i].poster_path + '" alt="Poster">' + '\n';
+        htmlstring += '    <img class="poster" src="https://image.tmdb.org/t/p/original/' + response.results[i].poster_path + '" alt="Poster">' + '\n';
         htmlstring += '  </div>' + '\n';
         htmlstring += '</div>' + '\n';
         htmlstring += '\n';
