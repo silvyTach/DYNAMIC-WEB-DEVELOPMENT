@@ -37,10 +37,10 @@
                         <p class="plot">
                             <%= index[i].overview %>
                         </p>
-                        <form action="/movieshowinfo" method="POST">
+                        <form action="/movieshowinfo" method="POST" display="none">
                           <input name="id" display="none">
-                          <button type="submit" class="button" tabindex="-1">more details</button>
                         </form>
+                        <button type="submit" class="button" tabindex="-1">more details</button>
                         <!-- <div><a href="/movieshowinfo" class="button" type="submit" tabindex="-1">more details</a></div> -->
                     </div>
                     <div class="image">
