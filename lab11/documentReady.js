@@ -1,6 +1,6 @@
 $(function(){
   //document ready
-  alert("Document Ready");
+  //alert("Document Ready");
 
   $('#searchform').submit(function(){
     var searchterms = $('#searchterms').val();
