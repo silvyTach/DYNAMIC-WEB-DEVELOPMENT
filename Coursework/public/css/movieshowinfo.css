@@ -1,5 +1,4 @@
 main {
-  padding-top: 5%;
   margin:10%;
   color: white;
 
@@ -64,7 +63,7 @@ main {
 }
 main li {
   list-style-type: none;
-  margin-top: 5%;
+  margin-top: 2em;
   padding: 0;
   display: block;
   font-size: small;
