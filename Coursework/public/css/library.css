@@ -137,16 +137,8 @@ i {
 }
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media (max-width: 600px) {
-  .librarybox {
-    margin: 2.5%;
-  }
+.librarybox {
+  margin: 2.5%;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 601) {
-  .librarybox {
-    margin: 2.5%;
-  }
 }
