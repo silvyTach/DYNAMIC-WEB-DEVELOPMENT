@@ -3,6 +3,7 @@ $(function(){
   //alert("Document Ready");
   var id = $('#id').html();
   similarMovies(id);
+  director(id);
   $('#id').remove();
   });
 
@@ -29,3 +30,19 @@ $(function(){
       $('#similar table').html(html);
     });
   }
+
+  function director(id) {
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.themoviedb.org/3/movie/" + id + "/credits?api_key=305a3b42d88760bd22c9f8c8c54f788d",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response.crew[0].name);
+  $('#director').html(response.crew[0].name);
+});
+}
