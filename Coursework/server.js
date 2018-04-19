@@ -60,11 +60,6 @@ app.get('/library', function(req, res) {
   //Library page
 });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d2883ede4736715532c43290e4b04ef1ff38e33d
-
 app.get('/movieshowinfo', function(req, res) {
   var id = req.query.id;
   console.log(id);
