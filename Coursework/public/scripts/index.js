@@ -26,12 +26,12 @@ $(function(){
     }
 
     for (var i = 0; i < slides.length; i++) {
-       $(slides[i]).css("display", "none");
-       //Each unwanted slide is completely removed by changing the display CSS attribute through JQuery
+       slides[i].style.display = "none";
+       //Each unwanted slide is completely removed by changing the display CSS attribute
     }
 
-    $(slides[slideIndex - 1]).css("display","block");
-    //The desired slide is shown as a block element by changing the display CSS attribute through JQuery
+    slides[slideIndex - 1].style.display = "block";
+    //The desired slide is shown as a block element by changing the display CSS attribute
 
   }
 
