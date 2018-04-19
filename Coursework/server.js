@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
     res.render('pages/index', {
-      movie: result.body.results
+      index: result.body.results
     });
   });
 });
@@ -74,7 +74,7 @@ req.end(function (result) {
   if (result.error) throw new Error(result.error);
   console.log(result.body.original_title);
   res.render('pages/movieshowinfo', {
-    index: result.body
+    movie: result.body
   });
 });
 });
