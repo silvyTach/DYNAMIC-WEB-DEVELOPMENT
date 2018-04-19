@@ -61,16 +61,15 @@
         <div class="grid-20 tablet-grid-20 mobile-grid-100">
 
             <ul>
-                <li class="info"> Director: </li>
+                <li class="label"> Director: </li>
                 <li id="director"></li>
-                <script>console.log(movie.credits.crew[0].name)</script>
-                <li class="info"> Release Date: </li>
-                <li ><%= movie.release_date %></li>
-                <li class="info"> Run Time: </li>
-                <li ><%= movie.runtime %>m </li>
-                <li class="info"> Tagline: </li>
-                <li ><%= movie.tagline %></li>
-                <li class="info"> Genres: </li>
+                <li class="label"> Release Date: </li>
+                <li class="value"><%= movie.release_date %></li>
+                <li class="label"> Run Time: </li>
+                <li class="value"><%= movie.runtime %>m </li>
+                <li class="label"> Tagline: </li>
+                <li class="value"><%= movie.tagline %></li>
+                <li class="label"> Genres: </li>
                 <li id="genres">
                   <% movie.genres.forEach(function(genre){%>
                     <p><%= genre.name %></p>

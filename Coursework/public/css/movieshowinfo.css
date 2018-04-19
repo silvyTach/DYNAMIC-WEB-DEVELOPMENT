@@ -60,10 +60,11 @@ main {
      font-size: small;
 }
 
-ul {
+.value {
   color: #FFFFFF;
 }
-.info {
+
+.label {
     color: #D75813;
 }
  #genres p{
