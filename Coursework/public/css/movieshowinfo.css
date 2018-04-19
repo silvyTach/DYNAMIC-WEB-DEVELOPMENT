@@ -1,3 +1,12 @@
+*  {
+	font-family: 'Comfortaa', sans-serif;
+	box-sizing: border-box;
+	/* border: solid green; */
+}
+body{
+	margin:0;
+	background-color:  #1C1F24;
+}
 main {
   margin:10%;
   color: white;
