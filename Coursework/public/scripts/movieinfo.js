@@ -14,6 +14,7 @@ function omdb(title) {
     "data": "{}"
   }
 $.ajax(settings).done(function (response) {
+  alert(response);
   $('#plot').html(response.Plot)
 });
 
