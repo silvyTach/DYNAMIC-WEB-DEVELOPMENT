@@ -83,8 +83,7 @@ req.end(function (result) {
 
 
 app.get('/signuplogin', function(req, res) {
-  var id = db.collection('users').find().toArray();
-    console.log(id.length);
+    console.log(JSON.stringify(db.collection('users').find()));
   res.render('pages/signuplogin');
   //Log in/sign up page
 });
