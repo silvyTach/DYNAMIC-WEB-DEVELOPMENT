@@ -83,6 +83,7 @@ req.end(function (result) {
 
 
 app.get('/signuplogin', function(req, res) {
+  console.log(db.collection('users').count());
   res.render('pages/signuplogin');
   //Log in/sign up page
 });
@@ -114,11 +115,12 @@ app.post('/login', function(req, res) {
 //this is our signup route, adds new user to the db and draws the home page
 app.post('/signup', function(req, res) {
   console.log(JSON.stringify(req.body));
-  if (req.body.password != req.body.password2) throw console.log("Passwords do not match");
-  if (req.body.email != req.body.email2) throw console.log("E-mails do not match");
-  if(db.collection('users').find({"login.username": req.body.username}).count() > 0) throw console.log("This username is already in use");
+  if (req.body.password != req.body.password2) console.log("Passwords do not match");
+  if (req.body.email != req.body.email2) console.log("E-mails do not match");
+  if(db.collection('users').find({"login.username": req.body.username}).count() > 0) console.log("This username is already in use");
 
   var id = parseInt(db.collection('users').count()) + 1;
+
   var userData = {_id: id, email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
   db.collection('users').insert(userData, function(err, result) {
     if(err) throw "Error! New user was not added to the database!"
