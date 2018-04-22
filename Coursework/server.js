@@ -114,16 +114,21 @@ app.post('/login', function(req, res) {
 //this is our signup route, adds new user to the db and draws the home page
 app.post('/signup', function(req, res) {
   console.log(JSON.stringify(req.body));
-  if (req.body.password != req.body.password2) console.log("Passwords do not match");
-  if (req.body.email != req.body.email2) console.log("E-mails do not match");
-  if(db.collection('users').find({"login.username": req.body.username}).count() > 0) console.log("This username is already in use");
-
-  var userData = {email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
-  db.collection('users').insert(userData, function(err, result) {
-    if(err) throw "Error! New user was not added to the database!"
-    if(!result) {res.redirect('signuplogin');return}
-    else {req.session.loggedin = true; res.redirect('/')}
-  })
+  var password = true;
+  if (req.body.password != req.body.password2 || req.body.password == "") password = false;
+  var email = true;
+  if (req.body.email != req.body.email2 || req.body.email == "") email = false;
+  var uname = true;
+  if(db.collection('users').find({"login.username": req.body.username}).count() > 0 || req.body.username == "") uname = false;
+  if(!(email) || !(password) || (uname)) res.redirect('/signuplogin');
+  else {
+    var userData = {email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
+    db.collection('users').insert(userData, function(err, result) {
+      if(err) throw "Error! New user was not added to the database!"
+      if(!result) {res.redirect('signuplogin');return}
+      else {req.session.loggedin = true; res.redirect('/')}
+    })
+  }
 });
 
 app.post('/dosearch', function(req, res) {
