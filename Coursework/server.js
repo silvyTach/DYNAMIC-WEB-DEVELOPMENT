@@ -116,7 +116,7 @@ app.get('/adduser', function(req, res) {
   console.log(JSON.stringify(req.body))
   if (req.body.password != req.body.password2) throw err;
   if (req.body.email != req.body.email2) throw err;
-  if(db.collection('users').find("login.username": req.body.username).limit(1).count(true)) throw err;
+  if(db.collection('users').find("login.username": req.body.username).limit(1).count() >= 1) throw err;
 
   var id = db.collection('users').count() + 1;
   var userData = {id: id, email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
