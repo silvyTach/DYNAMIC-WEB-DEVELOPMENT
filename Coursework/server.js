@@ -119,8 +119,8 @@ app.get('/signup', function(req, res) {
   // if(db.collection('users').find({"login.username": req.body.username}).limit(1).count(true)) throw err;
 
   var id = db.collection('users').count() + 1;
-  var userData = {id: id, email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
-  db.collection('users').insertOne(userData, function(err, result) {
+  var userData = {_id: id, email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
+  db.collection('users').insert(userData, function(err, result) {
     if(err) throw error
     if(!result) {res.redirect('signuplogin');return}
     else {req.session.loggedin = true; res.redirect('/')}
