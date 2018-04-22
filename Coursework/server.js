@@ -120,7 +120,9 @@ app.post('/signup', function(req, res) {
   if (req.body.email != req.body.email2 || req.body.email == "") email = false;
   var uname = true;
   if(db.collection('users').find({"login.username": req.body.username}).count() > 0 || req.body.username == "") uname = false;
-  if(!(email) || !(password) || (uname)) res.redirect('/signuplogin');
+  if(!(email) || !(password) || (uname)) {
+    console.log(uname + password + email);
+    res.redirect('/signuplogin');}
   else {
     var userData = {email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
     db.collection('users').insert(userData, function(err, result) {
