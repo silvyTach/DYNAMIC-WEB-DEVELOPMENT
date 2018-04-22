@@ -119,7 +119,7 @@ app.post('/signup', function(req, res) {
   if (req.body.email != req.body.email2) console.log("E-mails do not match");
   if(db.collection('users').find({"login.username": req.body.username}).count() > 0) console.log("This username is already in use");
 
-  var id = parseInt(db.collection('users').count()) + 1;
+  var id = parseInt(db.collection('users').find().count()) + 1;
 
   var userData = {_id: id, email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
   db.collection('users').insert(userData, function(err, result) {
