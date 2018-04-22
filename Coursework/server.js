@@ -113,8 +113,7 @@ app.post('/login', function(req, res) {
 
 //this is our signup route, adds new user to the db and draws the home page
 app.post('/signup', function(req, res) {
-  console.log(JSON.stringify(req.body))
-  var err1 =
+  console.log(JSON.stringify(req.body));
   if (req.body.password != req.body.password2) throw "password";
   if (req.body.email != req.body.email2) throw "email";
   if(db.collection('users').find({"login.username": req.body.username}).limit(1).count(true)) throw "username";
