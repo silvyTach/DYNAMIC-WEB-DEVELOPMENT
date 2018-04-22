@@ -94,49 +94,38 @@ app.get('/search', function(req, res) {
 
 //-------------------- POST ROUTES --------------------
 
+//this is our login route, all it does is render the login.ejs page.
 app.post('/login', function(req, res) {
   console.log(JSON.stringify(req.body))
-  var uname = req.body.loginformusername;
-  var pword = req.body.loginformpassword;
-
+  var uname = req.body.username;
+  var pword = req.body.password;
+  // Getting the username and password entered by the user
   db.collection('users').findOne({"login.username":uname}, function(err, result) {
     if (err) throw err;//if there is an error, throw the error
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('/signuplogin');return}
-    //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
+    //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to their library
     if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/library') }
     //otherwise send them back to login
     else{res.redirect('/signuplogin')}
   });
 });
 
-// app.post('/login', function(req, res) {
-//   console.log(JSON.stringify(req.body));
-//   var uname = req.body.loginformusername;
-//   var pword = req.body.loginformpassword;
-//   Getting the username and password entered by the user
-//   db.collection('users').findOne({"username":uname}), function (error, result) {
-//     if (error) {
-//       throw error;
-//       If there's an error, throw it
-//     }
-//
-//     if (!result) {
-//       res.redirect('/login');
-//       return;
-//       //If there is no result matching the username, a new login page is generated
-//     }
-//
-//     if (result.password == pword) {
-//       res.redirect('/library');
-//       //The user is redirected to their library
-//     } else {
-//       res.redirect('/login');
-//       return;
-//       If there is no result matching the username, a new login page is generated
-//     }
-//   };
-// });
+//this is our signup route, adds new user to the db and draws the home page
+app.get('/adduser', function(req, res) {
+  console.log(JSON.stringify(req.body))
+  if (req.body.password != req.body.password2) throw err;
+  if (req.body.email != req.body.email2) throw err;
+  if(db.collection('users').find("login.username": req.body.username).limit(1).count(true)) throw err;
+
+  var id = db.collection('users').count() + 1;
+  var userData = {id: id, email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
+  db.collection('users').insertOne(userData, function(err, result) {
+    if(err) throw error
+    if(!result) {res.redirect('signuplogin');return}
+    else {req.session.loggedin = true; res.redirect('/')}
+  })
+});
 
 app.post('/dosearch', function(req, res) {
   console.log(JSON.stringify(req.body));
