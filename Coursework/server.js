@@ -114,14 +114,15 @@ app.post('/login', function(req, res) {
 //this is our signup route, adds new user to the db and draws the home page
 app.post('/signup', function(req, res) {
   console.log(JSON.stringify(req.body))
-  if (req.body.password != req.body.password2) throw err;
-  if (req.body.email != req.body.email2) throw err;
-  if(db.collection('users').find({"login.username": req.body.username}).limit(1).count(true)) throw err;
+  var err1 =
+  if (req.body.password != req.body.password2) throw Error("password");
+  if (req.body.email != req.body.email2) throw Error("email");
+  if(db.collection('users').find({"login.username": req.body.username}).limit(1).count(true)) throw Error("username");
 
   var id = db.collection('users').count() + 1;
   var userData = {_id: id, email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
   db.collection('users').insert(userData, function(err, result) {
-    if(err) throw error
+    if(err) throw Error("no result")
     if(!result) {res.redirect('signuplogin');return}
     else {req.session.loggedin = true; res.redirect('/')}
   })
