@@ -83,9 +83,6 @@ req.end(function (result) {
 
 
 app.get('/signuplogin', function(req, res) {
-  db.collection('users').count().then((count) => {
-    console.log(count);
-});
   res.render('pages/signuplogin');
   //Log in/sign up page
 });
@@ -120,9 +117,8 @@ app.post('/signup', function(req, res) {
   if (req.body.password != req.body.password2) console.log("Passwords do not match");
   if (req.body.email != req.body.email2) console.log("E-mails do not match");
   if(db.collection('users').find({"login.username": req.body.username}).count() > 0) console.log("This username is already in use");
-
-
-
+  var id = db.collection('users').count().then((id);
+  id++;
   var userData = {_id: id, email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
   db.collection('users').insert(userData, function(err, result) {
     if(err) throw "Error! New user was not added to the database!"
