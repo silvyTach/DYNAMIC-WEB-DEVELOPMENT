@@ -83,7 +83,7 @@ req.end(function (result) {
 
 
 app.get('/signuplogin', function(req, res) {
-  console.log(parseInt(db.collection('users').find().count()));
+  console.log(db.collection('users').find().count());
   res.render('pages/signuplogin');
   //Log in/sign up page
 });
