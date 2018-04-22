@@ -84,7 +84,7 @@ req.end(function (result) {
 
 app.get('/signuplogin', function(req, res) {
   var documents = db.collection('users').find().count();
-  console.(documents.length);
+  console.log(documents.length);
   res.render('pages/signuplogin');
   //Log in/sign up page
 });
