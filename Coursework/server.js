@@ -96,7 +96,7 @@ app.get('/search', function(req, res) {
 
 //this is our login route, all it does is render the login.ejs page.
 app.post('/login', function(req, res) {
-  console.log(JSON.stringify(req.body))
+  //console.log(JSON.stringify(req.body))
   var uname = req.body.username;
   var pword = req.body.password;
   // Getting the username and password entered by the user
@@ -113,20 +113,26 @@ app.post('/login', function(req, res) {
 
 //this is our signup route, adds new user to the db and draws the home page
 app.post('/signup', function(req, res) {
-  console.log(JSON.stringify(req.body));
+  //console.log(JSON.stringify(req.body));
   var password = true;
   if (req.body.password != req.body.password2 || req.body.password == "") password = false;
+  // checking if the passwords match and if both fields are filled out
   var email = true;
   if (req.body.email != req.body.email2 || req.body.email == "") email = false;
+  // checking if the emails match and if both fields are filled out
   var uname = true;
   if(db.collection('users').find({"login.username": req.body.username}).count() > 0 || req.body.username == "") uname = false;
+  // checking if the username already exists in the db and if the field is filled out
   if(!(email) || !(password) || !(uname)) res.redirect('/signuplogin');
+  // if any of the conditions is false the user is redirected back to the signup page
+  // and is not added to the db, else the signup procedure continues
   else {
     var userData = {email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
     db.collection('users').insert(userData, function(err, result) {
       if(err) throw "Error! New user was not added to the database!"
       if(!result) {res.redirect('signuplogin');return}
       else {req.session.loggedin = true; res.redirect('/')}
+      //if there are no errors the user is added to the db and the home page is drawn
     })
   }
 });
