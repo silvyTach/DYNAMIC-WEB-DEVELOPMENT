@@ -1,14 +1,9 @@
-/* ---------- Main & buttons ---------- */
-
-main {
-  margin:10%;
-  /* Main tag has a margin around it of 10% */
-}
-
+/* ---------- Buttons & Inputs ---------- */
 h2, h3{
   font-size: xx-large/;
   color: #AB0000;
   margin: 2%;
+  margin-top:15%;
   text-align: center;
   /* Aligning h2 and h3 and adding a margin, h2 gets a color and size */
 }
