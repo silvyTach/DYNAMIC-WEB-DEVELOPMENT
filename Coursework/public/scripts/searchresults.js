@@ -32,7 +32,6 @@ function getResults(searchTerms) {
   }
 
   $.ajax(settings).done(function (response) {
-    console.log(response);
     var htmlstring = '';
     if (response) {
       for(var i = 0; i < response.results.length; i++){
