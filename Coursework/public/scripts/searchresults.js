@@ -32,6 +32,7 @@ function getResults(searchTerms) {
   }
 
   $.ajax(settings).done(function (response) {
+    console.log(response);
     var htmlstring = '';
     if (response) {
       for(var i = 0; i < response.results.length; i++){
@@ -44,7 +45,7 @@ function getResults(searchTerms) {
         htmlstring += '      </ul>' + '\n';
         htmlstring += '    </div>' + '\n';
         htmlstring += '    <div class="moredetails">' + '\n';
-        htmlstring += '      <a href="/movieshowinfo?id=' + response.results[i].id +'" class="poster-button">More Details</a>' + '\n';
+        htmlstring += '      <a href="/movieshowinfo?id=' + response.results[i].id +'" class="button">More Details</a>' + '\n';
         htmlstring += '    </div>' + '\n';
         htmlstring += '  </div>' + '\n';
         htmlstring += '\n';
