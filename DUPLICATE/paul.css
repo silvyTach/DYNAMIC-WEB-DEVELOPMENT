@@ -1,0 +1,132 @@
+main {
+  clear: both;
+  margin:15%;
+}
+
+.slideshow {
+  float: left;
+  width: 89%;
+}
+
+.arrows {
+  width: 5%;
+}
+
+.text, .image, .title{
+  box-sizing:border-box;
+  width: 90%;
+  padding:0.5%;
+  margin:0 0 2%;
+}
+.text {
+  float: left;
+  width: 75%;
+}
+.text h1 {
+  font-size: 5em;
+  color: white;
+}
+
+.info, .plot {
+  width: 80%;
+}
+
+.info li {
+  font-size: large;
+  color: #ab0000;
+  font-weight: bold;
+}
+
+i {
+  font-size: small;
+  color: #5B6073;
+}
+
+.plot {
+  color: #5B6073;
+  font-size: large;
+  /*@override box-sizing: content-box important;*/
+}
+
+.image {
+  float: right;
+  width: 25%;
+
+}
+.image img{
+  float: right;
+}
+
+
+
+
+.button {
+  border-radius: 30px;
+    font-weight: bold;
+    background-color: #D75813;
+    color: #ffffff;
+    padding: 13px 25px;
+    clear: both;
+    float: left;
+    margin-top: 3%;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #D75813;
+
+}
+
+.info, .plot, .title {
+  bodrder: solid green;
+  margin: 0;
+}
+
+.arrows img {
+  width: 50%;
+  padding-top: 210%;
+  padding-bottom: 210%;
+}
+#left {
+  clear: both;
+  float: left;
+}
+#left img {
+  width:52%;
+  padding-top: 235%;
+}
+
+#right {
+  float: right;
+}
+
+#right img {
+  float: right;
+  padding-top: 230%;
+}
+
+
+
+.slideshow, .arrows, .poster {
+  bofrder: solid green;
+}
+/*--------------Slideshow end --------------*/
+
+#white {
+  width: 100%; !important;
+  clear: both;
+  background-color: white !important;
+}
+
+
+h2,.provider a {
+  color: #ab0000;
+}
+
+.provider a{
+  float: right;
+  text-decoration: none;
+}
