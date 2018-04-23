@@ -113,7 +113,7 @@ app.post('/login', function(req, res) {
 
 //this is our signup route, adds new user to the db and draws the home page
 app.post('/signup', function(req, res) {
-  //console.log(JSON.stringify(req.body));
+  console.log(JSON.stringify(req.body));
   var password = true;
   if (req.body.password != req.body.password2 || req.body.password == "") password = false;
   // checking if the passwords match and if both fields are filled out
