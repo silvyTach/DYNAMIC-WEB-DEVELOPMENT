@@ -36,26 +36,7 @@
     </header>
 
     <main>
-      <!-- <label>
-  <input type="radio" name="img"/>
-  <img src="iloveimg-resized/p0.png" width="100">
-</label>
-<label>
-<input type="radio" name="img" />
-<img src="iloveimg-resized/p1.png" width="100">
-</label>
-<label>
-<input type="radio" name="img" />
-<img src="iloveimg-resized/p2.png" width="100">
-</label>
-<label>
-<input type="radio" name="img"/>
-<img src="iloveimg-resized/p3.png" width="100">
-</label> -->
-  <!-- <option data-img-src="profile_pics/p1.png"  -->
-
-
-  <div class="slideshow-container">
+  <!-- <div class="slideshow-container">
 
     <div class="slideshow fade">
       <label>
@@ -98,6 +79,21 @@
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+</div> -->
+
+<div class="slideshow-container">
+  <%for(var i = 1; i < 13; i++) {%>
+  <div class="slideshow fade">
+    <%for(var j = 1; j < 5; i++) {%>
+    <label>
+    <input class="rbPic" type="radio" name="img" />
+    <img class="prof_pic"src="/images/profile_pics/p<%i*j - 1%>.png" width="100">
+  </label>
+  <% } %>
+  </div>
+  <% } %>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
     </main>
