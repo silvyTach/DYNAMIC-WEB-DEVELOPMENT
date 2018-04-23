@@ -1,11 +1,9 @@
+/* ---------- Main & buttons ---------- */
+
 main {
   margin:10%;
   /* Main tag has a margin around it of 10% */
 }
-
-/* ---------- FORM ---------- */
-
-/* ----- General ----- */
 
 h2, h3{
   font-size: xx-large/;
@@ -47,18 +45,7 @@ main input {
   /* When the button is hovered over it becomes transparent and the text becomes orange */
 }
 
-hr {
-  width: 75% !important;
-  /* The line will take 75% of its parent element */
-}
-
-#login, #signup {
-  /* border: 1px solid green; */
-  /* Adding a border so I can see where each element starts and ends */
-}
-/* ----- Log In ----- */
-
-/* ----- Sign Up ----- */
+/* ----- Log In & Sign up----- */
 
 h3 {
   color: #5B6073;
