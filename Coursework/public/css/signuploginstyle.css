@@ -6,7 +6,7 @@ main {
 
 /* ----- General ----- */
 
-h2 {
+h2, h3{
   font-size: xx-large;
   color: #AB0000;
   width: auto;
@@ -52,7 +52,7 @@ main input {
 }
 
 hr {
-  width: 75%;
+  width: 75% !important;
   /* The line will take 75% of its parent element */
 }
 
