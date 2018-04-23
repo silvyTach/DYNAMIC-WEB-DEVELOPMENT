@@ -27,6 +27,21 @@
                 <input type="text" class="loginsignup" name="username" placeholder="Username">
                 <input type="password" class="loginsignup" name="password" placeholder="Password">
                 <button type="submit" class="button">Log In</button>
+
+                <div class="slideshow-container">
+                  <%for(var i = 1; i < 13; i++) {%>
+                  <div class="slideshow fade">
+                    <%for(var j = 1; j < 5; i++) {%>
+                    <label>
+                    <input class="rbPic" type="radio" name="img" />
+                    <img class="prof_pic"src="/images/profile_pics/p<%i*j - 1%>.png" width="100">
+                  </label>
+                  <% } %>
+                  </div>
+                  <% } %>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
               </form>
 
             <!-- End of whole form -->
@@ -67,7 +82,7 @@
       <% include ../partials/footer.ejs %>
       <!-- Using ejs to import the footer code -->
     </footer>
-
+    <script src="/scripts/slideshowscript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
 </html>
