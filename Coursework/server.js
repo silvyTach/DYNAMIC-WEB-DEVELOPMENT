@@ -68,19 +68,17 @@ app.get('/movieshowinfo', function(req, res) {
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
   req.query({
     "append_to_response": "credits",
-  "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
-});
-req.send("{}");
-req.end(function (result) {
-  if (result.error) throw new Error(result.error);
-  console.log(result.body.original_title);
-  res.render('pages/movieshowinfo', {
-    movie: result.body
+    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+  });
+  req.send("{}");
+  req.end(function (result) {
+    if (result.error) throw new Error(result.error);
+    console.log(result.body.original_title);
+    res.render('pages/movieshowinfo', {
+      movie: result.body
+    });
   });
 });
-});
-
-
 
 app.get('/signuplogin', function(req, res) {
   res.render('pages/signuplogin');
