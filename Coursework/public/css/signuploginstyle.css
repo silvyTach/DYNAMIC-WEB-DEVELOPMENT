@@ -3,11 +3,7 @@ h2, h3{
   font-size: xx-large/;
   color: #AB0000;
   margin: 2%;
-<<<<<<< HEAD
   margin-top:10%;
-=======
-  margin-top:15%;
->>>>>>> 961282b483edbc0e043eeff0d26065d026cf820a
   text-align: center;
   /* Aligning h2 and h3 and adding a margin, h2 gets a color and size */
 }
@@ -49,10 +45,7 @@ main input {
 h3 {
   color: #5B6073;
   font-size:x-large;
-<<<<<<< HEAD
   margin: 0 10% 7.5%;
-=======
->>>>>>> 961282b483edbc0e043eeff0d26065d026cf820a
   /* h3 gets a different color and size from h2 */
 }
 
@@ -63,19 +56,12 @@ h3 {
 .rbPic + .prof_pic{ /* IMAGE STYLES */
   cursor:pointer;
   border:4px solid #D75813; /* giving an orange border to the imgs */
-<<<<<<< HEAD
   margin: 1.5%;
-=======
-  margin: 2%;
->>>>>>> 961282b483edbc0e043eeff0d26065d026cf820a
   width: 20%;
 }
 .rbPic:checked + .prof_pic{ /* (RADIO CHECKED) IMAGE STYLES */
   border:5px solid  #AB0000;
-<<<<<<< HEAD
   width: 110px;
-=======
->>>>>>> 961282b483edbc0e043eeff0d26065d026cf820a
   when img is chose its borger goes red
 }
 
