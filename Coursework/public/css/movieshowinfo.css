@@ -84,3 +84,7 @@ main {
  h1 {
      color: #AB0000;
 }
+
+#addtolibrary {
+  display: inline-block;
+}
