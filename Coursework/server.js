@@ -90,6 +90,27 @@ app.get('/search', function(req, res) {
   //Log in/sign up page
 });
 
+app.get('/addtolibrary', function(req, res) {
+  var id = req.query.id;
+  console.log(id);
+  //Finding the ID of the movie to be add to the Library
+  db.collection('users').findOne({"login.username":"testuser"}, function(error, result) {
+    if (error) {
+      throw error;
+      //If there's an error, throw it
+    }
+
+    if (!result) {
+      res.redirect('/signuplogin');
+      return;
+    }
+
+    //Still need to find the user's library based on their username and then add the id to their library
+    //Then redirect user to library with their username
+
+  });
+});
+
 //-------------------- POST ROUTES --------------------
 
 //this is our login route, all it does is render the login.ejs page.
