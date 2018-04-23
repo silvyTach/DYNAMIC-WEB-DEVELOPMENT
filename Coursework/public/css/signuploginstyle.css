@@ -1,6 +1,4 @@
 main {
-  clear: both;
-  margin: 15%;
   /* No elements are allowed to float within the main element and it has a margin around it of 15% */
 }
 
@@ -88,7 +86,6 @@ hr {
 .slideshow {
   display: none;
   margin: 10%;
-  width:50%;
 }
 /* Slideshow container */
 .slideshow-container {
@@ -114,7 +111,7 @@ hr {
 
 /* Position the "next button" to the right */
 .next {
-  margin-left: 60%;
+  right:0;
   border-radius: 3px 0 0 3px;
 }
 
