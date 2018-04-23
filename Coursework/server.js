@@ -56,6 +56,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/library', function(req, res) {
+  if (!req.session.loggedin) {
+    res.redirect('/signuplogin');
+    return;
+    //If the user isn't logged in, they can't reach their library page
+  }
   res.render('pages/library');
   //Library page
 });
@@ -68,19 +73,17 @@ app.get('/movieshowinfo', function(req, res) {
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
   req.query({
     "append_to_response": "credits",
-  "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
-});
-req.send("{}");
-req.end(function (result) {
-  if (result.error) throw new Error(result.error);
-  console.log(result.body.original_title);
-  res.render('pages/movieshowinfo', {
-    movie: result.body
+    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+  });
+  req.send("{}");
+  req.end(function (result) {
+    if (result.error) throw new Error(result.error);
+    console.log(result.body.original_title);
+    res.render('pages/movieshowinfo', {
+      movie: result.body
+    });
   });
 });
-});
-
-
 
 app.get('/signuplogin', function(req, res) {
   res.render('pages/signuplogin');
@@ -90,6 +93,27 @@ app.get('/signuplogin', function(req, res) {
 app.get('/search', function(req, res) {
   res.render('pages/search');
   //Log in/sign up page
+});
+
+app.get('/addtolibrary', function(req, res) {
+  var id = req.query.id;
+  console.log(id);
+  //Finding the ID of the movie to be add to the Library
+  db.collection('users').findOne({"login.username":"testuser"}, function(error, result) {
+    if (error) {
+      throw error;
+      //If there's an error, throw it
+    }
+
+    if (!result) {
+      res.redirect('/signuplogin');
+      return;
+    }
+
+    //Still need to find the user's library based on their username and then add the id to their library
+    //Then redirect user to library with their username
+
+  });
 });
 
 //-------------------- POST ROUTES --------------------
@@ -113,7 +137,7 @@ app.post('/login', function(req, res) {
 
 //this is our signup route, adds new user to the db and draws the home page
 app.post('/signup', function(req, res) {
-  //console.log(JSON.stringify(req.body));
+  console.log(JSON.stringify(req.body));
   var password = true;
   if (req.body.password != req.body.password2 || req.body.password == "") password = false;
   // checking if the passwords match and if both fields are filled out

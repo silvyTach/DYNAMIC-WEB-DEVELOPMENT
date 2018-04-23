@@ -17,6 +17,7 @@ $(function(){
       "data": "{}"
     }
     $.ajax(settings).done(function (response) {
+      console.log(response);
       var html = "";
       for(var i=0; i<3; i++){
         html+= '<tr><td><a href="/movieshowinfo?id=' + response.results[i].id + '">'

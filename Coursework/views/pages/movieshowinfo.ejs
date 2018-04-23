@@ -20,7 +20,7 @@
         <div id="poster" class="grid-30 tablet-grid-30 mobile-grid-100">
             <img src=" http://image.tmdb.org/t/p/w500/<%= movie.poster_path %>" alt="<%= movie.title %> Poster" class="grid-100 mobile-grid-100">
             <div class="prefix-25 grid-50 suffix-25 tablet-prefix-25 tablet-grid-50 tablet-suffix-25 mobile-grid-100">
-                <button class="button" id="addtolibrary">Add to Library</button>
+                <a href="/addtolibrary?id=<%= movie.id %>" class="button" id="addtolibrary">Add to Library</a>
             </div>
         </div>
 
@@ -42,6 +42,7 @@
                   <%for(var i = 0; i < 10; i++) {%>
                     <tr>
                         <td><img src="http://image.tmdb.org/t/p/w45/<%=movie.credits.cast[i].profile_path %>" alt="Actor Photo"></td>
+                        <!-- We need something here to not show this tab content if the profile doesn't exist -->
                         <td class="actor"><%= movie.credits.cast[i].name %></td>
                         <td class="character"><%= movie.credits.cast[i].character %></td>
                     </tr>

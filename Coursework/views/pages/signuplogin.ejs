@@ -15,29 +15,25 @@
 
     <main>
       <!-- Start of login section -->
-      <section id="login">
-        <!-- Identifying the form with a header -->
+      <section>
         <h2>Log In</h2>
         <!-- Start of container -->
         <div class="grid-container">
             <!-- Start of whole form -->
             <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
-
               <form id="loginform" action="/login" method="POST">
                 <input type="text" class="loginsignup" name="username" placeholder="Username">
                 <input type="password" class="loginsignup" name="password" placeholder="Password">
                 <button type="submit" class="button">Log In</button>
               </form>
-
             <!-- End of whole form -->
             </div>
         <!-- End of container -->
         </div>
       <!-- End of login section -->
       </section>
-
       <!-- Start of sign up section -->
-      <section id="signup">
+      <section>
         <!-- Identifying the form with a header -->
         <h2>Sign Up</h2>
         <!-- Start of container -->
@@ -51,6 +47,21 @@
                 <input type="text" class="loginsignup" name="email2" placeholder="Confirm Email Address">
                 <input type="password" class="loginsignup" name="password" placeholder="Password">
                 <input type="password" class="loginsignup" name="password2" placeholder="Confirm Password">
+                <h3>Now choose your profile pic!</h3>
+                <div class="slideshow-container loginsignup">
+                  <%for(var i = 0; i < 12; i++) {%>
+                  <div class="slideshow fade">
+                    <%for(var j = 0; j < 4; j++) {%>
+                    <label>
+                      <input class="rbPic" type="radio" name="img" value="<%=i*4 + j%>">
+                      <img class="prof_pic" src="/images/profile_pics/p<%=i*4 + j%>.png" width="100">
+                    </label>
+                    <%}%>
+                </div>
+                <%}%>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
                 <button type="submit" class="button">Sign Up</button>
               </form>
 
@@ -67,7 +78,8 @@
       <% include ../partials/footer.ejs %>
       <!-- Using ejs to import the footer code -->
     </footer>
-
+    <script src="/scripts/slideshowscript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>$('.rbPic').filter('[value="0"]').attr('checked', true);</script>
   </body>
 </html>
