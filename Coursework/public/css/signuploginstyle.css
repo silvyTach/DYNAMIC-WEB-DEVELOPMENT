@@ -45,6 +45,8 @@ main input {
 h3 {
   color: #5B6073;
   font-size:x-large;
+  margin-top:0;
+
   /* h3 gets a different color and size from h2 */
 }
 
@@ -55,17 +57,18 @@ h3 {
 .rbPic + .prof_pic{ /* IMAGE STYLES */
   cursor:pointer;
   border:4px solid #D75813; /* giving an orange border to the imgs */
-  margin: 2%;
+  margin: 1.5%;
   width: 20%;
 }
 .rbPic:checked + .prof_pic{ /* (RADIO CHECKED) IMAGE STYLES */
   border:5px solid  #AB0000;
+  width:110px !important;
   when img is chose its borger goes red
 }
 
 .slideshow {
   display: none;
-  margin: 10%;
+  margin: 2% 10% 7.5%;
   /* Hiding all the images and setting a margin of 10% */
 }
 /* Slideshow container */

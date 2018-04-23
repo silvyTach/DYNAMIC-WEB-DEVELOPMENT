@@ -1,0 +1,27 @@
+#main {
+  margin: 15%;
+  color: red;
+}
+* {
+  border: solid green;
+  /* box-sizing: border-box; */
+}
+
+#userData {
+    background: pink;
+    padding: 2.5%;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.user {
+    text-decoration: none;
+    color: #AB0000;
+    display: block;
+}
+#library {
+    font-size: large; /* Increased text to enable scrolling */
+    padding: 2%
+}
