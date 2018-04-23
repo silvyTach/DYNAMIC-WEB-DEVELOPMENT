@@ -68,6 +68,11 @@ hr {
 /* ----- Log In ----- */
 
 /* ----- Sign Up ----- */
+
+h3 {
+  color: #5B6073;
+}
+
 .rbPic{ /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
   position: absolute; /* Remove input from document flow */
@@ -86,11 +91,13 @@ hr {
 .slideshow {
   display: none;
   margin: 10%;
+
 }
 /* Slideshow container */
 .slideshow-container {
   position: relative;
   margin: auto;
+  width:50%;
 }
 
 /* Next & previous buttons */
