@@ -57,7 +57,7 @@
                   <div class="slideshow fade">
                     <%for(var j = 0; j < 4; j++) {%>
                     <label>
-                      <input class="rbPic" type="radio" name="img">
+                      <input class="rbPic" type="radio" name="img" value="<%=i*4 + j%>">
                       <img class="prof_pic" src="/images/profile_pics/p<%=i*4 + j%>.png" width="100">
                     </label>
                     <%}%>
@@ -84,5 +84,6 @@
     </footer>
     <script src="/scripts/slideshowscript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>$('.rbPic').filter('[value="0"]').attr('checked', true);</script>
   </body>
 </html>
