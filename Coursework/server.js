@@ -90,6 +90,11 @@ app.get('/signuplogin', function(req, res) {
   //Log in/sign up page
 });
 
+app.get('/user', function(req, res) {
+  res.render('pages/user');
+  //Log in/sign up page
+});
+
 app.get('/search', function(req, res) {
   res.render('pages/search');
   //Log in/sign up page
