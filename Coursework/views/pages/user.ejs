@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head.ejs %>
+        <!-- Using ejs to import the head code -->
+        <link rel="stylesheet" type="text/css" href="/css/movieshowinfo.css">
+        <link rel="stylesheet" type="text/css" href="/css/headerfooter.css">
+        <link rel="stylesheet" type="text/css" href="/css/user.css">
+        <script src="/scripts/movieinfo.js"></script>
+        <!-- Linking the stylesheet for the index page -->
+</head>
+
+<body>
+    <header>
+        <% include ../partials/header.ejs %>
+            <!-- Using ejs to import the header code -->
+    </header>
+
+    <!-- Start of main body -->
+    <main>
+      <section id="profile" class="grid-20 tablet-grid-33 mobile-grid-100">
+        <ul>
+          <li class="user"><h2>Hi, Sis</h2></li>
+          <li class="user"><img src="iloveimg-resized/p40.png" width="120px"></li>
+          <li class="user">E-mail: example@rgu.ac.uk</li>
+        </ul>
+      </section>
+      <section id="library" class="grid-80 tablet-grid-66 mobile-grid-100">
+        <div class="posters">
+            <div class="poster-title">
+                <img src="poster1.jpg" alt="Poster 1">
+                <span>Into The Wild</span>
+                <div class="imageInner">
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">remove</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="posters">
+            <div class="poster-title">
+                <img src="poster1.jpg" alt="Poster 1">
+                <span>Into The Wild</span>
+                <div class="imageInner">
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">remove</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="posters">
+            <div class="poster-title">
+                <img src="poster1.jpg" alt="Poster 1">
+                <span>Into The Wild</span>
+                <div class="imageInner">
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">remove</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="posters">
+            <div class="poster-title">
+                <img src="poster1.jpg" alt="Poster 1">
+                <span>Into The Wild</span>
+                <div class="imageInner">
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">remove</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="posters">
+            <div class="poster-title">
+                <img src="poster1.jpg" alt="Poster 1">
+                <span>Into The Wild</span>
+                <div class="imageInner">
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">remove</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="posters">
+            <div class="poster-title">
+                <img src="poster1.jpg" alt="Poster 1">
+                <span>Into The Wild</span>
+                <div class="imageInner">
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">remove</a></span>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+    <!-- end of main body -->
+
+    <footer class="grid-100 tablet-grid-100 footer">
+        <% include ../partials/footer.ejs %>
+            <!-- Using ejs to import the footer code -->
+    </footer>
+</body>
+
+</html>
