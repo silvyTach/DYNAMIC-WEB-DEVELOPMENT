@@ -156,7 +156,7 @@ app.post('/signup', function(req, res) {
   // if any of the conditions is false the user is redirected back to the signup page
   // and is not added to the db, else the signup procedure continues
   else {
-    var userData = {email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
+    var userData = {email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}, img: req.body.img};
     db.collection('users').insert(userData, function(err, result) {
       if(err) throw "Error! New user was not added to the database!"
       if(!result) {res.redirect('signuplogin');return}
