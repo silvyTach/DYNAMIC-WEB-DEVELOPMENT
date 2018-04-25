@@ -3,7 +3,7 @@ main {
   margin:15%;
 }
 
-.librarybuttons {
+.button {
   background-color: #D75813;
   border-radius: 30px;
   border-color: transparent;
@@ -21,7 +21,7 @@ main {
   width: 100%;
 }
 
-.librarybuttons:hover {
+.button:hover {
   background-color: transparent;
   color: #D75813;
   /* When the button is hovered over it becomes transparent and the text becomes orange */
@@ -34,13 +34,6 @@ main {
 
   box-sizing: border-box;
 } */
-
-.result {
-  margin-top: 5%;
-  /* Separating results */
-}
-
-
 .moredetails {
   width: 95%;
 }
