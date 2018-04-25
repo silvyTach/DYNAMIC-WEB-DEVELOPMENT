@@ -29,6 +29,8 @@ main {
 
 .title{
   color: #FFFFFF;
+  text-align: justify;
+  padding: 1%;
 }
 
 .moredetails {
