@@ -1,7 +1,7 @@
 $(function(){
   //document ready
   //alert("Document Ready");
-  if(req.session.loggedin) change();
+  if(req.query.user != "") change();
   });
   function change() {
     var li = $('navbar li a');
