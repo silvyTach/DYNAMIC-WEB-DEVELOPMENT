@@ -1,4 +1,5 @@
 $(function(){
+  const MongoClient = require('mongodb').MongoClient; 
   var db;
   //Variable to store the database
 
