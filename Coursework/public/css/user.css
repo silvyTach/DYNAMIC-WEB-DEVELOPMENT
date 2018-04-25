@@ -1,4 +1,7 @@
 /* *{border: solid green} */
+main{
+  margin: 10%;
+}
 
 .user {
   text-align: justify;
@@ -13,6 +16,12 @@
   margin-top: 2%;
 }
 
+.poster-title {
+  width: 60%;
+}
+
 .imageInner{
-  margin-left:0 !important;
+  width: 100%;
+height: 100%;
+margin: 0%;
 }
