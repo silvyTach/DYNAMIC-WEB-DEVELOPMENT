@@ -12,16 +12,16 @@ main{
 }
 
 .posters {
-  width: 30%;
-  margin-top: 2%;
+  width: 30% !important;
+  margin-top: 2% !important;
 }
 
 .poster-title {
-  width: 72%;
+  width: 72% !important;
 }
 
 .poster-title >span {
-padding: 5%;
+padding: 5% !important;
 }
 
 .imageInner{
