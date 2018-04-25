@@ -213,7 +213,6 @@ h2, .provider a {
   width: 90%;
   height: 92%;
   /* The area covering the image when its hovered over takes the whole height and width of the poster size */
-
   position: absolute;
   /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class and the margin is calculated by the browser */
   margin: 5%;

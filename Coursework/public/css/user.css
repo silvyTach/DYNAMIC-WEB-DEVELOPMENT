@@ -51,6 +51,13 @@ main{
   /* Any text is centred and the vertical alignment within the poster-title class is set to middle */
 }
 
+.librarybuttons {
+  position: relative;
+  margin: 0;
+  top: 50%;
+  /* Span tags within the imageInner class are positioned relative to their natural position, have their margin reset, and the top edge adjusted */
+}
+
 .libraryimage:hover .over {
   display: block;
   /* When the image is hovered over, the innerImage is displayed as a whole-line element, taking a line to itself*/
