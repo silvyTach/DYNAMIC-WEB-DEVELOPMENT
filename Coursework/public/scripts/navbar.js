@@ -15,11 +15,11 @@ $(function(){
   }
   console.log("user: " + user);
 
-  if(user != "") change();
+  if(user == "undefined") change();
   });
   function change() {
-    $('#menu2').html('My movies');
-    $('#menu2').href("/user");
-    $('#menu3').html('Sign out');
-    $('#menu3').href("/");
+    $('#menu2').html('Log in');
+    $('#menu2').attr("href", "/signuplogin");
+    $('#menu3').html('Sign up');
+    $('#menu3').attr("href", "/signuplogin");
   }
