@@ -7,12 +7,9 @@
 
         <!-- Navigation menu bar-->
         <navbar class="prefix-15 grid-35 mobile-grid-100 tablet-prefix-5 tablet-grid-40 ">
-          <ul>
-            <li><a id="menu-item" href="/library">Library</a></li>
-            <li><a id="menu-item" href="/signuplogin">Log in</a></li>
-            <li><a id="menu-item" href="/signuplogin">Sign up</a></li>
-            <!-- Navigation bar using unordered list, each item linking to a different page through a server route -->
-          </ul>
+          <% if (req.query.user != "") include ../partials/logged-in-navbar.ejs %>
+          <% else include ../partials/navbar.ejs %>
+              <!-- Using ejs to import the header code -->
         </navbar>
         <!-- End of navigation menu bar -->
 
