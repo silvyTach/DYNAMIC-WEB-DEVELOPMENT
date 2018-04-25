@@ -15,9 +15,9 @@ $(function(){
   }
   console.log("user: " + user);
   db.collection('users').findOne({"login.username":user}, function(err, result) {
-    if(!result) { throw err}
+    if(!result) { console.log('no user');}
     else {change();}
-  }
+  });
   console.log("user");
   });
 
