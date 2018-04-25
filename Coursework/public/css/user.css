@@ -11,22 +11,55 @@ main{
   border-radius: 50%;
 }
 
-.posters {
-  width: 30% !important;
-  margin-top: 2% !important;
+.over{
+  width: 90%;
+  height: 92%;
+  /* The area covering the image when its hovered over takes the whole height and width of the poster size */
+
+  position: absolute;
+  /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class and the margin is calculated by the browser */
+  margin: 5%;
+  /* The left margin is then increased */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* The edges of the tags is set to a unit equal to the edges of the ancestor element */
+  opacity: 0;
+  background-color: rgba(91, 96, 115, 0.5);
+  /* The opacity is changed and a colour given */
+  text-align: center;
+  vertical-align: middle;
+  /* Any text is centred and the vertical alignment within the poster-title class is set to middle */
 }
 
-.poster-title {
-  width: 72% !important;
+.libraryimage:hover .over {
+  display: block;
+  /* When the image is hovered over, the innerImage is displayed as a whole-line element, taking a line to itself*/
+  z-index: 999;
+  opacity: 1;
+  /* The opacity is set and the stack order is set */
+  transition: all 0.5s ease-out;
+  /* All properties will have an effect added for half a second with a slow end */
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  /* Including transition compatability for Safari, Mozilla Firefox and Oracle*/
 }
 
-.poster-title >span {
-  margin-left: -75% !important;
-  padding: 7.5% !important;
-}
-
-.imageInner{
-  width: 100% !important;
-height: 99% !important;
-margin: 0% !important;
+.librarybuttons {
+  background-color: #AB0000;
+  border-radius: 30px;
+  padding: 13px 25px;
+  margin: auto;
+  /* The button is given an orange color, its edges rounded, some padding added and separation from */
+  position: relative;
+  float: unset;
+  /* The element is positioned and floating left unset */
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
 }
