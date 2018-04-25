@@ -93,11 +93,16 @@ app.get('/signuplogin', function(req, res) {
 app.get('/user', function(req, res) {
   var user = req.query.user;
   console.log(user);
-  db.collection('users').findOne({"login.username":user}, function(err, result) {
+  //this query finds the first document in the array with that username.
+  //Because the username value sits in the login section of the user data we use login.username
+  db.collection('users').findOne({
+    "login.username": user
+  }, function(err, result) {
     if (err) throw err;
-    else res.render('pages/user', {
-      user: result.body
-    });
+    //finally we just send the result to the user page as "user"
+    res.render('pages/user', {
+      user: result
+    })
   });
 });
 
