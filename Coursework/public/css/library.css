@@ -27,13 +27,10 @@ main {
   /* When the button is hovered over it becomes transparent and the text becomes orange */
 }
 
-/* ----- Boreders for fixing positions ----- */
+.title{
+  color: #FFFFFF;
+}
 
-/* .text, .poster, .resultbox, .moredetails {
-  border: 1px solid green;
-
-  box-sizing: border-box;
-} */
 .moredetails {
   width: 95%;
 }
@@ -43,10 +40,10 @@ main {
   width: 100%;
 }
 
-#library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
+/* #library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
   border: 1px solid green;
   box-sizing: border-box;
-}
+} */
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
