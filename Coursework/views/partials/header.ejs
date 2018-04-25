@@ -7,7 +7,7 @@
 
         <!-- Navigation menu bar-->
         <navbar class="prefix-15 grid-35 mobile-grid-100 tablet-prefix-5 tablet-grid-40 ">
-          <% if (req.query.user != "") include ../partials/logged-in-navbar.ejs %>
+          <% if (req.session.loggedin)  include ../partials/logged-in-navbar.ejs %>
           <% else include ../partials/navbar.ejs %>
               <!-- Using ejs to import the header code -->
         </navbar>
