@@ -21,7 +21,8 @@ main{
 }
 
 .poster-title >span {
-padding: 5% !important;
+  margin-left: -75% !important;
+  padding: 7.5% !important;
 }
 
 .imageInner{
