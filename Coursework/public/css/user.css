@@ -10,6 +10,27 @@ main{
 .user img {
   border-radius: 50%;
 }
+.librarytitle {
+  position: relative;
+  display: inline-block;
+  /* The title above the poster is rendered relative to its normal position */
+  /* It is also displayed as an inline element */
+}
+
+.librarytitle > h4 {
+  margin-left: -100%;
+  padding: 10%;
+  /* Span tags within the poster-title class take up the whole width of their containing element, has an outer margin to separate it from the element on its left (i.e. the edge) and internal padding of 5px */
+  position: absolute;
+  bottom: 0;
+  /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class */
+  /* The bottom edge of the tags is set to a unit equal to the bottom edge of the ancestor element */
+  font-size: large;
+  font-weight: 700;
+  color: #FFFFFF;
+  /* The font is made large, bold and white */
+  z-index:3;
+}
 
 .over{
   width: 100%;
