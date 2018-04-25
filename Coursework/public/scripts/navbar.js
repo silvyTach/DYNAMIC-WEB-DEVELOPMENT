@@ -15,9 +15,8 @@ $(function(){
   }
   console.log("user: " + user);
   db.collection('users').findOne({"login.username":user}, function(err, result) {
-    if err throw err;
-    if(result) { change();}
-    else {break;}
+    if(!result) { throw err}
+    else {change();}
   }
   console.log("user");
   });
