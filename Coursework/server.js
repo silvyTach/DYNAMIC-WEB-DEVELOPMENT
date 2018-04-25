@@ -160,7 +160,7 @@ app.post('/signup', function(req, res) {
     db.collection('users').insert(userData, function(err, result) {
       if(err) throw "Error! New user was not added to the database!"
       if(!result) {res.redirect('signuplogin');return}
-      else {req.session.loggedin = true; res.redirect'/?user=' + result._id)}
+      else {req.session.loggedin = true; res.redirect('/?user=' + result._id)}
       //if there are no errors the user is added to the db and the home page is drawn
     })
   }
