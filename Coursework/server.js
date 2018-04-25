@@ -91,8 +91,14 @@ app.get('/signuplogin', function(req, res) {
 });
 
 app.get('/user', function(req, res) {
-  res.render('pages/user');
-  //Log in/sign up page
+  var user = req.query.user;
+  console.log(user);
+  db.collection('users').findOne({"login.username":user}, function(err, result) {
+    if (err) throw err;
+    else res.render('pages/user'), {
+      user: result.body;
+    }}
+  });
 });
 
 app.get('/search', function(req, res) {

@@ -21,9 +21,9 @@
     <main>
       <section id="profile" class="grid-20 tablet-grid-33 mobile-grid-100">
         <ul>
-          <li class="user"><h2>Hi, Sis</h2></li>
-          <li class="user"><img src="iloveimg-resized/p40.png" width="120px"></li>
-          <li class="user">E-mail: example@rgu.ac.uk</li>
+          <li class="user"><h2>Hi, <%= user.login.username %></h2></li>
+          <li class="user"><img src="/images/profile_pics/p<%= user.img%>.png" width="120px"></li>
+          <li class="user">E-mail: <%= user.email %></li>
         </ul>
       </section>
       <section id="library" class="grid-80 tablet-grid-66 mobile-grid-100">

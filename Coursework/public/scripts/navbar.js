@@ -1,4 +1,7 @@
-var searchString = document.location.search;
+$(function(){
+  //document ready
+  //alert("Document Ready");
+  var searchString = document.location.search;
   searchString = searchString.substring(1);
   var nvPairs = searchString.split("&");
   var user;
@@ -11,10 +14,9 @@ var searchString = document.location.search;
     }
   }
   console.log("user: " + user);
-  if(user != "undefined") {
-    change();
-  }
+  if(user != "undefined") change();
   console.log("user");
+  });
 
   function change() {
     $('#menu2').html('My movies');
