@@ -134,7 +134,7 @@ app.post('/login', function(req, res) {
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('/signuplogin');return}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to their library
-    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/user?user=' + result.login.username)}
+    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/user?user=' + result._id)}
     //otherwise send them back to login
     else{res.redirect('/signuplogin')}
   });
@@ -160,7 +160,7 @@ app.post('/signup', function(req, res) {
     db.collection('users').insert(userData, function(err, result) {
       if(err) throw "Error! New user was not added to the database!"
       if(!result) {res.redirect('signuplogin');return}
-      else {req.session.loggedin = true; res.redirect('/')}
+      else {req.session.loggedin = true; res.redirect'/?user=' + result._id)}
       //if there are no errors the user is added to the db and the home page is drawn
     })
   }
