@@ -12,13 +12,11 @@ main{
 }
 
 .over{
-  width: 90%;
-  height: 92%;
+  width: 100%;
+  height: 100%;
   /* The area covering the image when its hovered over takes the whole height and width of the poster size */
   position: relative;
   /* The span tags are also positioned relative to the first positioned ancestor element i.e. the poster-title class and the margin is calculated by the browser */
-  margin: 5%;
-  /* The left margin is then increased */
   top: 0;
   left: 0;
   bottom: 0;
