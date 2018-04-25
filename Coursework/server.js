@@ -96,7 +96,7 @@ app.get('/user', function(req, res) {
   db.collection('users').findOne({"login.username":user}, function(err, result) {
     if (err) throw err;
     else res.render('pages/user'), {
-      user: result.body;
+      user: result.body
     }}
   });
 });
