@@ -91,6 +91,7 @@ app.get('/signuplogin', function(req, res) {
 });
 
 app.get('/user', function(req, res) {
+  console.log(response.body);
   res.render('pages/user');
   //Log in/sign up page
 });
@@ -160,7 +161,7 @@ app.post('/signup', function(req, res) {
     db.collection('users').insert(userData, function(err, result) {
       if(err) throw "Error! New user was not added to the database!"
       if(!result) {res.redirect('signuplogin');return}
-      else {req.session.loggedin = true; res.redirect('/')}
+      else {req.session.loggedin = true; res.redirect('/', {user: result.body})}
       //if there are no errors the user is added to the db and the home page is drawn
     })
   }
