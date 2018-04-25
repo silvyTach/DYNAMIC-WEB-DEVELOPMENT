@@ -14,11 +14,17 @@ $(function(){
     }
   }
   console.log("user: " + user);
-  if(user != "undefined") {
+  db.collection('users').findOne({"login.username":user}, function(err, result) {
+    if err throw err;
+    if(result) { change();}
+    else {break;}
+  }
+  console.log("user");
+  });
+
+  function change() {
     $('#menu2').html('My movies');
     $('#menu2').attr("href", "/user");
     $('#menu3').html('Sign out');
     $('#menu3').attr("href", "/");
-    console.log("user");
   }
-  });
