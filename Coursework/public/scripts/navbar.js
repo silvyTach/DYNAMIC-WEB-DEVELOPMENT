@@ -15,13 +15,10 @@ $(function(){
   }
   console.log("user: " + user);
   if(user != "undefined") {
-    change();
-    console.log("user");
-  }
-  });
-  function change() {
     $('#menu2').html('My movies');
     $('#menu2').attr("href", "/user");
     $('#menu3').html('Sign out');
     $('#menu3').attr("href", "/");
+    console.log("user");
   }
+  });
