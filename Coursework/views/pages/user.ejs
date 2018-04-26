@@ -42,6 +42,11 @@
             <button class="button">Remove</button>
           </div>
         </div>
+          <% user.library.forEach(function(movie){%>
+        <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+          <%= movie %>
+        </div>
+        <%};%>
         <!-- End of the library result -->
 
       </section>
