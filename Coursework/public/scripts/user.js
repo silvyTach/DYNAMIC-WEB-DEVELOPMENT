@@ -3,11 +3,13 @@ $(function(){
   //alert("Document Ready");
   var id = $('.movie').html();
   console.log(id);
-  for (var i = 0; i < id.length; i++) {
-    getInfo(id[i]);
-    $('.id').remove();
-  }
+  // for (var i = 0; i < id.length; i++) {
+  //   getInfo(id[i]);
+  //   $('.id').remove();
+  // }
+  getInfo(id);
   });
+
 
   function getInfo(id) {
     var settings = {
@@ -21,15 +23,13 @@ $(function(){
     $.ajax(settings).done(function (response) {
       console.log(response);
       var html = "";
-      for(var i=0; i<3; i++){
         html+= '<div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">'
         html+= '<div class="grid-100 libraryimage"> <img class="poster" '
-        html+= "src='https://image.tmdb.org/t/p/w185" + response.results[i].poster_path + "' alt='" + response.results[i].title + " poster'></div>"
-        html+= '<div class="grid-100 librarytitle"><h4 class="title">' + response.results[i].title + "</h4></div>"
+        html+= "src='https://image.tmdb.org/t/p/w185" + response.poster_path + "' alt='" + response.title + " poster'></div>"
+        html+= '<div class="grid-100 librarytitle"><h4 class="title">' + response.title + "</h4></div>"
 
         html+= '<div class="grid-100 librarybuttons"><button class="button">More Details</button>'
         html+= '<button class="button">Remove</button></div></div>'
-      }
       $('#library').html(html);
     });
   }
