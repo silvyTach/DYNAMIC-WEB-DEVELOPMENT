@@ -1,7 +1,8 @@
 $(function(){
   //document ready
   //alert("Document Ready");
-  $("#user", "#movie").css("display", "none");
+  $("#user").css("display", "none");
+  $("#movie").css("display", "none");
   var id = $('#id').html();
   similarMovies(id);
   director(id);
