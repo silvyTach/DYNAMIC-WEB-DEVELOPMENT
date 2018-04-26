@@ -90,9 +90,10 @@ app.get('/signuplogin', function(req, res) {
   //Log in/sign up page
 });
 
+//Each user's page containing the library with their movies
 app.get('/user', function(req, res) {
   var user = req.query.user;
-  console.log(user);
+  //console.log(user);
   //this query finds the first document in the array with that username.
   //Because the username value sits in the login section of the user data we use login.username
   db.collection('users').findOne({
@@ -109,27 +110,6 @@ app.get('/user', function(req, res) {
 app.get('/search', function(req, res) {
   res.render('pages/search');
   //Log in/sign up page
-});
-
-app.get('/addtolibrary', function(req, res) {
-  var id = req.query.id;
-  console.log(id);
-  //Finding the ID of the movie to be add to the Library
-  db.collection('users').findOne({"login.username":"testuser"}, function(error, result) {
-    if (error) {
-      throw error;
-      //If there's an error, throw it
-    }
-
-    if (!result) {
-      res.redirect('/signuplogin');
-      return;
-    }
-
-    //Still need to find the user's library based on their username and then add the id to their library
-    //Then redirect user to library with their username
-
-  });
 });
 
 //-------------------- POST ROUTES --------------------
@@ -177,13 +157,28 @@ app.post('/signup', function(req, res) {
   }
 });
 
+//this is our addMovie route, adds the movie to the user's library and redraws the movie info page
 app.post('/addMovie', function(req, res) {
-  console.log(JSON.stringify(req.body));
+  // finds a user based on their name
   var query = { "login.username" : req.body.user};
+  // adds the movie id in that user's library
   var newvalues = { $push: { "library": req.body.id}};
   db.collection('users').update(query,newvalues, function(err, result) {
     if (err) throw err;
-    console.log("added movie" + req.body.id + " to " + req.body.user);
+    // console.log("added movie" + req.body.id + " to " + req.body.user);
     res.redirect('/movieshowinfo?id=' + req.body.id);
+  });
+});
+
+//this is our removeMovie route, removes the movie from the user's library
+app.post('/removeMovie', function(req, res) {
+  // finds a user based on their name
+  var query = { "login.username" : req.body.user};
+  // removes the movie id from the array that represents that user's library
+  var newvalues = { $pull: { "library": req.body.id}};
+  db.collection('users').update(query,newvalues, function(err, result) {
+    if (err) throw err;
+    console.log("removed movie " + req.body.id + " from " + req.body.user);
+    res.redirect('/user?user=' + req.body.user);
   });
 });

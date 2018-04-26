@@ -37,9 +37,10 @@ function getInfo(id, user) {
 		html += '<div class="grid-100 libraryimage"> <img class="poster" '
 		html += "src='https://image.tmdb.org/t/p/w185" + response.poster_path + "' alt='" + response.title + " poster'></div>"
 		html += '<div class="grid-100 librarytitle"><h4 class="title">' + response.title + "</h4></div>"
-
 		html += '<div class="grid-100 librarybuttons"><a href="/movieshowinfo?user=' + user + '&id=' + response.id + '" class="button">More Details</a>'
-		html += '<button class="button">Remove</button></div></div>'
+    html += '<form action="/removeMovie" method="POST"><input id="user" type="text" name="user" value="' + user + '">'
+    html += '<input id="movie" type="text" name="id" value="' + id + '"><button type="submit" class="button">Remove</button></form>'
+		html += '</div></div>'
 		$('#library').append(html);
 	});
 }
