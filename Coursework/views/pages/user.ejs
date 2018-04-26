@@ -30,7 +30,7 @@
       <!-- Start of the library container -->
       <p id="length"><%= user.library.length %></p>
       <% for(var i=0; i < user.library.length; i++){ %>
-        <p class="movie<%=i%>"><%= movie %></p>
+        <p class="movie<%=i%>"><%= user.library[i] %></p>
         <% }; %>
       <section id="library" class="grid-80 mobile-grid-100 tablet-grid-33 grid-parent">
 
