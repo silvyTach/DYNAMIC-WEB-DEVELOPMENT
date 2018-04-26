@@ -20,8 +20,8 @@
         <div id="poster" class="grid-30 tablet-grid-30 mobile-grid-100">
             <img src=" http://image.tmdb.org/t/p/w500/<%= movie.poster_path %>" alt="<%= movie.title %> Poster" class="grid-100 mobile-grid-100">
             <form action="/addMovie" method="POST" class="prefix-25 grid-50 suffix-25 tablet-prefix-25 tablet-grid-50 tablet-suffix-25 mobile-grid-100">
-              <input type="text" class="loginsignup" name="user" placeholder="sisa" display="none">
-              <input type="text" class="loginsignup" name="id" placeholder="<%= movie.id %>" display="none">
+              <input type="text" class="loginsignup" name="user" html="sisa" display="none">
+              <input type="text" class="loginsignup" name="id" html="<%= movie.id %>" display="none">
                 <button type="submit" class="button" id="addtolibrary">Add to Library</button>
             </form>
         </div>
