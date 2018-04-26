@@ -3,11 +3,12 @@ $(function(){
   //alert("Document Ready");
   var length = $("#length").html();
   // var id = $('.movie').html();
+  console.log(length);
   for (var i = 0; i < length; i++) {
     var id= $("#movie"+i);
     console.log(id);
     getInfo(id);
-     $('.movie' + i).remove();
+     $('#movie' + i).remove();
   }
    $('#length').remove();
   // for (var i = 0; i < id.length; i++) {
