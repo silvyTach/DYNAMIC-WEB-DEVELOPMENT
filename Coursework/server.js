@@ -173,6 +173,7 @@ app.post('/addMovie', function(req, res) {
 //this is our removeMovie route, removes the movie from the user's library
 app.post('/removeMovie', function(req, res) {
   // finds a user based on their name
+  console.log(req.body);
   var query = { "login.username" : req.body.user};
   // removes the movie id from the array that represents that user's library
   var newvalues = { $pull: { "library": req.body.id}};
