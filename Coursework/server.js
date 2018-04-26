@@ -179,9 +179,9 @@ app.post('/signup', function(req, res) {
 
 app.post('/addMovie', function(req, res) {
   console.log(JSON.stringify(req.body));
-  var query = { login : {username : req.body.user}};
-  var newvalues = { $push: { library : req.body.id}};
-  db.collection('users').updateOne(query,newvalues, function(err, result) {
+  var query = { "login.username" : req.body.user}};
+  var newvalues = { $push: { "library": req.body.id}};
+  db.collection('users').update(query,newvalues, function(err, result) {
     if (err) throw err;
     console.log("added movie" + req.body.id + " to " + req.body.user);
     res.redirect('/movieshowinfo?id=' + req.body.id);
