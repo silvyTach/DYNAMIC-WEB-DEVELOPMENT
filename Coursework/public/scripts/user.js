@@ -5,7 +5,7 @@ $(function(){
   // var id = $('.movie').html();
   for (var i = 0; i < length; i++) {
     var id= $(".movie"+i);
-    console.log(id);
+    console.log(".movie"+i);
     getInfo(id);
      $('.movie' + i).remove();
   }
