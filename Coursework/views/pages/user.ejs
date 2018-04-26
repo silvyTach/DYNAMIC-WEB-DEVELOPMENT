@@ -28,6 +28,10 @@
         </ul>
       </section>
       <!-- Start of the library container -->
+      <p id="length"><%= user.library.length %></p>
+      <% for(var i=0; i < user.library.length; i++){%>
+        <p class="movie<%=i%>"><%= movie %></p>
+        <%});%>
       <section id="library" class="grid-80 mobile-grid-100 tablet-grid-33 grid-parent">
 
         <!-- Start of the library result -->
@@ -43,11 +47,12 @@
             <button class="button">Remove</button>
           </div>
         </div>
-          <% user.library.forEach(function(movie){%>
-        <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-          <p class="movie"><%= movie %></p>
-        </div>
-        <%});%>
+
+          <!-- <% user.library.forEach(function(movie){%> -->
+        <!-- <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+
+        </div> -->
+
         <!-- End of the library result -->
 
       </section>

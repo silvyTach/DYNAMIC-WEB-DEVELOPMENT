@@ -1,13 +1,19 @@
 $(function(){
   //document ready
   //alert("Document Ready");
-  var id = $('.movie').html();
-  console.log(id);
+  var length = $("#length").html();
+  // var id = $('.movie').html();
+  for (var i = 0; i < length; i++) {
+    var id= $(".movie"+i);
+    getInfo(id);
+     $('.movie' + i).remove();
+  }
+   $('#length').remove();
   // for (var i = 0; i < id.length; i++) {
   //   getInfo(id[i]);
   //   $('.id').remove();
   // }
-  getInfo(id);
+  // getInfo(id);
   });
 
 
@@ -30,6 +36,6 @@ $(function(){
 
         html+= '<div class="grid-100 librarybuttons"><button class="button">More Details</button>'
         html+= '<button class="button">Remove</button></div></div>'
-      $('#library').html(html);
+      $('#library').append(html);
     });
   }
