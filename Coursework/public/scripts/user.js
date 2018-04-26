@@ -1,13 +1,14 @@
 $(function(){
   //document ready
   //alert("Document Ready");
+  var user = $("#user").html();
   var length = $("#length").html();
   // var id = $('.movie').html();
   console.log(length);
   for (var i = 0; i < length; i++) {
     var id= $("#movie"+i).html();
     console.log(id);
-    getInfo(id);
+    getInfo(id, user);
      $('#movie' + i).remove();
   }
    $('#length').remove();
@@ -19,7 +20,7 @@ $(function(){
   });
 
 
-  function getInfo(id) {
+  function getInfo(id, user) {
     var settings = {
       "async": true,
       "crossDomain": true,
@@ -36,7 +37,7 @@ $(function(){
         html+= "src='https://image.tmdb.org/t/p/w185" + response.poster_path + "' alt='" + response.title + " poster'></div>"
         html+= '<div class="grid-100 librarytitle"><h4 class="title">' + response.title + "</h4></div>"
 
-        html+= '<div class="grid-100 librarybuttons"><button class="button">More Details</button>'
+        html+= '<div class="grid-100 librarybuttons"><a href="/movieshowinfo?user='+ user + '&id=' + response.id + '" class="button">More Details</a>'
         html+= '<button class="button">Remove</button></div></div>'
       $('#library').append(html);
     });
