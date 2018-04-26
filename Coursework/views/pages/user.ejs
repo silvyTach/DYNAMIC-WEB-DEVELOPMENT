@@ -20,42 +20,37 @@
 
     <!-- Start of main body -->
     <main>
-      <section id="profile" class="grid-20 tablet-grid-33 mobile-grid-100">
-        <ul>
-          <li class="user"><h2>Hi, <h2 id = "user"><%= user.login.username %></h2></h2></li>
-          <li class="user"><img src="/images/profile_pics/p<%= user.img%>.png" width="120px"></li>
-          <li class="user">E-mail: <%= user.email %></li>
-        </ul>
-      </section>
-      <!-- Start of the library container -->
-      <p id="length"><%= user.library.length %></p>
-      <% for(var i=0; i < user.library.length; i++){ %>
-        <p id="movie<%=i%>"><%= user.library[i] %></p>
-        <% }; %>
-      <section id="library" class="grid-80 mobile-grid-100 tablet-grid-33 grid-parent">
+        <section id="profile" class="grid-20 tablet-grid-33 mobile-grid-100">
+            <ul>
+                <li class="user">
+                    <h2>Hi,
+                        <h2 id="user">
+                            <%= user.login.username %>
+                        </h2>
+                    </h2>
+                </li>
+                <li class="user"><img src="/images/profile_pics/p<%= user.img%>.png" width="120px"></li>
+                <li class="user">E-mail:
+                    <%= user.email %>
+                </li>
+            </ul>
+        </section>
+        <!-- creating an element with the number of movies in the user library so that number can be passed to the js function -->
+        <p id="length">
+            <%= user.library.length %>
+        </p>
+        <!-- for each movie I`m creating an element that contains the id of the movie so it can be accessed from the js function -->
+        <% for(var i=0; i < user.library.length; i++){ %>
+            <p id="movie<%=i%>">
+                <%= user.library[i] %>
+            </p>
+            <% }; %>
+                <!-- end oif the ekements with movies id -->
 
-        <!-- Start of the library result -->
-        <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-          <div class="grid-100 libraryimage">
-            <img class="poster" src="/images/poster0.jpg" alt="Poster">
-          </div>
-          <div class="grid-100 librarytitle">
-            <h4 class="title">Guardians of the Galaxy</h4>
-          </div>
-          <div class="grid-100 librarybuttons">
-            <button class="button">More Details</button>
-            <button class="button">Remove</button>
-          </div>
-        </div>
-
-        <!-- <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-
-        </div> -->
-
-        <!-- End of the library result -->
-
-      </section>
-      <!-- End of the library container -->
+                <!-- the container where all the movie posters will be put -->
+                <section id="library" class="grid-80 mobile-grid-100 tablet-grid-33 grid-parent">
+                </section>
+                <!-- End of the library container -->
     </main>
     <!-- end of main body -->
 
