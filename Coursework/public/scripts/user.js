@@ -18,8 +18,8 @@ $(function () {
 	}
 	//the p tag with the number of movies in the user library is removed
 	$('#length').remove();
-  $(".user").css("display", "none");
-  $(".movie").css("display", "none");
+  $(".remove-user").css("display", "none");
+  $(".remove-movie").css("display", "none");
 });
 
 //Function that gets info from the API
@@ -40,8 +40,8 @@ function getInfo(id, user) {
 		html += "src='https://image.tmdb.org/t/p/w185" + response.poster_path + "' alt='" + response.title + " poster'></div>"
 		html += '<div class="grid-100 librarytitle"><h4 class="title">' + response.title + "</h4></div>"
 		html += '<div class="grid-100 librarybuttons"><a href="/movieshowinfo?user=' + user + '&id=' + response.id + '" class="button">More Details</a>'
-    html += '<form action="/removeMovie" method="POST"><input class="user" type="text" name="user" value="' + user + '">'
-    html += '<input class="movie" type="text" name="id" value="' + parseInt(id) + '"><button type="submit" class="button">Remove</button></form>'
+    html += '<form action="/removeMovie" method="POST"><input class="user" type="text" name="remove-user" value="' + user + '">'
+    html += '<input class="remove-movie" type="text" name="id" value="' + parseInt(id) + '"><button type="submit" class="button">Remove</button></form>'
 		html += '</div></div>'
 		$('#library').append(html);
 	});
