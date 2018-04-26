@@ -13,7 +13,7 @@ $(function(){
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://api.themoviedb.org/3/movie/" + id + "/similar?page=1&api_key=305a3b42d88760bd22c9f8c8c54f788d",
+      "url": "https://api.themoviedb.org/3/movie/" + id + "?api_key=305a3b42d88760bd22c9f8c8c54f788d",
       "method": "GET",
       "headers": {},
       "data": "{}"
@@ -23,7 +23,7 @@ $(function(){
       var html = "";
       for(var i=0; i<3; i++){
         html+= '<div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">'
-        html+= 'div class="grid-100 libraryimage"> <img class="poster" '
+        html+= '<div class="grid-100 libraryimage"> <img class="poster" '
         html+= "src='https://image.tmdb.org/t/p/w185" + response.results[i].poster_path + "' alt='" + response.results[i].title + " poster'></div>"
         html+= '<div class="grid-100 librarytitle"><h4 class="title">' + response.results[i].title + "</h4></div>"
 
