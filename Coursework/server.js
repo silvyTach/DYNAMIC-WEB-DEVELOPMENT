@@ -179,7 +179,7 @@ app.post('/signup', function(req, res) {
 
 app.post('/addMovie', function(req, res) {
   console.log(JSON.stringify(req.body));
-  var query = { "login.username" : req.body.user}};
+  var query = { "login.username" : req.body.user};
   var newvalues = { $push: { "library": req.body.id}};
   db.collection('users').update(query,newvalues, function(err, result) {
     if (err) throw err;
