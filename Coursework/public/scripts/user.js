@@ -1,7 +1,7 @@
 $(function(){
   //document ready
   //alert("Document Ready");
-  var id = $('.movie').html();
+  var id = $('p .movie').html();
   console.log(id);
   for (var i = 0; i < id.length; i++) {
     getInfo(id[i]);
