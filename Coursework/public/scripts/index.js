@@ -29,7 +29,7 @@ $.ajax(settings).done(function (response) {
       "' width = '261px' alt='" + response.results[i].title + " poster'>"
     html+= "<span>" + response.results[i].title + "</span>"
     html+= "<div class='imageInner'>"
-    html+= '<span><a href="/movieshowinfo?id=' + response.results[i].id +'" class="poster-button" tabindex="-1">more details</a></span>'
+    html+= '<span><a href="/movieshowinfo?user=sisa&id=' + response.results[i].id +'" class="poster-button" tabindex="-1">more details</a></span>'
     html+= "</div></div>"
     // console.log(response.results[i].title);
     $("#" + genre).html(html);
