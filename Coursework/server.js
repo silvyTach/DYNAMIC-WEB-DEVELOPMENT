@@ -184,6 +184,6 @@ app.post('/addMovie', function(req, res) {
   db.collection('users').updateOne(query,newvalues, function(err, result) {
     if (err) throw err;
     console.log("added movie" + req.body.id + " to " + req.body.user);
-    res.redirect('/');
+    res.redirect('/movieshowinfo?id=' + req.body.id);
   });
 });
