@@ -18,8 +18,6 @@ $(function () {
 	}
 	//the p tag with the number of movies in the user library is removed
 	$('#length').remove();
-  // $(".remove-user").forEach(function(tag) {tag.css("display", "none")});
-  // $(".remove-movie").css("display", "none");
 });
 
 //Function that gets info from the API
