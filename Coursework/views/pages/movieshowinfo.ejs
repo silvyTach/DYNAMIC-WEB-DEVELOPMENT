@@ -45,10 +45,23 @@
 
             <div id="cast" class="tabcontent">
                 <table style="width:100%">
-                  <%var length %>
-                  <%if(movie.credits.cast.length < 10)  length = movie.credits.cast.length %>
-                  <%else  length =10 %>
-                    <%for(var i = 0; i < length; i++) {%>
+                  <%if(movie.credits.cast.length < 10){%>
+                  <%for(var i = 0; i < movie.credits.cast.length; i++) %>
+                  <tr>
+                    <%if(movie.credits.cast[i].profile_path == null) {%>
+                      <td><img src="http://via.placeholder.com/45x68" alt="Actor Photo nog available"></td>
+                      <% }else {%>
+                      <td><img src="http://image.tmdb.org/t/p/w45/<%=movie.credits.cast[i].profile_path %>" alt="Actor Photo"></td>
+                      <% }%>
+                      <td class="actor">
+                          <%= movie.credits.cast[i].name %>
+                      </td>
+                      <td class="character">
+                          <%= movie.credits.cast[i].character %>
+                      </td>
+                  </tr>
+                  <% }} %>
+                    <%else {for(var i = 0; i < 10; i++) {%>
                         <tr>
                           <%if(movie.credits.cast[i].profile_path == null) {%>
                             <td><img src="http://via.placeholder.com/45x68" alt="Actor Photo nog available"></td>
@@ -62,7 +75,7 @@
                                 <%= movie.credits.cast[i].character %>
                             </td>
                         </tr>
-                        <% }; %>
+                        <% }} %>
                 </table>
             </div>
 
