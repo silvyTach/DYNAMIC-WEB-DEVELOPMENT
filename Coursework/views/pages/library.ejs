@@ -17,7 +17,7 @@
     <main class="grid-container">
       <div class=" grid-100 tab">
           <button class="tablinks active" onclick="showTab(event, 'Popular')">#Popular</button>
-          <% genres.forEach(function(genre)) {%>
+          <% genres.forEach(function(genre) {%>
             <button class="tablinks" onclick="showTab(event, '<%= genre.name %>')">#<%= genre.name %></button>
           <!-- <button class="tablinks" onclick="showTab(event, 'Action')">#Action</button>
           <button class="tablinks" onclick="showTab(event, 'Adventure')">#Adventure</button>
@@ -38,7 +38,7 @@
           <button class="tablinks" onclick="showTab(event, 'Thriller')">#Thriller</button>
           <button class="tablinks" onclick="showTab(event, 'War')">#War</button>
           <button class="tablinks" onclick="showTab(event, 'Western')">#Western</button> -->
-          <%};%>
+          <%});%>
       </div>
       <div id="Popular" class="tabcontent">
             <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
