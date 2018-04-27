@@ -22,13 +22,14 @@ function genre(id, name) {
           "headers": {},
           "data": "{}"
       }
-      var pages = 0;
       $.ajax(settings).done(function (response) {
-        console.log(response.total_pages)
+        // console.log(response.total_pages)
+        $("#" + id).append(<p id="p" + id>response.total_pages</p>)
       });
-
-      // console.log(pages);
-      for(var i = 1; i <= pages; i++) {
+      var pages = parseInt($(".p"+ id).html());
+      $(".p"+ id).remove();
+      console.log(pages);
+      for(var i = 1; i <= 0; i++) {
         var settings = {
                 "async": true,
                 "crossDomain": true,
