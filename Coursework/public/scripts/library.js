@@ -1,4 +1,4 @@
-$(function() {
+// $(function() {
     var searchString = document.location.search;
     console.log(searchString.substring(1));
     pair = searchString.substring(1);
@@ -18,7 +18,7 @@ $(function() {
         genre(id, name, user);
         popular(user);
     }
-});
+// });
 
 // function that builds the tab with movies for each genre
 // every request to the API returns a single page of results with movies
