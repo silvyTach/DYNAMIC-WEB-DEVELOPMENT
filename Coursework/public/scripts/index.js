@@ -1,10 +1,12 @@
 $(function() {
     //document ready
     //alert("Document Ready");
-    var searchString = document.location.search;
-  	pair = searchString.substring(1);
-  	var split = pair.split("=");
-  	var user = split[1];
+    // var searchString = document.location.search;
+  	// pair = searchString.substring(1);
+  	// var split = pair.split("=");
+  	// var user = split[1];
+    var user = req.user;
+    console.log(user);
     $(".url").attr("href", $(".url").attr("href") + "&user=" + user);
     // adding the user name to the url so it can be passed throught the pages
     // Top 5 Comedies
