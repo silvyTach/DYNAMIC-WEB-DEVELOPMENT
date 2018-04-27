@@ -215,6 +215,6 @@ app.post('/search', function(req, res) {
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
     // console.log(result.body);
-    res.redirect('/results?user=' + user , result);
+    res.send(result);
   });
 });
