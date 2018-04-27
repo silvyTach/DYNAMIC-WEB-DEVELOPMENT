@@ -26,7 +26,7 @@ function top5(id, genre, user) {
         "data": "{}"
     }
     $.ajax(settings).done(function(response) {
-        var html = '<div class="top"><h2>' + genre + ' <i>#Top5</i></h2><a href="/library">view all ></a></div>';
+        var html = '<div class="top"><h2>' + genre + ' <i>#Top5</i></h2><a href="/library?user=' + user + '" >view all ></a></div>';
         for (var i = 0; i < 5; i++) {
             html += "<div class='poster-title'>"
             html += "<img src='https://image.tmdb.org/t/p/original/" + response.results[i].poster_path +
@@ -35,7 +35,6 @@ function top5(id, genre, user) {
             html += "<div class='imageInner'>"
             html += '<span><a href="/movieshowinfo?user=' + user + '&id=' + response.results[i].id + '" class="poster-button" tabindex="-1">more details</a></span>'
             html += "</div></div>"
-                // console.log(response.results[i].title);
             $("#" + genre).html(html);
         }
     });
