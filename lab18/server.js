@@ -104,7 +104,7 @@ app.get('/logout', function(req, res) {
 
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
-app.post('/login', function(req, res) {
+app.post('/dologin', function(req, res) {
   console.log(JSON.stringify(req.body))
   var uname = req.body.username;
   var pword = req.body.password;

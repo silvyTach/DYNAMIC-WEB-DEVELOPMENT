@@ -3,70 +3,13 @@ main {
   margin:15%;
 }
 
-hr {
-  width: 75%;
+.user {
+  text-align: justify;
 }
 
-/* ----- General ----- */
-
-.text, .title {
-  box-sizing: border-box;
-  /* Each of these elements will have its border included in a float */
-  /*width: 90%;
-  /* They all take 90% of their parent element's width */
-  padding: 0.5%;
-  /*margin: 0% 0% 2%;
-  /* They all have internal padding and external margins added */
+.user img {
+  border-radius: 50%;
 }
-
-/* ----- Text ----- */
-
-.text {
-  float: left;
-  width: 95%;
-  /* All text within the slideshow will occupy 75% of the width and float left */
-}
-
-.text h1 {
-  font-size: 5em;
-  color: #FFFFFF;
-  /* The headers of the slideshow are made white and given a font size */
-}
-
-.info, .plot {
-  /*width: 80%;
-  /* The info about the movie/show and the plot will only occupy 80% of the text section */
-}
-
-.info, .plot, .title {
-  /* border: solid green; */
-  margin: 0;
-  /* Each of these items has their margin removed */
-}
-
-.info li {
-  font-size: large;
-  color: #AB0000;
-  font-weight: bold;
-  /* The list items within the info list will have a large font size, be red, and be bold */
-}
-
-i {
-  font-size: small;
-  color: #5B6073;
-  /* Any font made italic will be small and a medium grey colour */
-}
-
-.plot {
-  color: #5B6073;
-  font-size: large;
-  /* The plot text will be a medium grey and a large font size */
-  /*@override box-sizing: content-box important;*/
-}
-
-/* ----- Images ----- */
-
-/* ----- Button ----- */
 
 .button {
   background-color: #D75813;
@@ -92,19 +35,11 @@ i {
   /* When the button is hovered over it becomes transparent and the text becomes orange */
 }
 
-/* ----- Boreders for fixing positions ----- */
-
-/* .text, .poster, .resultbox, .moredetails {
-  border: 1px solid green;
-
-  box-sizing: border-box;
-} */
-
-.result {
-  margin-top: 5%;
-  /* Separating results */
+.title{
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1%;
 }
-
 
 .moredetails {
   width: 95%;
@@ -115,26 +50,10 @@ i {
   width: 100%;
 }
 
-#errormessage {
-  margin-top: 5%;
-}
-
-#errormessage h1 {
-  font-size: xx-large;
-  color: #FFFFFF;
-  text-align: center;
-  /* The headers of the slideshow are made white and given a font size */
-}
-
-#errormessage p {
-  color: #5B6073;
-  text-align: center;
-}
-
-#library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
+/* #library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
   border: 1px solid green;
   box-sizing: border-box;
-}
+} */
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
