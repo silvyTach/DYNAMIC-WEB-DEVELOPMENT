@@ -2,11 +2,12 @@ $(function() {
   var p = $(".tab p").toArray();
 
   for (var i = 0; i < p.length; i++) {
-    console.log($(p[i]).html());
-    // var id = p[i].html();
-    // var name = $("#g" + id).html();
-    // console.log(id + " : " + name);
+    // console.log($(p[i]).html());
+    var id = $(p[i]).html();
     p[i].remove();
+    var name = $("#g" + id).html();
+    console.log(id + " : " + name);
+
   }
   // $(".tab p").forEach(function(p){
   //   var id = p.html();
