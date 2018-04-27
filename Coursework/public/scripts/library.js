@@ -23,6 +23,7 @@ function genre(id, name) {
         "data": "{}"
     }
     $.ajax(settings).done(function(response) {
+      console.log(response.body);
       var html = "";
         for (var i = 0; i < response.results.length; i++) {
             html += '<div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">'
