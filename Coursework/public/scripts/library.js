@@ -11,7 +11,7 @@ $(function() {
     for (var i = 0; i < p.length; i++) {
         // saving the id and deleting the <p> as it's not needed anymore
         var id = $(p[i]).html();
-
+        console.log($(p[i]).html());
         p[i].remove();
         //extracting the genre name
         var name = $("#b" + id).html().substring(1);
