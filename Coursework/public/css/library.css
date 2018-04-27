@@ -64,10 +64,11 @@ h4 a {
 
 .tab button {
   font-size: large !important;
+  margin-left: 0 !important;
 }
 
 .tab button:hover, .tab button:active {
-  border: none !important;
+  border-top: none !important;
 }
 
 
