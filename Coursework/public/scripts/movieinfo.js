@@ -1,6 +1,4 @@
 $(function(){
-  //document ready
-  //alert("Document Ready");
   var searchString = document.location.search;
   searchString = searchString.substring(1);
   var nvPairs = searchString.split("&");

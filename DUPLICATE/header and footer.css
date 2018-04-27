@@ -115,3 +115,9 @@ header {
 #socialMediaLogos{
   jborder: solid 1px green;
 }
+
+#back-to-top {
+	position: fixed;
+	bottom: 0;
+	right: 1%;
+}

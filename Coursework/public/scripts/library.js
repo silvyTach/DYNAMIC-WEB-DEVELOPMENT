@@ -5,7 +5,6 @@ $(function() {
   var user = split[1];
   //extracting the username from the url so it can be passed to the next page that will be loaded
   //getting an array of all the genre ids
-  $(".tab p").css("display", "none");
   var p = $(".tab p").toArray();
   for (var i = 0; i < p.length; i++) {
     // saving the id and deleting the <p> as it's not needed anymore
@@ -46,7 +45,7 @@ function genre(id, name, user) {
     });
   }
 }
-
+// function that builds the tab with the most popular movies
 function popular(user) {
   for (var i = 1; i < 7; i++) {
     var settings = {
