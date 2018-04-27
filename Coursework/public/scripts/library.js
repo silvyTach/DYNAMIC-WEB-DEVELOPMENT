@@ -23,6 +23,7 @@ function genre(id, name) {
           "data": "{}"
       }
       var pages = 0;
+      console.log(pages);
       $.ajax(settings).done(function (response) {
         pages = response.total_pages
       });
