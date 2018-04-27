@@ -24,7 +24,8 @@ function genre(id, name) {
       }
       $.ajax(settings).done(function (response) {
         // console.log(response.total_pages)
-        $("#" + id).append('<p id="p' + id'">response.total_pages</p>')
+        var append = '<p id="p' + id + '" >' + response.total_pages + '</p>';
+        $("#" + id).append(append);
       });
       var pages = parseInt($(".p"+ id).html());
       $(".p"+ id).remove();
