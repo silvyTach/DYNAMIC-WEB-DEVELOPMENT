@@ -24,10 +24,10 @@ function genre(id, name) {
       }
       var pages = 0;
       $.ajax(settings).done(function (response) {
-        pages = response.total_pages
+        console.log(response.total_pages)
       });
 
-      console.log(pages);
+      // console.log(pages);
       for(var i = 1; i <= pages; i++) {
         var settings = {
                 "async": true,
