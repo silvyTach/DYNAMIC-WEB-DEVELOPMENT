@@ -15,7 +15,7 @@ $(function() {
 
 function genre(id, name) {
   var html = "";
-  for(var i = 1; i <= 10; i++) {
+  for(var i = 1; i <= 3; i++) {
     var settings = {
                 "async": true,
                 "crossDomain": true,
