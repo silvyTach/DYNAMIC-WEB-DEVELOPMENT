@@ -5,7 +5,7 @@ $(function() {
   	pair = searchString.substring(1);
   	var split = pair.split("=");
   	var user = split[1];
-    $(".url").attr("href", $("#url").attr("href") + "&user=" + user);
+    $(".url").attr("href", $(".url").attr("href") + "&user=" + user);
     // adding the user name to the url so it can be passed throught the pages
     // Top 5 Comedies
     top5(35, "Comedy");
