@@ -55,6 +55,7 @@ app.get('/', function(req, res) {
   });
 });
 
+//Library page with all the movies available
 app.get('/library', function(req, res) {
   if (!req.session.loggedin) {
     res.redirect('/signuplogin');
@@ -90,6 +91,7 @@ app.get('/movieshowinfo', function(req, res) {
   });
 });
 
+//signup/login page
 app.get('/signuplogin', function(req, res) {
   res.render('pages/signuplogin');
   //Log in/sign up page
