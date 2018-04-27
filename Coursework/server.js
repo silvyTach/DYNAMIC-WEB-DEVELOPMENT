@@ -94,7 +94,7 @@ app.get('/movieshowinfo', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    console.log(result.body.original_title);
+    // console.log(result.body.original_title);
     res.render('pages/movieshowinfo', {
       movie: result.body
     });

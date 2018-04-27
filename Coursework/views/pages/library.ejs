@@ -5,6 +5,7 @@
     <!-- Using ejs to import the head code -->
     <link rel="stylesheet" type="text/css" href="/css/library.css">
     <link rel="stylesheet" type="text/css" href="/css/movieshowinfo.css">
+    <script src="/scripts/library.js"></script>
     <!-- Linking the stylesheet for the library page -->
   </head>
 
@@ -18,65 +19,11 @@
       <div class=" grid-100 tab">
           <button class="tablinks active" onclick="showTab(event, 'Popular')">#Popular</button>
           <% genres.forEach(function(genre) {%>
+            <p><%= genre.id %></p>
             <button class="tablinks" onclick="showTab(event, 'g<%= genre.id %>')">#<%= genre.name %></button>
           <%});%>
       </div>
       <div id="Popular" class="tabcontent">
-            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-              <div class="grid-100 libraryimage">
-                <img class="poster" src="/images/poster0.jpg" alt="Poster">
-              </div>
-              <div class="grid-100 librarytitle">
-                <h4 class="title">Guardians of the Galaxy</h4>
-              </div>
-              <div class="grid-100 librarybuttons">
-                <button class="button">More Details</button>
-              </div>
-            </div>
-            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-              <div class="grid-100 libraryimage">
-                <img class="poster" src="/images/poster5.jpg" alt="Poster">
-              </div>
-              <div class="grid-100 librarytitle">
-                <h4 class="title">Guardians of the Galaxy</h4>
-              </div>
-              <div class="grid-100 librarybuttons">
-                <button class="button">More Details</button>
-              </div>
-            </div>
-            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-              <div class="grid-100 libraryimage">
-                <img class="poster" src="/images/poster4.jpg" alt="Poster">
-              </div>
-              <div class="grid-100 librarytitle">
-                <h4 class="title">Guardians of the Galaxy</h4>
-              </div>
-              <div class="grid-100 librarybuttons">
-                <button class="button">More Details</button>
-              </div>
-            </div>
-            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-              <div class="grid-100 libraryimage">
-                <img class="poster" src="/images/poster3.jpg" alt="Poster">
-              </div>
-              <div class="grid-100 librarytitle">
-                <h4 class="title">Guardians of the Galaxy</h4>
-              </div>
-              <div class="grid-100 librarybuttons">
-                <button class="button">More Details</button>
-              </div>
-            </div>
-            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-              <div class="grid-100 libraryimage">
-                <img class="poster" src="/images/poster2.jpg" alt="Poster">
-              </div>
-              <div class="grid-100 librarytitle">
-                <h4 class="title">Guardians of the Galaxy</h4>
-              </div>
-              <div class="grid-100 librarybuttons">
-                <button class="button">More Details</button>
-              </div>
-            </div>
             <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
               <div class="grid-100 libraryimage">
                 <img class="poster" src="/images/poster1.jpg" alt="Poster">
@@ -101,7 +48,7 @@
     </footer>
     <script>
         $()
-        $("#overview").css('display', 'block');
+        $("#Popular").css('display', 'block');
         function showTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = $(".tabcontent");
