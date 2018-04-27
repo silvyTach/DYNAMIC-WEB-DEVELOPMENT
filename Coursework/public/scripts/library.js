@@ -1,21 +1,17 @@
 $(function() {
     var searchString = document.location.search;
-    console.log(searchString.substring(1));
     pair = searchString.substring(1);
     var split = pair.split("=");
     var user = split[1];
     //extracting the username from the url so it can be passed to the next page that will be loaded
     //getting an array of all the genre ids
     var p = $(".tab p").toArray();
-    console.log(p);
     for (var i = 0; i < p.length; i++) {
         // saving the id and deleting the <p> as it's not needed anymore
         var id = $(p[i]).html();
-        console.log(id);
         p[i].remove();
         //extracting the genre name
         var name = $("#b" + id).html().substring(1);
-        console.log(name);
         // passing the id and the name to the function
         genre(id, name, user);
         popular(user);
