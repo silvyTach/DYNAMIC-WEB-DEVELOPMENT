@@ -7,7 +7,7 @@ $(function() {
     p[i].remove();
     var name = $("#b" + id).html().substring(1);
     console.log(id + " : " + name);
-    // genre(id, name);
+    genre(id, name);
   }
 });
 
