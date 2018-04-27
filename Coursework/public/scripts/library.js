@@ -1,8 +1,8 @@
 $(function() {
-  var p = $(".tab p").html().toArray();
+  var p = $(".tab p").toArray();
 
   for (var i = 0; i < p.length; i++) {
-    console.log(p[i]);
+    console.log(p[i].html());
     // var id = p[i].html();
     // var name = $("#g" + id).html();
     // console.log(id + " : " + name);
