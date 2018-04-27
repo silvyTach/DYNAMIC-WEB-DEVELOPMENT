@@ -45,10 +45,13 @@
 
             <div id="cast" class="tabcontent">
                 <table style="width:100%">
-                    <%for(var i = 0; i < 10; i++) {%>
+                    <%for(var i = 0; i < (movie.credits.cast.length > 10 ? 10 : movie.credits.cast.length); i++) {%>
                         <tr>
+                          <%if(movie.credits.cast[i].profile_path == null) {%>
+                            <td><img src="http://via.placeholder.com/45x68" alt="Actor Photo nog available"></td>
+                            <% }else {%>
                             <td><img src="http://image.tmdb.org/t/p/w45/<%=movie.credits.cast[i].profile_path %>" alt="Actor Photo"></td>
-                            <!-- We need something here to not show this tab content if the profile doesn't exist -->
+                            <% }%>
                             <td class="actor">
                                 <%= movie.credits.cast[i].name %>
                             </td>

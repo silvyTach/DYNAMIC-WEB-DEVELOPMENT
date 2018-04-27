@@ -127,10 +127,6 @@ app.get('/user', function(req, res) {
   });
 });
 
-// app.get('/results', function(req, res) {
-//   res.render('pages/results');
-// });
-
 //signout route causes the page to Sign out.
 //it sets our session.loggedin to false and then redirects the user to the login/signup page
 app.get('/signout', function(req, res) {
