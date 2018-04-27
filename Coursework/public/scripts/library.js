@@ -16,7 +16,7 @@ function genre(id, name) {
     var settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&page=" + i + "&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
+          "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&page=" + i + "&sort_by=primary_release_date.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
           "method": "GET",
           "headers": {},
           "data": "{}"
