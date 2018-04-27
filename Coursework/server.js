@@ -174,7 +174,7 @@ app.post('/addMovie', function(req, res) {
   db.collection('users').update(query,newvalues, function(err, result) {
     if (err) throw err;
     // console.log("added movie" + req.body.id + " to " + req.body.user);
-    res.redirect('/movieshowinfo?id=' + req.body.id);
+    res.redirect('/movieshowinfo?user=' + req.body.user + '&id=' + req.body.id);
   });
 });
 
