@@ -23,10 +23,11 @@ function genre(id, name) {
           "data": "{}"
       }
       var pages = 0;
-      console.log(pages);
       $.ajax(settings).done(function (response) {
         pages = response.total_pages
       });
+
+      console.log(pages);
       for(var i = 1; i <= pages; i++) {
         var settings = {
                 "async": true,
