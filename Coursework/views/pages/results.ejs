@@ -14,13 +14,8 @@
       <!-- Using ejs to import the header code -->
     </header>
 
-    <main>
-
-      <!-- Start of results section -->
-      <section id="searchresults">
-        <!-- Start of grid container -->
-
-          <% search.results.forEach(function(movie){%>
+    <main class="grid-container">
+      <% search.results.forEach(function(movie){%>
               <div class="slideshow fade">
                   <div class="text">
                       <h1 class="title">
@@ -42,14 +37,7 @@
                   </div>
               </div>
               <hr>
-              <% }); %>
-
-        <!-- </div> -->
-        <!-- End of grid container -->
-      </section>
-      <!-- End of results section -->
-
-    </main>
+              <% }); %></main>
 
     <footer class="grid-100 tablet-grid-100 footer">
       <% include ../partials/footer.ejs %>
