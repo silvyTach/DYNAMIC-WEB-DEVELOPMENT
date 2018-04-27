@@ -1,15 +1,15 @@
 .slideshow {
-  width: 100% !important;
+  width: 100%;
 }
 .text {
-  float: right !important;
+  float: right;
 }
 .image {
-  float: left !important;
+  float: left;
 }
 
 .button {
-  float: right !important;
+  float: right;
 }
 
 .text h1 {
@@ -17,11 +17,9 @@
 }
 
 hr {
-    margin: 2.5%;
-    /* border-color: #5B6073; */
     border-color: #D75813;
 }
 
 .title, .info, .plot {
-  width:100% !important;
+  width:100%;
 }
