@@ -19,7 +19,7 @@
       <!-- Start of results section -->
       <section id="searchresults">
         <!-- Start of grid container -->
-        <div class="grid-container" id="results">
+        <!-- <div class="grid-container" id="results"> -->
           <% search.results.forEach(function(movie){%>
               <div class="slideshow fade">
                   <div class="text">
@@ -41,9 +41,10 @@
                       <img src="https://image.tmdb.org/t/p/original/<%= movie.poster_path %>" alt="<%= movie.title %> Poster" width="261px" height="401px">
                   </div>
               </div>
+              <hr>
               <% }); %>
 
-        </div>
+        <!-- </div> -->
         <!-- End of grid container -->
       </section>
       <!-- End of results section -->
