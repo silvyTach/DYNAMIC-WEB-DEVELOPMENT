@@ -62,8 +62,18 @@ app.get('/library', function(req, res) {
     return;
     //If the user isn't logged in, they can't reach the movies library page
   }
-  res.render('pages/library');
-  //Library page
+  var req = unirest("GET", "https://api.themoviedb.org/3/genre/movie/list");
+  req.query({
+    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+  });
+  req.send("{}");
+  req.end(function (res) {
+    if (res.error) throw new Error(res.error);
+    console.log(res.body.genres);
+    res.render('pages/library', {
+      genres: res.body.genres;
+    });
+  });
 });
 
 //Movie info page
@@ -114,10 +124,9 @@ app.get('/user', function(req, res) {
   });
 });
 
-app.get('/results', function(req, res) {
-  res.render('pages/results');
-  //Log in/sign up page
-});
+// app.get('/results', function(req, res) {
+//   res.render('pages/results');
+// });
 
 //signout route causes the page to Sign out.
 //it sets our session.loggedin to false and then redirects the user to the login/signup page
