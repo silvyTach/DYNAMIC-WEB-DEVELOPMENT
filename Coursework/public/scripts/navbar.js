@@ -20,7 +20,7 @@ $(function(){
   if(searchString != "") change(user);
   });
 
-  function change() {
+  function change(user) {
     $('#menu1').attr("href", "/library?user=" + user);
     $('#menu2').html('My movies');
     $('#menu2').attr("href", "/user?user=" + user);
