@@ -14,7 +14,6 @@ $(function(){
   $("#user").val(user);
   $("#user").css("display", "none");
   $("#movie").css("display", "none");
-
   var id = $('#id').html();
   similarMovies(id, user);
   director(id);
@@ -61,5 +60,3 @@ $.ajax(settings).done(function (response) {
   $('#director').html(response.crew[0].name);
 });
 }
-
-})
