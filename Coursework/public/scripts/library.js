@@ -33,8 +33,8 @@ function genre(id, name) {
             html += '<div class="grid-100 librarybuttons">'
             html += '<button class="button">More Details</button>'
             html += "</div></div>"
-            $("#" + id).append(html);
         }
+        $("#" + id).append(html);
     });
   }
 }
