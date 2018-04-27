@@ -45,7 +45,7 @@
 
             <div id="cast" class="tabcontent">
                 <table style="width:100%">
-                    <%for(var i = 0; i < 10; i++) {%>
+                    <%for(var i = 0; i < (movie.credits.cast.length > 10 ? 10 : movie.credits.cast.length); i++) {%>
                         <tr>
                           <%if(movie.credits.cast[i].profile_path == null) {%>
                             <td><img src="http://via.placeholder.com/45x68" alt="Actor Photo nog available"></td>
