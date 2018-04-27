@@ -1,9 +1,10 @@
 $(function() {
-  $(".tab p").forEach(function(p)){
+  $(".tab p").forEach(function(p){
     var id = p.html();
     var name = $("#g" + id).html();
     console.log(id + " : " + name);
-  }
+    p.remove();
+  })
 
 
 
