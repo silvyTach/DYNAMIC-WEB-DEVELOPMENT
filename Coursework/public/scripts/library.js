@@ -14,32 +14,16 @@ $(function() {
 });
 
 function genre(id, name) {
-  var settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&page=1&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
-          "method": "GET",
-          "headers": {},
-          "data": "{}"
-      }
-      $.ajax(settings).done(function (response) {
-        // console.log(response.total_pages)
-        var append = '<p id="p' + id + '" >' + response.total_pages + '</p>';
-        $("#" + id).append(append);
-      });
-      var pages = $(".p"+ id).html();
-      $(".p"+ id).css("display", "none");
-      console.log(pages);
-      for(var i = 1; i <= 0; i++) {
-        var settings = {
+  var html = "";
+  for(var i = 1; i <= 10; i++) {
+    var settings = {
                 "async": true,
                 "crossDomain": true,
                 "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&page="+ i + "&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
                 "method": "GET",
                 "headers": {},
                 "data": "{}"
-            }
-            var html = "";
+              }
             $.ajax(settings).done(function(response) {
                 for (var i = 0; i < response.results.length; i++) {
                     html += '<div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">'
@@ -52,8 +36,7 @@ function genre(id, name) {
                     html += '<button class="button">More Details</button>'
                     html += "</div></div>"
                 }
-                $("#" + id).append(html);
             });
-      }
-
+          }
+          $("#" + id).append(html);
 }
