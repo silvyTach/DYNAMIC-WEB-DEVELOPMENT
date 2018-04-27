@@ -7,8 +7,6 @@ main {
 }
 /* ---------- SLIDESHOW ---------- */
 
-/* ----- General ----- */
-
 .slideshow {
   float: left;
   width: 89%;
@@ -41,6 +39,10 @@ main {
   font-size: 5em;
   color: #FFFFFF;
   /* The headers of the slideshow are made white and given a font size */
+}
+
+.plot {
+  text-align: justify;
 }
 
 .info, .plot {

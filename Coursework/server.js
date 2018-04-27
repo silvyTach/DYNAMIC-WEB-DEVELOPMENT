@@ -55,11 +55,12 @@ app.get('/', function(req, res) {
   });
 });
 
+//Library page with all the movies available
 app.get('/library', function(req, res) {
   if (!req.session.loggedin) {
     res.redirect('/signuplogin');
     return;
-    //If the user isn't logged in, they can't reach their library page
+    //If the user isn't logged in, they can't reach the movies library page
   }
   res.render('pages/library');
   //Library page
@@ -67,8 +68,13 @@ app.get('/library', function(req, res) {
 
 //Movie info page
 app.get('/movieshowinfo', function(req, res) {
+  if (!req.session.loggedin) {
+    res.redirect('/signuplogin');
+    return;
+    //If the user isn't logged in, they can't reach the page with additional information about the movie
+  }
   var id = req.query.id;
-  console.log(id);
+  // console.log(id);
   //this query finds the id of the movie that will be shown on the next page.
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
   req.query({
@@ -85,6 +91,7 @@ app.get('/movieshowinfo', function(req, res) {
   });
 });
 
+//signup/login page
 app.get('/signuplogin', function(req, res) {
   res.render('pages/signuplogin');
   //Log in/sign up page
@@ -107,9 +114,17 @@ app.get('/user', function(req, res) {
   });
 });
 
-app.get('/search', function(req, res) {
-  res.render('pages/search');
+app.get('/results', function(req, res) {
+  res.render('pages/results');
   //Log in/sign up page
+});
+
+//signout route causes the page to Sign out.
+//it sets our session.loggedin to false and then redirects the user to the login/signup page
+app.get('/signout', function(req, res) {
+  req.session.loggedin = false;
+  req.session.destroy();
+  res.redirect('/signuplogin');
 });
 
 //-------------------- POST ROUTES --------------------
@@ -166,7 +181,7 @@ app.post('/addMovie', function(req, res) {
   db.collection('users').update(query,newvalues, function(err, result) {
     if (err) throw err;
     // console.log("added movie" + req.body.id + " to " + req.body.user);
-    res.redirect('/movieshowinfo?id=' + req.body.id);
+    res.redirect('/movieshowinfo?user=' + req.body.user + '&id=' + req.body.id);
   });
 });
 
@@ -180,5 +195,27 @@ app.post('/removeMovie', function(req, res) {
     if (err) throw err;
     // console.log("removed movie " + req.body.id + " from " + req.body.user);
     res.redirect('/user?user=' + req.body.user);
+  });
+});
+
+//this is our search route, looks for movie by a given id and draws the results page
+app.post('/search', function(req, res) {
+  // gets the movie title to search for
+  var title = req.body.title;
+  var user = req.body.user;
+
+  var req = unirest("GET", "https://api.themoviedb.org/3/search/movie");
+  req.query({
+    "query": title,
+    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+  });
+  req.send("{}");
+  req.end(function (result) {
+    if (result.error) throw new Error(result.error);
+    // console.log(result.body);
+    res.render('pages/results', {
+      search: result.body,
+      user: user
+    });
   });
 });
