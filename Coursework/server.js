@@ -41,7 +41,6 @@ MongoClient.connect(url, function(error, database) {
 
 //Index page
 app.get('/', function(req, res) {
-  var user = req.query.user;
    //res.render('pages/index');
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
   req.query({
@@ -50,7 +49,7 @@ app.get('/', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    res.render('pages/index?user=' + user, {
+    res.render('pages/index', {
       index: result.body.results
     });
   });
