@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head.ejs %>
+    <!-- Using ejs to import the head code  -->
+    <link rel="stylesheet" type="text/css" href="/css/search.css">
+    <link rel="stylesheet" type="text/css" href="/css/index-main.css">
+    <!-- Linking the stylesheet for the index page -->
+  </head>
+
+  <body>
+    <header>
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
+    </header>
+
+    <main>
+
+      <!-- Start of results section -->
+      <section id="searchresults">
+        <!-- Start of grid container -->
+        <div class="grid-container" id="results">
+          <% results.forEach(function(movie){%>
+              <div class="slideshow fade">
+                  <div class="text">
+                      <h1 class="title">
+                          <%= movie.title %>
+                      </h1>
+                      <ul class="info">
+                          <li class="rating">⭐️
+                              <%= movie.vote_average %><i> /10</i></li>
+                          <!-- <li class="duration">Run Time: 2h 21'</li>
+                  <li class="age">Rated: PG-13</li> -->
+                      </ul>
+                      <p class="plot">
+                          <%= movie.overview %>
+                      </p>
+                      <div><a href="/movieshowinfo?id=<%=movie.id %>" class="button url" tabindex="-1">more details</a></div>
+                  </div>
+                  <div class="image">
+                      <img src="https://image.tmdb.org/t/p/original/<%= movie.poster_path %>" alt="<%= movie.title %> Poster" width="261px" height="401px">
+                  </div>
+              </div>
+              <% }; %>
+
+        </div>
+        <!-- End of grid container -->
+      </section>
+      <!-- End of results section -->
+
+    </main>
+
+    <footer class="grid-100 tablet-grid-100 footer">
+      <% include ../partials/footer.ejs %>
+      <!-- Using ejs to import the footer code -->
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="/scripts/searchresults.js"></script> -->
+  </body>
+</html>

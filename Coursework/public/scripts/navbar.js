@@ -13,6 +13,9 @@ $(function(){
       break;
     }
   }
+
+  $("#sendUser").val(user);
+  $("#sendUser").css("display", "none");
   // console.log("searchString " + searchString);
 
   // Checks if there is userinfo in the url

@@ -74,7 +74,7 @@ app.get('/movieshowinfo', function(req, res) {
     //If the user isn't logged in, they can't reach the page with additional information about the movie
   }
   var id = req.query.id;
-  console.log(id);
+  // console.log(id);
   //this query finds the id of the movie that will be shown on the next page.
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/" + id);
   req.query({
@@ -114,7 +114,7 @@ app.get('/user', function(req, res) {
   });
 });
 
-app.get('/search', function(req, res) {
+app.get('/results', function(req, res) {
   res.render('pages/search');
   //Log in/sign up page
 });
@@ -195,5 +195,26 @@ app.post('/removeMovie', function(req, res) {
     if (err) throw err;
     // console.log("removed movie " + req.body.id + " from " + req.body.user);
     res.redirect('/user?user=' + req.body.user);
+  });
+});
+
+//this is our search route, looks for movie by a given id and draws the results page
+app.post('/search', function(req, res) {
+  // gets the movie title to search for
+  var title = req.body.title;
+  var user = req.body.user;
+
+  var req = unirest("GET", "https://api.themoviedb.org/3/search/movie");
+  req.query({
+    "query": title,
+    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+  });
+  req.send("{}");
+  req.end(function (result) {
+    if (res.error) throw new Error(res.error);
+    console.log(res.body.original_title);
+    res.render('pages/results', {
+      results: result.body
+    });
   });
 });
