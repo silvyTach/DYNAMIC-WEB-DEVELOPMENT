@@ -13,91 +13,177 @@
       <!-- Using ejs to import the header code -->
     </header>
 
-    <main>
-      <!-- Start of the grid container -->
-      <div class="grid-container">
-
-        <!-- Start of the filters -->
-        <section id="filters">
-
-        </section>
-        <!-- End of the filters -->
-
-        <!-- Start of the library container -->
-        <section id="library" class="grid-100 grid-parent">
-
-          <!-- Start of the library result -->
-          <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-            <div class="grid-100 libraryimage">
-              <img class="poster" src="/images/poster0.jpg" alt="Poster">
-            </div>
-            <div class="grid-100 librarytitle">
-              <h4 class="title">Guardians of the Galaxy</h4>
-            </div>
-            <div class="grid-100 librarybuttons">
-              <button class="button">More Details</button>
-              <button class="button">Remove from Library</button>
-            </div>
-          </div>
-          <!-- End of the library result -->
-
-          <!-- Start of the library result -->
-          <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-            <div class="grid-100 libraryimage">
-              <img class="poster" src="/images/poster0.jpg" alt="Poster">
-            </div>
-            <div class="grid-100 librarytitle">
-              <h4 class="title">Guardians of the Galaxy</h4>
-            </div>
-            <div class="grid-100 librarybuttons">
-              <button class="button">More Details</button>
-              <button class="button">Remove from Library</button>
-            </div>
-          </div>
-          <!-- End of the library result -->
-
-          <!-- Start of the library result -->
-          <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-            <div class="grid-100 libraryimage">
-              <img class="poster" src="/images/poster0.jpg" alt="Poster">
-            </div>
-            <div class="grid-100 librarytitle">
-              <h4 class="title">Guardians of the Galaxy</h4>
-            </div>
-            <div class="grid-100 librarybuttons">
-              <button class="button">More Details</button>
-              <button class="button">Remove from Library</button>
-            </div>
-          </div>
-          <!-- End of the library result -->
-
-          <!-- Start of the library result -->
-          <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
-            <div class="grid-100 libraryimage">
-              <img class="poster" src="/images/poster0.jpg" alt="Poster">
-            </div>
-            <div class="grid-100 librarytitle">
-              <h4 class="title">Guardians of the Galaxy</h4>
-            </div>
-            <div class="grid-100 librarybuttons">
-              <button class="button">More Details</button>
-              <button class="button">Remove from Library</button>
-            </div>
-          </div>
-          <!-- End of the library result -->
-
-        </section>
-        <!-- End of the library container -->
-
+    <main class="grid-container">
+      <div class=" grid-100 tab">
+          <button class="tablinks active" onclick="showTab(event, 'Popular')">#Popular</button>
+          <button class="tablinks" onclick="showTab(event, 'Action')">#Action</button>
+          <button class="tablinks" onclick="showTab(event, 'Adventure')">#Adventure</button>
+          <button class="tablinks" onclick="showTab(event, 'Animation')">#Animation</button>
+          <button class="tablinks" onclick="showTab(event, 'Comedy')">#Comedy</button>
+          <button class="tablinks" onclick="showTab(event, 'Crime')">#Crime</button>
+          <button class="tablinks" onclick="showTab(event, 'Documentary')">#Documentary</button>
+          <button class="tablinks" onclick="showTab(event, 'Drama')">#Drama</button>
+          <button class="tablinks" onclick="showTab(event, 'Family')">#Family</button>
+          <button class="tablinks" onclick="showTab(event, 'Fantasy')">#Fantasy</button>
+          <button class="tablinks" onclick="showTab(event, 'History')">#History</button>
+          <button class="tablinks" onclick="showTab(event, 'Horror')">#Horror</button>
+          <button class="tablinks" onclick="showTab(event, 'Music')">#Music</button>
+          <button class="tablinks" onclick="showTab(event, 'Mystery')">#Mistery</button>
+          <button class="tablinks" onclick="showTab(event, 'Romance')">#Romance</button>
+          <button class="tablinks" onclick="showTab(event, 'Science Fiction')">#Science Fiction</button>
+          <button class="tablinks" onclick="showTab(event, 'TV Movie')">#TV Movie</button>
+          <button class="tablinks" onclick="showTab(event, 'Thriller')">#Thriller</button>
+          <button class="tablinks" onclick="showTab(event, 'War')">#War</button>
+          <button class="tablinks" onclick="showTab(event, 'Western')">#Western</button>
       </div>
-      <!-- End of the grid container -->
+      <div id="Popular" class="tabcontent">
+            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+              <div class="grid-100 libraryimage">
+                <img class="poster" src="/images/poster0.jpg" alt="Poster">
+              </div>
+              <div class="grid-100 librarytitle">
+                <h4 class="title">Guardians of the Galaxy</h4>
+              </div>
+              <div class="grid-100 librarybuttons">
+                <button class="button">More Details</button>
+              </div>
+            </div>
+            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+              <div class="grid-100 libraryimage">
+                <img class="poster" src="/images/poster5.jpg" alt="Poster">
+              </div>
+              <div class="grid-100 librarytitle">
+                <h4 class="title">Guardians of the Galaxy</h4>
+              </div>
+              <div class="grid-100 librarybuttons">
+                <button class="button">More Details</button>
+              </div>
+            </div>
+            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+              <div class="grid-100 libraryimage">
+                <img class="poster" src="/images/poster4.jpg" alt="Poster">
+              </div>
+              <div class="grid-100 librarytitle">
+                <h4 class="title">Guardians of the Galaxy</h4>
+              </div>
+              <div class="grid-100 librarybuttons">
+                <button class="button">More Details</button>
+              </div>
+            </div>
+            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+              <div class="grid-100 libraryimage">
+                <img class="poster" src="/images/poster3.jpg" alt="Poster">
+              </div>
+              <div class="grid-100 librarytitle">
+                <h4 class="title">Guardians of the Galaxy</h4>
+              </div>
+              <div class="grid-100 librarybuttons">
+                <button class="button">More Details</button>
+              </div>
+            </div>
+            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+              <div class="grid-100 libraryimage">
+                <img class="poster" src="/images/poster2.jpg" alt="Poster">
+              </div>
+              <div class="grid-100 librarytitle">
+                <h4 class="title">Guardians of the Galaxy</h4>
+              </div>
+              <div class="grid-100 librarybuttons">
+                <button class="button">More Details</button>
+              </div>
+            </div>
+            <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+              <div class="grid-100 libraryimage">
+                <img class="poster" src="/images/poster1.jpg" alt="Poster">
+              </div>
+              <div class="grid-100 librarytitle">
+                <h4 class="title">Guardians of the Galaxy</h4>
+              </div>
+              <div class="grid-100 librarybuttons">
+                <button class="button">More Details</button>
+              </div>
+            </div>
+      </div>
+      <div id="Action" class="tabcontent">
+        <h2>Action</h2>
+      </div>
+      <div id="Adventure" class="tabcontent">
+          <h2>Adventure</h2>
+      </div>
+      <div id="Animation" class="tabcontent">
+        <h2>Animations</h2>
+      </div>
+      <div id="Comedy" class="tabcontent">
+          <h2>Comedies</h2>
+      </div>
+      <div id="Crime" class="tabcontent">
+        <h2>Crime</h2>
+      </div>
+      <div id="Documentary" class="tabcontent">
+          <h2>Documentary</h2>
+      </div>
+      <div id="Drama" class="tabcontent">
+        <h2>Drama</h2>
+      </div>
+      <div id="Family" class="tabcontent">
+          <h2>Family</h2>
+      </div>
+      <div id="Fantasy" class="tabcontent">
+        <h2>Fantasy</h2>
+      </div>
+      <div id="History" class="tabcontent">
+          <h2>History</h2>
+      </div>
+      <div id="Horror" class="tabcontent">
+        <h2>Horror</h2>
+      </div>
+      <div id="Music" class="tabcontent">
+          <h2>Music</h2>
+      </div>
+      <div id="Mystery" class="tabcontent">
+        <h2>Mystery</h2>
+      </div>
+      <div id="Romance" class="tabcontent">
+          <h2>Romance</h2>
+      </div>
+      <div id="Science Fiction" class="tabcontent">
+        <h2>Science Fiction</h2>
+      </div>
+      <div id="TV Movie" class="tabcontent">
+          <h2>TV Movie</h2>
+      </div>
+      <div id="Thriller" class="tabcontent">
+          <h2>Thriller</h2>
+      </div>
+      <div id="War" class="tabcontent">
+        <h2>War</h2>
+      </div>
+      <div id="Western" class="tabcontent">
+          <h2>Western</h2>
+      </div>
     </main>
 
     <footer class="grid-100 tablet-grid-100 footer">
       <% include ../partials/footer.ejs %>
       <!-- Using ejs to import the footer code -->
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $()
+        $("#overview").css('display', 'block');
+        function showTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = $(".tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = $(".tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            $("#" +tabName).css("display", "block");
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 </body>
 </html>
