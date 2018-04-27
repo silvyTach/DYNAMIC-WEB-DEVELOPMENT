@@ -116,7 +116,7 @@ app.get('/user', function(req, res) {
 
 app.get('/results', function(req, res) {
   res.render('pages/results', {
-    search: result
+    search: res
   });
   //Log in/sign up page
 });
