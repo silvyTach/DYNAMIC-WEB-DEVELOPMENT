@@ -19,25 +19,6 @@
           <button class="tablinks active" onclick="showTab(event, 'Popular')">#Popular</button>
           <% genres.forEach(function(genre) {%>
             <button class="tablinks" onclick="showTab(event, '<%= genre.name %>')">#<%= genre.name %></button>
-          <!-- <button class="tablinks" onclick="showTab(event, 'Action')">#Action</button>
-          <button class="tablinks" onclick="showTab(event, 'Adventure')">#Adventure</button>
-          <button class="tablinks" onclick="showTab(event, 'Animation')">#Animation</button>
-          <button class="tablinks" onclick="showTab(event, 'Comedy')">#Comedy</button>
-          <button class="tablinks" onclick="showTab(event, 'Crime')">#Crime</button>
-          <button class="tablinks" onclick="showTab(event, 'Documentary')">#Documentary</button>
-          <button class="tablinks" onclick="showTab(event, 'Drama')">#Drama</button>
-          <button class="tablinks" onclick="showTab(event, 'Family')">#Family</button>
-          <button class="tablinks" onclick="showTab(event, 'Fantasy')">#Fantasy</button>
-          <button class="tablinks" onclick="showTab(event, 'History')">#History</button>
-          <button class="tablinks" onclick="showTab(event, 'Horror')">#Horror</button>
-          <button class="tablinks" onclick="showTab(event, 'Music')">#Music</button>
-          <button class="tablinks" onclick="showTab(event, 'Mystery')">#Mistery</button>
-          <button class="tablinks" onclick="showTab(event, 'Romance')">#Romance</button>
-          <button class="tablinks" onclick="showTab(event, 'Science Fiction')">#Science Fiction</button>
-          <button class="tablinks" onclick="showTab(event, 'TV Movie')">#TV Movie</button>
-          <button class="tablinks" onclick="showTab(event, 'Thriller')">#Thriller</button>
-          <button class="tablinks" onclick="showTab(event, 'War')">#War</button>
-          <button class="tablinks" onclick="showTab(event, 'Western')">#Western</button> -->
           <%});%>
       </div>
       <div id="Popular" class="tabcontent">
@@ -108,7 +89,12 @@
               </div>
             </div>
       </div>
-      <div id="Action" class="tabcontent">
+      <% genres.forEach(function(genre) {%>
+        <div id="<%= genre.name %>" class="tabcontent">
+          <h2><%= genre.name %></h2>
+        </div>
+        <%});%>
+      <!-- <div id="Action" class="tabcontent">
         <h2>Action</h2>
       </div>
       <div id="Adventure" class="tabcontent">
@@ -164,7 +150,7 @@
       </div>
       <div id="Western" class="tabcontent">
           <h2>Western</h2>
-      </div>
+      </div> -->
     </main>
 
     <footer class="grid-100 tablet-grid-100 footer">
