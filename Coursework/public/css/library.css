@@ -65,6 +65,7 @@ h4 a {
 .tab button {
   font-size: medium !important;
   margin-left: 0 !important;
+  border-top: none !important;
 }
 
 .tab button:hover {
