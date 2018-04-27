@@ -3,11 +3,16 @@ $(function () {
 	pair = searchString.substring(1);
 	var split = pair.split("=");
 	var user = split[1];
-	// var user = $("#user").html();
 	//variable to save the user name so it can be passed via the url
 	var length = $("#length").html();
 	//variable to get number of movies in the user library
 
+	// if there are no movies, an appropriate message is displayed
+	if(length == 0) {
+		var html = '<h4>You seem to have added no movies to your collection, why don`t you have a look at our <a href="/library?user=' + user +'">library</a> and save your favourites</h4>'
+		$('#library').append(html);
+	}
+	else {
 	//for each movie the movie id is acquired from the p tag with a certain id
 	// the id is then used to fetch information from TMDB api
 	//the p tag with that movie id is removed
@@ -18,6 +23,7 @@ $(function () {
 	}
 	//the p tag with the number of movies in the user library is removed
 	$('#length').remove();
+}
 });
 
 //Function that gets info from the API

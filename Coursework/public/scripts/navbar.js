@@ -13,14 +13,21 @@ $(function(){
       break;
     }
   }
-  console.log("user: " + user);
-  if(user != "undefined") change();
-  console.log("user");
+
+  $("#sendUser").val(user);
+  $("#sendUser").css("display", "none");
+  // console.log("searchString " + searchString);
+
+  // Checks if there is userinfo in the url
+  // if thre is, the content of the navigation bar changes
+  if(searchString != "") change(user);
   });
 
-  function change() {
+  function change(user) {
+    $('#menu0').attr("href", "/?user=" + user);
+    $('#menu1').attr("href", "/library?user=" + user);
     $('#menu2').html('My movies');
-    $('#menu2').attr("href", "/user");
+    $('#menu2').attr("href", "/user?user=" + user);
     $('#menu3').html('Sign out');
-    $('#menu3').attr("href", "/");
+    $('#menu3').attr("href", "/signout");
   }

@@ -3,6 +3,17 @@ main {
   margin:15%;
 }
 
+h4 {
+  text-align: center;
+  text-transform:uppercase;
+  color: #D75813;
+}
+
+h4 a {
+  text-decoration: none;
+  color: #D75813;
+}
+
 .user {
   text-align: justify;
 }
