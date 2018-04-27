@@ -8,16 +8,16 @@ $(function() {
     $(".url").attr("href", $(".url").attr("href") + "&user=" + user);
     // adding the user name to the url so it can be passed throught the pages
     // Top 5 Comedies
-    top5(35, "Comedy");
+    top5(35, "Comedy", user);
     // Top 5 Action
-    top5(28, "Action");
+    top5(28, "Action", user);
     // Top 5 Romance
-    top5(10749, "Romance");
+    top5(10749, "Romance", user);
     // Top 5 Crine
-    top5(80, "Crime");
+    top5(80, "Crime", user);
 });
 
-function top5(id, genre) {
+function top5(id, genre, user) {
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -34,7 +34,7 @@ function top5(id, genre) {
                 "' width = '261px' alt='" + response.results[i].title + " poster'>"
             html += "<span>" + response.results[i].title + "</span>"
             html += "<div class='imageInner'>"
-            html += '<span><a href="/movieshowinfo?user=sisa&id=' + response.results[i].id + '" class="poster-button" tabindex="-1">more details</a></span>'
+            html += '<span><a href="/movieshowinfo?user=' + user + '&id=' + response.results[i].id + '" class="poster-button" tabindex="-1">more details</a></span>'
             html += "</div></div>"
                 // console.log(response.results[i].title);
             $("#" + genre).html(html);
