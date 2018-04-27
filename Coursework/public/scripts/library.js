@@ -13,6 +13,7 @@ $(function() {
         p[i].remove();
         //extracting the genre name
         var name = $("#b" + id).html().substring(1);
+        console.log(name);
         // passing the id and the name to the function
         genre(id, name, user);
         popular(user);
