@@ -29,7 +29,7 @@ $(function(require) {
         db.close();
       });
     })
-  }
+  })
 
 
   var id = $('#id').html();
