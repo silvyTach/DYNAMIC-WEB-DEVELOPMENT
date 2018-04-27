@@ -7,3 +7,13 @@
 .image {
   float: left !important;
 }
+
+.text h1, .button {
+  float: right !important;
+}
+
+hr {
+    margin: 2.5%;
+    /* border-color: #5B6073; */
+    border-color: #D75813;
+}
