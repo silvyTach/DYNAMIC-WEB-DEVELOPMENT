@@ -215,7 +215,7 @@ app.post('/search', function(req, res) {
     console.log(result.body);
     res.render('pages/results', {
       search: result.body,
-      user: user;
+      user: user
     });
   });
 });
