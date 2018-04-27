@@ -6,16 +6,17 @@ $(function() {
     var id = $(p[i]).html();
     p[i].remove();
     var name = $("#b" + id).html().substring(1);
-    console.log(id + " : " + name);
+    // console.log(id + " : " + name);
     genre(id, name);
   }
 });
 
 function genre(id, name) {
-  var settings = {
+  for (var i = 0; i < 5; i++) {
+    var settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&page=1&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
+          "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&page=" + i + "&sort_by=popularity.desc&api_key=305a3b42d88760bd22c9f8c8c54f788d",
           "method": "GET",
           "headers": {},
           "data": "{}"
@@ -32,7 +33,8 @@ function genre(id, name) {
             html += '<div class="grid-100 librarybuttons">'
             html += '<button class="button">More Details</button>'
             html += "</div></div>"
-            $("#" + id).html(html);
+            $("#" + id).append(html);
         }
     });
+  }
 }
