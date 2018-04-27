@@ -28,7 +28,7 @@ function genre(id, name) {
         $("#" + id).append(append);
       });
       var pages = $(".p"+ id).html();
-      $(".p"+ id).remove();
+      $(".p"+ id).css("display", "none");
       console.log(pages);
       for(var i = 1; i <= 0; i++) {
         var settings = {
