@@ -1,0 +1,86 @@
+main {
+     margin:10%;
+     color: white;
+}
+ .button {
+     border-radius: 30px;
+     font-weight: bold;
+     background-color: #D75813;
+     color: #ffffff;
+     padding: 13px 25px;
+     margin-top: 3%;
+     font-size: 0.75em;
+     text-transform: uppercase;
+     text-decoration: none;
+     border-color: transparent;
+}
+ .button:hover {
+     background-color: transparent;
+     color: #D75813;
+}
+/* Style the tab */
+ .tab {
+     overflow: hidden;
+}
+/* Style the buttons inside the tab */
+ .tab button {
+     float: left;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     padding: 14px 16px;
+     transition: 0.3s;
+     font-size: x-large;
+     margin-left:5%;
+     color:#5B6073;
+     background-color: transparent;
+}
+/* Change background color of buttons on hover */
+ .tab button:hover {
+     border-top: medium solid #D75813;
+     color: #D75813;
+}
+/* Create an active/current tablink class */
+ .tab button.active {
+     border-top: medium solid #D75813;
+     color: #D75813;
+}
+/* Style the tab content */
+ .tabcontent {
+     display: none;
+     padding: 6px 12px;
+     border: 1px solid #ccc;
+     border-top: none;
+}
+ main li {
+     list-style-type: none;
+     margin-top: 2em;
+     padding: 0;
+     display: block;
+     font-size: small;
+}
+ .value, #director {
+     color: #FFFFFF;
+}
+ .label {
+     color: #D75813;
+}
+ #genres p{
+     display:inline-block;
+     color: #5B6073;
+     margin: 5%;
+}
+ table {
+     font-size: small;
+     padding: 2%;
+}
+ td {
+     border: solid 1em transparent;
+}
+ .l-items{
+     display: inline-block;
+     margin-right: 5%;
+}
+ h1 {
+     color: #AB0000;
+}

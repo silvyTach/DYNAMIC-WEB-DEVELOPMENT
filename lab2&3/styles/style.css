@@ -1,0 +1,79 @@
+body{
+  padding:5%;
+  width: 90%;
+}
+
+header, section, article, nav, aside,
+footer, div, .navlink {
+  box-sizing:border-box;
+ font-family: sans-serif;
+ border: 1px dashed red;
+ padding: 10px;
+ margin: 10px;
+}
+
+#Main, aside, #SiteLogo, #SiteTitle {
+  display:inline-block;
+}
+
+#SiteLogo {
+  width: 40%
+}
+
+#SiteTitle {
+  float: right;
+  margin: 20px;
+  width: 55%;
+}
+
+#PageContent {
+  border: dashed red;
+  background-color: LightBlue;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navlink {
+  display: inline;
+}
+
+#ImageDetails {
+  margin-left: auto;
+}
+
+#Main {
+  width: 64%
+}
+
+aside {
+  width: 33%;
+  padding: 0;
+}
+ #MainImage {
+   padding: 6.5%;
+ }
+.Thumbnail, .Row{
+  display: inline-block;
+}
+.Thumbnail {
+  margin: 5px;
+  width: 30%;
+}
+
+.Row {
+  margin: 0;
+  margin-left: 3%;
+  border: none;
+  width: 100%
+  padding:1%;
+}
+#Thumbnails, #Comments, aside {
+  margin: 0;
+  border: none
+}
+
+img {
+  margin: 1%
+}

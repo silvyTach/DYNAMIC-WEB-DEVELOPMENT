@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../partials/head %>
+  <title>App Index</title>
+</head>
+
+<body class="container">
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div class="jumbotron">
+
+      <h2>Quotes!</h2>
+      <ul>
+      <% quotes.forEach(function(result) { %>
+      <li> <h3>
+      <%= result.name %>
+    </h3></li>
+      <li>
+      <%= result.quote %>
+      </li>
+      <% }); %>
+      </ul>
+    </div>
+  </main>
+
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+
+</html>
