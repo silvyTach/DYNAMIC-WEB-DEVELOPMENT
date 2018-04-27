@@ -14,8 +14,8 @@ $(function(){
     }
   }
   console.log("user: " + user);
-  if(user != "undefined") {change();}
-  console.log("user");
+  if(user != "undefined") {change();
+  console.log("user");}
   });
 
   function change() {
