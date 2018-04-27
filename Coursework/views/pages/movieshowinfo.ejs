@@ -18,51 +18,65 @@
     <!-- Start of main body -->
     <main>
         <div id="poster" class="grid-30 tablet-grid-30 mobile-grid-100">
+            <!-- loading the movie poster  -->
             <img src=" http://image.tmdb.org/t/p/w500/<%= movie.poster_path %>" alt="<%= movie.title %> Poster" class="grid-100 mobile-grid-100">
+            <!-- form for adding the movie to the user's collection -->
             <form action="/addMovie" method="POST" class="prefix-25 grid-50 suffix-25 tablet-prefix-25 tablet-grid-50 tablet-suffix-25 mobile-grid-100">
                 <input id="user" type="text" name="user" value="sisa">
                 <input id="movie" type="text" name="id" value="<%= movie.id %>">
                 <button type="submit" class="button" id="addtolibrary">Add to My Movies</button>
             </form>
+            <!-- end of collection -->
         </div>
 
         <div class="grid-50 tablet-grid-50 mobile-grid-100">
+            <!-- movie title -->
             <div>
                 <h1 id="title">
                     <%= movie.title %>
                 </h1>
             </div>
+            <!-- we have three tabs with different information here -->
             <div class=" grid-100 tab">
                 <button class="tablinks active" onclick="showTab(event, 'overview')">Overview</button>
                 <button class="tablinks" onclick="showTab(event, 'cast')">Cast</button>
                 <button class="tablinks" onclick="showTab(event, 'similar')">Similar Movies</button>
+                <!-- these are the buttons for displaying the tabs -->
             </div>
+            <!-- first tab contains the plot of the movie -->
             <div id="overview" class="tabcontent">
                 <p id="plot">
                     <%= movie.overview %>
                 </p>
             </div>
-
+            <!-- second tab displays ten actors from the cast -->
             <div id="cast" class="tabcontent">
+                <!-- the information is displayed in a table -->
                 <table style="width:100%">
                     <%for(var i = 0; i < (movie.credits.cast.length > 10 ? 10 : movie.credits.cast.length); i++) {%>
+                        <!-- if the info provided from the API is for less then 10 actors -->
+                        <!-- only the available number of actors are displayed -->
                         <tr>
-                          <%if(movie.credits.cast[i].profile_path == null) {%>
-                            <td><img src="http://via.placeholder.com/45x68" alt="Actor Photo nog available"></td>
-                            <% }else {%>
-                            <td><img src="http://image.tmdb.org/t/p/w45/<%=movie.credits.cast[i].profile_path %>" alt="Actor Photo"></td>
-                            <% }%>
-                            <td class="actor">
-                                <%= movie.credits.cast[i].name %>
-                            </td>
-                            <td class="character">
-                                <%= movie.credits.cast[i].character %>
-                            </td>
+                            <%if(movie.credits.cast[i].profile_path == null) {%>
+                                <!-- in the first column we have an image of the actor -->
+                                <!-- if the API doesn't provide an image, a placeholder is loaded -->
+                                <td><img src="http://via.placeholder.com/45x68" alt="Actor Photo nog available"></td>
+                                <% }else {%>
+                                    <td><img src="http://image.tmdb.org/t/p/w45/<%=movie.credits.cast[i].profile_path %>" alt="Actor Photo"></td>
+                                    <% }%>
+                                        <!-- second column is the actor's name -->
+                                        <td class="actor">
+                                            <%= movie.credits.cast[i].name %>
+                                        </td>
+                                        <!-- and in the third column we have the name of their character -->
+                                        <td class="character">
+                                            <%= movie.credits.cast[i].character %>
+                                        </td>
                         </tr>
                         <% }; %>
                 </table>
             </div>
-
+            <!-- in the third tab we provide three similar movies to the one the user is currently viewing -->
             <div id="similar" class="tabcontent">
                 <p id="id">
                     <%= movie.id %>
@@ -70,12 +84,13 @@
                 <table style="width:100%">
                 </table>
             </div>
-
+            <!-- end of tabs -->
         </div>
-
+        <!-- we also have a sidebar with additional information -->
         </div>
         <div class="grid-20 tablet-grid-20 mobile-grid-100">
-
+            <!-- the director, the release date, the runtime,  -->
+            <!-- the tagline and the list of genres of the movie are displayed -->
             <ul>
                 <li class="label"> Director: </li>
                 <li id="director"></li>
@@ -91,6 +106,7 @@
                     <%= movie.tagline %>
                 </li>
                 <li class="label"> Genres: </li>
+                <!-- the movie can have more then one genre, so a loop is used -->
                 <li id="genres">
                     <% movie.genres.forEach(function(genre){%>
                         <p>
@@ -100,6 +116,7 @@
                 </li>
             </ul>
         </div>
+        <!-- end of the sidebar -->
     </main>
     <!-- end of main body -->
 
