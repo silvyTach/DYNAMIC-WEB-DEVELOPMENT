@@ -35,13 +35,14 @@
                       <p class="plot">
                           <%= movie.overview %>
                       </p>
-                      <div><a href="/movieshowinfo?id=<%=movie.id %>" class="button url" tabindex="-1">more details</a></div>
+                      <div><a href="/movieshowinfo?id=<%=movie.id %>&user=<%=user%>" class="button url" tabindex="-1">more details</a></div>
                   </div>
                   <div class="image">
                       <img src="https://image.tmdb.org/t/p/original/<%= movie.poster_path %>" alt="<%= movie.title %> Poster" width="261px" height="401px">
                   </div>
+                  <hr>
               </div>
-              <hr>
+
               <% }); %>
 
         <!-- </div> -->
