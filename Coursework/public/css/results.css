@@ -17,3 +17,8 @@ hr {
     /* border-color: #5B6073; */
     border-color: #D75813;
 }
+
+.title, .info, .plot {
+  display:block !important;
+  width:100%;
+}
