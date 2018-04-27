@@ -14,6 +14,22 @@ $(function(){
   $("#user").val(user);
   $("#user").css("display", "none");
   $("#movie").css("display", "none");
+
+  var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("wheresmymovie");
+  var query = {"login.username":user};
+  dbo.collection("users").find(query).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result.library);
+    db.close();
+  });
+});
+
+
+
   var id = $('#id').html();
   similarMovies(id, user);
   director(id);
