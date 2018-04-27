@@ -1,5 +1,5 @@
 $(function() {
-  var p = $("#.tab p").toArray();
+  var p = $(".tab p").toArray();
   for (var i = 0; i < p.length; i++) {
     var id = p[i].html();
     var name = $("#g" + id).html();
