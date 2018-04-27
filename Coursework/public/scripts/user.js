@@ -3,7 +3,6 @@ $(function () {
 	pair = searchString.substring(1);
 	var split = pair.split("=");
 	var user = split[1];
-	// var user = $("#user").html();
 	//variable to save the user name so it can be passed via the url
 	var length = $("#length").html();
 	//variable to get number of movies in the user library
