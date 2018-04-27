@@ -5,6 +5,7 @@ $(function() {
   var user = split[1];
   //extracting the username from the url so it can be passed to the next page that will be loaded
   //getting an array of all the genre ids
+  $(".tab p").css("display", "none");
   var p = $(".tab p").toArray();
   for (var i = 0; i < p.length; i++) {
     // saving the id and deleting the <p> as it's not needed anymore
