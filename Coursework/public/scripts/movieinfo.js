@@ -1,34 +1,19 @@
-$(function(require) {
-    var databaseUrl = "mongodb://localhost:27017/";
-    var collections = ["users"];
-
-    var searchString = document.location.search;
-    searchString = searchString.substring(1);
-    var nvPairs = searchString.split("&");
-    var user;
-    for (var i = 0; i < nvPairs.length; i++) {
-      var nvPair = nvPairs[i].split("=");
-      var name = nvPair[0];
-      if(name == "user") {
-        user = nvPair[1];
-        break;
-      }
+$($(function(){
+  var searchString = document.location.search;
+  searchString = searchString.substring(1);
+  var nvPairs = searchString.split("&");
+  var user;
+  for (var i = 0; i < nvPairs.length; i++) {
+    var nvPair = nvPairs[i].split("=");
+    var name = nvPair[0];
+    if(name == "user") {
+      user = nvPair[1];
+      break;
     }
-    $("#user").val(user);
-    $("#user").css("display", "none");
-    $("#movie").css("display", "none");
-
-
-    var db = require("mongojs").connect(databaseUrl, function(err, db) {
-      if (err) throw err;
-      var dbo = db.db("wheresmymovie");
-      var query = {"login.username":user};
-      dbo.collection("users").find(query).toArray(function(err, result) {
-        if (err) throw err;
-        console.log(result.library);
-        db.close();
-      });
-    })
+  }
+  $("#user").val(user);
+  $("#user").css("display", "none");
+  $("#movie").css("display", "none");
 
   var id = $('#id').html();
   similarMovies(id, user);
@@ -76,3 +61,5 @@ $.ajax(settings).done(function (response) {
   $('#director').html(response.crew[0].name);
 });
 }
+
+})
