@@ -1,7 +1,7 @@
 $(function() {
     var searchString = document.location.search;
     console.log(searchString.substr(1));
-    pair = searchString.substring(1);
+    pair = searchString.substr(1);
     var split = pair.split("=");
     var user = split[1];
     //extracting the username from the url so it can be passed to the next page that will be loaded
