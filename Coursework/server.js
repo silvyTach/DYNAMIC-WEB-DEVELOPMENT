@@ -67,11 +67,11 @@ app.get('/library', function(req, res) {
     "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
   });
   req.send("{}");
-  req.end(function (res) {
-    if (res.error) throw new Error(res.error);
-    console.log(res.body.genres);
+  req.end(function (result) {
+    if (result.error) throw new Error(result.error);
+    console.log(result.body.genres);
     res.render('pages/library', {
-      genres: res.body.genres
+      genres: result.body.genres
     });
   });
 });
