@@ -1,15 +1,18 @@
+main {
+  padding-top: 5%;
+}
 .slideshow {
-  width: 100%;
+  width: 100% !important;
 }
 .text {
-  float: right;
+  float: right !important;
 }
 .image {
-  float: left;
+  float: left !important;
 }
 
 .button {
-  float: right;
+  float: right !important;
 }
 
 .text h1 {
@@ -21,5 +24,5 @@ hr {
 }
 
 .title, .info, .plot {
-  width:100%;
+  width:100% !important;
 }
