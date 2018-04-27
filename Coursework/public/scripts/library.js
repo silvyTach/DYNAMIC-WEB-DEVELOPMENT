@@ -27,7 +27,7 @@ function genre(id, name) {
         var append = '<p id="p' + id + '" >' + response.total_pages + '</p>';
         $("#" + id).append(append);
       });
-      var pages = parseInt($(".p"+ id).html());
+      var pages = $(".p"+ id).html();
       $(".p"+ id).remove();
       console.log(pages);
       for(var i = 1; i <= 0; i++) {
