@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+*  {
+	font-family: 'Comfortaa', sans-serif;
+}
+body{
+  width: 90%auto;
+  background-color:  #1C1F24
+;
+}
+#logo-img{
+  display: inline-block;
+  float: left;
+}
+#search {
+	background-color:#1C1F24;
+	padding-top:0.5%;
+	margin-top:0.5%;
+  float: left;
+  margin-left: 10%;
+  width: 50%;
+  border-top: medium solid #d75813;
+}
+#searchBox{
+	width:80%;
+	font-size: medium;
+	float: left;
+	border: thin solid transparent;
+	color: #d75813;
+	background-color: transparent;
+	display:inline-block;
+}
+#searchIcon {
+	border-top: medium solid transparent;
+	float:right;
+	width: 3%;
+	padding-top: 0.5%;
+	padding-left: 0.2%;
+	padding-right: 0.2%;
+}
+
+navbar {
+  display: inline-block;
+  float: right;
+}
+li a, #back-to-top, #copyright, li {
+  padding:10px;
+  text-decoration:none;
+  color:#5B6073;
+}
+
+navbar li a {
+  font-size: x-large;
+  font-weight: 700;
+}
+a {
+  cursor:pointer;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+}
+
+back-to-top {
+  text-decoration: none;
+}
+
+#copyright {
+  display: inline-block;
+  float: left;
+}
+
+#back-to-top {
+  display: inline-block;
+  float: right;
+}
+
+#back-to-top, #copyright {
+  font-size: small;
+  color: #5B6073;
+}
+
+#footer-menu {
+  color: #5B6073;
+  width: 90%;
+  margin-left: 5%;
+  padding-left: 20%
+}
+
+navbar li a:hover{
+	border-top: medium solid #D75813;
+	color: #D75813;
+}
+
+#back-to-top:hover, .footer-menu:hover {
+  border-top: medium solid #D75813;
+  color: #D75813;
+}
+
+#socialMediaLogos {
+  margin-left: 47%;
+}
+
+#inst, #tw, #fb {
+	max-width: 7%;
+	padding:0.5%;
+	margin-top:2.5%;
+}
+
+header {
+  display: inline;
+  clear: none;
+}
+
+#socialMediaLogos{
+  jborder: solid 1px green;
+}
+
+#back-to-top {
+	position: fixed;
+	bottom: 0;
+	right: 1%;
+}

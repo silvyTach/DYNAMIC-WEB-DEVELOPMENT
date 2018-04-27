@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Paul TEST -->
+    <meta charset="utf-8">
+    <title>Where's my movie</title>
+    <link rel="stylesheet" href="header and footer.css">
+    <link rel="stylesheet" href="index-main.css">
+    <style type="text/css">
+        @import url("unsemantic-grid-responsive-tablet.css");
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img id="logo-img" src="black-logo.png"  alt="Website's logo" width="13%"></a>
+        </div>
+
+        <!-- search box -->
+        <section class="-20 tablet-grid-15 mobile-grid-100" id="search">
+            <input id="searchBox" type="search" placeholder="Search">
+            <img id="searchIcon" src="lupa-orange.png" alt="Search Icon" />
+        </section>
+        <!-- end of search box -->
+
+        <!-- menu -->
+        <navbar>
+            <ul>
+                <li><a id="menu-item" href="library.html">Library</a></li>
+                <li><a id="menu-item" href="signuplogin.html">Log in</a></li>
+                <li><a id="menu-item" href="signuplogin.html">Sign up</a></li>
+            </ul>
+            <navbar>
+                <!-- end of menu -->
+    </header>
+
+    <main>
+        <!-- Top  5 in the user's location -->
+        <section id="top5">
+            <!-- Left slideshow arrow -->
+            <div id="left" class="arrows">
+                <img onclick="plusSlides(-1)" src="left-arrow.png">
+            </div>
+
+            <!-- Top 5 #1 -->
+            <div class="slideshow">
+                <div class="text">
+                    <h1 class="title">Guardians of the Galaxy</h1>
+                    <ul class="info">
+                        <li class="rating">⭐️ 7.4 <i> /10</i></li>
+                        <li class="duration">Run Time: 2h 21'</li>
+                        <li class="age">Rated: PG-13</li>
+                    </ul>
+                    <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum, ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda, nec ex choro omnium sadipscing.</p>
+                    <div><a href="movieshowinfo.html" class="button" tabindex="-1">more details</a></div>
+                </div>
+                <div class="image">
+                    <img src="poster0.jpg" alt="Poster">
+                </div>
+            </div>
+
+            <!-- Top 5 #2 -->
+            <div class="slideshow">
+                <div class="text">
+                    <h1 class="title">Game of Thrones</h1>
+                    <ul class="info">
+                        <li class="rating">⭐️ 7.4 <i> /10</i></li>
+                        <li class="duration">Run Time: 2h 21'</li>
+                        <li class="age">Rated: PG-13</li>
+                    </ul>
+                    <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum, ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda, nec ex choro omnium sadipscing.</p>
+                    <div><a href="movieshowinfo.html" class="button" tabindex="-1">more details</a></div>
+                </div>
+                <div class="image">
+                    <img src="poster0.jpg" alt="Poster">
+                </div>
+            </div>
+
+            <!-- Top 5 #3 -->
+            <div class="slideshow">
+                <div class="text">
+                    <h1 class="title">Example 3</h1>
+                    <ul class="info">
+                        <li class="rating">⭐️ 7.4 <i> /10</i></li>
+                        <li class="duration">Run Time: 2h 21'</li>
+                        <li class="age">Rated: PG-13</li>
+                    </ul>
+                    <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum, ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda, nec ex choro omnium sadipscing.</p>
+                    <div><a href="movieshowinfo.html" class="button" tabindex="-1">more details</a></div>
+                </div>
+                <div class="image">
+                    <img src="poster0.jpg" alt="Poster">
+                </div>
+            </div>
+
+            <!-- Top 5 #4 -->
+            <div class="slideshow">
+                <div class="text">
+                    <h1 class="title">Another Example</h1>
+                    <ul class="info">
+                        <li class="rating">⭐️ 7.4 <i> /10</i></li>
+                        <li class="duration">Run Time: 2h 21'</li>
+                        <li class="age">Rated: PG-13</li>
+                    </ul>
+                    <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum, ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda, nec ex choro omnium sadipscing.</p>
+                    <div><a href="movieshowinfo.html" class="button" tabindex="-1">more details</a></div>
+                </div>
+                <div class="image">
+                    <img src="poster0.jpg" alt="Poster">
+                </div>
+            </div>
+
+            <!-- Top 5 #5 -->
+            <div class="slideshow">
+                <div class="text">
+                    <h1 class="title">Last example, Top 5</h1>
+                    <ul class="info">
+                        <li class="rating">⭐️ 7.4 <i> /10</i></li>
+                        <li class="duration">Run Time: 2h 21'</li>
+                        <li class="age">Rated: PG-13</li>
+                    </ul>
+                    <p class="plot">Lorem ipsum dolor sit amet, no mei sapientem prodesset voluptatum, ad usu altera similique, vix cu intellegat inciderint. Eam in modus adipisci expetenda, nec ex choro omnium sadipscing.</p>
+                    <div><a href="movieshowinfo.html" class="button" tabindex="-1">more details</a></div>
+                </div>
+                <div class="image">
+                    <img src="poster0.jpg" alt="Poster">
+                </div>
+            </div>
+            <!-- Right slideshow arrow -->
+
+            <div id="right" class="arrows">
+                <img onclick="plusSlides(1)" src="right-arrow.png">
+            </div>
+        </section>
+    </main>
+
+    <section id="white">
+        <!-- Top 5 on Netflix -->
+        <div class=" provider" id="netflix">
+            <div class="top">
+                <h2>Netflix <i>#Top5</i></h2>
+                <a href="library.html">view all ></a>
+            </div>
+            <!-- Poster #1 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster1.jpg" alt="Poster 1">
+                    <span>Into The Wild</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #2 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster2.jpg" alt="Poster 2">
+                    <span>Skyfall</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #3 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster3.jpg" alt="Poster 3">
+                    <span>It</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #4 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster4.jpg" alt="Poster 4">
+                    <span>Inception</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #5 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster5.jpg" alt="Poster 5">
+                    <span>Jurassic Park</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Top 5 on Netflix end-->
+        <!-- Top 5 on Prime -->
+        <div class=" provider" id="prime">
+            <div class="top">
+                <h2>Amazon <i>#Top5</i></h2>
+                <a href="library.html">view all ></a>
+            </div>
+            <!-- Poster #1 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster1.jpg" alt="Poster 1">
+                    <span>Into The Wild</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #2 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster2.jpg" alt="Poster 2">
+                    <span>Skyfall</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #3 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster3.jpg" alt="Poster 3">
+                    <span>It</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #4 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster4.jpg" alt="Poster 4">
+                    <span>Inception</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #5 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster5.jpg" alt="Poster 5">
+                    <span>Jurassic Park</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Top 5 on Amazon Prime end-->
+        <!-- Top 5 on Hulu -->
+        <div class=" provider" id="hulu">
+            <div class="top">
+                <h2>Hulu <i>#Top5</i></h2>
+                <a href="library.html">view all ></a>
+            </div>
+            <!-- Poster #1 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster1.jpg" alt="Poster 1">
+                    <span>Into The Wild</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #2 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster2.jpg" alt="Poster 2">
+                    <span>Skyfall</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #3 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster3.jpg" alt="Poster 3">
+                    <span>It</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #4 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster4.jpg" alt="Poster 4">
+                    <span>Inception</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Poster #5 -->
+            <div class="posters">
+                <div class="poster-title">
+                    <img src="poster5.jpg" alt="Poster 5">
+                    <span>Jurassic Park</span>
+                    <div class="imageInner">
+                        <span><a href="movieshowinfo.html" class="poster-button" tabindex="-1">more details</a></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Top 5 on Hulu end-->
+
+    </section>
+
+
+
+
+    <footer class="grid-100 tablet-grid-100 footer">
+        <ul id="footer-menu" class="prefix-25 grid-50 tablet-prefix-25 tablet-grid-50 mobile-prefix-5 mobile-grid-90">
+            <li><a href="#" class="footer-menu">Accessibility</a></li>
+            <li>|</li>
+            <li><a href="#" class="footer-menu">Privacy</a></li>
+            <li>|</li>
+            <li><a href="#" class="footer-menu">Cookie Preferences</a></li>
+            <li>|</li>
+            <li><a href="#" class="footer-menu">Sitemap</a></li>
+            <li>|</li>
+            <li><a href="#" class="footer-menu">Copyright</a></li>
+        </ul>
+
+        <section id="socialMediaLogos" class="grid-25 tablet-grid-25 mobile-grid-100 hide-on-mobile">
+            <!-- Logos of social media -->
+            <a href="#"><img id="inst" class="mobile-grid-33" src="insta-logo-orange.png" alt="Instagram Logo" /></a>
+            <a href="#"><img id="tw" class= "mobile-grid-33" src="twitter-logo-orange.png" alt="Twitter Logo" /></a>
+            <a href="#"><img id="fb" class= "mobile-grid-33" src="fb-logo-orange.png" alt="Facebook Logo" /></a>
+        </section>
+
+        <div class="grid-100 tablet-grid-100 footer">
+            <div id="copyright">
+                <p>© 2018 Where is my Movie. All Rights Reserved. Designed by Group 8</p>
+            </div>
+            <div>
+                <a href="index.html" id="back-to-top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+    <script src="slideshowscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>

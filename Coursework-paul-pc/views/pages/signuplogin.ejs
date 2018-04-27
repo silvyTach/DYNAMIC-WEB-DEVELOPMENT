@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head.ejs %>
+    <!-- Using ejs to import the head code  -->
+    <link rel="stylesheet" type="text/css" href="/css/signuploginstyle.css">
+    <!-- Linking the stylesheet for the index page -->
+  </head>
+
+  <body>
+    <header>
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
+    </header>
+
+    <main>
+      <!-- Start of login section -->
+      <section id="login">
+        <!-- Identifying the form with a header -->
+        <h2>Log In</h2>
+        <!-- Start of container -->
+        <div class="grid-container">
+            <!-- Start of whole form -->
+            <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
+
+              <form id="loginform" action="/login" method="POST">
+                <input type="text" class="loginsignup" name="loginformusername" placeholder="Username">
+                <input type="password" class="loginsignup" name="loginformpassword" placeholder="Password">
+                <button type="submit" class="button">Log In</button>
+              </form>
+
+            <!-- End of whole form -->
+            </div>
+        <!-- End of container -->
+        </div>
+      <!-- End of login section -->
+      </section>
+
+      <!-- Start of sign up section -->
+      <section id="signup">
+        <!-- Identifying the form with a header -->
+        <h2>Sign Up</h2>
+        <!-- Start of container -->
+        <div class="grid-container">
+            <!-- Start of whole form -->
+            <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
+
+              <form id="signupform" action="/signup" method="post">
+                <input type="text" class="loginsignup" name="signupformusername" placeholder="Username">
+                <input type="text" class="loginsignup" name="signupformemail1" placeholder="Email Address">
+                <input type="text" class="loginsignup" name="signupformemail2" placeholder="Confirm Email Address">
+                <input type="password" class="loginsignup" name="signupformpassword1" placeholder="Password">
+                <input type="password" class="loginsignup" name="signupformpassword2" placeholder="Confirm Password">
+                <button type="submit" class="button" name="signupformsubmit">Sign Up</button>
+              </form>
+
+            <!-- End of whole form -->
+            </div>
+        <!-- End of container -->
+        </div>
+      <!-- End of sign up section -->
+      </section>
+
+    </main>
+
+    <footer class="grid-100 tablet-grid-100 footer">
+      <% include ../partials/footer.ejs %>
+      <!-- Using ejs to import the footer code -->
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </body>
+</html>

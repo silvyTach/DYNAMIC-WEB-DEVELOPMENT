@@ -1,0 +1,18 @@
+/* *{border: solid green} */
+
+.user {
+  text-align: justify;
+}
+
+.user img {
+  border-radius: 50%;
+}
+
+.posters {
+  width: 30%;
+  margin-top: 2%;
+}
+
+.imageInner{
+  margin-left:0 !important;
+}

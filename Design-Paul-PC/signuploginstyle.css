@@ -1,0 +1,177 @@
+main {
+  clear: both;
+  margin:15%;
+}
+
+hr {
+  width: 75%;
+}
+
+.loginsignup {
+  width: 100%;
+}
+
+.text, .image, .title{
+  box-sizing:border-box;
+  width: 70%;
+  padding:0.5%;
+  margin:0 0 2%;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+#image_div .img_wrapper img
+{
+ width:100%;
+}
+#image_div .img_wrapper:hover img
+{
+ -webkit-filter: blur(1.7px);
+}
+#image_div .img_wrapper span
+{
+ display:none;
+ position:absolute;
+ top:40px;
+ left:30px;
+}
+#image_div .img_wrapper:hover span
+{
+ display:table-cell;
+}
+#image_div .img_wrapper span input[type="button"]
+{
+ width:120px;
+ height:40px;
+ background-color:#00BFFF;
+ border:none;
+ color:white;
+ font-weight:bold;
+ font-size:17px;
+}
+
+
+navbar {
+  text-align: center;
+}
+.text {
+  float: left;
+  width: 75%;
+}
+ h2 {
+  font-size: 4em;
+  color: #  AB0000;
+
+  width: auto;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.info, .plot {
+  width: 80%;
+}
+
+.info li {
+  font-size: large;
+  color: #ab0000;
+  font-weight: bold;
+}
+
+i {
+  font-size: small;
+  color: #5B6073;
+}
+
+.plot {
+  color: #5B6073;
+  font-size: large;
+  @override box-sizing: content-box important;
+}
+
+.image {
+  float: right;
+  width: 25%;
+
+}
+.image img{
+  float: right;
+}
+
+.button {
+  border-radius: 30px;
+    font-weight: bold;
+    background-color: #D75813;
+    color: #ffffff;
+    padding: 13px 25px;
+    clear: both;
+    float: left;
+    margin-top: 3%;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #D75813;
+
+}
+
+.info, .plot, .title {
+  bodrder: solid green;
+  margin: 0;
+}
+
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}

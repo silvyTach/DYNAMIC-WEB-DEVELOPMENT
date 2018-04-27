@@ -1,0 +1,176 @@
+main {
+     /* margin:10%; */
+     color: white;
+     /* clear: both; */
+}
+ .button {
+     border-radius: 30px;
+     font-weight: bold;
+     background-color: #D75813;
+     color: #ffffff;
+     padding: 13px 25px;
+     margin-top: 3%;
+     font-size: 0.75em;
+     text-transform: uppercase;
+     text-decoration: none;
+     border-color: transparent;
+}
+ .button:hover {
+     background-color: transparent;
+     color: #D75813;
+}
+/* Style the tab */
+ .tab {
+     overflow: hidden;
+}
+/* Style the buttons inside the tab */
+ .tab button {
+     float: left;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     padding: 1%;
+     transition: 0.3s;
+     font-size: large;
+     text-transform: lowercase;
+     color:#5B6073;
+     background-color: transparent;
+}
+/* Change background color of buttons on hover */
+ .tab button:hover {
+     color: #D75813;
+}
+/* Create an active/current tablink class */
+ .tab button.active {
+     color: #D75813;
+}
+/* Style the tab content */
+ .tabcontent {
+     display: none;
+     padding: 6px 12px;
+     border: 1px solid #ccc;
+     border-top: none;
+}
+ main li {
+     list-style-type: none;
+     margin-top: 2em;
+     padding: 0;
+     display: block;
+     font-size: small;
+}
+ .value, #director {
+     color: #FFFFFF;
+}
+ .label {
+     color: #D75813;
+}
+ #genres p{
+     display:inline-block;
+     color: #5B6073;
+     margin: 5%;
+}
+ table {
+     font-size: small;
+     padding: 2%;
+}
+ td {
+     border: solid 1em transparent;
+}
+ .l-items{
+     display: inline-block;
+     margin-right: 5%;
+}
+ h1 {
+     color: #AB0000;
+}
+
+#addtolibrary {
+  display: inline-block;
+}
+
+
+h4 {
+  text-align: center;
+  text-transform:uppercase;
+  color: #D75813;
+}
+
+h4 a {
+  text-decoration: none;
+  color: #D75813;
+}
+
+.user {
+  text-align: justify;
+}
+
+.user img {
+  border-radius: 50%;
+}
+
+.button {
+  background-color: #D75813;
+  border-radius: 30px;
+  border-color: transparent;
+  padding: 13px 25px;
+  margin: 0;
+  /* The button is given an orange color, its edges rounded, some padding added and separation from */
+  /* No items are allowed to float around it and it floats to the left of its containing element */
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
+  display: inline-block;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #D75813;
+  /* When the button is hovered over it becomes transparent and the text becomes orange */
+}
+
+.title{
+  color: #FFFFFF;
+  text-align: center;
+  /* padding: 1%; */
+}
+
+.moredetails {
+  width: 95%;
+}
+
+.poster {
+  float: right;
+  width: 100%;
+}
+
+/* #library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
+  border: 1px solid green;
+  box-sizing: border-box;
+} */
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .librarybox {
+    width: 100%;
+    margin: 5%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .librarybox {
+    margin: 10%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 769px) {
+  .librarybox {
+    margin: 2.5%;
+  }
+}
