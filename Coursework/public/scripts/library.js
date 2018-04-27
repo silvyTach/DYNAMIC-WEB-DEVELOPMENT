@@ -38,6 +38,5 @@ function genre(id, name) {
                 }
                 $("#" + id).append(html);
             });
-          }
 
 }
