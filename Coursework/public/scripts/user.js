@@ -9,7 +9,7 @@ $(function () {
 
 	// if there are no movies, an appropriate message is displayed
 	if(length == 0) {
-		var html = "<h2>You seem to have added no movies to your collection, why don't you have a look at our library and save your favourites</h2>"
+		var html = "<h3>You seem to have added no movies to your collection, why don't you have a look at our library and save your favourites</h3>"
 		$('#library').append(html);
 	}
 	else {
