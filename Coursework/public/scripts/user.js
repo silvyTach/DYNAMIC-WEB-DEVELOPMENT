@@ -21,9 +21,9 @@ $(function () {
 		getInfo(id, user);
 		$('#movie' + i).remove();
 	}
-	//the p tag with the number of movies in the user library is removed
-	$('#length').remove();
 }
+//the p tag with the number of movies in the user library is removed
+$('#length').remove();
 });
 
 //Function that gets info from the API
