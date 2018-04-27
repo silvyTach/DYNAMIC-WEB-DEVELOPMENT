@@ -48,8 +48,9 @@ h4 a {
 
 .title{
   color: #FFFFFF;
-  text-align: center;
-  padding: 1%;
+  text-align: center; 
+  padding-top: 1em; 
+  width: 100%;
 }
 
 .moredetails {
@@ -60,12 +61,6 @@ h4 a {
   float: right;
   width: 100%;
 }
-
-/* #library, .librarybox, .libraryimage, .librarytitle, .librarybuttons {
-  border: 1px solid green;
-  box-sizing: border-box;
-} */
-
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
