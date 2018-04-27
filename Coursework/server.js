@@ -71,7 +71,7 @@ app.get('/library', function(req, res) {
     if (res.error) throw new Error(res.error);
     console.log(res.body.genres);
     res.render('pages/library', {
-      genres: res.body.genres;
+      genres: res.body.genres
     });
   });
 });
