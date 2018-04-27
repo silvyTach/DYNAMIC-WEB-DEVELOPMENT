@@ -21,9 +21,7 @@
             <button id="bPopular" class="tablinks" onclick="showTab(event, 'Popular')">#Popular</button>
             <!-- loading the buttons for the genre tabs -->
             <% genres.forEach(function(genre) {%>
-                <p>
-                    <%= genre.id %>
-                </p>
+                <p><%= genre.id %></p>
                 <button id="b<%= genre.id %>" class="tablinks" onclick="showTab(event, '<%= genre.id %>')">#<%= genre.name %></button>
                 <%});%>
                     <!-- end of tabs buttons -->
