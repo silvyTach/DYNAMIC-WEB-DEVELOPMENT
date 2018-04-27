@@ -59,7 +59,7 @@ app.get('/library', function(req, res) {
   if (!req.session.loggedin) {
     res.redirect('/signuplogin');
     return;
-    //If the user isn't logged in, they can't reach their library page
+    //If the user isn't logged in, they can't reach the movies library page
   }
   res.render('pages/library');
   //Library page
@@ -67,6 +67,11 @@ app.get('/library', function(req, res) {
 
 //Movie info page
 app.get('/movieshowinfo', function(req, res) {
+  if (!req.session.loggedin) {
+    res.redirect('/signuplogin');
+    return;
+    //If the user isn't logged in, they can't reach the page with additional information about the movie
+  }
   var id = req.query.id;
   console.log(id);
   //this query finds the id of the movie that will be shown on the next page.
