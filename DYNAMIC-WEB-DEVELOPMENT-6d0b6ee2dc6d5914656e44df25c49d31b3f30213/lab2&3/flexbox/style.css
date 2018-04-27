@@ -1,0 +1,72 @@
+/**
+* @Author: John Isaacs <john>
+* @Date:   17-Feb-172017
+* @Filename: style.css
+* @Last modified by:   john
+* @Last modified time: 17-Feb-172017
+*/
+
+/* uncomment this if you want to see the boarders*/
+*{
+  border: 1px dashed red;
+}
+
+/* style to set body width, margins set to auto to centre the page */
+body{
+  width:960px;
+  margin: auto;
+}
+/* style to nav list items, flex row justfied using space around to spread the links out*/
+nav ul{
+  flex-direction: row;
+  justify-content:space-around;
+}
+/* style to set the aside (sidebar) set as a column*/
+aside{
+  flex-direction: column;
+}
+
+/* style to set the comments ID, set to column layout and some padding*/
+#comments{
+  flex-direction: column;
+  padding-left:20px;
+  padding-right:20px;
+}
+/* style to set the content ID, set to horizontal row*/
+#content{
+  flex-direction: row;
+}
+/* style to set the image container ID, set to vertical column*/
+#image-container{
+  flex-direction: column;
+}
+/* style to set the thumbnails section, set to vertical column with some padding*/
+#thumbnails{
+  flex-direction: column;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+/* style to set the general felx container, anything that is going to use flex will need this classection*/
+.flex-container{
+  display:flex;
+}
+
+/* style to set the header class, set to horizontal row*/
+.header {
+  flex-direction: row;
+}
+/* style to set any H1 tags within the header class*/
+.header h1{
+  padding: 20px;
+}
+/* style to set row class*/
+.row{
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* style to set the image thumbnail class*/
+.image-thumbnail{
+  padding-left: 5px;
+  padding-right: 5px;
+}

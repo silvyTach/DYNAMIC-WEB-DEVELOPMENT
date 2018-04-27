@@ -1,0 +1,25 @@
+main {
+     padding-top: 5%;
+}
+ .slideshow {
+     width: 100% !important;
+}
+ .text {
+     float: right !important;
+}
+ .image {
+     float: left !important;
+}
+ .button {
+     float: right !important;
+}
+ .text h1 {
+     text-align: right;
+}
+ hr {
+     border-color: #D75813;
+}
+ .title, .info, .plot {
+     width:100% !important;
+}
+ 

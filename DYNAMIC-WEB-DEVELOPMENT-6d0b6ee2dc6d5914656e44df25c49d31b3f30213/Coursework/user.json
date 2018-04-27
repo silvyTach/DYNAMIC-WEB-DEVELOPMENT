@@ -1,0 +1,12 @@
+{ "_id" : ObjectId("5adbf3aadfb6d90cea3b2454"), "email" : "ahs@wolfmail.grr", "login" : { "username" : "Ashaya", "password" : "1234567" }, "library" : {
+  }, "img" : "1" }
+{ "_id" : ObjectId("5adbf3d4dfb6d90cea3b2456"), "email" : "ash.pi@gmail.com", "login" : { "username" : "ashayapi", "password" : "1234567" }, "library" :
+ {  }, "img" : "2" }
+{ "_id" : ObjectId("5adbf4f19085a10d08bb3983"), "email" : "1600644@rgu.ac.uk", "login" : { "username" : "testuser", "password" : "1234password" }, "libr
+ary" : {  }, "img" : "3" }
+{ "_id" : ObjectId("5adbf92107f3a70db8bd7923"), "email" : "whitegorilla@da.jungle.com", "login" : { "username" : "testuser", "password" : "whitegorilla@
+da.jungle.com" }, "library" : {  }, "img" : "4" }
+{ "_id" : ObjectId("5adbf9b107f3a70db8bd7924"), "email" : "yellow_rabbit@hopmail.com", "login" : { "username" : "yellowrabbit371", "password" : "371" },
+ "library" : {  }, "img" : "5" }
+{ "email" : "sisa_pisa@gmail.gr", "login" : { "username" : "sisa", "password" : "1234" }, "library" : {  }, "img" : "14", "_id" : ObjectId("5adfa906a600
+8e07104117fc") }

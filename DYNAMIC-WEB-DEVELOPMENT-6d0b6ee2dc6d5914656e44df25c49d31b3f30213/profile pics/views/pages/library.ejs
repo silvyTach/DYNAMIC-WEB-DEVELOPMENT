@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head.ejs %>
+    <!-- Using ejs to import the head code -->
+    <link rel="stylesheet" type="text/css" href="/css/library.css">
+    <!-- Linking the stylesheet for the library page -->
+  </head>
+
+  <body>
+    <header>
+      <% include ../partials/header.ejs %>
+      <!-- Using ejs to import the header code -->
+    </header>
+
+    <main>
+      <!-- Start of the grid container -->
+      <div class="grid-container">
+
+        <!-- Start of the filters -->
+        <section id="filters">
+
+        </section>
+        <!-- End of the filters -->
+
+        <!-- Start of the library container -->
+        <section id="library" class="grid-100 grid-parent">
+
+          <!-- Start of the library result -->
+          <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+            <div class="grid-100 libraryimage">
+              <img class="poster" src="/images/poster0.jpg" alt="Poster">
+            </div>
+            <div class="grid-100 librarytitle">
+              <h4 class="title">Guardians of the Galaxy</h4>
+            </div>
+            <div class="grid-100 librarybuttons">
+              <button class="button">More Details</button>
+              <button class="button">Remove from Library</button>
+            </div>
+          </div>
+          <!-- End of the library result -->
+
+          <!-- Start of the library result -->
+          <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+            <div class="grid-100 libraryimage">
+              <img class="poster" src="/images/poster0.jpg" alt="Poster">
+            </div>
+            <div class="grid-100 librarytitle">
+              <h4 class="title">Guardians of the Galaxy</h4>
+            </div>
+            <div class="grid-100 librarybuttons">
+              <button class="button">More Details</button>
+              <button class="button">Remove from Library</button>
+            </div>
+          </div>
+          <!-- End of the library result -->
+
+          <!-- Start of the library result -->
+          <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+            <div class="grid-100 libraryimage">
+              <img class="poster" src="/images/poster0.jpg" alt="Poster">
+            </div>
+            <div class="grid-100 librarytitle">
+              <h4 class="title">Guardians of the Galaxy</h4>
+            </div>
+            <div class="grid-100 librarybuttons">
+              <button class="button">More Details</button>
+              <button class="button">Remove from Library</button>
+            </div>
+          </div>
+          <!-- End of the library result -->
+
+          <!-- Start of the library result -->
+          <div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">
+            <div class="grid-100 libraryimage">
+              <img class="poster" src="/images/poster0.jpg" alt="Poster">
+            </div>
+            <div class="grid-100 librarytitle">
+              <h4 class="title">Guardians of the Galaxy</h4>
+            </div>
+            <div class="grid-100 librarybuttons">
+              <button class="button">More Details</button>
+              <button class="button">Remove from Library</button>
+            </div>
+          </div>
+          <!-- End of the library result -->
+
+        </section>
+        <!-- End of the library container -->
+
+      </div>
+      <!-- End of the grid container -->
+    </main>
+
+    <footer class="grid-100 tablet-grid-100 footer">
+      <% include ../partials/footer.ejs %>
+      <!-- Using ejs to import the footer code -->
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>

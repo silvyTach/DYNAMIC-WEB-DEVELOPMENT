@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head.ejs %>
+        <!-- Using ejs to import the head code -->
+        <link rel="stylesheet" type="text/css" href="/css/movieshowinfo.css">
+        <script src="/scripts/movieinfo.js"></script>
+        <!-- Linking the stylesheet for the index page -->
+</head>
+
+<body>
+    <header>
+        <% include ../partials/header.ejs %>
+            <!-- Using ejs to import the header code -->
+    </header>
+
+    <!-- Start of main body -->
+    <main>
+        <div id="poster" class="grid-30 tablet-grid-30 mobile-grid-100">
+            <img src=" http://image.tmdb.org/t/p/w500/<%= movie.poster_path %>" alt="<%= movie.title %> Poster" class="grid-100 mobile-grid-100">
+            <div class="prefix-25 grid-50 suffix-25 tablet-prefix-25 tablet-grid-50 tablet-suffix-25 mobile-grid-100">
+                <button class="button" id="addtolibrary">Add to Library</button>
+            </div>
+        </div>
+
+        <div class="grid-50 tablet-grid-50 mobile-grid-100">
+            <div>
+                <h1 id="title"><%= movie.title %></h1>
+            </div>
+            <div class=" grid-100 tab">
+                <button class="tablinks active" onclick="showTab(event, 'overview')">Overview</button>
+                <button class="tablinks" onclick="showTab(event, 'cast')">Cast</button>
+                <button class="tablinks" onclick="showTab(event, 'similar')">Similar Movies</button>
+            </div>
+            <div id="overview" class="tabcontent">
+                <p id="plot"><%= movie.overview %></p>
+            </div>
+
+            <div id="cast" class="tabcontent">
+                <table style="width:100%">
+                  <%for(var i = 0; i < 10; i++) {%>
+                    <tr>
+                        <td><img src="http://image.tmdb.org/t/p/w45/<%=movie.credits.cast[i].profile_path %>" alt="Actor Photo"></td>
+                        <td class="actor"><%= movie.credits.cast[i].name %></td>
+                        <td class="character"><%= movie.credits.cast[i].character %></td>
+                    </tr>
+                    <% }; %>
+                </table>
+            </div>
+
+            <div id="similar" class="tabcontent">
+              <p id="id"><%= movie.id %></p>
+                <table style="width:100%">
+                </table>
+              </div>
+
+        </div>
+
+        </div>
+        <div class="grid-20 tablet-grid-20 mobile-grid-100">
+
+            <ul>
+                <li class="label"> Director: </li>
+                <li id="director"></li>
+                <li class="label"> Release Date: </li>
+                <li class="value"><%= movie.release_date %></li>
+                <li class="label"> Run Time: </li>
+                <li class="value"><%= movie.runtime %>m </li>
+                <li class="label"> Tagline: </li>
+                <li class="value"><%= movie.tagline %></li>
+                <li class="label"> Genres: </li>
+                <li id="genres">
+                  <% movie.genres.forEach(function(genre){%>
+                    <p><%= genre.name %></p>
+                    <% }); %>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <!-- end of main body -->
+
+    <footer class="grid-100 tablet-grid-100 footer">
+        <% include ../partials/footer.ejs %>
+            <!-- Using ejs to import the footer code -->
+    </footer>
+    <script>
+        $()
+        $("#overview").css('display', 'block');
+        function showTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = $(".tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = $(".tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            $("#" +tabName).css("display", "block");
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head.ejs %>
+        <!-- Using ejs to import the head code  -->
+        <link rel="stylesheet" type="text/css" href="/css/signuploginstyle.css">
+        <!-- Linking the stylesheet for the index page -->
+</head>
+
+<body>
+    <header>
+        <% include ../partials/header.ejs %>
+            <!-- Using ejs to import the header code -->
+    </header>
+
+    <main>
+        <!-- Start of login section -->
+        <section>
+            <h2>Log In</h2>
+            <div class="grid-container">
+                <!-- Start of the login form -->
+                <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
+                    <form id="loginform" action="/login" method="POST">
+                        <input type="text" class="loginsignup" name="username" placeholder="Username">
+                        <input type="password" class="loginsignup" name="password" placeholder="Password">
+                        <button type="submit" class="button">Log In</button>
+                    </form>
+                    <!-- End ofform -->
+                </div>
+            </div>
+            <!-- End of login section -->
+        </section>
+
+        <!-- Start of sign up section -->
+        <section>
+            <!-- Identifying the form with a header -->
+            <h2>Sign Up</h2>
+            <div class="grid-container">
+                <!-- Start of signup form -->
+                <div class="grid-100 mobile-grid-100 tablet-grid-100 loginsignupgrid">
+
+                    <form id="signupform" action="/signup" method="post">
+                        <input type="text" class="loginsignup" name="username" placeholder="Username">
+                        <input type="text" class="loginsignup" name="email" placeholder="Email Address">
+                        <input type="text" class="loginsignup" name="email2" placeholder="Confirm Email Address">
+                        <input type="password" class="loginsignup" name="password" placeholder="Password">
+                        <input type="password" class="loginsignup" name="password2" placeholder="Confirm Password">
+                        <!-- the user can choose their profile pic -->
+                        <!-- the first picture in the slideshow is chosen by default -->
+                        <h3>Now choose your profile pic!</h3>
+                        <div class="slideshow-container loginsignup">
+                            <!-- there are 12 slides with 4 pictures to choose from on each slide -->
+                            <%for(var i = 0; i < 12; i++) {%>
+                                <div class="slideshow fade">
+                                    <%for(var j = 0; j < 4; j++) {%>
+                                        <label>
+                      <input class="rbPic" type="radio" name="img" value="<%=i*4 + j%>">
+                      <img class="prof_pic" src="/images/profile_pics/p<%=i*4 + j%>.png" width="100">
+                    </label>
+                                        <%}%>
+                                </div>
+                                <%}%>
+
+                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                        <!-- end of the slideshow with available user pictures -->
+                        <button type="submit" class="button">Sign Up</button>
+                    </form>
+                    <!-- End of signup form -->
+                </div>
+            </div>
+            <!-- End of sign up section -->
+        </section>
+
+    </main>
+
+    <footer class="grid-100 tablet-grid-100 footer">
+        <% include ../partials/footer.ejs %>
+            <!-- Using ejs to import the footer code -->
+    </footer>
+    <!-- script for the slideshow with profile pics -->
+    <script src="/scripts/slideshowscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- script to assign the first image as a default if the user doesnt choose one -->
+    <script>
+        $('.rbPic').filter('[value="0"]').attr('checked', true);
+    </script>
+</body>
+
+</html>

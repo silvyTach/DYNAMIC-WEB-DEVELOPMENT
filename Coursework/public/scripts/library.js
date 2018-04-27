@@ -1,6 +1,6 @@
 $(function() {
     var searchString = document.location.search;
-    console.log(searchString);
+    console.log(searchString.substring(1));
     pair = searchString.substring(1);
     var split = pair.split("=");
     var user = split[1];

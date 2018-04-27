@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+/* Importing the Comfortaa font from Google Fonts */
+
+/* ---------- EVERYTHING ---------- */
+
+*  {
+	font-family: 'Comfortaa', sans-serif;
+	/* Everything on the site uses the imported font */
+	box-sizing: border-box;
+}
+
+body {
+  background-color: #1C1F24;
+	/* Everything within the body tag will have a max width of 90% of the page and the background is a dark blue-y grey */
+	margin:0;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+	margin: 5px 10% 5% 10%;
+	display: inline;
+	/* The header area is displayed as an inline element and allows elements to float on both sizes */
+}
+
+/* ----- Logo area ----- */
+
+#logo-img {
+  display: inline-block;
+  float: left;
+	/* The logo image is displayed as an inline element and floated to the left of its parent element */
+}
+
+/* ----- Search bar area ----- */
+
+#search {
+	background-color:#1C1F24;
+	/* The search box area has the same background colour as the body */
+  border-top: medium solid #d75813;
+	/* An orange solid border/line is added to the top */
+	display: inline-block;
+}
+
+#searchBox {
+	width: 80%;
+	padding: 12px 20px;
+	border: thin solid transparent;
+	/* The search box takes up 80% of the width of its parent element and has a transparent border line around it */
+	color: #D75813;
+	font-size: medium;
+	background-color: transparent;
+	/* The text within it is orange and medium sized, and the background is transparent */
+}
+
+#searchIcon {
+	border-top: medium solid transparent;
+	border: none;
+	float: right;
+	width: 3%;
+	/* The search icon has a transparent border along the top, floats to the right within its parent element and takes up 3% of its width */
+	padding-top: 0.5%;
+	padding-left: 0.2%;
+	padding-right: 0.2%;
+	/* The search icon is given some internal padding around its top, left and right sides */
+}
+
+/* ----- Navigation area ----- */
+
+navbar {
+  display: inline-block;
+  float: right;
+	/* The navigation bar is displayed as an inline element and floated to the right of its parent element */
+}
+
+li, li a, #back-to-top, #copyright {
+  padding: 10px;
+  text-decoration: none;
+  color: #5B6073;
+	/* List items, the links inside them, and both the back to top and copyright text have 10px padding added around all sides */
+	/* They also have all text-decoration stripped before they're given a new slightly lighter grey colour */
+}
+
+navbar li a {
+  font-size: x-large;
+  font-weight: 700;
+	/* Links within navbar list items have extra large font size and are bold */
+}
+
+a {
+  cursor: pointer;
+	/* When the cursor is over a list element, its style changes to a pointing finger */
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+	/* List items have their bulletpoints removed and are displayed as inline elements i.e. all in one line */
+}
+
+navbar li a:hover{
+	border-top: medium solid #D75813;
+	color: #D75813;
+	/* Links within navbar list items turn orange and get an orange bar above them when they're hovered over */
+}
+
+/* ---------- FOOTER ---------- */
+
+/* back-to-top {
+  text-decoration: none;
+} */
+/* Not sure what the purpose of this is */
+
+/* ----- Footer menu links ----- */
+
+#footer-menu {
+  width: 90%;
+	color: #5B6073;
+	/* The list for the main links within the footer take */
+  margin-left: 5%;
+  padding-left: 20%
+	/* Each item has 5% space between itself and the element on its left, it also has 20% internal padding */
+}
+
+/* ----- Copyright notice and back to top ----- */
+
+#copyright {
+  display: inline-block;
+  float: left;
+	/* The copyright text is floating to the left of the footer and displayed as an inline element */
+}
+
+#back-to-top {
+  display: inline-block;
+  float: right;
+	/* The back to top text is floating to the left of the footer and displayed as an inline element */
+}
+
+#back-to-top, #copyright {
+  font-size: small;
+  color: #5B6073;
+	/* The copyright and back to top text is made small and given a lighter grey colour */
+}
+
+#back-to-top:hover, .footer-menu:hover {
+  border-top: medium solid #D75813;
+  color: #D75813;
+	/* Menu items in the footer and the back to top link turn orange and have an orange border above appear when they're hovered on */
+}
+
+/* ----- Social media icons ----- */
+
+#socialMediaLogos {
+  margin-left: 47%;
+	/* The social media div has a 47% margin away from the element to its left */
+	/* jborder: solid 1px green; - not sure why this is here */
+}
+
+#inst, #tw, #fb {
+	max-width: 7%;
+	/* Each social media icon takes a 7% width of the parent div */
+	padding: 0.5%;
+	margin-top: 2.5%;
+	/* Each icon has internal padding of 0.5% and a margin of 2.5% separating it from the element above it */
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #logo-img {
+        width: 70%;
+    }
+		navbar {
+			font-size: medium;
+		}
+}
