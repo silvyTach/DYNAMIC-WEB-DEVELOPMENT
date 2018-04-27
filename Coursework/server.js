@@ -212,8 +212,8 @@ app.post('/search', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    console.log(result.body);
-    res.render('pages/results?user=' + user , {
+    // console.log(result.body);
+    res.redirect('/results?user=' + user , {
       search: result.body
     });
   });
