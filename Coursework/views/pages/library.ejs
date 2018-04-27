@@ -19,7 +19,7 @@
       <div class=" grid-100 tab">
           <button class="tablinks active" onclick="showTab(event, 'Popular')">#Popular</button>
           <% genres.forEach(function(genre) {%>
-            <p visibility="hidden"><%= genre.id %></p>
+            <p css({"display":"none"})><%= genre.id %></p>
             <button id="b<%= genre.id %>" class="tablinks" onclick="showTab(event, '<%= genre.id %>')">#<%= genre.name %></button>
           <%});%>
       </div>
