@@ -12,6 +12,10 @@
   float: right !important;
 }
 
+.button {
+  margin-right: 20%;
+}
+
 hr {
     margin: 2.5%;
     /* border-color: #5B6073; */
@@ -19,6 +23,5 @@ hr {
 }
 
 .title, .info, .plot {
-  display:block !important;
-  width:100%;
+  width:100% !important;
 }
