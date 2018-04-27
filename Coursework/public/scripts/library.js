@@ -1,10 +1,17 @@
 $(function() {
-  $(".tab p").forEach(function(p){
-    var id = p.html();
+  var p = $("#.tab p").toArray();
+  for (var i = 0; i < p.length; i++) {
+    var id = p[i].html();
     var name = $("#g" + id).html();
     console.log(id + " : " + name);
-    p.remove();
-  })
+    p[i].remove();
+  }
+  // $(".tab p").forEach(function(p){
+  //   var id = p.html();
+  //   var name = $("#g" + id).html();
+  //   console.log(id + " : " + name);
+  //   p.remove();
+  // })
 
 
 
