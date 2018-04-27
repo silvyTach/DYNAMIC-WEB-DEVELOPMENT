@@ -26,5 +26,5 @@ $(function(){
     $('#menu2').html('My movies');
     $('#menu2').attr("href", "/user?user=" + user);
     $('#menu3').html('Sign out');
-    $('#menu3').attr("href", "/");
+    $('#menu3').attr("href", "/signout");
   }

@@ -112,6 +112,14 @@ app.get('/search', function(req, res) {
   //Log in/sign up page
 });
 
+//signout route causes the page to Sign out.
+//it sets our session.loggedin to false and then redirects the user to the login/signup page
+app.get('/signout', function(req, res) {
+  req.session.loggedin = false;
+  req.session.destroy();
+  res.redirect('/signuplogin');
+});
+
 //-------------------- POST ROUTES --------------------
 
 //this is our login route, all it does is render the login.ejs page.
