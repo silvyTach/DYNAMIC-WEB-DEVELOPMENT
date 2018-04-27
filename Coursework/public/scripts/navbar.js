@@ -21,6 +21,7 @@ $(function(){
   });
 
   function change(user) {
+    $('#menu0').attr("href", "/?user=" + user);
     $('#menu1').attr("href", "/library?user=" + user);
     $('#menu2').html('My movies');
     $('#menu2').attr("href", "/user?user=" + user);
