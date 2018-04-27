@@ -1,5 +1,5 @@
 $(function() {
-  var p = $(".tab p").toArray();
+  var p = $(".tab p").html().toArray();
 
   for (var i = 0; i < p.length; i++) {
     console.log(p[i]);
