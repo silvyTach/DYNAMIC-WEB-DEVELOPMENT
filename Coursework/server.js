@@ -212,7 +212,7 @@ app.post('/search', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    console.log(result.body.);
+    console.log(result.body);
     res.render('pages/results', {
       search: result.body
     });
