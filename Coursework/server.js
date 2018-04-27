@@ -211,10 +211,10 @@ app.post('/search', function(req, res) {
   });
   req.send("{}");
   req.end(function (result) {
-    if (result.error) throw new Error(res.error);
-    console.log(result.body.title);
+    if (result.error) throw new Error(result.error);
+    console.log(result.body.);
     res.render('pages/results', {
-      results: result.body
+      search: result.body
     });
   });
 });
