@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head.ejs %>
+        <!-- Using ejs to import the head code -->
+        <link rel="stylesheet" type="text/css" href="/css/index-main.css">
+        <link rel="stylesheet" type="text/css" href="/css/headerfooter.css">
+        <link rel="stylesheet" type="text/css" href="/css/library.css">
+        <style>
+          .remove-user, .remove-movie {display: none;}
+        </style>
+        <script src="/scripts/user.js"></script>
+        <!-- <script src="/scripts/movieinfo.js"></script> -->
+        <!-- Linking the stylesheet for the index page -->
+</head>
+
+<body>
+    <header>
+        <% include ../partials/header.ejs %>
+            <!-- Using ejs to import the header code -->
+    </header>
+
+    <!-- Start of main body -->
+    <main>
+        <section id="profile" class="grid-20 tablet-grid-33 mobile-grid-100">
+            <ul>
+                <li class="user">
+                    <h2>Hi, <%= user.login.username %></h2>
+                </li>
+                <li class="user"><img src="/images/profile_pics/p<%= user.img%>.png" width="120px"></li>
+                <li class="user">E-mail:
+                    <%= user.email %>
+                </li>
+            </ul>
+        </section>
+        <!-- creating an element with the number of movies in the user library so that number can be passed to the js function -->
+        <p id="length">
+            <%= user.library.length %>
+        </p>
+        <!-- for each movie I`m creating an element that contains the id of the movie so it can be accessed from the js function -->
+        <% for(var i=0; i < user.library.length; i++){ %>
+            <p id="movie<%=i%>">
+                <%= user.library[i] %>
+            </p>
+            <% }; %>
+                <!-- end oif the ekements with movies id -->
+
+                <!-- the container where all the movie posters will be put -->
+                <section id="library" class="grid-80 mobile-grid-100 tablet-grid-33 grid-parent">
+                </section>
+                <!-- End of the library container -->
+    </main>
+    <!-- end of main body -->
+
+    <footer class="grid-100 tablet-grid-100 footer">
+        <% include ../partials/footer.ejs %>
+            <!-- Using ejs to import the footer code -->
+    </footer>
+</body>
+
+</html>

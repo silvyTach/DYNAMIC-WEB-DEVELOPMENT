@@ -90,30 +90,26 @@ app.get('/signuplogin', function(req, res) {
   //Log in/sign up page
 });
 
+//Each user's page containing the library with their movies
+app.get('/user', function(req, res) {
+  var user = req.query.user;
+  //console.log(user);
+  //this query finds the first document in the array with that username.
+  //Because the username value sits in the login section of the user data we use login.username
+  db.collection('users').findOne({
+    "login.username": user
+  }, function(err, result) {
+    if (err) throw err;
+    //finally we just send the result to the user page as "user"
+    res.render('pages/user', {
+      user: result
+    })
+  });
+});
+
 app.get('/search', function(req, res) {
   res.render('pages/search');
   //Log in/sign up page
-});
-
-app.get('/addtolibrary', function(req, res) {
-  var id = req.query.id;
-  console.log(id);
-  //Finding the ID of the movie to be add to the Library
-  db.collection('users').findOne({"login.username":"testuser"}, function(error, result) {
-    if (error) {
-      throw error;
-      //If there's an error, throw it
-    }
-
-    if (!result) {
-      res.redirect('/signuplogin');
-      return;
-    }
-
-    //Still need to find the user's library based on their username and then add the id to their library
-    //Then redirect user to library with their username
-
-  });
 });
 
 //-------------------- POST ROUTES --------------------
@@ -129,7 +125,7 @@ app.post('/login', function(req, res) {
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('/signuplogin');return}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to their library
-    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/library') }
+    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/user?user=' + result.login.username)}
     //otherwise send them back to login
     else{res.redirect('/signuplogin')}
   });
@@ -151,12 +147,38 @@ app.post('/signup', function(req, res) {
   // if any of the conditions is false the user is redirected back to the signup page
   // and is not added to the db, else the signup procedure continues
   else {
-    var userData = {email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: {}};
+    var userData = {email: req.body.email, login: {username: req.body.username, password: req.body.password}, library: [], img: req.body.img};
     db.collection('users').insert(userData, function(err, result) {
       if(err) throw "Error! New user was not added to the database!"
       if(!result) {res.redirect('signuplogin');return}
-      else {req.session.loggedin = true; res.redirect('/')}
+      else {req.session.loggedin = true; res.redirect('/?user=' + req.body.username)}
       //if there are no errors the user is added to the db and the home page is drawn
     })
   }
+});
+
+//this is our addMovie route, adds the movie to the user's library and redraws the movie info page
+app.post('/addMovie', function(req, res) {
+  // finds a user based on their name
+  var query = { "login.username" : req.body.user};
+  // adds the movie id in that user's library
+  var newvalues = { $push: { "library": req.body.id}};
+  db.collection('users').update(query,newvalues, function(err, result) {
+    if (err) throw err;
+    // console.log("added movie" + req.body.id + " to " + req.body.user);
+    res.redirect('/movieshowinfo?id=' + req.body.id);
+  });
+});
+
+//this is our removeMovie route, removes the movie from the user's library
+app.post('/removeMovie', function(req, res) {
+  // finds a user based on their name
+  var query = { "login.username" : req.body.user};
+  // removes the movie id from the array that represents that user's library
+  var newvalues = { $pull: { "library": req.body.id}};
+  db.collection('users').update(query,newvalues, function(err, result) {
+    if (err) throw err;
+    // console.log("removed movie " + req.body.id + " from " + req.body.user);
+    res.redirect('/user?user=' + req.body.user);
+  });
 });
