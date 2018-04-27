@@ -115,7 +115,9 @@ app.get('/user', function(req, res) {
 });
 
 app.get('/results', function(req, res) {
-  res.render('pages/results');
+  res.render('pages/results', {
+    search: result.body;
+  });
   //Log in/sign up page
 });
 
@@ -213,8 +215,6 @@ app.post('/search', function(req, res) {
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
     // console.log(result.body);
-    res.redirect('/results?user=' + user , {
-      search: result.body
-    });
+    res.redirect('/results?user=' + user , result);
   });
 });
