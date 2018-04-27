@@ -14,8 +14,7 @@ $(function() {
 });
 
 function genre(id, name) {
-  var html = "";
-  for(var i = 1; i <= 3; i++) {
+
     var settings = {
                 "async": true,
                 "crossDomain": true,
@@ -24,6 +23,7 @@ function genre(id, name) {
                 "headers": {},
                 "data": "{}"
               }
+              var html = "";
             $.ajax(settings).done(function(response) {
                 for (var i = 0; i < response.results.length; i++) {
                     html += '<div class="grid-20 mobile-grid-45 tablet-grid-45 grid-parent librarybox">'
@@ -36,7 +36,8 @@ function genre(id, name) {
                     html += '<button class="button">More Details</button>'
                     html += "</div></div>"
                 }
+                $("#" + id).append(html);
             });
           }
-          $("#" + id).append(html);
+
 }
