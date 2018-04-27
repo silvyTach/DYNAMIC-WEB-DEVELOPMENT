@@ -1,6 +1,30 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @silvyTach
+Sign out
+2
+0 0 silvyTach/DYNAMIC-WEB-DEVELOPMENT
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+DYNAMIC-WEB-DEVELOPMENT/Coursework/public/scripts/library.js
+3569b1c  24 minutes ago
+@ashPi ashPi commenting and beautifying code + deleting useless files
+@ashPi @silvyTach
+We found a potential security vulnerability in one of your dependencies.
+A dependency defined in Coursework/package-lock.json has known security vulnerabilities and should be updated.
+
+Only the owner of this repository can see this message.
+Learn more about vulnerability alerts
+
+
+81 lines (79 sloc)  3.8 KB
 $(function() {
     var searchString = document.location.search;
-    var pair = searchString.substring(1);
+    pair = searchString.substring(1);
     var split = pair.split("=");
     var user = split[1];
     //extracting the username from the url so it can be passed to the next page that will be loaded
@@ -78,3 +102,16 @@ function popular(user) {
         });
     }
 }
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+Press h to open a hovercard with more details.
