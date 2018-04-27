@@ -1,0 +1,9 @@
+.slideshow {
+  width: 100% !important;
+}
+.text {
+  float: right !important;
+}
+.image {
+  float: left !important;
+}
