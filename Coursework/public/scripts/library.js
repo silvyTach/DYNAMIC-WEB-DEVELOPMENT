@@ -5,8 +5,7 @@ $(function() {
     // console.log($(p[i]).html());
     var id = $(p[i]).html();
     p[i].remove();
-    var temp = $("#g" + id).html();
-    var name = $(temp).html();
+    var name = $("#b" + id).html();
     console.log(id + " : " + name);
 
   }
