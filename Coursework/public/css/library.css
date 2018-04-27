@@ -62,6 +62,15 @@ h4 a {
   width: 100%;
 }
 
+.tab button {
+  font-size: large !important;
+}
+
+.tab button:hover, .tab button:active {
+  border: none !important;
+}
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .librarybox {
