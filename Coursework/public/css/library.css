@@ -38,6 +38,7 @@ h4 a {
   /* The text is bold, white, set to a certain size, made uppercase and has decoration stripped */
   display: inline-block;
   width: 100%;
+  text-align: center;
 }
 
 .button:hover {
@@ -48,9 +49,8 @@ h4 a {
 
 .title{
   color: #FFFFFF;
-  text-align: center; 
-  padding-top: 1em; 
-  width: 100%;
+  width: 100%;
+  padding-top: 1em;
 }
 
 .moredetails {
