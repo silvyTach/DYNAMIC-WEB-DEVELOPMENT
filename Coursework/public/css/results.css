@@ -2,14 +2,18 @@
   width: 100% !important;
 }
 .text {
-  text-align: right;
+  float: right !important;
 }
 .image {
   float: left !important;
 }
 
-.text h1, .button {
+.button {
   float: right !important;
+}
+
+.text h1 {
+  text-align: right;
 }
 
 hr {
