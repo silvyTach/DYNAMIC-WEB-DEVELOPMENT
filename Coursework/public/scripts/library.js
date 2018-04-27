@@ -6,11 +6,9 @@ $(function() {
     var id = $(p[i]).html();
     p[i].remove();
     var name = $("#b" + id).html().substring(1);
-    // console.log(id + " : " + name);
-    genre(id, name);
+    console.log(id + " : " + name);
+    // genre(id, name);
   }
-    // Top 5 Comedies
-    // top5(35, "Comedy");
 });
 
 function genre(id, name) {
