@@ -18,7 +18,7 @@
       <div class=" grid-100 tab">
           <button class="tablinks active" onclick="showTab(event, 'Popular')">#Popular</button>
           <% genres.forEach(function(genre) {%>
-            <button class="tablinks" onclick="showTab(event, '<%= genre.name %>')">#<%= genre.name %></button>
+            <button class="tablinks" onclick="showTab(event, 'g<%= genre.id %>')">#<%= genre.name %></button>
           <%});%>
       </div>
       <div id="Popular" class="tabcontent">
@@ -90,69 +90,11 @@
             </div>
       </div>
       <% genres.forEach(function(genre) {%>
-        <div id="<%= genre.name %>" class="tabcontent">
+        <div id="g<%= genre.id %>" class="tabcontent">
           <h2><%= genre.name %></h2>
         </div>
         <%});%>
-      <!-- <div id="Action" class="tabcontent">
-        <h2>Action</h2>
-      </div>
-      <div id="Adventure" class="tabcontent">
-          <h2>Adventure</h2>
-      </div>
-      <div id="Animation" class="tabcontent">
-        <h2>Animations</h2>
-      </div>
-      <div id="Comedy" class="tabcontent">
-          <h2>Comedies</h2>
-      </div>
-      <div id="Crime" class="tabcontent">
-        <h2>Crime</h2>
-      </div>
-      <div id="Documentary" class="tabcontent">
-          <h2>Documentary</h2>
-      </div>
-      <div id="Drama" class="tabcontent">
-        <h2>Drama</h2>
-      </div>
-      <div id="Family" class="tabcontent">
-          <h2>Family</h2>
-      </div>
-      <div id="Fantasy" class="tabcontent">
-        <h2>Fantasy</h2>
-      </div>
-      <div id="History" class="tabcontent">
-          <h2>History</h2>
-      </div>
-      <div id="Horror" class="tabcontent">
-        <h2>Horror</h2>
-      </div>
-      <div id="Music" class="tabcontent">
-          <h2>Music</h2>
-      </div>
-      <div id="Mystery" class="tabcontent">
-        <h2>Mystery</h2>
-      </div>
-      <div id="Romance" class="tabcontent">
-          <h2>Romance</h2>
-      </div>
-      <div id="Science Fiction" class="tabcontent">
-        <h2>Science Fiction</h2>
-      </div>
-      <div id="TV Movie" class="tabcontent">
-          <h2>TV Movie</h2>
-      </div>
-      <div id="Thriller" class="tabcontent">
-          <h2>Thriller</h2>
-      </div>
-      <div id="War" class="tabcontent">
-        <h2>War</h2>
-      </div>
-      <div id="Western" class="tabcontent">
-          <h2>Western</h2>
-      </div> -->
     </main>
-
     <footer class="grid-100 tablet-grid-100 footer">
       <% include ../partials/footer.ejs %>
       <!-- Using ejs to import the footer code -->
