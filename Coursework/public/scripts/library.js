@@ -1,18 +1,27 @@
 $(function() {
-  var p = $(".tab p").toArray();
+  var searchString = document.location.search;
+  pair = searchString.substring(1);
+  var split = pair.split("=");
+  var user = split[1];
+  //extracting the username from the url so it can be passed to the next page that will be loaded
 
+  //getting an array of all the genre ids
+  var p = $(".tab p").toArray();
   for (var i = 0; i < p.length; i++) {
     // console.log($(p[i]).html());
+    // saving the id and deleting the <p> as it's not needed anymore
     var id = $(p[i]).html();
     p[i].remove();
+    //extracting the genre name
     var name = $("#b" + id).html().substring(1);
     // console.log(id + " : " + name);
-    genre(id, name);
+    // passing the id and the name to the function
+    genre(id, name, user);
   }
 });
-
-function genre(id, name) {
-  for (var i = 0; i < 5; i++) {
+// function that builds the tab with movies for each genre
+function genre(id, name, user) {
+  for (var i = 1; i < 7; i++) {
     var settings = {
           "async": true,
           "crossDomain": true,
@@ -31,7 +40,7 @@ function genre(id, name) {
             html += '<div class="grid-100 librarytitle">'
             html += '<h4 class="title">' + response.results[i].title + '</h4></div>'
             html += '<div class="grid-100 librarybuttons">'
-            html += '<button class="button">More Details</button>'
+            html += '<a href="/movieshowinfo?user=' + user + '&id=' + response.results[i].id + '" class="button">More Details</a>'
             html += "</div></div>"
         }
         $("#" + id).append(html);
