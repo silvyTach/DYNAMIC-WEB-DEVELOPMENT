@@ -41,7 +41,7 @@ MongoClient.connect(url, function(error, database) {
 
 //Index page
 app.get('/', function(req, res) {
-   //res.render('pages/index');
+  //requesting the top 5 most popular movies from TMDB
   var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
   req.query({
     "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
@@ -49,6 +49,7 @@ app.get('/', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
+    //rendering the index and sending the response that will be used to build the page
     res.render('pages/index', {
       index: result.body.results
     });
@@ -62,8 +63,20 @@ app.get('/library', function(req, res) {
     return;
     //If the user isn't logged in, they can't reach the movies library page
   }
-  res.render('pages/library');
-  //Library page
+  // requesting the list of genres from TMDB
+  var req = unirest("GET", "https://api.themoviedb.org/3/genre/movie/list");
+  req.query({
+    "api_key": "305a3b42d88760bd22c9f8c8c54f788d"
+  });
+  req.send("{}");
+  req.end(function (result) {
+    if (result.error) throw new Error(result.error);
+    // console.log(result.body.genres);
+    // rendering the library page and sendig the list of genres that will be used to build the page
+    res.render('pages/library', {
+      genres: result.body.genres
+    });
+  });
 });
 
 //Movie info page
@@ -84,7 +97,7 @@ app.get('/movieshowinfo', function(req, res) {
   req.send("{}");
   req.end(function (result) {
     if (result.error) throw new Error(result.error);
-    console.log(result.body.original_title);
+    // console.log(result.body.original_title);
     res.render('pages/movieshowinfo', {
       movie: result.body
     });
@@ -114,10 +127,9 @@ app.get('/user', function(req, res) {
   });
 });
 
-app.get('/results', function(req, res) {
-  res.render('pages/results');
-  //Log in/sign up page
-});
+// app.get('/results', function(req, res) {
+//   res.render('pages/results');
+// });
 
 //signout route causes the page to Sign out.
 //it sets our session.loggedin to false and then redirects the user to the login/signup page
